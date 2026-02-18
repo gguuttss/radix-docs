@@ -18,7 +18,7 @@ You can see this applied in the [Gumball Machine with an Owner example](https://
 By using the `enable_method_auth!` macro at the top of our blueprint code we can decide which methods require proof of ownership and which are public.  
 `restrict_to: [OWNER]` means that the method requires proof of ownership.
 
-```
+```rust
 `enable_method_auth!` {
         methods {
             buy_gumball => PUBLIC;
@@ -56,7 +56,7 @@ By making it indivisible and giving it a fixed supply of 1, we make sure there c
 We then make the `owner_badge` proof the evidence of ownership when the  
 component is instantiated with a `require` rule:
 
-```
+```rust
     .instantiate()
     .prepare_to_globalize(OwnerRole::Fixed(rule!(require(
         owner_badge.resource_address()
@@ -68,7 +68,7 @@ The Owner role is now fixed to (cannot be changed from) proof of the `owner_badg
 
 The instantiated component and the `owner_badge` are then returned from the function:
 
-```
+```rust
             (component, owner_badge)
 ```
 
@@ -81,7 +81,7 @@ Now we can restrict methods to just the owner of the gumball machine, we've upda
 
 -   `set_price` - Allows the owner to set the price of the gumballs.
     
-    ```
+```rust
       pub fn set_price(&mut self, price: Decimal) {
           self.price = price
       }
@@ -90,7 +90,7 @@ Now we can restrict methods to just the owner of the gumball machine, we've upda
 -   `withdraw_earnings` - Lets the owner withdraw any  
     XRD collected in the gumball machine, from bought gumballs.
     
-    ```
+```rust
       pub fn withdraw_earnings(&mut self) -> Bucket {
           self.collected_xrd.take_all()
       }

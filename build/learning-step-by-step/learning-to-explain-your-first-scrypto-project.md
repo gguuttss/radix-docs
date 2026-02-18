@@ -124,7 +124,7 @@ When a resource is created, it is in a bucket. As buckets only exist to move res
 
 5.  Put the new resources in a **vault**.
 
-```
+```rust
     // 5. Put the new resources in a vault
     sample_vault: Vault::with_bucket(my_bucket),
 ```

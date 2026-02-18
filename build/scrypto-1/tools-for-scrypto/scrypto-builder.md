@@ -17,6 +17,6 @@ DOCKER_DEFAULT_PLATFORM=linux/amd64 docker pull radixdlt/scrypto-builder:v1.2.0
 
 2.  Compile Scrypto project
 
-```
+```bash
 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker run -v /full/path/to/scrypto/crate:/src radixdlt/scrypto-builder:v1.2.0
 ```

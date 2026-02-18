@@ -91,7 +91,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
 
 -   Getting the status of various transactions after they've been submitted to the network via the wallet:
     
-    ```
+```rust
     // Fetch the transaction status from the Gateway API
     const transactionStatus = await gatewayApi.transaction.getStatus(
       result.value.transactionIntentHash
@@ -100,7 +100,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
     
 -   Finding the addresses of the new component and resources after instantiation (as component instantiation is a part of the front end this time):
     
-    ```
+```rust
     // Fetch the details of changes committed to ledger from Gateway API
     const committedDetails = await gatewayApi.transaction.getCommittedDetails(
       result.value.transactionIntentHash
@@ -116,7 +116,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
     
 -   Querying the ledger state of our Gumball Machine component to track price, number of gumballs and earnings:
     
-    ```
+```rust
     async function fetchAndShowGumballMachineState() {
       // Use Gateway API to fetch component details
       if (componentAddress) {
@@ -140,7 +140,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
     
     We then use these values to update the page:
     
-    ```
+```typescript
         // Show the values on the page
         document.getElementById("numOfGumballs").innerText = numOfGumballs;
         document.getElementById("price").innerText = price;

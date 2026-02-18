@@ -54,7 +54,7 @@ The global `GumballMachine` remains the same as in previous sections.
 
 -   Some of it's methods are restricted to its owner in the `enable_method_auth!` macro at the top of the blueprint.
     
-    ```
+```rust
     enable_method_auth! {
         methods {
             buy_gumball => PUBLIC;
@@ -68,7 +68,7 @@ The global `GumballMachine` remains the same as in previous sections.
     
 -   The component's address is reserved for token access rules.
     
-    ```
+```rust
     pub fn instantiate_gumball_machine(price: Decimal) ->
         (Global<GumballMachine>, Bucket) {
             // reserve an address for the component
@@ -80,13 +80,13 @@ The global `GumballMachine` remains the same as in previous sections.
     
 -   An owner badge is created. This will later be stored in the `CandyStore`, so it can call restricted methods on the `GumballMachine`.
     
-    ```
+```rust
     let owner_badge = ...
     ```
     
 -   Mint roles are set using the components reserved address ensuring that only the `GumballMachine` can mint new tokens.
     
-    ```
+```rust
         .mint_roles(mint_roles! {
             minter => rule!(require(
                 global_caller(component_address)
@@ -97,7 +97,7 @@ The global `GumballMachine` remains the same as in previous sections.
     
 -   Proof of the owner badge is made the required authorization for ownership and the address reservation is applied to the new component.
     
-    ```
+```rust
         .instantiate()
         .prepare_to_globalize(OwnerRole::Fixed(rule!(require(
             owner_badge.resource_address()
@@ -113,7 +113,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
 
 -   The component state holds the `GumballMachine` and a `Vault` containing the `GumballMachine` owner badge.
     
-    ```
+```rust
     struct CandyStore {
         gumball_machine: Global<GumballMachine>,
         gumball_machine_owner_badges: Vault,
@@ -122,7 +122,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
     
 -   The gumball machine is instantiated as a part of the candy store's own instantiate function.
     
-    ```
+```rust
     let (gumball_machine, gumball_machine_owner_badge) =
         GumballMachine::instantiate_gumball_machine(
             gumball_price
@@ -131,7 +131,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
     
 -   To call the `GumballMachine`'s public methods we can simply call them on the `CandyStore`'s internal `gumball_machine`.
     
-    ```
+```rust
       pub fn buy_gumball(&mut self, mut payment: Bucket) -> (Bucket, Bucket) {
         self.gumball_machine.buy_gumball(payment)
       }
@@ -139,7 +139,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
     
 -   To call a restricted method on the `GumballMachine` we need to pass a proof that we have it's owner badge by calling `authorize_with_amount` on the vault containing it.
     
-    ```
+```rust
     pub fn set_gumball_price(&mut self, new_price: Decimal) {
         self.gumball_machine_owner_badges
             .as_fungible()

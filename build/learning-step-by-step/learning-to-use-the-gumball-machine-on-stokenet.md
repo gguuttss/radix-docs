@@ -19,7 +19,7 @@ A component does not need to have its own badge to provide permission and perfor
 
 All components on the Radix ledger have a unique address assigned at instantiation, but the gumball token is defined inside the instantiate function. So we have access to the a component address inside the function before it's complete, we need to reserve it. We do so right at the start of `instantiate_gumball_machine`.
 
-```
+```rust
 let (address_reservation, component_address) =
     Runtime::allocate_component_address(GumballMachine::blueprint_id());
 ```
@@ -31,7 +31,7 @@ This give us the `component_address` to use for the minter rule, and the
 
 We update the minter rule to now require the component's own address to mint new gumballs. Only the component and therefore it's methods will be able to mint.
 
-```
+```rust
 .mint_roles(mint_roles! {
     minter => rule!(require(global_caller(component_address)));
     minter_updater => rule!(deny_all);
@@ -40,7 +40,7 @@ We update the minter rule to now require the component's own address to mint new
 
 The `address_reservation` is applied in the last instantiation step, giving our component the address we reserved and same address as used to mint new gumballs.
 
-```
+```rust
     .instantiate()
     .prepare_to_globalize(OwnerRole::Fixed(rule!(require(
         owner_badge.resource_address()
@@ -54,7 +54,7 @@ The `address_reservation` is applied in the last instantiation step, giving our 
 
 We now have one last thing to do before we publish the gumball machine. Outside of `resim` the token will be displayed in a variety of ways in dapps and wallets. So these can be more visually appealing we need to add an icon for the gumball token. This is done with just an extra metadata field called `icon_url`.
 
-```
+```rust
    "icon_url" => Url::of("https://assets.radixdlt.com/icons/icon-gumball-pink.png"), locked;
 ```
 

@@ -29,7 +29,7 @@ In many cases the resources you make will need to have information on them that 
 
 You can see them being set in the Hello blueprint in the in the `instantiate_hello` function here:
 
-```
+```rust
     .metadata(metadata! {
         init {
             "name" => "HelloToken", locked;
@@ -42,7 +42,7 @@ With different values here, we can create a new token with a different name and 
 
 Metadata fields that have url values must be of type `Url` and not `String`, as they are treated differently by the Radix engine. To do this convert the `String` to a `Url` with `Url::of()`, e.g.
 
-```
+```rust
 "icon_url" => Url::of("https://example.url/icon.png"), locked;
 ```
 

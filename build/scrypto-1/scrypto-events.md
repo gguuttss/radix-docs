@@ -17,7 +17,7 @@ pub enum WithdrawEvent {
 
 Events can be observed in the transaction stream. To receive events in this stream the following opt-in must be included in the request body:
 
-```
+```json
 "opt_ins": {
     "receipt_events": true
 }

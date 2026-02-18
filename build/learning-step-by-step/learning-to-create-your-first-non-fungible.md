@@ -46,7 +46,7 @@ Resource Builder methods
 
 For clarity we also change the metadata so we have a new name and symbol for our resource.
 
-```
+```rust
   .metadata(metadata! {
     init {
       "name" => "HelloNonFungible", locked;
@@ -57,7 +57,7 @@ For clarity we also change the metadata so we have a new name and symbol for our
 
 Finally, we need to mint our initial supply of non-fungibles. This is done by calling the `mint_initial_supply` method on our resource builder, but it now takes an array of `NonFungibleData` in the form described in our `Greeting` struct.
 
-```
+```rust
   .mint_initial_supply(
     [
       Greeting { text: "Hello".into(), },

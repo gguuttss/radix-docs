@@ -33,7 +33,7 @@ By default tokens can neither be recalled nor are they burnable. Turning these b
 
 The rules for these roles are a little different to the mint roles we added in previous examples. They accept either the owner or manager badges as authorisation not the component's address. Recall and burn therefore can't and won't be called by any of the component's methods. They will instead be called on the vault containing the staff badge and the recalled badge bucket respectively, shown in the `recall_staff_badge.rtm` transaction manifest here:
 
-```
+```rust
 RECALL_NON_FUNGIBLES_FROM_VAULT
     Address("<VAULT_ADDRESS>")
     Array<NonFungibleLocalId>(

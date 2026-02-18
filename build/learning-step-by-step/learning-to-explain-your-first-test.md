@@ -57,7 +57,7 @@ fn test_hello() {
 
 In that environment, we create an account:
 
-```
+```rust
     // Create an account
     let (public_key, _private_key, account) = ledger.new_allocated_account();
 ```
@@ -73,7 +73,7 @@ Once we have the package we can test the instantiate function. This is done by:
 
 1.  Building a manifest with the the [ManifestBuilder](../../integrate/rust-libraries/rust-manifest-builder.md):
     
-    ```
+```rust
         let manifest = ManifestBuilder::new()
             .lock_fee_from_faucet()
             .call_function(
@@ -87,7 +87,7 @@ Once we have the package we can test the instantiate function. This is done by:
     
 2.  Submitting the manifest to the ledger:
     
-    ```
+```rust
         let receipt = ledger.execute_manifest(
             manifest,
             vec![NonFungibleGlobalId::from_public_key(&public_key)],
@@ -96,7 +96,7 @@ Once we have the package we can test the instantiate function. This is done by:
     
 3.  Checking the manifest receipt to see if it successfully instantiated a new component, then storing the component address for later use if it did:
     
-    ```
+```rust
         let component = receipt.expect_commit(true).new_component_addresses()[0];
     ```
     
@@ -105,7 +105,7 @@ With the component in our test environment and its address, we can now test the 
 
 1.  Build a manifest:
     
-    ```
+```rust
      let manifest = ManifestBuilder::new()
          .lock_fee_from_faucet()
          .call_method(component, "free_token", manifest_args!())
@@ -119,7 +119,7 @@ With the component in our test environment and its address, we can now test the 
     
 2.  Submit the manifest to the ledger:
     
-    ```
+```rust
      let receipt = ledger.execute_manifest(
          manifest,
          vec![NonFungibleGlobalId::from_public_key(&public_key)],
@@ -128,7 +128,7 @@ With the component in our test environment and its address, we can now test the 
     
 3.  Check the manifest receipt to see if it was successful:
     
-    ```
+```rust
      receipt.expect_commit_success();
     ```
     

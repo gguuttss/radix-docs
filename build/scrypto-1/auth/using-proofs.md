@@ -117,7 +117,7 @@ In the Transaction manifest, Proofs returned from methods go straight onto the A
 
 If necessary, Proofs can be taken off with `POP_FROM_AUTH_ZONE` and put back with `PUSH_TO_AUTH_ZONE`:
 
-```
+```plainText
 PUSH_TO_AUTH_ZONE Proof("proof");
 POP_FROM_AUTH_ZONE Proof("popped_proof"); # Same proof, but it needs a new name
 ```
@@ -169,7 +169,7 @@ The standard method to protect your methods is by [assigning roles to methods](s
 
 For example, this might look like:
 
-```
+```rust
     enable_method_auth! {
         methods {
             withdraw_earnings => restrict_to: [OWNER];

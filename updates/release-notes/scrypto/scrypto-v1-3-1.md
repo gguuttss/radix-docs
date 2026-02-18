@@ -42,7 +42,7 @@ To understand the need for this we need to take a deep dive into how the data fl
 
 Let’s now say that you have the following argument in a manifest, which is equivalent to a `rule!(require(named_address))` which is a an access rule that requires a named address:
 
-```
+```plainText
 Enum<2u8>(  
     Enum<0u8>(  
         Enum<0u8>(  

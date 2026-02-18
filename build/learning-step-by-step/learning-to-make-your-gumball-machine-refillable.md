@@ -15,7 +15,7 @@ Tokens in the Radix Engine have a collection of behaviours that define what they
 
 By default tokens have a fixed supply. We need make the gumball resource mintable, so we can create more after the initial batch. Our token is made mintable by adding `mint_roles` to the `bucket_of_gumballs` in its initial definition.
 
-```
+```rust
 .mint_roles(mint_roles! {
     minter => rule!(allow_all);
     minter_updater => rule!(deny_all);
@@ -56,7 +56,7 @@ We've added just one new method to the gumball machine this time:
 
 -   `refill_gumball_machine` - Takes no arguments and refills the `gumballs` vault to 100 gumballs.
     
-    ```
+```rust
       pub fn refill_gumball_machine(&mut self) {
           let gumball_amount = 100 - self.gumballs.amount();
           self.gumballs

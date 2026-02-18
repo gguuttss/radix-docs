@@ -23,7 +23,7 @@ pub fn swap(&mut self, input_bucket: Bucket) -> Bucket {
 
 The exchange rate is determined by comparing the size of the resource pools with a formula used in many automated market makers (AMMs), a constant product formula that looks like this:
 
-```
+```rust
 output_amount = input_amount * (output_reserves / (input_reserves + input_amount))
 ```
 
@@ -56,7 +56,7 @@ The first and last of these are new to us.
 
 The first is simply the full owner role declaration that we've been declaring in blueprints before, usually either as `OwnerRole::None` or using the `rule!` macro and some resource address, e.g.
 
-```
+```rust
 OwnerRole::Fixed(rule!(require(
                 owner_badge.resource_address()
             )))
@@ -224,7 +224,7 @@ const componentDetails =
 
 As well as connect to and request details from a Radix Wallet:
 
-```
+```typescript
 rdt.walletApi.setRequestData(DataRequestBuilder.accounts().exactly(1));
 ```
 

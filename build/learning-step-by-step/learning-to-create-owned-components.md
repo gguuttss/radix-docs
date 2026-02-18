@@ -58,7 +58,7 @@ Global
 
 -   No method restrictions. This is now handled by the parent component.
 
-```
+```rust
 enable_method_auth! {
     methods {
         buy_gumball => PUBLIC;
@@ -122,7 +122,7 @@ Owned
 
 Global
 
-```
+```rust
     .mint_roles(mint_roles! {
         minter => rule!(require(
               global_caller(
@@ -132,7 +132,7 @@ Global
     })
 ```
 
-```
+```rust
     .mint_roles(mint_roles! {
         minter => rule!(require(
             global_caller(
@@ -148,11 +148,11 @@ Owned
 
 Global
 
-```
+```rust
     .instantiate()
 ```
 
-```
+```rust
     .instantiate()
     .prepare_to_globalize(OwnerRole::Fixed(rule!(require(
         owner_badge.resource_address()
@@ -192,7 +192,7 @@ Owner (owned GumballMachine)
 
 Non-owner (global GumballMachine)
 
-```
+```rust
 let (address_reservation, component_address) =
     Runtime::allocate_component_address(
         CandyStore::blueprint_id()
@@ -216,7 +216,7 @@ let gumball_machine =
      );
 ```
 
-```
+```rust
 let (
        gumball_machine,
        gumball_machine_owner_badge,
@@ -232,7 +232,7 @@ Owner (owned GumballMachine)
 
 Non-owner (global GumballMachine)
 
-```
+```rust
   .instantiate()
   .prepare_to_globalize(
     OwnerRole::Fixed(rule!(require(
@@ -242,7 +242,7 @@ Non-owner (global GumballMachine)
   .globalize();
 ```
 
-```
+```rust
     .instantiate()
     .prepare_to_globalize(
       OwnerRole::Fixed(rule!(require(

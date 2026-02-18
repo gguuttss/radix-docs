@@ -34,7 +34,7 @@ Development starts by creating a package. We'll use the `scrypto` command line t
 
 -   Open a new terminal in the directory where you'd like to create your new project and run the command below.
     
-    ```
+```bash
     scrypto new-package tutorial
     ```
     
@@ -57,7 +57,7 @@ Find the [instructions on how to setup VSCode here](../setting-up-for-scrypto-de
 
 -   Then open up `src/lib.rs` to see the source that we’re going to compile and deploy to the simulator.
     
-    ```
+```bash
     code tutorial/src/lib.rs
     ```
     
@@ -83,7 +83,7 @@ To deploy our package, we will therefore need an account with enough XRD to cove
 
 -   Most `resim` commands use an existing account, so before we do anything else, lets create one.
     
-    ```
+```bash
     resim new-account
     ```
     
@@ -105,7 +105,7 @@ Do not attempt to use this private key on the main network! It is seeded from a 
 
 -   If you do not see the line about setting your default account, then you already created an account previously. Either reset your entire simulator with the `resim reset` command and try again, or set this new account as your default account with the following command:
     
-    ```
+```bash
     resim set-default-account <ACCOUNT_ADDRESS> <PRIVATE_KEY> <OWNER_BADGE>
     ```
     
@@ -114,7 +114,7 @@ Do not attempt to use this private key on the main network! It is seeded from a 
 
 -   You can look at the resources in your new account by running:
     
-    ```
+```bash
     resim show <ACCOUNT_ADDRESS>
     ```
     
@@ -125,7 +125,7 @@ The `show` command can be used with any account component, component or resource
 
 You will get something like this:
 
-```
+```plainText
 Component Address: account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma
 Blueprint ID: { package_address: package_sim1pkgxxxxxxxxxaccntxxxxxxxxxx000929625493xxxxxxxxxrn8jm6, blueprint_name: "Account" }
 Owned Fungible Resources: 1
@@ -142,13 +142,13 @@ Note the `Owned Fungible Resources:` section, which indicates that the account a
 
 -   To publish/deploy our package, we need to make sure our terminal has navigated to the project root directory containing the `Cargo.toml` file:
     
-    ```
+```bash
     cd tutorial
     ```
     
 -   Then we use the radix engine simulator to publish/deploy our package locally
     
-    ```
+```bash
     resim publish .
     ```
     
@@ -165,7 +165,7 @@ Success! New Package: package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp
 
 -   Now our package is deployed "on ledger" in the simulator, we're going to create a component by calling the `instantiate_hello` function on the `Hello` blueprint.
     
-    ```
+```bash
     resim call-function <PACKAGE_ADDRESS> Hello instantiate_hello
     ```
     
@@ -262,7 +262,7 @@ Now that we have our component in our local environment, we can interact with th
 
 -   Let's call the `free_token` method.
     
-    ```
+```bash
     resim call-method <COMPONENT_ADDRESS> free_token
     ```
     
@@ -353,11 +353,11 @@ You'll now have a shiny new `HelloToken` in your account, and your `Hello` compo
 
 -   We can check this by using `resim show` on our account and `Hello` components.
     
-    ```
+```bash
     resim show <ACCOUNT_ADDRESS>
     ```
     
-    ```
+```bash
     resim show <COMPONENT_ADDRESS>
     ```
     
@@ -366,13 +366,13 @@ You'll now have a shiny new `HelloToken` in your account, and your `Hello` compo
 
 -   If you make changes to the structs within your code, then unfortunately you will have to run through the entire publish-instantiate-call flow from scratch, saving the new addresses as they appear. If you only make implementation changes then it is possible to update your package with:
     
-    ```
+```bash
     resim publish . --package-address <PACKAGE_ADDRESS>
     ```
     
 -   At any point you can instantly get a clean slate in the simulator by running:
     
-    ```
+```bash
     resim reset
     ```
     

@@ -73,7 +73,7 @@ const rdt = RadixDappToolkit(dappConfig);
 
 We then use the toolkit's wallet API to do a few different things. First we decide what data we want to request from connected wallets:
 
-```
+```typescript
 rdt.walletApi.setRequestData(DataRequestBuilder.accounts().exactly(1));
 ```
 

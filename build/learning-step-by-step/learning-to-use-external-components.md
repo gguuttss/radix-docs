@@ -13,7 +13,7 @@ There are [many methods to use external components in Scrypto](../scrypto-1/adva
 
 First, we use the `extern_blueprint!` macro to import the external blueprint into our own. This process is the same as in the previous section, but this time we won't instantiate the external component in our package.
 
-```
+```rust
 extern_blueprint! {
         // import the GumballMachine package from the ledger using its package address
         "<YOUR_GUMBALL_MACHINE_PACKAGE_ADDRESS>",

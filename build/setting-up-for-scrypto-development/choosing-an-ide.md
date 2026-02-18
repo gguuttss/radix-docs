@@ -31,7 +31,7 @@ Use these scripts to install the full scrypto toolchain on your machine.
 
 #### Windows
 
-```
+```bash
 Invoke-RestMethod 'https://raw.githubusercontent.com/radixdlt/radixdlt-scrypto/refs/heads/main/scrypto-install-scripts/install-scrypto-windows.ps1' | Invoke-Expression
 ```
 
@@ -63,7 +63,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
     -   Enable git long path support:
         
-        ```
+```plainText
         git config --system core.longpaths true
         ```
         
@@ -82,7 +82,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 -   Install the required Rust toolchain
     
-    ```
+```bash
     rustup default 1.92.0
     ```
     
@@ -115,7 +115,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 -   Make sure you have the `xcode` command line tools by running:
     
-    ```
+```bash
     xcode-select --install
     ```
     
@@ -125,20 +125,20 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
     If you don't already have homebrew installed you will need to follow the [instructions here](https://brew.sh/)
     
-    ```
+```bash
     brew install cmake llvm
     ```
     
 -   Add `LLVM` to the system path by updating `~/.zshrc` and `~/.profile`:
     
-    ```
+```bash
     path_update='export PATH="$(brew --prefix llvm)/bin:$PATH"' 
     echo $path_update >> ~/.zshrc && echo $path_update >> ~/.profile
     ```
     
 -   Install Rust compiler
     
-    ```
+```bash
     # Replace 1.92.0 with the required version
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.92.0 
     ```
@@ -174,13 +174,13 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 -   Make sure a C++ compiler and `LLVM` is installed:
     
-    ```
+```bash
     sudo apt install clang build-essential llvm
     ```
     
 -   Install Rust compiler
     
-    ```
+```bash
     # Replace 1.92.0 with the required version
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.92.0
     ```
@@ -216,7 +216,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 1.  Check your clang version
     
-    ```
+```bash
     clang --version
     ```
     
@@ -226,20 +226,20 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 4.  Reinstall required Rust toolchain
     
-    ```
+```bash
     # Replace 1.92.0 with the required version
     rustup default 1.92.0
     ```
     
 5.  Add WebAssembly target
     
-    ```
+```bash
     rustup target add wasm32-unknown-unknown
     ```
     
 6.  Install Radix Engine Simulator and command-line tools
     
-    ```
+```bash
     # Replace 1.3.1 with the required version
     cargo install --force radix-clis@1.3.1
     ```
@@ -251,21 +251,21 @@ Try the following steps:
 
 1.  Define rust stable:
     
-    ```
+```bash
     # Replace 1.92.0 with the required version
     rustup default 1.92.0
     ```
     
 2.  Install LLVM 21 using brew:
     
-    ```
+```bash
     # Replace 21 with the required version
     brew install llvm@21
     ```
     
 3.  Confirm the Installation Path:
     
-    ```
+```bash
     # Replace 21 with the required version
     brew --prefix llvm@21
     ```
@@ -274,7 +274,7 @@ Try the following steps:
     
 4.  Add the vesion `LLVM` to the system path:
     
-    ```
+```bash
     # Replace @21 with the required version
     path_update='export PATH="$(brew --prefix llvm@21)/bin:$PATH"' 
     echo $path_update >> ~/.zshrc && echo $path_update >> ~/.profile
@@ -284,7 +284,7 @@ Try the following steps:
     
 6.  Check that the installation of LLVM was done correctly by checking the clang version
     
-    ```
+```bash
     clang --version
     ```
     
@@ -292,19 +292,19 @@ Try the following steps:
     
 8.  Reset the XCode config:
     
-    ```
+```bash
     xcodebuild -runFirstLaunch
     ```
     
 9.  Add WebAssembly target
     
-    ```
+```bash
     rustup target add wasm32-unknown-unknown
     ```
     
 10.  Install Radix Engine Simulator and command-line tools
      
-     ```
+```bash
      cargo install --force radix-clis@1.3.1
      ```
      
@@ -313,13 +313,13 @@ Try the following steps:
 
 1.  Remove command line tools
     
-    ```
+```bash
     sudo rm -rf /Library/Developer/CommandLineTools
     ```
     
 2.  Reinstall command line tools
     
-    ```
+```bash
     xcode-select install
     ```
     

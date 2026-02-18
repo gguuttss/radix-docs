@@ -16,7 +16,7 @@ Authorization in Scrypto is handled with roles. Each component has 2 predefined 
 Additional roles are defined in the `enable_method_auth!` macro at the top of  
 the blueprint code. We add the manager and staff roles here:
 
-```
+```rust
 enable_method_auth! {
     roles {
         manager => updatable_by: [OWNER];
@@ -26,7 +26,7 @@ enable_method_auth! {
 
 The component methods can then be restricted to one or more roles:
 
-```
+```rust
     methods {
         buy_candy => PUBLIC;
         buy_chocolate_egg => PUBLIC;
@@ -61,7 +61,7 @@ The Staff badge, as well as having it's own `name` and `symbol`, is mintable in 
 
 To make it mintable we've set the minter rule to require the component address as proof. To do that we have to reserve an address for the component at the beginning of the instantiate function.
 
-```
+```rust
 let (address_reservation, component_address) =
     Runtime::allocate_component_address(CandyStore::blueprint_id());
 ```

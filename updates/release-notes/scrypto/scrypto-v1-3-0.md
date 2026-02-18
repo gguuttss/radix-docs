@@ -136,7 +136,7 @@ A brief overview of the new V2 instructions are as follows. Full detail and exam
 
 More cryptographic primitive utilities have been added to the Radix Engine, available in [CryptoUtils](https://docs.rs/scrypto/1.3.0/scrypto/crypto_utils/struct.CryptoUtils.html) in Scrypto:
 
-```
+```rust
 CryptoUtils::blake2b_256_hash(&data);
 CryptoUtils::ed25519_verify(&message, &pub_key, &signature);
 CryptoUtils::secp256k1_ecdsa_verify(&hash, &pub_key, &signature);

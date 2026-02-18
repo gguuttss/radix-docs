@@ -104,7 +104,7 @@ Unstored Tokens
 
 If tokens do not end up in a vault, you would need to confirm they are the correct resource by comparing the resource address with your desired address, e.g.
 
-```
+```rust
 assert_eq!(payment.resource_address(), XRD);
 ```
 
