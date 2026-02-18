@@ -28,7 +28,7 @@ Obviously, you’ll need to have the `babylonnode` CLI installed before you opti
 
 For guidance on installing the babylonnode CLI, take a look at [Installing the babylonnode CLI](../node-setup/node-setup-guided/node-setup-guided-installing-cli.md).
 
-### 1\. Set up the optimiser
+### 1. Set up the optimiser
 
 1.  Execute the following command:
     
@@ -41,7 +41,7 @@ For guidance on installing the babylonnode CLI, take a look at [Installing the b
 2.  Log out of the shell then log in again.
     
 
-### 2\. Run the optimiser
+### 2. Run the optimiser
 
 1.  Once the optimiser has installed, and you’ve logged back into the shell, run the same command to carry out the optimisations:
     
@@ -56,7 +56,7 @@ For guidance on installing the babylonnode CLI, take a look at [Installing the b
 4.  Log out of your session to update the settings, then log in again.
     
 
-### 3\. Check your settings
+### 3. Check your settings
 
 To check your settings, execute the following command:
 

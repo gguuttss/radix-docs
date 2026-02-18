@@ -11,11 +11,11 @@ The CLI supports running the node either using Docker or via systemd. However, w
 
 Each step specifies the commands for each mode - you should only run the commands for the mode of your choice (e.g. only those for the “Docker mode”), not both.
 
-### 1\. Install the babylonnode CLI
+### 1. Install the babylonnode CLI
 
 If you haven’t done so already, [install the babylonnode CLI](node-setup-guided-installing-cli.md).
 
-### 2\. Install the dependencies on the host machine
+### 2. Install the dependencies on the host machine
 
 This is required only to be run during first time setup on a new host machine. This is done through one simple call of the `babylonnode` CLI script.
 
@@ -45,7 +45,7 @@ Execute following commands so that the radixdlt user can use sudo commands witho
   $ exit
 ```
 
-### 3\. Install the node
+### 3. Install the node
 
 #### 3.1. Create the config file
 
@@ -155,7 +155,7 @@ babylonnode systemd install
 > 3.  **Optional** - The `-t` setting is the address of a Radix node you can use to join the network (a seed node). Select one from the list of seed nodes.
 >     
 
-### 4\. Set passwords for the nginx server
+### 4. Set passwords for the nginx server
 
 By default there are two separate users configured for accessing the APIs:
 
@@ -190,7 +190,7 @@ By default there are two separate users configured for accessing the APIs:
     ```
     
 
-### 5\. Verifying that the node works
+### 5. Verifying that the node works
 
 After you’ve installed the node using the commands above, it should start automatically. It should start processing the genesis transactions. Depending on your setup mode you can use either `docker logs -f ubuntu-core-1` or `journalctl -f -u radixdlt-node` to view the logs. You should be seeing messages that begin with “Committing data ingestion chunk…” in the output log. This may take up to 30 minutes to fully process, depending on your hardware. Usually it finishes in around 10-15 minutes.
 
@@ -222,7 +222,7 @@ There’s a `current_epoch_round` field in the response and both the `epoch` and
 Congratulations! At this point you’ve got a fully operational Radix node connected to the network.  
 Note that it might take some time until it’s fully synced up with the latest ledger state. You can check the current epoch using one of the community-run Radix network dashboards on the internet.
 
-### 7\. Stopping your node
+### 7. Stopping your node
 
 This command will shut down a `systemd` or `docker` node, and is executed differently depending on which kind of installation you’re running.
 
@@ -242,7 +242,7 @@ babylonnode systemd stop
 
 Optional parameter `-f` can be used to point to config.yaml file
 
-### 8\. Restarting your node
+### 8. Restarting your node
 
 Restart the node using the following command:
 
@@ -262,7 +262,7 @@ babylonnode systemd restart
 
 Optional parameter `-f` can be used to point to config.yaml file
 
-### 10\. Advanced user config
+### 10. Advanced user config
 
 For advanced users, there is an additional file that can be optionally mounted to provide additional configuration to the `babylon-node` application which will be appended to the configuration when executing the `install` command. This allows to add configuration that the `babylonnode` CLI does not natively support.
 

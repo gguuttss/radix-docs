@@ -29,7 +29,7 @@ If running monitoring on a separate host, we’d recommend the following (or equ
 | t3.medium | 2 | 4 GB | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 60 GB of SSD space | At least 100 Mbps | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/) |
 
 
-### 1\. Set up the Nginx Metrics password
+### 1. Set up the Nginx Metrics password
 
 In order to make sure the node/gateway is secure as possible, the metrics API endpoint is configured with a separate password in the nginx layer.
 
@@ -58,7 +58,7 @@ Then run the below command to setup password
 babylonnode auth set-metrics-password -m SYSTEMD
 ```
 
-### 2\. Set up the monitoring service
+### 2. Set up the monitoring service
 
 This step will be performed on the host you wish to install monitoring.
 
@@ -181,7 +181,7 @@ babylonnode monitoring install
 
 And that’s pretty much it.
 
-### 3\. Accessing the dashboard.
+### 3. Accessing the dashboard.
 
 From the monitoring host, you can view your node’s dashboard remotely using any browser, using this URL pattern:
 
@@ -206,7 +206,8 @@ Navigate to Dashboards > Radix Node Dashboard:
 Grafana will now the example dashboard:
 
 <figure><img src="../../../.gitbook/assets/radix-node-validator-dashboard.png" alt="The Grafana Dashboard"><figcaption><p>The Grafana Dashboard</p></figcaption></figure>
-### 4\. Accessing the metrics endpoint
+
+### 4. Accessing the metrics endpoint
 
 Now that the dashboard is up and running, you may want to add new elements yourself, or use the data from the node to build other applications for monitoring and gathering information.
 
@@ -225,7 +226,7 @@ curl -X -k GET --location "https://GATEWAY_API_HOST:METRICS_PORT/gateway/metrics
 
 Where nginx-password is the password you set up earlier.
 
-### 5\. Shut down Node monitoring
+### 5. Shut down Node monitoring
 
 To shut down the monitor on the monitoring host, use the following command:
 

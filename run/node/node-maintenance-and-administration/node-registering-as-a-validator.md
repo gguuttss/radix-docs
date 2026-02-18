@@ -32,7 +32,7 @@ In the consensus layer, a node can represent the validator if it is configured w
 -   You should have set up a [Babylon Radix Wallet](https://www.radixdlt.com/wallet).
     
 
-### 1\. Get your wallet connected and an account set up with XRD
+### 1. Get your wallet connected and an account set up with XRD
 
 -   Go to the Dashboard \[[Stokenet](https://stokenet-dashboard.radixdlt.com/) | [Mainnet](https://dashboard.radixdlt.com/)\], and connect your wallet using the connect button.
     
@@ -41,7 +41,7 @@ In the consensus layer, a node can represent the validator if it is configured w
 -   Click on the Connect button, and make a note of the referenced account address. This will be your `<ACCOUNT_ADDRESS>` in the following steps.
     
 
-### 2\. Gather your node public key
+### 2. Gather your node public key
 
 Query your node’s System API to retrieve the public key that’s associated with it (in a hex format).
 
@@ -73,7 +73,7 @@ You will receive a response like this:
 
 Take a note of the `public_key_hex`. This will be your `<NODE_PUBLIC_KEY_HEX>` in the following steps.
 
-### 3\. Create your validator component
+### 3. Create your validator component
 
 Go to “Send Raw Transaction” on the console \[[Stokenet](https://stokenet-console.radixdlt.com/transaction-manifest) | [Mainnet](https://console.radixdlt.com/transaction-manifest)\].
 
@@ -163,7 +163,7 @@ Then, go to the “Network staking” page of the dashboard \[[Stokenet](https:
 -   Find your `<BADGE_LOCAL_ID>` by copying the value in the `OWNER_BADGE` metadata.
     
 
-### 4\. Reconfigure your node to identify as this validator
+### 4. Reconfigure your node to identify as this validator
 
 #### 4.1. If set-up using the `babylonnode` CLI
 
@@ -226,7 +226,7 @@ Then restart. Your node should start up as a validator now - which can be verifi
 curl http://localhost:3334/system/identity
 ```
 
-### 5\. Configure your validator
+### 5. Configure your validator
 
 Go to “Send Raw Transaction” on the console \[[Stokenet](https://stokenet-console.radixdlt.com/transaction-manifest) | [Mainnet](https://console.radixdlt.com/transaction-manifest)\].
 
@@ -318,7 +318,7 @@ Submit this transaction, approve it in the wallet, and go to the results page in
 
 Note: You can use the "update\_key", "update\_fee" and "update\_accept\_delegated\_stake" to update the validator’s Secp256k1PublicKey, decimal fee factor proportion, and accept stake boolean respectively. Updating the fee factor takes effect after a number of epochs. This fee factor update delay will be 100 epochs (500 minutes) for testnets, but 2 weeks of epochs for mainnet. Further updates to the fee factor in that time will reset the time till update.
 
-### 6\. Stake a little to your validator
+### 6. Stake a little to your validator
 
 Go to “Send Raw Transaction” on the console \[[Stokenet](https://stokenet-console.radixdlt.com/transaction-manifest) | [Mainnet](https://console.radixdlt.com/transaction-manifest)\].
 
@@ -380,7 +380,7 @@ Submit this transaction, approve it in the wallet, and go to the results page in
 
 Note - Instead of the "stake" method, there is also a "stake\_as\_owner" method which requires the owner badge, but can allow you to stake even if your validator does not currently accept delegated stake.
 
-### 7\. Lock some stake as owner stake
+### 7. Lock some stake as owner stake
 
 New at Babylon is the concept of "Owner Stake". This works a little differently compared to Olympia.
 
@@ -450,7 +450,7 @@ CALL_METHOD
 
 You can start unlocking stake units with `"start_unlock_owner_stake_units" Decimal("<Amount>")` and claim stake units which have finished unlocking with `"finish_unlock_owner_stake_units"` and then depositing the returned stake units to your account.
 
-### 8\. Checking your validator is active
+### 8. Checking your validator is active
 
 > This only applies if you’ve made it to the top 100 validators.
 
@@ -460,6 +460,6 @@ This time, it should include `"consensus_status": "VALIDATING_IN_CURRENT_EPOCH"`
 
 Also check out the validators page on the dashboard and see if you can spot your validator.
 
-### 9\. \[Stokenet only\] Request the RDX team stake to your validator
+### 9. \[Stokenet only\] Request the RDX team stake to your validator
 
 Post on the #node-runners channel on the [Radix DiscRadix Discord servererver](https://go.radixdlt.com/Discord), and the Network Team will be able to stake a large chunk of XRD to your validator, so it can get a decent count of rounds in consensus.

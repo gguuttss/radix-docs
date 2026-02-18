@@ -58,7 +58,7 @@ mod hello {
 }
 ```
 
-### 1\. Defining Component Structure
+### 1. Defining Component Structure
 
 ```rust
     struct Hello {
@@ -69,7 +69,7 @@ mod hello {
 
 Every blueprint must start with a `struct` defining what is stored where in the component. The `struct` has the same name as the blueprint.
 
-### 2\. Instantiating a Component from a Package
+### 2. Instantiating a Component from a Package
 
 ```rust
     pub fn instantiate_hello() -> Global<Hello> {
@@ -155,7 +155,7 @@ Self {
 
 This completes the `instantiate_hello` function which creates a new `HelloToken` definition with an initial supply of 1000, stores the 1000 tokens inside a state struct and instantiates a new component from that state.
 
-### 3\. Component Methods
+### 3. Component Methods
 
 ```rust
     pub fn free_token(&mut self) -> Bucket {

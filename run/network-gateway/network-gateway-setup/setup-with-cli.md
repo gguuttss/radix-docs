@@ -15,13 +15,13 @@ All services will be setup to run in docker, except PostgreSQL, which will be se
 
 This guide will take you through how to setup the full stack with docker and the `babylonnode` CLI.
 
-### 1\. Provision the host machines
+### 1. Provision the host machines
 
 The first step is to work out which setup and host machine requirements best suite your needs using the [Network Gateway Setup Overview](README.md).
 
 Once you have provisioned the required host machines, continue the instructions below.
 
-### 2\. Prepare the host machines
+### 2. Prepare the host machines
 
 This is required only to be run during first time setup on a new host machine.
 
@@ -33,7 +33,7 @@ babylonnode docker dependencies
 
 Once the process has completed, you will be asked to log out of your ssh bash session and log back in.
 
-### 3\. Configure each host machine
+### 3. Configure each host machine
 
 You should only need to do this setup the first time you setup on a host machine. If you’re upgrading, skip to the next step.
 
@@ -137,7 +137,7 @@ This setup can be achieved by creating a config file using the DETAILED mode, on
 babylonnode docker config -m DETAILED
 ```
 
-### 4\. Install or update on each host machine
+### 4. Install or update on each host machine
 
 Once the configuration file has been created, run the following on each host:
 
@@ -156,7 +156,7 @@ babylonnode docker install
 
 > The configuration file includes a version number. If the CLI is updated to use a new configuration version, it may prompt you to manually migrate the configuration file to the new version. Instructions to perform this manual migration will live in the release notes of the CLI.
 
-### 5\. Set passwords for nginx reverse proxy
+### 5. Set passwords for nginx reverse proxy
 
 The full node’s Core API and System API; and the Network Gateway’s Gateway API, are both protected by nginx. If Core and Gateway are on the same host, they share a single nginx, otherwise, the full node and Gateway API will have separate nginx instances on each host.
 
@@ -184,7 +184,7 @@ babylonnode auth set-superadmin-password --setupmode DOCKER
 babylonnode auth set-metrics-password --setupmode DOCKER
 ```
 
-### 6\. Make sure the gateway is running
+### 6. Make sure the gateway is running
 
 The gateway status can be checked by running the below command.
 
@@ -224,7 +224,7 @@ The key values in the above response are:
 3.  `target_ledger_state.version` is the latest ledger transaction number that the connected CORE node can see on the network.
     
 
-### 7\. Setting up Monitoring
+### 7. Setting up Monitoring
 
 Monitoring can be set up on the same host as an existing setup, or on another host. It also includes a database, so can cause increased IO contention. For that reason, we’d recommend running it on a separate host, with connections to the other hosts.
 

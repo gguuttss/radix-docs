@@ -3,7 +3,7 @@ title: "Installing the babylonnode CLI"
 ---
 # Installing the babylonnode CLI
 
-### 1\. Update the packages
+### 1. Update the packages
 
 Start by ensuring that the package list on the system is up to date by running the following command from the terminal:
 
@@ -17,7 +17,7 @@ You’ll also need `wget` and `curl`, if they do not come preinstalled on your d
 sudo apt install wget curl
 ```
 
-### 2\. Download and install the babylonnode CLI
+### 2. Download and install the babylonnode CLI
 
 Now download the `babylonnode` CLI from its GitHub repository.
 

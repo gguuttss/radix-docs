@@ -57,7 +57,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 ### Manual Windows Install
 
-#### 1\. Install LLVM & Rust compiler
+#### 1. Install LLVM & Rust compiler
 
 -   Install git by running the [git installer for windows](https://gitforwindows.org/)
     
@@ -87,23 +87,23 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 ```
     
 
-#### 2\. Enable cargo in the current shell
+#### 2. Enable cargo in the current shell
 
 -   Start a new **PowerShell**
 
-#### 3\. Add WebAssembly target
+#### 3. Add WebAssembly target
 
 ```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
-#### 4\. Install Radix Engine Simulator and command-line tools
+#### 4. Install Radix Engine Simulator and command-line tools
 
 ```bash
 cargo install --force radix-clis@1.3.1
 ```
 
-#### 5\. Next Steps
+#### 5. Next Steps
 
 After Installation
 
@@ -111,7 +111,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 ### Manual macOS Install
 
-#### 1\. Install LLVM & Rust compiler
+#### 1. Install LLVM & Rust compiler
 
 -   Make sure you have the `xcode` command line tools by running:
     
@@ -144,25 +144,25 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 ```
     
 
-#### 2\. Enable cargo in the current shell
+#### 2. Enable cargo in the current shell
 
 ```bash
 source $HOME/.cargo/env
 ```
 
-#### 3\. Add WebAssembly target
+#### 3. Add WebAssembly target
 
 ```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
-#### 4\. Install Radix Engine Simulator and command-line tools
+#### 4. Install Radix Engine Simulator and command-line tools
 
 ```bash
 cargo install --force radix-clis@1.3.1
 ```
 
-#### 5\. Next Steps
+#### 5. Next Steps
 
 After Installation
 
@@ -170,7 +170,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 ### Manual Linux Install
 
-#### 1\. Install LLVM & Rust compiler
+#### 1. Install LLVM & Rust compiler
 
 -   Make sure a C++ compiler and `LLVM` is installed:
     
@@ -186,25 +186,25 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 ```
     
 
-#### 2\. Enable cargo in the current shell
+#### 2. Enable cargo in the current shell
 
 ```bash
 source $HOME/.cargo/env
 ```
 
-#### 3\. Add WebAssembly target
+#### 3. Add WebAssembly target
 
 ```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
-#### 4\. Install Radix Engine Simulator and command-line tools
+#### 4. Install Radix Engine Simulator and command-line tools
 
 ```bash
 cargo install --force radix-clis@1.3.1
 ```
 
-#### 5\. Next Steps
+#### 5. Next Steps
 
 After Installation
 
