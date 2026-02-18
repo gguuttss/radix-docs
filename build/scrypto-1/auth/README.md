@@ -33,14 +33,14 @@ let access_rule: AccessRule = rule!(require(some_resource_address));
 
 `access_rule` in this case is a rule which only passes if the AuthZone contains a proof of `some_resource_address`.
 
-The assignment of AccessRules to functions and methods is slightly different between the two. For functions, an AccessRule [is assigned directly to a given function](assign-function-accessrules). For methods, a role based access control system is used which [statically maps a set of roles to each method](structure-roles-and-methods) and an [AccessRule is assigned to each role](assign-component-roles).
+The assignment of AccessRules to functions and methods is slightly different between the two. For functions, an AccessRule [is assigned directly to a given function](assign-function-accessrules.md). For methods, a role based access control system is used which [statically maps a set of roles to each method](structure-roles-and-methods.md) and an [AccessRule is assigned to each role](assign-component-roles.md).
 
 ## Useful Auth Design Patterns
 
--   [User Badge Pattern](user-badge-pattern)
+-   [User Badge Pattern](../scrypto-design-patterns/user-badge-pattern.md)
     
--   [Actor Virtual Badge Pattern](actor-virtual-badge-pattern)
+-   [Actor Virtual Badge Pattern](../scrypto-design-patterns/actor-virtual-badge-pattern.md)
     
--   [The Withdraw Pattern](the-withdraw-pattern)
+-   [The Withdraw Pattern](../scrypto-design-patterns/the-withdraw-pattern.md)
     
--   [Transient Badge Pattern](transient-badge-pattern)
+-   [Transient Badge Pattern](../scrypto-design-patterns/transient-badge-pattern.md)

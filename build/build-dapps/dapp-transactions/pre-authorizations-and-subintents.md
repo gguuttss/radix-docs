@@ -3,9 +3,9 @@ title: "Pre-authorization / Subintent Flow"
 ---
 # Pre-authorization / Subintent Flow
 
-Pre-authorizations (the user-facing name for [subintents](subintents)) allow a partial transaction to be authorized by one actor such that it can then become a part of a larger atomic transaction. That larger transaction can then be submitted to the network by another actor. They are a powerful tool which can be used for a wide number of new use cases.
+Pre-authorizations (the user-facing name for [subintents](../../../reference/transactions/subintents.md)) allow a partial transaction to be authorized by one actor such that it can then become a part of a larger atomic transaction. That larger transaction can then be submitted to the network by another actor. They are a powerful tool which can be used for a wide number of new use cases.
 
-Pre-authorizations launched on mainnet at the [Cuttlefish](cuttlefish) protocol update in December 2024.
+Pre-authorizations launched on mainnet at the [Cuttlefish](../../../updates/protocol-updates/cuttlefish.md) protocol update in December 2024.
 
 ## Introduction to Pre-authorization
 
@@ -19,22 +19,22 @@ The following diagram compares the standard transaction request flow with the pr
 
 The pre-authorization flow happens in four parts:
 
-1.  **Pre-authorization request:** A dApp front-end uses the [dApp toolkit](dapp-toolkit) to send a [pre-authorization request](https://github.com/radixdlt/radix-dapp-toolkit/blob/main/packages/dapp-toolkit/README.md#preauthorization-requests) to the wallet which includes a [subintent](subintents) manifest stub, an expiry schedule and an optional message.
+1.  **Pre-authorization request:** A dApp front-end uses the [dApp toolkit](../dapp-application-stack/dapp-sdks/dapp-toolkit.md) to send a [pre-authorization request](https://github.com/radixdlt/radix-dapp-toolkit/blob/main/packages/dapp-toolkit/README.md#preauthorization-requests) to the wallet which includes a [subintent](../../../reference/transactions/subintents.md) manifest stub, an expiry schedule and an optional message.
     -   A subintent manifest stub must not include any fee locks - these are included by the [transaction intent](transaction-intent).
-    -   The Radix Wallet currently requires that pre-authorizations do not have children of their own - all [interaction with other subintents](intent-structure) must go through its parent.
+    -   The Radix Wallet currently requires that pre-authorizations do not have children of their own - all [interaction with other subintents](../../../reference/transactions/intent-structure.md) must go through its parent.
     -   At execution time, a subintent does not start running until it is yielded to from its parent. The parent may pass the subintent buckets immediately, which end up on its starting worktop.
     -   A subintent manifest *must* end with a `YIELD_TO_PARENT` instruction, and *may* include additional intermediate yields, if it needs to run logic before/after interaction with the rest of the transaction.
     -   If possible, it's recommended to *first withdraw/yield buckets* and then *deposit buckets at the end*. This allows the most liquidity/flexibility in the rest of the transaction.
     -   The manifest stub should include `ASSERT_...` instructions to ensure that the user ends up with at least the resources they expect.
 2.  **User review and signing:** The wallet shows a pre-authorization review for the user, and if they sign, passes it back to the dApp as a hex-encoded `SignedPartialTransaction` (which just contains a single signed subintent with no children).
-    -   If the subintent is [self-contained](subintents), it is shown with a preview-style review, which allows the user to add their own guarantees.
+    -   If the subintent is [self-contained](../../../reference/transactions/subintents.md), it is shown with a preview-style review, which allows the user to add their own guarantees.
     -   If the subintent has a ["GeneralSubintent" classification](docs/conforming-manifest-types#01-general-subintent) then it displays statically-computable bounds on the user's account withdrawals and deposits. The wallet may add access controller calls to access the provided wallets, but will otherwise not change the manifest. The dApp developer will likely need to tweak the `ASSERT_...` instructions to ensure the bounds are as the user expects. These is detailed guidance on this under the [GeneralSubintent](docs/conforming-manifest-types#01-general-subintent) conforming manifest type.
 3.  **Propagation:** The dApp front-end is then responsible for relaying the signed partial transaction to a back-end service which can build it into a transaction and submit it.
     -   Depending on the use case, this may be the dApp's own backend, or it may be to a specific external intent matcher (such as Anthic) or a more general subintent aggregator/solver (which doesn't exist as of Cuttlefish launch).
     -   Note that the subintent aggregation and propagation is out-of-band of the network. The network mempools only operate with transactions.
     -   Each subintent aggregation service may have their own requests for metadata the dApp provides. Some may request that the manifest stub contains a `VERIFY_PARENT` instruction to ensure only their aggregator can be used.
 4.  **Transaction construction and submission:** The subintent aggregator finds/creates other intents to work with the subintent(s) it receives, builds up the transaction using a v2 partial transaction builder / transaction builder, previews the resulting transaction, and if happy, notarizes it and submits it to the network.
-    -   The [v2 (partial) transaction builders](rust-transaction-building) are available in the [v1.3.0+ rust radix-transactions crate](rust-libraries-overview) or in a variety of UniFFI [Radix Engine Toolkits](radix-engine-toolkit). As of December 2024, they are not yet available in the Typescript Radix Engine Toolkit.
+    -   The [v2 (partial) transaction builders](../../../integrate/rust-libraries/rust-transaction-building.md) are available in the [v1.3.0+ rust radix-transactions crate](../../../integrate/rust-libraries/rust-libraries-overview.md) or in a variety of UniFFI [Radix Engine Toolkits](../../../integrate/radix-engine-toolkit/README.md). As of December 2024, they are not yet available in the Typescript Radix Engine Toolkit.
     -   A v2 preview transaction can be created from the transaction builder, and previewed with the v2 preview endpoint on the [Core API](https://radix-babylon-core-api.redoc.ly/#tag/Transaction/paths/~1transaction~1preview-v2/post) or [Gateway API](https://radix-babylon-gateway-api.redoc.ly/#operation/TransactionPreviewV2).
 
 ## Use Cases
@@ -46,7 +46,7 @@ In this use case, a dApp wishes to unconditionally pay fees for a user's interac
 The dApp acts as the subintent aggregator, in order to pay fees for a user's subintent:
 
 1.  The dApp sends the user a pre-authorization request with a subintent manifest to interact with their app, much like a transaction request.
-    -   To get a typical preview-based review experience where the user can set guarantees, the subintent manifest stub should ideally be [self-contained](subintents). If not, the user will get a static review based on guaranteed deposit amounts.
+    -   To get a typical preview-based review experience where the user can set guarantees, the subintent manifest stub should ideally be [self-contained](../../../reference/transactions/subintents.md). If not, the user will get a static review based on guaranteed deposit amounts.
 2.  The dApp backend would then:
     -   Decompile the subintent to verify it is doing exactly what the dApp expects and so the dApp is comfortable paying fees for the user
     -   Wrap it in a transaction intent, where the transaction intent locks a fees from the dApp account
@@ -58,7 +58,7 @@ The dApp acts as the subintent aggregator, in order to pay fees for a user's sub
 
 ### User Badge Deposit
 
-A dApp wishes to deposit a user badge to a user's account [where they *may* have configured their account to reject deposits of new resources](account).
+A dApp wishes to deposit a user badge to a user's account [where they *may* have configured their account to reject deposits of new resources](../../../reference/radix-engine/native-blueprints/account.md).
 
 In this case, the dApp acts as the subintent aggregator and:
 

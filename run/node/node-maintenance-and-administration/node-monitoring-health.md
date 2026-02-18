@@ -5,7 +5,7 @@ title: "Monitoring node's health"
 
 Radix node provides the System API that can be used to monitor its health.
 
-You can query **your own node** at these endpoints to get various kinds of data about the the operation of the node. The easiest way to call the endpoints is through the `babylonnode` script (see [Installing the babylonnode CLI](node-setup-guided-installing-cli) for more information), but you can also use `curl`, for example.
+You can query **your own node** at these endpoints to get various kinds of data about the the operation of the node. The easiest way to call the endpoints is through the `babylonnode` script (see [Installing the babylonnode CLI](../node-setup/node-setup-guided/node-setup-guided-installing-cli.md) for more information), but you can also use `curl`, for example.
 
 ### The /health endpoint
 
@@ -49,4 +49,4 @@ The status message will be one of the following codes:
 
 The `/metrics` endpoint provides a wealth of performance and operational data. While it can be queried directly, it is designed for use with monitoring and alerting dashboards, such as [Grafana](https://grafana.com/), and so provides its data in the [Prometheus data format](https://prometheus.io/docs/instrumenting/exposition_formats/#text-based-format).
 
-Radix provides a convenient [Grafana monitoring dashboard installation through the babylonnode CLI](node-setting-up-grafana).
+Radix provides a convenient [Grafana monitoring dashboard installation through the babylonnode CLI](node-setting-up-grafana.md).

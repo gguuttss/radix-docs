@@ -35,7 +35,7 @@ Now that we have more than just the scrypto package, we need to reorganize our p
 
 Every dapp needs a dapp definition; an account with metadata that identifies the dapp on the network. It creates a way for the Radix Wallet (and other clients) to know and verify what dapp it's interacting with as well as what components and resources that dapp is associated with.
 
-We are only going to connect this dapp to the Stokenet test network, but for Mainnet you will need to [provide the dapp definition address in the client](dapp-definition-setup) as well. Without this, verification will not work and the Radix Wallet will not be able to connect. This is explained further in [Set Verification Metadata](learning-to-set-verification-metadata) section of this step-by-step
+We are only going to connect this dapp to the Stokenet test network, but for Mainnet you will need to [provide the dapp definition address in the client](../build-dapps/dapp-application-stack/dapp-definition-setup.md) as well. Without this, verification will not work and the Radix Wallet will not be able to connect. This is explained further in [Set Verification Metadata](learning-to-set-verification-metadata.md) section of this step-by-step
 
 ## The Radix Dapp Toolkit
 

@@ -7,23 +7,23 @@ You can use the [radix-transactions](https://docs.rs/radix-transactions/latest) 
 
 ## Other languages
 
--   The UniFFI [Radix Engine Toolkit](radix-engine-toolkit) enables building transactions in other languages (e.g. Swift, Kotlin, Go, Python), with a similar API to the below.
+-   The UniFFI [Radix Engine Toolkit](../radix-engine-toolkit/README.md) enables building transactions in other languages (e.g. Swift, Kotlin, Go, Python), with a similar API to the below.
 -   The Typescript Radix Engine Toolkit allows building v1 transactions, but does not have support for building v2 transactions as-of December 2024.
 
 ## Choosing the version to build
 
-If starting your programmatic integration now, we recommend building [V2 transactions](transaction-overview) introduced at Cuttlefish.
+If starting your programmatic integration now, we recommend building [V2 transactions](../../reference/transactions/transaction-overview.md) introduced at Cuttlefish.
 
 Even if you don't use subintents, they offer a few advantages over V1 transactions, including:
 
 -   Support for timestamp expiry.
 -   A collission-resistant intent discriminator.
--   More flexible [instructions for assertions](manifest-instructions).
+-   More flexible [instructions for assertions](../../reference/transactions/manifest/manifest-instructions.md).
 -   A more user-friendly builder, which outputs a detailed transaction with hashes.
 
 Building for the Wallet
 
-In the unlikely circumstance where you are using the Rust manifest builder to build a manifest stub which will be used in the dApp toolkit, note that at Cuttlefish launch, only v1 instructions are supported in the wallet for the `sendTransaction` action. v2 instructions are supported in the [pre-authorization flow](pre-authorizations-and-subintents) however.
+In the unlikely circumstance where you are using the Rust manifest builder to build a manifest stub which will be used in the dApp toolkit, note that at Cuttlefish launch, only v1 instructions are supported in the wallet for the `sendTransaction` action. v2 instructions are supported in the [pre-authorization flow](../../build/build-dapps/dapp-transactions/pre-authorizations-and-subintents.md) however.
 
 ## Transaction V2
 
@@ -31,9 +31,9 @@ To build V2 transactions, you can use the [TransactionV2Builder](https://docs.rs
 
 You will need to integrate with the [Gateway API](gateway-api) or [Core API](core-api) to resolve the current epoch.
 
-Support for external signers (e.g. HSMs) is available via implementing the (blocking/non-async) `Signer` trait. Note the [Curves, Keys, Signatures and Hashing](concepts-curves-keys-signatures-and-hashing) guide for the canonical serialization to use for keys and signatures.
+Support for external signers (e.g. HSMs) is available via implementing the (blocking/non-async) `Signer` trait. Note the [Curves, Keys, Signatures and Hashing](../../reference/babylon-technical-concepts/concepts-curves-keys-signatures-and-hashing.md) guide for the canonical serialization to use for keys and signatures.
 
-You will likely want to read the documentation on [intent structure](intent-structure) before beginning.
+You will likely want to read the documentation on [intent structure](../../reference/transactions/intent-structure.md) before beginning.
 
 ### Configuration
 
@@ -145,11 +145,11 @@ let subintent_manifest = ManifestBuilder::new_subintent_v2()
 
 ## Legacy Transaction V1
 
-To build basic V1 transations, you can use the [TransactionV1Builder](https://docs.rs/radix-transactions/latest/radix_transactions/builder/struct.TransactionV1Builder.html), along with the [ManifestBuilder](rust-manifest-builder).
+To build basic V1 transations, you can use the [TransactionV1Builder](https://docs.rs/radix-transactions/latest/radix_transactions/builder/struct.TransactionV1Builder.html), along with the [ManifestBuilder](rust-manifest-builder.md).
 
 You will need to integrate with the [Gateway API](gateway-api) or [Core API](core-api) to resolve the current epoch.
 
-Support for external signers (e.g. HSMs) is available via implementing the (blocking/non-async) `Signer` trait. Note the [Curves, Keys, Signatures and Hashing](concepts-curves-keys-signatures-and-hashing) guide for the canonical serialization to use for keys and signatures.
+Support for external signers (e.g. HSMs) is available via implementing the (blocking/non-async) `Signer` trait. Note the [Curves, Keys, Signatures and Hashing](../../reference/babylon-technical-concepts/concepts-curves-keys-signatures-and-hashing.md) guide for the canonical serialization to use for keys and signatures.
 
 ```
 // The notary can be an ephemeral key (in which case, set notary_is_signatory as false)

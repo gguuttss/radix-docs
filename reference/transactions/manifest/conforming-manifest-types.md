@@ -151,16 +151,16 @@ The following instructions are disallowed:
         
     -   Resources (e.g. mints)
         
--   Calling non-main-module methods (`CALL_ROYALTY_METHOD`, `CALL_METADATA_METHOD`, `CALL_ROLE_ASSIGNMENT_METHOD`, `CALL_DIRECT_VAULT_METHOD` and [their associated aliases](manifest-instructions))
+-   Calling non-main-module methods (`CALL_ROYALTY_METHOD`, `CALL_METADATA_METHOD`, `CALL_ROLE_ASSIGNMENT_METHOD`, `CALL_DIRECT_VAULT_METHOD` and [their associated aliases](manifest-instructions.md))
     
 -   Interacting with other intents (`YIELD_TO_PARENT`, `YIELD_TO_CHILD` and `VERIFY_PARENT`)
     
 
 ### 0.1) General Subintent
 
-For [pre-authorization](pre-authorizations-and-subintents) summaries to be shown in conforming form in the wallet, their manifest has to have a “General Subintent” type.
+For [pre-authorization](../../../build/build-dapps/dapp-transactions/pre-authorizations-and-subintents.md) summaries to be shown in conforming form in the wallet, their manifest has to have a “General Subintent” type.
 
-A manifest is classified as a General [Subintent](subintents) if:
+A manifest is classified as a General [Subintent](../subintents.md) if:
 
 -   It has at least one `YIELD_TO_PARENT` instruction.
     
@@ -173,7 +173,7 @@ Note that a General Subintent is currently not allowed to have children itself.
 
 The pre-authorization display focuses on statically guaranteed resource movements.
 
-To optimize display of your manifest stub in the wallet, you should try to ensure that the static guarantees are very clear, by using certain [manifest instructions](manifest-instructions) to constrain what is possible.
+To optimize display of your manifest stub in the wallet, you should try to ensure that the static guarantees are very clear, by using certain [manifest instructions](manifest-instructions.md) to constrain what is possible.
 
 -   If your manifest is **self-contained**, and doesn’t interact with its parent, then the subintent is transaction-like and the wallet can give a best display using transaction rules and preview. To achieve this, start with `ASSERT_WORKTOP_IS_EMPTY`, end with an empty `YIELD_TO_PARENT` and contain no other subintent-only instructions.
     
@@ -193,7 +193,7 @@ If you’re not careful, users may see warnings like this, because they have app
 
 ![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot 2025-01-08 at 17.05.03.png)
 
-There are a lots of patterns that can be used to constrain the [account](account) deposits. The following are some examples of possible structures for this:
+There are a lots of patterns that can be used to constrain the [account](../../radix-engine/native-blueprints/account.md) deposits. The following are some examples of possible structures for this:
 
 -   If you know an exact set of resources that will be deposited, then:
     
@@ -313,7 +313,7 @@ With this type, the wallet is able to show a summary of a set of claims in a “
 
 ### 7) Update Account Deposit Settings
 
-This type is when a user is updating the configuration settings of one or more of their own [accounts](account) that control if/how third-parties are able to deposit assets to them.
+This type is when a user is updating the configuration settings of one or more of their own [accounts](../../radix-engine/native-blueprints/account.md) that control if/how third-parties are able to deposit assets to them.
 
 **Allowed transaction manifest instructions:**
 

@@ -3,7 +3,7 @@ title: "Displaying Non-fungible data"
 ---
 # Displaying Non-fungible data
 
-To display a non-fungible, you will want to [display its id](non-fungible-display), and possibly display its associated data.
+To display a non-fungible, you will want to [display its id](non-fungible-display.md), and possibly display its associated data.
 
 This article captures the rules the Wallet uses to display non-fungible data. Other clients may choose their own representations of non-fungible data, but we recommend the standardized interpretation of certain fields.
 
@@ -13,9 +13,9 @@ Non-fungibles are transferred individually, and each holds its own data. This da
 
 For example, I might have a set of "Dallas Mavericks Tickets" NFTs where the data struct says that each individual ticket non-fungible must have a `game_date` and `seat_number`. Each separate non-fungible under this resource will potentially have a different value for `game_date` and `seat_number`.
 
-Non-fungible data is encoded as [Scrypto SBOR](scrypto-sbor), and the engine ensures it matches the schema of the Non-Fungible data type, defined on the Non-Fungible Resource. The engine also validates that the top-layer is of a Tuple type with named fields.
+Non-fungible data is encoded as [Scrypto SBOR](../../sbor-serialization/scrypto-sbor/README.md), and the engine ensures it matches the schema of the Non-Fungible data type, defined on the Non-Fungible Resource. The engine also validates that the top-layer is of a Tuple type with named fields.
 
-This data structure is recursive, and can be displayed by parsing the [annotated programmatic SBOR JSON](sbor-programmatic-json) from the Gateway API.
+This data structure is recursive, and can be displayed by parsing the [annotated programmatic SBOR JSON](../../sbor-serialization/sbor-textual-representations/sbor-programmatic-json.md) from the Gateway API.
 
 Some top-level field names have standardized purposes and are discussed below. But the other fields can be displayed by mapping the returned SBOR json into a tree-based data view.
 
@@ -93,4 +93,4 @@ The `NonFungibleLocalId` is used to address a specific non-fungible, must be uni
 
 For example, the `NonFungibleLocalId` might be a string set to “mavs\_lakers\_122524\_44G”.
 
-For more details on how we recommend non-fungible ids to be displayed, please see the [non-fungible display](non-fungible-display) article.
+For more details on how we recommend non-fungible ids to be displayed, please see the [non-fungible display](non-fungible-display.md) article.

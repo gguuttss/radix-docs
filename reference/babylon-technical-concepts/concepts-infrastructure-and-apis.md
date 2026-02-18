@@ -15,7 +15,7 @@ The node’s APIs are:
 -   **System API** - exposes information about system health and connections.
 -   **Prometheus API** - exposes metrics from the node in prometheus format.
 
-[Documentation on Babylon Network APIs can be found here.](network-apis)
+[Documentation on Babylon Network APIs can be found here.](../../integrate/network-apis/README.md)
 
 ### Exchanges
 
@@ -31,6 +31,6 @@ Exchanges will need to run their own Babylon full node/s. Documentation on [runn
 
 ## Network Gateway
 
-Wallets and Dashboards use the [**Gateway API**](network-apis#gateway-api), which offers more complex APIs, which allow for more indexing and lookup of historic ledger state.
+Wallets and Dashboards use the [**Gateway API**](../../integrate/network-apis/README.md#gateway-api), which offers more complex APIs, which allow for more indexing and lookup of historic ledger state.
 
-Running a Gateway is more expensive than a Babylon full node. Documentation on [running a Network Gateway can be found here](network-gateway)
+Running a Gateway is more expensive than a Babylon full node. Documentation on [running a Network Gateway can be found here](../../run/network-gateway/README.md)

@@ -5,7 +5,7 @@ title: "Setup with CLI"
 
 ## Install gateway and core using CLI
 
-Before starting on this, please read the [Network Gateway Setup Overview](network-gateway-setup) to decide what setup you require.
+Before starting on this, please read the [Network Gateway Setup Overview](README.md) to decide what setup you require.
 
 ### Introduction
 
@@ -17,7 +17,7 @@ This guide will take you through how to setup the full stack with docker and the
 
 ### 1\. Provision the host machines
 
-The first step is to work out which setup and host machine requirements best suite your needs using the [Network Gateway Setup Overview](network-gateway-setup).
+The first step is to work out which setup and host machine requirements best suite your needs using the [Network Gateway Setup Overview](README.md).
 
 Once you have provisioned the required host machines, continue the instructions below.
 
@@ -25,7 +25,7 @@ Once you have provisioned the required host machines, continue the instructions 
 
 This is required only to be run during first time setup on a new host machine.
 
-On each host machine, first [install the CLI](setup-with-cli). Then install the dependencies:
+On each host machine, first [install the CLI](setup-with-cli.md). Then install the dependencies:
 
 ```bash
 babylonnode docker dependencies
@@ -77,7 +77,7 @@ This process will configure the following services onto the single host:
 -   \[CORE & GATEWAY, STATELESS\] An Nginx reverse proxy running with docker compose, providing access to the Core, System and Gateway APIs.
     
 
-It is assumed that you already have a [PostgreSQL database with sufficient specification](configuration) - either in a separate managed service or on another host; that you can connect to from the host we’re configuring. You will need to provide connection details to this database as part of the config process.
+It is assumed that you already have a [PostgreSQL database with sufficient specification](custom-setup/configuration.md) - either in a separate managed service or on another host; that you can connect to from the host we’re configuring. You will need to provide connection details to this database as part of the config process.
 
 This setup can be achieved by creating a config file using the `DETAILED` mode:
 
@@ -129,7 +129,7 @@ This process will configure the following services onto the second host:
 -   \[GATEWAY, STATELESS\] An Nginx reverse proxy running with docker compose, providing access to the Gateway API.
     
 
-It is assumed that you already have a [PostgreSQL database with sufficient specification](configuration) - either in a separate managed service or on another host; that you can connect to from the second host. You will need to provide connection details to this database as part of the config process.
+It is assumed that you already have a [PostgreSQL database with sufficient specification](custom-setup/configuration.md) - either in a separate managed service or on another host; that you can connect to from the second host. You will need to provide connection details to this database as part of the config process.
 
 This setup can be achieved by creating a config file using the DETAILED mode, on each host:
 
@@ -173,7 +173,7 @@ When you run setup, you can select which endpoints are protected by HTTP basic a
 -   `metrics` - For the node, Data Aggregator and Gateway API metrics endpoints
     
 
-For more details on these endpoints, see the [api specification docs](network-apis).
+For more details on these endpoints, see the [api specification docs](../../../integrate/network-apis/README.md).
 
 By default, a random password is generated for each user and output by the CLI, but this can be updated using the following CLI commands. Ensure you update the relevant password on each host that runs nginx:
 
@@ -228,4 +228,4 @@ The key values in the above response are:
 
 Monitoring can be set up on the same host as an existing setup, or on another host. It also includes a database, so can cause increased IO contention. For that reason, we’d recommend running it on a separate host, with connections to the other hosts.
 
-Please see [this guide for setting up the Grafana Monitoring stack](node-setting-up-grafana).
+Please see [this guide for setting up the Grafana Monitoring stack](../../node/node-maintenance-and-administration/node-setting-up-grafana.md).

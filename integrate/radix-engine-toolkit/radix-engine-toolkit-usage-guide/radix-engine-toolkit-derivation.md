@@ -9,7 +9,7 @@ This article is a usage guide for the derivation module of the Radix Engine Tool
 
 Deterministically maps a public key to its associated virtual account component address.
 
-An account can be virtual or physical (see the "[Account Virtualization](account#account-virtualization)" article). A virtual account is an account with no physical state on the ledger, just virtual state, and whose component address is derived from the public key associated with the private key controlling the account. A virtual account only becomes physical after the first transaction that interacts with the account.
+An account can be virtual or physical (see the "[Account Virtualization](../../../reference/radix-engine/native-blueprints/account.md#account-virtualization)" article). A virtual account is an account with no physical state on the ledger, just virtual state, and whose component address is derived from the public key associated with the private key controlling the account. A virtual account only becomes physical after the first transaction that interacts with the account.
 
 ### Function Name
 

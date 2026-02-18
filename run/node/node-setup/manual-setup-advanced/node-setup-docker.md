@@ -6,12 +6,12 @@ title: "Manual Setup with Docker"
 ### Introduction
 
 Welcome to the Radix node manual setup guide!  
-Before we begin, make sure you’ve read the [Node Setup Introduction](node-setup).
+Before we begin, make sure you’ve read the [Node Setup Introduction](../README.md).
 
-On this page we’ll guide you through the process of setting up your node to run inside a Docker container directly on the host system, and we’ll do it manually (i.e. without the use of our helper `babylonnode` CLI). Using the CLI is an alternative and easier way (for dedicated server instances). Manual mode is however better suited for shared servers (i.e. when the server isn’t solely dedicated to running a Radix node) or non-Ubuntu hosts. If you wish to switch to a CLI path, go to [Guided Setup Instructions](node-setup-guided).  
-There’s also an alternative path that utilizes systemd, instead of Docker [here](node-setup-systemd) (also manually, i.e. without using our CLI).
+On this page we’ll guide you through the process of setting up your node to run inside a Docker container directly on the host system, and we’ll do it manually (i.e. without the use of our helper `babylonnode` CLI). Using the CLI is an alternative and easier way (for dedicated server instances). Manual mode is however better suited for shared servers (i.e. when the server isn’t solely dedicated to running a Radix node) or non-Ubuntu hosts. If you wish to switch to a CLI path, go to [Guided Setup Instructions](../node-setup-guided/README.md).  
+There’s also an alternative path that utilizes systemd, instead of Docker [here](node-setup-systemd/README.md) (also manually, i.e. without using our CLI).
 
-You can use any compatible operating system (again, check [Node Setup Introduction](node-setup) for details), however all examples in this guide will be for Ubuntu 22.04. Consult your system’s manual for the corresponding packages/commands.
+You can use any compatible operating system (again, check [Node Setup Introduction](../README.md) for details), however all examples in this guide will be for Ubuntu 22.04. Consult your system’s manual for the corresponding packages/commands.
 
 We’ve split the installation into discrete stages:
 

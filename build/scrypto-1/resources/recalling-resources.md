@@ -3,7 +3,7 @@ title: "Recalling Resources"
 ---
 # Recalling Resources
 
-Recalling resources is only possible for resources where this feature has been enabled, by setting an explicit rule for `recaller` or `recaller_updater`. Such resources are clearly flagged in the Radix explorer and wallet, as per the [resource behaviors](resource-behaviors) guide.
+Recalling resources is only possible for resources where this feature has been enabled, by setting an explicit rule for `recaller` or `recaller_updater`. Such resources are clearly flagged in the Radix explorer and wallet, as per the [resource behaviors](resource-behaviors.md) guide.
 
 ## Recall Transaction
 

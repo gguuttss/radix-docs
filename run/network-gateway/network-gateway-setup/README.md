@@ -72,7 +72,7 @@ For the deployment approach, see the **Custom** option, in a tab below.
 
 ### Host Requirements
 
-Whatever your setup, we’d also recommend [deploying the Grafana / Monitoring stack](node-setting-up-grafana), which should be deployed onto a separate host.
+Whatever your setup, we’d also recommend [deploying the Grafana / Monitoring stack](../../node/node-maintenance-and-administration/node-setting-up-grafana.md), which should be deployed onto a separate host.
 
 **Single Host**
 
@@ -195,7 +195,7 @@ You should initially provision 250 GB of SSD space
 
 GATEWAY DB:
 
-See the dedicated [Network Gateway service requirements](requirements) for the suggested Gateway DB requirements.
+See the dedicated [Network Gateway service requirements](custom-setup/requirements.md) for the suggested Gateway DB requirements.
 
 **Dual Host**
 
@@ -374,15 +374,15 @@ You should initially provision 250 GB of SSD space
 
 **GATEWAY:**
 
-See the dedicated [Network Gateway service requirements](requirements). You will want to combine Data Aggregator and Gateway API requirements, as these will be deployed onto the same host. Both of these services are stateless.
+See the dedicated [Network Gateway service requirements](custom-setup/requirements.md). You will want to combine Data Aggregator and Gateway API requirements, as these will be deployed onto the same host. Both of these services are stateless.
 
 **GATEWAY DB:**
 
-See the dedicated [Network Gateway service requirements](requirements) for the suggested Gateway DB requirements.
+See the dedicated [Network Gateway service requirements](custom-setup/requirements.md) for the suggested Gateway DB requirements.
 
 **Kubernetes**
 
-See the [dedicated Network Gateway service requirements](requirements) for requirements by service / pod.
+See the [dedicated Network Gateway service requirements](custom-setup/requirements.md) for requirements by service / pod.
 
 ### Deployment Approach
 
@@ -396,13 +396,13 @@ This setup isn’t designed for production workloads, and so defaults to running
 
 This runs the node and gateway on Ubuntu hosts, with the option of connecting to an external PostgreSQL Database.
 
-See [setting up the network gateway using the CLI](setup-with-cli) for more information.
+See [setting up the network gateway using the CLI](setup-with-cli.md) for more information.
 
-The CLI configures the Gateway with sensible default configuration. If you’d like to have more ability to configure your Gateway, you may need to instead [deploy and configure a custom network gateway.](custom-setup)
+The CLI configures the Gateway with sensible default configuration. If you’d like to have more ability to configure your Gateway, you may need to instead [deploy and configure a custom network gateway.](custom-setup/README.md)
 
 **Custom**
 
-See [setting up a custom network gateway](custom-setup).
+See [setting up a custom network gateway](custom-setup/README.md).
 
 * * *
 

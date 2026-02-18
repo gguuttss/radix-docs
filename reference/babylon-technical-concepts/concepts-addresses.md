@@ -19,7 +19,7 @@ The use of the Bech32m addressing scheme comes with a number of benefits:
 -   All addresses are now checksummed and therefore typographical errors can be detected and corrected.
 -   The entity specifier makes it clear what the address is meant to represent.
 
-The Radix Engine Toolkit can [generate virtual account addresses from a Ed25519 or Secp256k1 public key](radix-engine-toolkit-derivation#virtual-account-address-from-a-public-key), removing the need to implement Bech32m encoding/decoding.
+The Radix Engine Toolkit can [generate virtual account addresses from a Ed25519 or Secp256k1 public key](../../integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/radix-engine-toolkit-derivation.md#virtual-account-address-from-a-public-key), removing the need to implement Bech32m encoding/decoding.
 
 ## Encoded Data
 
@@ -55,4 +55,4 @@ The address HRP contains a network specifier which is used to specify which netw
 
 ## Display of Resource Addresses and Non-Fungibles
 
-Please see the Standards section for recommendations on [Displaying Resource Addresses](resource-address-display) and [Displaying Non-Fungibles](non-fungible-display) in UIs.
+Please see the Standards section for recommendations on [Displaying Resource Addresses](../standards/ui-ux-standards/resource-address-display.md) and [Displaying Non-Fungibles](../standards/non-fungible-standards/non-fungible-display.md) in UIs.

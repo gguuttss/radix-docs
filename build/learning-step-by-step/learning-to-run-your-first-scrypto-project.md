@@ -62,7 +62,7 @@ Find the [instructions on how to setup VSCode here](https://docs.radixdlt.com/v1
     ```
     
 
-The `Hello` blueprint has one function which creates a new component with a supply of tokens (`instantiate_hello`), and one method to get one of those tokens from the component (`free_token`). A detailed explanation of this blueprint is in the [next learning journey section](learning-to-explain-your-first-scrypto-project).
+The `Hello` blueprint has one function which creates a new component with a supply of tokens (`instantiate_hello`), and one method to get one of those tokens from the component (`free_token`). A detailed explanation of this blueprint is in the [next learning journey section](learning-to-explain-your-first-scrypto-project.md).
 
 So far we've completed steps;
 
@@ -379,6 +379,6 @@ You'll now have a shiny new `HelloToken` in your account, and your `Hello` compo
     You almost certainly need to do this if you switch to working on a different project.
     
 
-Well done. You've finished this introductory tutorial on using `resim` for Scrypto. You can continuing your learning journey with our explanation of the package code in the next section, [Explain Your First Scrypto Project](learning-to-explain-your-first-scrypto-project).
+Well done. You've finished this introductory tutorial on using `resim` for Scrypto. You can continuing your learning journey with our explanation of the package code in the next section, [Explain Your First Scrypto Project](learning-to-explain-your-first-scrypto-project.md).
 
 Let us know if you find any section helpful or not by clicking one of the buttons below ⬇. You can also let us know about a typo or outdated information using the same buttons.

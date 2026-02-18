@@ -15,7 +15,7 @@ You can create a `Proof` for a particular resource from a `Vault` or (rarely) a 
 
 Proofs have a quantity associated with them, and a Proof can not be created with a quantity of 0. That is, if you have a `Vault` which is configured to hold a specified resource, but that `Vault` is empty, you can’t create a Proof of that resource.
 
-Examples of how to create and use Proofs can be found in [Using Proofs](using-proofs)
+Examples of how to create and use Proofs can be found in [Using Proofs](using-proofs.md)
 
 ### The Authorization Zone
 

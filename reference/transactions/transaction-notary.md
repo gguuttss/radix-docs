@@ -25,7 +25,7 @@ Generally there will be one party who is orchestrating the transaction construct
 Compared to many other networks, the Babylon engine:
 
 -   Doesn't have a clear "signer" or "fee payer" on a transaction.
--   Is designed so that the presence/absence of signatures can cause the transaction to fail (via the [auth model](auth) and [implicit signature requirements](advanced-accessrules)); but does not affect the execution of the transaction.
+-   Is designed so that the presence/absence of signatures can cause the transaction to fail (via the [auth model](../../build/scrypto-1/auth/README.md) and [implicit signature requirements](../../build/scrypto-1/auth/advanced-accessrules.md)); but does not affect the execution of the transaction.
     -   In particular, you can't read the signatories inside the transaction.
     -   This has benefits in terms of readability: the intent itself captures the content of the transaction.
     -   It allows makes preview more powerful and accurate: we can support flags to disable authorization without affecting control flow.
@@ -36,7 +36,7 @@ We wanted our transaction design to:
 -   Support sending concurrent transactions without worrying about interaction between these transactions where it wasn't required (i.e. to avoid the "account nonce" feature)
 -   Prevent tampering of the signatures which could cause a transaction payload to fail unfairly and waste the fee
 
-We also had other requirements for the transaction design (e.g. to avoid adding permanent bloat to the ledger state) - these further aspects of the design are captured in the [Transaction Tracker](transaction-tracker) reference.
+We also had other requirements for the transaction design (e.g. to avoid adding permanent bloat to the ledger state) - these further aspects of the design are captured in the [Transaction Tracker](../radix-engine/native-blueprints/transaction-tracker.md) reference.
 
 The notary concept solves these problems:
 

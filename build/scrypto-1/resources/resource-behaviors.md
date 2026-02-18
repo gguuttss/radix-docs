@@ -9,7 +9,7 @@ New resources created with the ResourceBuilder can also be attributed with speci
 
 > Defining access rules
 > 
-> Full details on the `rule!(..)` macro in the below is covered in [Advanced AccessRules](advanced-accessrules).
+> Full details on the `rule!(..)` macro in the below is covered in [Advanced AccessRules](../auth/advanced-accessrules.md).
 
 <table width="100%" class="editor360-table" borderstyle="Solid"><colgroup style="display:none;"><col style="width:347px;"><col style="width:250px;"></colgroup><tbody><tr><th colspan="1" rowspan="1" colwidth="347" style="vertical-align:middle;text-align:left;width:347px;"><p>Method</p></th><th colspan="1" rowspan="1" style="vertical-align:middle;text-align:left;"><p>Description</p></th></tr><tr><td colspan="1" rowspan="1" colwidth="347"><pre language="rust" data-custom-title="Custom" class="language-rust"><code class="language-rust" spellcheck="false">OwnerRole::None
 OwnerRole::Fixed(rule!(..))

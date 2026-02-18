@@ -13,7 +13,7 @@ In the mean time here are a few things you might be interested in for a full sta
 
 -   Find out how to [Install the Scrypto Toolchain](https://docs.radixdlt.com/docs/getting-rust-scrypto)
 -   Have a look at the [Learning Step-by-Step](https://docs.radixdlt.com/docs/learning-step-by-step) where the [Scrypto and Front End path](https://docs.radixdlt.com/docs/learning-step-by-step#scrypto-and-front-end) highlights any sections you can ignore if you don't want to worry about a front end.
--   The [main Scrypto docs pages](scrypto-1).
+-   The [main Scrypto docs pages](../scrypto-1/README.md).
 -   The [Rust Scrypto docs](https://docs.rs/scrypto/latest/scrypto/index.html)
--   The [Stokenet Dev Console](https://stokenet-console.radixdlt.com/), and just in case you skipped past it on your way here the [Radix Dashboard page](radix-dashboard).
+-   The [Stokenet Dev Console](https://stokenet-console.radixdlt.com/), and just in case you skipped past it on your way here the [Radix Dashboard page](../../use/radix-dashboard.md).
 -   The [Reference Materials page](/useful-links) is loaded with important links could be useful for developing in Scrypto

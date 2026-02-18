@@ -49,7 +49,7 @@ See the [rustdocs](https://docs.rs/scrypto/latest/scrypto/runtime/struct.Clock.h
 
 A new set of crypto APIs have been introduced. Using these APIs is much cheaper than doing the same computation within WASM.
 
-For use guides, please refer to [Cryptography](cryptography)
+For use guides, please refer to [Cryptography](../../../build/scrypto-1/cryptography/README.md)
 
 ### Pool Blueprints Update
 

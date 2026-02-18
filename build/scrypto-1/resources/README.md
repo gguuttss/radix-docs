@@ -45,11 +45,11 @@ Non-fungible resources, each individual resource unit is uniquely addressable an
 
 ## Resource Behaviors
 
-Resources have [configurable behavior](resource-behaviors) which is intrinsically understood by the Radix engine and clearly communicated to consumers, such as wallets.
+Resources have [configurable behavior](resource-behaviors.md) which is intrinsically understood by the Radix engine and clearly communicated to consumers, such as wallets.
 
 A developer is able to specify rules around things like who is able to mint more supply (if anyone), whether it requires special rights to deposit or withdraw it, and so forth. It is also possible to specify which of these rules can be changed after creation, and who is able to change those rules.
 
-Please see the [Resource Creation](resource-creation-in-detail) and [Resource Behaviors](resource-behaviors) documentation for an explanation of how to define these rules, and examples of their usage.
+Please see the [Resource Creation](resource-creation-in-detail.md) and [Resource Behaviors](resource-behaviors.md) documentation for an explanation of how to define these rules, and examples of their usage.
 
 ## Resource Containers
 
@@ -60,7 +60,7 @@ Resources on Radix need to always be placed in some kind of resource containers.
 -   `Vault` - Vaults are permanent containers where resources must live. Therefore, every transaction which use buckets to move resources must be transferred to a Vault by the end of a transaction.
     
 
-We will go over in detail in a later section [Buckets and Vaults](buckets-and-vaults) and you can also see more details of the `Bucket` and `Vault` implementations in the Scrypto Rust docs:
+We will go over in detail in a later section [Buckets and Vaults](buckets-and-vaults.md) and you can also see more details of the `Bucket` and `Vault` implementations in the Scrypto Rust docs:
 
 -   [scrypto::blueprints::resource::Bucket](https://docs.rs/scrypto/latest/scrypto/blueprints/resource/struct.Bucket.html)
     
@@ -76,4 +76,4 @@ Scrypto offers a handful of utilities to conveniently create and manage resource
 -   `ResourceManager` - When a resource is created, a ResourceManager is also created to manage and define resource behaviors.
     
 
-We will go into more detail about the `ResourceBuilder` and `ResourceManager` in the next section [Resource Creation in Detail](resource-creation-in-detail).
+We will go into more detail about the `ResourceBuilder` and `ResourceManager` in the next section [Resource Creation in Detail](resource-creation-in-detail.md).

@@ -167,7 +167,7 @@ If a dApp only adds their account locker to the `claimed_entities` field of the 
 
 ### Airdrop from Manifest
 
-Doing an airdrop using the account locker blueprint is simple and involves two main steps: the first step is instantiating a new account locker component from the account locker blueprint ([get the `locker_package` address](well-known-addresses)) and the second is performing the airdrop by calling the `airdrop` method on the account locker. Notice that none of these steps require a custom Scrypto blueprint, the entire airdrop process and the potential user claims can be done through a series of transaction manifests.
+Doing an airdrop using the account locker blueprint is simple and involves two main steps: the first step is instantiating a new account locker component from the account locker blueprint ([get the `locker_package` address](../../babylon-technical-concepts/well-known-addresses.md)) and the second is performing the airdrop by calling the `airdrop` method on the account locker. Notice that none of these steps require a custom Scrypto blueprint, the entire airdrop process and the potential user claims can be done through a series of transaction manifests.
 
 To create a new account locker we will use the `instantiate_simple` method which will create a new admin badge and set it as the owner, storer, and potentially the recoverer of the account locker. This method takes a single argument which is `allow_recover` that is a boolean that controls whether the admin can recover resources that have not been claimed. Since some people might not claim their airdrops in time we will set the `allow_recover` flag to true in this example.
 

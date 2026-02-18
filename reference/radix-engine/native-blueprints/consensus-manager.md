@@ -7,7 +7,7 @@ This document offers a description of the design and implementation of the Conse
 
 > Low-level details below
 > 
-> If you are only looking for the Consensus Manager’s public interface, please skip directly to the [API reference](consensus-manager#api-reference).
+> If you are only looking for the Consensus Manager’s public interface, please skip directly to the [API reference](consensus-manager.md#api-reference).
 
 ## Background
 
@@ -28,9 +28,9 @@ In Radix, the Consensus Manager native component is responsible for bridging the
 > 
 > The singleton Consensus Manager’s instance is created and started by the system during Genesis (i.e. it is not supposed to be instantiated by users). You can find its well-known address for each Network [here](https://docs.radixdlt.com/docs/well-known-addresses).
 
-The Consensus Manager’s [internal responsibilities](consensus-manager#internal-responsibilities) (i.e. related to Consensus progress) are performed at the beginning of each Consensus Round, when a special system transaction calls the protected `ConsensusManager::next_round()` method.
+The Consensus Manager’s [internal responsibilities](consensus-manager.md#internal-responsibilities) (i.e. related to Consensus progress) are performed at the beginning of each Consensus Round, when a special system transaction calls the protected `ConsensusManager::next_round()` method.
 
-Apart from that, the Consensus Manager exposes [public methods](consensus-manager#methods) for:
+Apart from that, the Consensus Manager exposes [public methods](consensus-manager.md#methods) for:
 
 -   Using the Consensus wall-clock.
     

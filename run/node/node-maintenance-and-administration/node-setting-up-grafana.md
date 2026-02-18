@@ -15,11 +15,11 @@ The Prometheus/Grafana installation has been packaged as part of the `babylonnod
 
 ### Prerequisites
 
-It probably goes without saying that before you can install the node monitoring software, you must have a node and/or gateway up and running. If you haven’t, then run through one of our guides which will show you how to do it. Start by reading the [Node Setup Introduction](node-setup) to work out which service/s to run.
+It probably goes without saying that before you can install the node monitoring software, you must have a node and/or gateway up and running. If you haven’t, then run through one of our guides which will show you how to do it. Start by reading the [Node Setup Introduction](../node-setup/README.md) to work out which service/s to run.
 
 Monitoring can be set up on the same host as an existing setup, or on another host. Monitoring also includes a database, so can cause increased IO contention. For that reason, we’d recommend running it on a separate host, with connections to the other host/s.
 
-Before you start, you must have the [babylonnode CLI](node-setup-guided-installing-cli) installed on the host you intend to install monitoring.
+Before you start, you must have the [babylonnode CLI](../node-setup/node-setup-guided/node-setup-guided-installing-cli.md) installed on the host you intend to install monitoring.
 
 If running monitoring on a separate host, we’d recommend the following (or equivalent) specs:
 

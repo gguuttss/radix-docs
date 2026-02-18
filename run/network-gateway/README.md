@@ -23,4 +23,4 @@ If you wish to perform custom queries on ledger data, or integrate an applicatio
 
 The Network Gateway code forms a reference implementation, and can be deployed directly, forked, or used as a reference to build other systems which integrate with the Core API.
 
-If you wish to deploy a Network Gateway directly, we provide some guidance in the [Setup](network-gateway-setup) article.
+If you wish to deploy a Network Gateway directly, we provide some guidance in the [Setup](network-gateway-setup/README.md) article.

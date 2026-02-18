@@ -50,4 +50,4 @@ sudo mv babylonnode /usr/local/bin
 > 
 > You may also need to set the current user as the owner of the `radixdlt` directory.
 
-**Next:** [**Installing the Node**](node-setup-guided-installing-node)
+**Next:** [**Installing the Node**](node-setup-guided-installing-node.md)

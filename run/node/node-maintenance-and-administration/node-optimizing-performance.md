@@ -83,7 +83,7 @@ These changes can be made manually, but the easiest way to do it is through the 
 
 Obviously, you’ll need to have the `babylonnode` CLI installed before you optimise the node. It’s a good idea to download the `babylonnode` script, even if you have already installed it; this will ensure you’re running the latest version.
 
-For guidance on installing the babylonnode CLI, take a look at [Installing the babylonnode CLI](node-setup-guided-installing-cli).
+For guidance on installing the babylonnode CLI, take a look at [Installing the babylonnode CLI](../node-setup/node-setup-guided/node-setup-guided-installing-cli.md).
 
 ### 1\. Set up the optimiser
 

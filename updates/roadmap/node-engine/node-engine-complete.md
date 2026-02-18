@@ -5,14 +5,14 @@ title: "Complete"
 
 **"Cuttlefish" coordinated protocol update**
 
--   Support for [subintents](pre-authorizations-and-subintents)
+-   Support for [subintents](../../../build/build-dapps/dapp-transactions/pre-authorizations-and-subintents.md)
 -   Additional native crypto utils for signature validation within Scrypto
 -   Getters for Account balances
 -   Throughput improvements
 
 **"Bottlenose" coordinated protocol update**
 
--   New AccountLocker native blueprint, as described [here](locker).
+-   New AccountLocker native blueprint, as described [here](../../../reference/radix-engine/native-blueprints/locker.md).
 -   New API for reading component owner role from Scrypto
 -   New substates that expose the current protocol-related parameters
 -   Add recovery fee vault to AccessController, removing the need for third-party fee locking during the recovery process

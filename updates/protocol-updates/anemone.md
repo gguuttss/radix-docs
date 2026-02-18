@@ -21,8 +21,8 @@ title: "Anemone"
 
 ## Release Notes
 
--   [Scrypto v1.1.0](scrypto-v1-1-0)
+-   [Scrypto v1.1.0](../release-notes/scrypto/scrypto-v1-1-0.md)
 
 ## Libraries & SDKS
 
-*See later [protocol updates](protocol-updates).*
+*See later [protocol updates](README.md).*

@@ -167,7 +167,7 @@ Each of the system modules have four methods on the [TestEnvironment](https://do
 4.  A method to disable the system module for some block of code and then reset the modules (e.g., [TestEnvironment::with\_auth\_module\_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_auth_module_disabled)).
     
 
-For the block scoped methods, they cache the state of the system modules, enable or disable the system module based on the method that’s been called, execute the callback, and then set the system modules to what has been cached before the execution of the callback. An example of how the block-scoped methods are used can be found [here](scrypto-test#how-to).
+For the block scoped methods, they cache the state of the system modules, enable or disable the system module based on the method that’s been called, execute the callback, and then set the system modules to what has been cached before the execution of the callback. An example of how the block-scoped methods are used can be found [here](scrypto-test.md#how-to).
 
 The following is a complete list of the methods used to manipulate the system modules.
 

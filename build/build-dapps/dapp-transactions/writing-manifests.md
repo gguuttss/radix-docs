@@ -22,7 +22,7 @@ CALL_METHOD
 
 For testing purposes, on the local simulator, you can also call the `lock_fee` on the System component (address `component_sim1qftacppvmr9ezmekxqpq58en0nk954x0a7jv2zz0hc7q8utaxr`) so the fee payment comes from the system rather than your account.
 
-You can read more about fees [here](transaction-costing).
+You can read more about fees [here](../../../reference/radix-engine/costing-and-limits/transaction-costing.md).
 
 ### The Worktop
 
@@ -45,7 +45,7 @@ Proofs can enter the auth zone from two places:
 -   Proofs can also be returned by calls to methods. They are automatically added to the authorization zone by the [transaction processor](transaction-processor).
     
 
-For more about proofs and authorization, please see the [Authorization Model](authorization-model).
+For more about proofs and authorization, please see the [Authorization Model](../../../reference/radix-engine/authorization-model.md).
 
 # Tooling
 
@@ -57,9 +57,9 @@ There are various tools for building transaction manifests for testing, learning
         
 -   For crafting more complex manifests:
     
-    -   Use the [Rust Manifest Builder](rust-manifest-builder) - this can allow building and outputting arbitrary manifests to a file easily, including complex manifests such as those creating Non Fungible Resources.
+    -   Use the [Rust Manifest Builder](../../../integrate/rust-libraries/rust-manifest-builder.md) - this can allow building and outputting arbitrary manifests to a file easily, including complex manifests such as those creating Non Fungible Resources.
         
-    -   Use the [Manifest Instructions](manifest-instructions) as reference to write manifests manually.
+    -   Use the [Manifest Instructions](../../../reference/transactions/manifest/manifest-instructions.md) as reference to write manifests manually.
         
 -   For front-end dApp builders:
     
@@ -67,9 +67,9 @@ There are various tools for building transaction manifests for testing, learning
         
 -   For integrators looking to programmatically create manifests or transactions:
     
-    -   If writing in Rust, use the [Rust Manifest Builder](rust-manifest-builder).
+    -   If writing in Rust, use the [Rust Manifest Builder](../../../integrate/rust-libraries/rust-manifest-builder.md).
         
-    -   If writing in other languages, use the [Radix Engine Toolkit](radix-engine-toolkit-manifest-builder).
+    -   If writing in other languages, use the [Radix Engine Toolkit](../../../integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/radix-engine-toolkit-manifest-builder.md).
         
 
 ## Using Radix Engine Simulator `resim`
@@ -112,11 +112,11 @@ You can edit the auto-generated manifest to modify or add any other instructions
 
 ## Using the Rust Manifest Builder
 
-See [Rust Manifest Builder](rust-manifest-builder).
+See [Rust Manifest Builder](../../../integrate/rust-libraries/rust-manifest-builder.md).
 
 ## Writing Transaction Manifests Manually
 
-Once you’re familiar enough with the transaction manifest syntax you can of course write manifest instructions from scratch. Please see the [full instruction list and specification](manifest-instructions) to learn more. It is also very common to use instructions that call methods on [Native Blueprints](native-blueprints). You will find blueprint methods listed in their specification (e.g. [Account](account#blueprint-api-function-reference)) where you will also find links to their [Rust Docs](https://docs.rs/scrypto/1.2.0/scrypto/component/).
+Once you’re familiar enough with the transaction manifest syntax you can of course write manifest instructions from scratch. Please see the [full instruction list and specification](../../../reference/transactions/manifest/manifest-instructions.md) to learn more. It is also very common to use instructions that call methods on [Native Blueprints](../../../reference/radix-engine/native-blueprints/README.md). You will find blueprint methods listed in their specification (e.g. [Account](../../../reference/radix-engine/native-blueprints/account.md#blueprint-api-function-reference)) where you will also find links to their [Rust Docs](https://docs.rs/scrypto/1.2.0/scrypto/component/).
 
 ### Examples
 

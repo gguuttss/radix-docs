@@ -9,9 +9,9 @@ The conditions for proving if a caller has a role is defined by an **AccessRule*
 
 ### Create a Badge Resource
 
-A **Badge** is simply a [resource](resources) used for authorization in an AccessRule. It is no different from any other resource and in fact existing resources may be used as a badge.
+A **Badge** is simply a [resource](../resources/README.md) used for authorization in an AccessRule. It is no different from any other resource and in fact existing resources may be used as a badge.
 
-To create a badge resource from scratch use the [resource builder pattern](resource-creation-in-detail):
+To create a badge resource from scratch use the [resource builder pattern](../resources/resource-creation-in-detail.md):
 
 ```rust
 #[blueprint]
@@ -61,7 +61,7 @@ mod my_token_sale {
 1.  Using `rule!` along with `require` sets the rule that a caller must show proof of any non-zero amount of the owner badge resource
     
 
-It is possible to create advanced access rules which define more complex sets of resources. This is documented [here](advanced-accessrules).
+It is possible to create advanced access rules which define more complex sets of resources. This is documented [here](advanced-accessrules.md).
 
 ### Assign an AccessRule to the Owner Role
 

@@ -21,7 +21,7 @@ Note that, for NFTs, this is metadata set on the NFT resource itself (or “reso
 
 ## Non-fungible Data Standards
 
-Non-fungible data is not technically metadata, but often displayed similarly. These are captured via the [non-fungible data standards](non-fungible-data-for-wallet-display).
+Non-fungible data is not technically metadata, but often displayed similarly. These are captured via the [non-fungible data standards](../non-fungible-standards/non-fungible-data-for-wallet-display.md).
 
 ## Components and Blueprint Packages
 
@@ -35,7 +35,7 @@ The Radix Network includes a selection of native blueprints from which users can
 
 Below are the metadata standards a developer should consider to customize how these components and resources are presented in the Radix Wallet and other clients.
 
-[Metadata standards for verification](metadata-for-verification) may also be applied to these components and resources.
+[Metadata standards for verification](metadata-for-verification.md) may also be applied to these components and resources.
 
 ### “Account” (for users) system component metadata
 
@@ -77,4 +77,4 @@ The metadata standards for pool components are the same as those for other compo
 
 Pool components automatically mint pool unit tokens. Instantiators of pool components will also be given the ability to set the metadata on this resource as they wish.
 
-The metadata standards for these resources are the same as [other resources above](metadata-for-wallet-display#resources).
+The metadata standards for these resources are the same as [other resources above](metadata-for-wallet-display.md#resources).

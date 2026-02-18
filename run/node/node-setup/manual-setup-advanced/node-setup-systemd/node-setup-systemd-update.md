@@ -19,7 +19,7 @@ Next, you may want to consider using a backup node to perform a switch to the up
 
 1.  Go to [https://github.com/radixdlt/babylon-node/releases](https://github.com/radixdlt/babylon-node/releases) and look for the entry with the \[ Latest release \] marker.
     
-2.  Download the corresponding node distribution zip file and the native library file (see the [Node Setup instructions](node-setup-systemd) “Downloading the Radix node software” section for details)
+2.  Download the corresponding node distribution zip file and the native library file (see the [Node Setup instructions](README.md) “Downloading the Radix node software” section for details)
     
 3.  Unzip both files and place them in some directory on your system (e.g. `/opt/radixdlt/babylon-node/core-v1.2.1` ), again, this is analogous to node setup docs
     

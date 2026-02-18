@@ -5,15 +5,15 @@ title: "Integrate with Radix"
 
 This section is a guide for those looking to build programmatic integrations with the Radix Network. It is intended for exchanges and integrators to understand how Babylon works in order to prepare an integration with Radix’s mainnet. 
 
-A broad overview of the Radix technical landscape at Babylon can be found in [Technical Concepts](babylon-technical-concepts) (formerly a part of this guide). This integration guidance is focused towards constructing and tracking fungible transfers to and from accounts.
+A broad overview of the Radix technical landscape at Babylon can be found in [Technical Concepts](../../reference/babylon-technical-concepts/README.md) (formerly a part of this guide). This integration guidance is focused towards constructing and tracking fungible transfers to and from accounts.
 
   
 
 ## Index
 
--   [Introduction to Radix at Babylon](introduction-to-radix-at-babylon)
+-   [Introduction to Radix at Babylon](introduction-to-radix-at-babylon.md)
     
--   [Exchange Integration Guide](exchange-integration-guide)
+-   [Exchange Integration Guide](exchange-integration-guide/README.md)
     
     -   [Infrastructure set-up](infrastructure-set-up)
         
@@ -33,12 +33,12 @@ A broad overview of the Radix technical landscape at Babylon can be found in [Te
         
     -   [Worked example 4: Node status and monitoring](worked-example-4-node-status-and-monitoring)
         
--   [Updating from Olympia](updating-from-olympia)
+-   [Updating from Olympia](updating-from-olympia/README.md)
     
-    -   [Changes in Babylon from Olympia](changes-in-babylon-from-olympia)
+    -   [Changes in Babylon from Olympia](updating-from-olympia/changes-in-babylon-from-olympia.md)
         
-    -   [Sourcing data from Olympia](sourcing-data-from-olympia)
+    -   [Sourcing data from Olympia](updating-from-olympia/sourcing-data-from-olympia.md)
         
-    -   [Olympia to Babylon migration, address mapping and reconciliation](olympia-to-babylon-migration-address-mapping-and-reconciliation)
+    -   [Olympia to Babylon migration, address mapping and reconciliation](updating-from-olympia/olympia-to-babylon-migration-address-mapping-and-reconciliation.md)
         
--   [FAQs](integrate-with-radix-faqs)
+-   [FAQs](integrate-with-radix-faqs.md)

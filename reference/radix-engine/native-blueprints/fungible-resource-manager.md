@@ -7,9 +7,9 @@ This document offers a description of the design and implementation of the Fungi
 
 ## Background
 
-In Radix, a Resource is a native concept used to implement use-cases typically associated with “tokens” or “assets”. You can learn more about its high-level design at [Resources](resources).
+In Radix, a Resource is a native concept used to implement use-cases typically associated with “tokens” or “assets”. You can learn more about its high-level design at [Resources](../../../build/scrypto-1/resources/README.md).
 
-A “Fungible Resource” is a kind of Resource operating on arbitrary quantities, which can be split and combined freely (i.e. its units do not have distinct identity nor individual metadata). [Detailed behaviors](resource-behaviors) of all units of a specific Fungible Resource is defined by its Fungible Resource Manager. This includes the rules for:
+A “Fungible Resource” is a kind of Resource operating on arbitrary quantities, which can be split and combined freely (i.e. its units do not have distinct identity nor individual metadata). [Detailed behaviors](../../../build/scrypto-1/resources/resource-behaviors.md) of all units of a specific Fungible Resource is defined by its Fungible Resource Manager. This includes the rules for:
 
 -   the Resource’s maximum divisibility,
     

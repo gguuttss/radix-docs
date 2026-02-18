@@ -13,7 +13,7 @@ Each step specifies the commands for each mode - you should only run the command
 
 ### 1\. Install the babylonnode CLI
 
-If you haven’t done so already, [install the babylonnode CLI](node-setup-guided-installing-cli).
+If you haven’t done so already, [install the babylonnode CLI](node-setup-guided-installing-cli.md).
 
 ### 2\. Install the dependencies on the host machine
 

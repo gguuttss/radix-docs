@@ -9,18 +9,18 @@ title: "Frontend dApp (Client and Ledger)"
 
 In the mean time here are a few things you might be interested in for a dApp frontend.
 
--   Check out [Building a Frontend dApp](building-a-frontend-dapp)
+-   Check out [Building a Frontend dApp](../build-dapps/dapp-application-stack/building-a-frontend-dapp.md)
     
--   Have a look at the [Learning Step-by-Step](learning-step-by-step), particularly the lists of lessons for front end development
+-   Have a look at the [Learning Step-by-Step](../learning-step-by-step/README.md), particularly the lists of lessons for front end development
     
--   The [Reference Materials page](useful-links) is loaded with important links for things you will need for a dApp frontend.
+-   The [Reference Materials page](../build-dapps/useful-links.md) is loaded with important links for things you will need for a dApp frontend.
     
--   [The Stokenet Dev Console](https://stokenet-console.radixdlt.com/) and just in case you skipped past it on your way here the [Radix Dashboard page](radix-dashboard).
+-   [The Stokenet Dev Console](https://stokenet-console.radixdlt.com/) and just in case you skipped past it on your way here the [Radix Dashboard page](../../use/radix-dashboard.md).
     
 -   [Radix dApp toolkit documentation on Github](https://github.com/radixdlt/radix-dapp-toolkit#readme)
     
 -   [Radix Connector extension on Github](https://github.com/radixdlt/connector-extension/releases/tag/v1.0.0) if you need a dev version of the connector extension.
     
--   [Radix Network APIs](network-apis)
+-   [Radix Network APIs](../../integrate/network-apis/README.md)
     
 -   The [Gumball Machine Example on Github](https://github.com/radixdlt/scrypto-examples/tree/main/full-stack/dapp-toolkit-gumball-machine)

@@ -70,7 +70,7 @@ Data Aggregator is stateless, with data stored in the PostgreSQL database.
 
 Only a single Data Aggregator should be (for v1) run at any given time. Having two running will cause many failed database writes as they will step on each other.
 
-The Data Aggregator should be configured to restart on failure. There is a health check endpoint available, discussed in [the monitoring guide](monitoring).
+The Data Aggregator should be configured to restart on failure. There is a health check endpoint available, discussed in [the monitoring guide](../../maintenance-1/monitoring.md).
 
 The Data Aggregator depends on migrations executed by Database Migrations. Those must be executed before Data Aggregator gets deployed.
 

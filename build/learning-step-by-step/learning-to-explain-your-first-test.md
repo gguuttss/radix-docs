@@ -13,7 +13,7 @@ There are two ways to test blueprints and modules, the Ledger Simulator and Test
 
 ### Ledger Simulator
 
-The [Ledger Simulator](scrypto-test) is an in-memory ledger simulator. Tests interact with the simulator as a user submitting transactions to the network would. This is great for integration and end-to-end testing.
+The [Ledger Simulator](../scrypto-1/testing/scrypto-test.md) is an in-memory ledger simulator. Tests interact with the simulator as a user submitting transactions to the network would. This is great for integration and end-to-end testing.
 
 To test in Scrypto, we import `scrypto_test::prelude::*` and the test version of our blueprint. In our case that's the `hello` blueprint imported with `use hello_test::hello_test`, `hello_test` is the package name followed by the blueprint name, appended with `_test` for the test version of said blueprint. These are imported at the top of our test file:
 

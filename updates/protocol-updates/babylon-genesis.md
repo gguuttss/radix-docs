@@ -18,8 +18,8 @@ This was a major update from Olympia, and brought the Babylon engine to Radix.
 
 ## Release Notes
 
-*See later [protocol updates](protocol-updates).*
+*See later [protocol updates](README.md).*
 
 ## Libraries & SDKS
 
-*See later [protocol updates](protocol-updates).*
+*See later [protocol updates](README.md).*

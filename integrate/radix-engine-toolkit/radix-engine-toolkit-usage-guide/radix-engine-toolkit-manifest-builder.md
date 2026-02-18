@@ -3,7 +3,7 @@ title: "Manifest Builder"
 ---
 # Manifest Builder
 
-One of the core features offered in the [Radix Engine Toolkit](radix-engine-toolkit) is a manifest builder that closely mimics the [Rust Manifest Builder](rust-manifest-builder) but that works over a foreign function interface (FFI). Thus, the Radix Engine Toolkit manifest builder is not identical to the one in Rust but quite similar. This article explores what methods the manifest builder has, what differences exist between it and the Rust manifest builder, and provides examples and guidance of how this manifest builder may be used in the various Radix Engine Toolkit wrappers.
+One of the core features offered in the [Radix Engine Toolkit](../README.md) is a manifest builder that closely mimics the [Rust Manifest Builder](../../rust-libraries/rust-manifest-builder.md) but that works over a foreign function interface (FFI). Thus, the Radix Engine Toolkit manifest builder is not identical to the one in Rust but quite similar. This article explores what methods the manifest builder has, what differences exist between it and the Rust manifest builder, and provides examples and guidance of how this manifest builder may be used in the various Radix Engine Toolkit wrappers.
 
 ## Methods
 
@@ -633,7 +633,7 @@ There are several things to note about the examples above. Each of the following
     
 3.  `Option<T>`, `Result<O, E>`, and other enums can be modeled as `ManifestBuilderValue.EnumValue`. The discriminator is the index of the enum variant. As an example, for `Option<T>` the discriminator of `None` is 0 and the discriminator of `Some` is 1 (as seen [here](https://doc.rust-lang.org/src/core/option.rs.html#563-572)). Similarly, for `Result<O, E>`, the discriminator of `Ok` is 0 and the discriminator of `Err` is 1.
     
-4.  For a comprehensive list of data types compatible with `ManifestBuilder`, refer to the [Data Types](data-types) documentation. When working in other languages like Python, certain types such as `i32` are not directly supported. Instead, you must use the corresponding type from the Radix Engine Toolkit library. For example, when using `.CALL_METHOD` with an `i32` argument (e.g., `-6927i32`), you should use `ManifestBuilderValue.I32_VALUE(-6927)` instead. An example for `Python` is provided in the next section.
+4.  For a comprehensive list of data types compatible with `ManifestBuilder`, refer to the [Data Types](../../../build/scrypto-1/data-types.md) documentation. When working in other languages like Python, certain types such as `i32` are not directly supported. Instead, you must use the corresponding type from the Radix Engine Toolkit library. For example, when using `.CALL_METHOD` with an `i32` argument (e.g., `-6927i32`), you should use `ManifestBuilderValue.I32_VALUE(-6927)` instead. An example for `Python` is provided in the next section.
     
 
 ## Usage Examples

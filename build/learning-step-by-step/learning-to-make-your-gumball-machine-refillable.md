@@ -22,7 +22,7 @@ By default tokens have a fixed supply. We need make the gumball resource mintabl
 })
 ```
 
-For now our minter rule allows anyone to mint new gumballs. We'll look at restricting this in later examples (see [Use The Gumball Machine on Stokenet](learning-to-use-the-gumball-machine-on-stokenet#virtual-badges)). We also need to decide on a rule for who can change the minter rule. For simplicity, we stop anyone from updating it.
+For now our minter rule allows anyone to mint new gumballs. We'll look at restricting this in later examples (see [Use The Gumball Machine on Stokenet](learning-to-use-the-gumball-machine-on-stokenet.md#virtual-badges)). We also need to decide on a rule for who can change the minter rule. For simplicity, we stop anyone from updating it.
 
 ### Resource Managers
 

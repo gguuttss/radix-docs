@@ -5,9 +5,9 @@ title: "dApp Definition Setup"
 
 A dApp Definition Account serves two purpose:
 
-1.  [Providing an on-ledger registration to establish relationships between your dApp’s entities (packages, components, resources)](metadata-for-wallet-display)
+1.  [Providing an on-ledger registration to establish relationships between your dApp’s entities (packages, components, resources)](../../../reference/standards/metadata-standards/metadata-for-wallet-display.md)
     
-2.  [Providing an on-ledger registration for a dApp (frontend) verification to ensure user interacting with your dApp is authentic.](metadata-for-verification)
+2.  [Providing an on-ledger registration for a dApp (frontend) verification to ensure user interacting with your dApp is authentic.](../../../reference/standards/metadata-standards/metadata-for-verification.md)
     
 
 The role of the dApp Definition Account is visibly most meaningful in the Radix Wallet to inform your users how entities of your dApp are related to each other. Most importantly, it helps authenticate your dApp’s website (and other entities) to ensure your users are not fooled by fake representation of your dApp. In essence, the dApp Definition Account acts as a hub which connects all the parts of your dApp together.
@@ -43,7 +43,7 @@ Ideally, a dApp Definition account should be created after you have built your d
 11.  An approve transaction should appear in your Radix Wallet to confirm!
      
 
-When you set up the [Radix dApp Toolkit](dapp-toolkit) in your dApp frontend website, you’ll configure it with the dApp Definition address that you just created, and it will be sent to the Radix Wallet whenever a user connects or receives a transaction from your dApp. The Wallet will then look up that dApp Definition address on the Radix Network, pull the latest metadata, and show it to the user. When a user logins to your dApp, an entry in the wallet’s preferences for your dApp will appear too.
+When you set up the [Radix dApp Toolkit](dapp-sdks/dapp-toolkit.md) in your dApp frontend website, you’ll configure it with the dApp Definition address that you just created, and it will be sent to the Radix Wallet whenever a user connects or receives a transaction from your dApp. The Wallet will then look up that dApp Definition address on the Radix Network, pull the latest metadata, and show it to the user. When a user logins to your dApp, an entry in the wallet’s preferences for your dApp will appear too.
 
 ## Claimed Entities
 

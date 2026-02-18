@@ -113,4 +113,4 @@ bash -c "$(wget -O - https://apt.llvm.org/llvm.sh 18)"
 apt install llvm-18
 ```
 
-5.  Now you can go to [Running Coverage Tool](coverage-tool#running-coverage-tool) instruction.
+5.  Now you can go to [Running Coverage Tool](coverage-tool.md#running-coverage-tool) instruction.

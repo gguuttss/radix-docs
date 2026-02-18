@@ -5,7 +5,7 @@ title: "Using Proofs"
 
 Proofs give us a way to tell if a resource exists in a Vault or Bucket without having to remove it. A Proof can be created from a resource and used instead, which allows us to know if an actor possesses a resource without the resource being sent.
 
-Proofs can be useful for a variety of reasons, but first and foremost is authorization. The most common version of this is creating a Proof of a badge to [Call a Protected Method/Function](call-a-protected-method-function) on a component, e.g. an owner badge that's required for the withdrawal of collected XRD from a [Gumball Machine component](learning-to-give-the-gumball-machine-an-owner).
+Proofs can be useful for a variety of reasons, but first and foremost is authorization. The most common version of this is creating a Proof of a badge to [Call a Protected Method/Function](call-a-protected-method-function.md) on a component, e.g. an owner badge that's required for the withdrawal of collected XRD from a [Gumball Machine component](../../learning-step-by-step/learning-to-give-the-gumball-machine-an-owner.md).
 
 Proofs are Transient
 
@@ -15,11 +15,11 @@ Proofs can only exist for the duration of a transaction.
 
 Proofs can be created, transferred, and dropped.
 
-Proofs can be passed around as tangible objects like Buckets, or put on/taken off an AuthZone. [Implicit proofs](advanced-accessrules#implicit-requirements) only live on the AuthZone and can't be created as tangible Proofs like others.
+Proofs can be passed around as tangible objects like Buckets, or put on/taken off an AuthZone. [Implicit proofs](advanced-accessrules.md#implicit-requirements) only live on the AuthZone and can't be created as tangible Proofs like others.
 
 Only Proofs in an AuthZone can be used to meet authorization checks in called methods/functions. If checks fail, the transaction will abort, otherwise it proceeds as normal.
 
-Just as with [Buckets and Vaults](buckets-and-vaults) there are multiple Scrypto types to refer to tangible Proofs:
+Just as with [Buckets and Vaults](../resources/buckets-and-vaults.md) there are multiple Scrypto types to refer to tangible Proofs:
 
 -   `Proof` - A general Proof type for fungible or non-fungible resources
 -   `FungibleProof` - A Proof of fungible resources
@@ -27,7 +27,7 @@ Just as with [Buckets and Vaults](buckets-and-vaults) there are multiple Scrypto
 
 How does an authorization check work?
 
-Authorization checks happen when a [protected method](structure-roles-and-methods) or [function](assign-function-accessrules) is called, or when `Runtime::assert_access_rule(rule!(...))` is called directly on an [access rule](advanced-accessrules).
+Authorization checks happen when a [protected method](structure-roles-and-methods.md) or [function](assign-function-accessrules.md) is called, or when `Runtime::assert_access_rule(rule!(...))` is called directly on an [access rule](advanced-accessrules.md).
 
 This check works by comparing the requirements in the access rule against Proofs in the parent `LocalAuthZone`.
 
@@ -73,7 +73,7 @@ let proof_2 = proof_1.clone();
 
 ### Creating Proofs in the manifest
 
-Proofs can be sourced from component calls. Commonly you create Proofs from your [Account](account).
+Proofs can be sourced from component calls. Commonly you create Proofs from your [Account](../../../reference/radix-engine/native-blueprints/account.md).
 
 There are two main Account methods for this, depending on the resource type:
 
@@ -100,7 +100,7 @@ CALL_METHOD
 
 When you receive Proofs from a manifest call, they are automatically placed on the Auth Zone.
 
-There are also lots of manifest instructions for creating, moving and dropping Proofs, such as `CREATE_PROOF_FROM_BUCKET_OF_ALL` and `CREATE_PROOF_FROM_BUCKET_OF_NON_FUNGIBLES`. These and other such instructions are listed with examples in [Manifest Instructions](manifest-instructions).
+There are also lots of manifest instructions for creating, moving and dropping Proofs, such as `CREATE_PROOF_FROM_BUCKET_OF_ALL` and `CREATE_PROOF_FROM_BUCKET_OF_NON_FUNGIBLES`. These and other such instructions are listed with examples in [Manifest Instructions](../../../reference/transactions/manifest/manifest-instructions.md).
 
 ## Transferring Proofs
 
@@ -165,7 +165,7 @@ This has a few benefits:
 
 ### Verify the role of your caller with the AuthZone
 
-The standard method to protect your methods is by [assigning roles to methods](structure-roles-and-methods) using Scrypto's **role based access control**.
+The standard method to protect your methods is by [assigning roles to methods](structure-roles-and-methods.md) using Scrypto's **role based access control**.
 
 For example, this might look like:
 

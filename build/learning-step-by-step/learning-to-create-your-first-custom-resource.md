@@ -11,7 +11,7 @@ As an [Asset-Oriented](https://docs.radixdlt.com/docs/asset-oriented) language r
 
 With Scrypto the behaviours are guaranteed. To make resources behave intuitively and safely, we've also made the language and Radix Engine treat them like real world objects, making things like double spending (where a resource is counted twice but has only been transferred once) impossible, and ensuring no resources can be lost in a transaction. In other words, every transaction concludes with all resources securely transferred from and to an account or other component. The engine itself does the work of tracking and checking the deeper level of the transaction, so your code can focus on utility and application.
 
-Resources on Radix can have many different roles, so we have given them many different properties and behaviours that can be customized. Although much of the depth of these features lies in [resource behaviors](resource-behaviors), resource [metadata](metadata) is where a tokens name and its symbol are stored.
+Resources on Radix can have many different roles, so we have given them many different properties and behaviours that can be customized. Although much of the depth of these features lies in [resource behaviors](../scrypto-1/resources/resource-behaviors.md), resource [metadata](../../reference/radix-engine/metadata/README.md) is where a tokens name and its symbol are stored.
 
 For a deeper dive into resources, explore the the [Resources](https://docs.radixdlt.com/docs/resources) section of these docs, but for now let's move our focus to how we can create and customise our own.
 
@@ -77,7 +77,7 @@ To give it a go follow the instructions in [the official-examples repo here](ht
 
 ## One Blueprint, Multiple Resources
 
-A fundamental part of how we made the Radix Engine work is to [reuse code](https://docs.radixdlt.com/docs/reusable-code). This means components are instantiated from the blueprints you write, and these components are the live objects that can be interacted with on the network, similar to smart contracts on other platforms. From a blueprint you construct a component (or more than one component). This [blueprints and components](blueprints-and-components) relationship gives us a few useful things we can do.
+A fundamental part of how we made the Radix Engine work is to [reuse code](https://docs.radixdlt.com/docs/reusable-code). This means components are instantiated from the blueprints you write, and these components are the live objects that can be interacted with on the network, similar to smart contracts on other platforms. From a blueprint you construct a component (or more than one component). This [blueprints and components](../scrypto-1/blueprints-and-components.md) relationship gives us a few useful things we can do.
 
 -   You can create multiple components from the same blueprint
 -   You can use existing blueprints made by others to create your own components
@@ -89,6 +89,6 @@ There are more steps to try this out in [the official-examples repo](https://gi
 
 ## Closing Thoughts
 
-You've now taken your first step into Scrypto resource creation and customization. Customizing resource metadata has given us tokens with new names and symbols making them accessible to users in wallets and dApps. We're also able to see some of the power of Scrypto with reusable blueprints. They've made us more efficient and allowed you to use only a single, versatile blueprint to create many differently named tokens. We develop these steps of customisation further in the [next section introducing a Radix favourite, the Gumball Machine](learning-to-build-a-gumball-machine).
+You've now taken your first step into Scrypto resource creation and customization. Customizing resource metadata has given us tokens with new names and symbols making them accessible to users in wallets and dApps. We're also able to see some of the power of Scrypto with reusable blueprints. They've made us more efficient and allowed you to use only a single, versatile blueprint to create many differently named tokens. We develop these steps of customisation further in the [next section introducing a Radix favourite, the Gumball Machine](learning-to-build-a-gumball-machine.md).
 
 Let us know if you find any section helpful or not by clicking one of the buttons below ⬇. You can also let us know about a typo or outdated information using the same buttons.

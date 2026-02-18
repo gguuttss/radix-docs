@@ -11,4 +11,4 @@ Items within sections are not ordered, and no timeline should be assumed for any
 
   
 
--   Scoping for 1.4.0 release along with [Dugong](dugong)
+-   Scoping for 1.4.0 release along with [Dugong](../../protocol-updates/dugong.md)

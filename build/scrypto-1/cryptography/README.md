@@ -7,9 +7,9 @@ Scrypto provides a set of precompiled cryptographic primitives, which are execut
 
 At the moment, the supported algorithms are:
 
--   [**Keccak256**](keccak256)
+-   [**Keccak256**](keccak256.md)
     
--   [**BLS12-381**](bls12-381)
+-   [**BLS12-381**](bls12-381.md)
     
 
 > Please note that CryptoUtils is only available after Anemone protocol update.

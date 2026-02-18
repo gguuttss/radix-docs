@@ -7,7 +7,7 @@ This topic is still a work in progress
 
 This area is either a placeholder for content which is yet to be written, or has sparse/early content which is still being worked on.
 
-Each Non-fungible on the Radix ledger can have its own unique associated data. Unlike metadata, this non-fungible data is unique to the token rather than shared across the resource collection. There are several common fields for [Displaying Non-fungible data](non-fungible-data-for-wallet-display) in the [Radix Wallet](radix-wallet-overview), [Dashboard](radix-dashboard) and other explorers, but we can choose whichever fields we want when defining a non-fungible data structure.
+Each Non-fungible on the Radix ledger can have its own unique associated data. Unlike metadata, this non-fungible data is unique to the token rather than shared across the resource collection. There are several common fields for [Displaying Non-fungible data](../../../reference/standards/non-fungible-standards/non-fungible-data-for-wallet-display.md) in the [Radix Wallet](../../../use/radix-wallet-overview.md), [Dashboard](../../../use/radix-dashboard.md) and other explorers, but we can choose whichever fields we want when defining a non-fungible data structure.
 
 Non-fungible data structures are defined when creating a non-fungible resource collection. The specific data for each token is then added at minting. It is immutable by default, but we can choose for some or all of it to be updatable. Below you will find how to define, set, retrieve and update non-fungible data.
 
@@ -185,7 +185,7 @@ For a bucket containing a multiple non-fungibles
 
 ### From Proofs
 
-There are different ways to retrieve non-fungible data from Proofs depending on whether they are [sitting on the Auth Zone](using-proofs#verify-your-caller-precisely-with-the-authzone) or have been [passed by intent](using-proofs#getting-non-fungible-data-from-proofs). Have a look at the [Authorizing callers of your method section](using-proofs#authorizing-callers-of-your-method) of [Using Proofs](using-proofs) for a complete description of how.
+There are different ways to retrieve non-fungible data from Proofs depending on whether they are [sitting on the Auth Zone](../auth/using-proofs.md#verify-your-caller-precisely-with-the-authzone) or have been [passed by intent](../auth/using-proofs.md#getting-non-fungible-data-from-proofs). Have a look at the [Authorizing callers of your method section](../auth/using-proofs.md#authorizing-callers-of-your-method) of [Using Proofs](../auth/using-proofs.md) for a complete description of how.
 
 ### Reading Individual Data Fields
 

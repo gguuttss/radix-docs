@@ -144,7 +144,7 @@ Updating Metadata
 You can find more information about setting and updating metadata in the [Entity Metadata](https://docs.radixdlt.com/docs/entity-metadata#configuring-metadata-roles) section of the documentation.
 
 This changes the steps to instantiate the package component on Stokenet. You can find those updated steps in the  
-[Using the Radiswap Front End on Stokenet](run-the-radiswap-dapp#using-the-radiswap-front-end-on-stokenet) Setup section below.
+[Using the Radiswap Front End on Stokenet](run-the-radiswap-dapp.md#using-the-radiswap-front-end-on-stokenet) Setup section below.
 
 ### Event Emission
 
@@ -185,7 +185,7 @@ The Radiswap front end is a single web page that allows anyone with a Radix Wall
 
 These types of front end interactions were previously described in more detail in both the [Run Your First Front End Dapp](https://docs.radixdlt.com/docs/learning-to-run-your-first-front-end-dapp) and [Run the Gumball Machine Front End dApp](https://docs.radixdlt.com/docs/learning-to-run-the-gumball-machine-front-end-dapp) sections of the documentation. They are summarised again here.
 
-In `client/main.js` we use the [radix-dapp-toolkit](dapp-toolkit) and [gateway-api-sdk](gateway-sdk) to interact with the Radix network.
+In `client/main.js` we use the [radix-dapp-toolkit](../build-dapps/dapp-application-stack/dapp-sdks/dapp-toolkit.md) and [gateway-api-sdk](../build-dapps/dapp-application-stack/dapp-sdks/gateway-sdk.md) to interact with the Radix network.
 
 ```
 import {
@@ -196,7 +196,7 @@ import { GatewayApiClient } from "@radixdlt/babylon-gateway-api-sdk";
 ```
 
 A connection to the Radix Wallet and Network is established using the Radix dApp Toolkit, Gatway API and a  
-[Dapp Definition](dapp-definition-setup):
+[Dapp Definition](../build-dapps/dapp-application-stack/dapp-definition-setup.md):
 
 ```
 const dAppDefinitionAddress = "_YOUR_DAPP_DEFINITION_ACCOUNT_ADDRESS_";

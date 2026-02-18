@@ -10,7 +10,7 @@ This area is either a placeholder for content which is yet to be written, or has
   
 The last section introduced us to testing blueprints. It's now time to apply those lessons to a more complex blueprint package; our familiar favourite, the Candy Store. This will show us how to test larger packages with multiple blueprints and methods.
 
-We'll add tests to the version of the Candy Store and Gumball Machine blueprints we created in the [Create Owned Components](learning-to-create-owned-components) section.
+We'll add tests to the version of the Candy Store and Gumball Machine blueprints we created in the [Create Owned Components](learning-to-create-owned-components.md) section.
 
 The scrypto package referenced in this section can be found in our [official examples here](https://github.com/radixdlt/official-examples/tree/main/step-by-step/20-candy-store-tests).
 

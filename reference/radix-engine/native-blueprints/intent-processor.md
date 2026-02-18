@@ -9,7 +9,7 @@ When the Radix Engine executes transactions, each intent has its own call stack,
 
 ## Features of the Transaction Layer
 
-Transaction manifests orchestrate the movement of resources between components. This includes accounts, which are also components (that only their owner may withdraw from), and other [intents](intent-structure) in the transaction. This is done through a sequence of instructions using a special instruction set created specifically for this purpose (transaction manifests do not use Scrypto). Radix Engine processes these instructions in order, and if any step fails for any reason, the entire transaction fails and none of the steps are committed to the ledger on the Radix network. This is what is meant by the transaction being "atomic".
+Transaction manifests orchestrate the movement of resources between components. This includes accounts, which are also components (that only their owner may withdraw from), and other [intents](../../transactions/intent-structure.md) in the transaction. This is done through a sequence of instructions using a special instruction set created specifically for this purpose (transaction manifests do not use Scrypto). Radix Engine processes these instructions in order, and if any step fails for any reason, the entire transaction fails and none of the steps are committed to the ledger on the Radix network. This is what is meant by the transaction being "atomic".
 
 Execution of a given transaction can be thought of as happening at its own "layer", above any components that are called during the transaction. This layer has some special features that make transaction manifests quite powerful.
 
@@ -38,4 +38,4 @@ Proofs can enter the auth zone from two places:
 -   Proofs can also be returned by calls to methods. They are automatically added to the authorization zone by the [transaction processor](transaction-processor).
     
 
-For more about proofs and authorization, please see the [Authorization model](auth).
+For more about proofs and authorization, please see the [Authorization model](../../../build/scrypto-1/auth/README.md).

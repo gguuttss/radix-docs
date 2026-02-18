@@ -10,13 +10,13 @@ A subintent (also known as a **pre-authorization** in the dApp/wallet [pre-autho
 
 Subintents can only be committed as part of a transaction.
 
-Each subintent has a parent, and zero or more of its own subintent children, as part of a transaction's [intent structure](intent-structure). The intent structure article also explains how subintents can interact with their parents and children, through yielding and passing buckets.
+Each subintent has a parent, and zero or more of its own subintent children, as part of a transaction's [intent structure](intent-structure.md). The intent structure article also explains how subintents can interact with their parents and children, through yielding and passing buckets.
 
 ## Execution
 
 A subintent starts execution by being yielded to from its parent for the first time.
 
-At the start of execution, and every time it [YIELDS](intent-structure#yielding) to a parent or child, it may end up with buckets on its worktop from the other intent.
+At the start of execution, and every time it [YIELDS](intent-structure.md#yielding) to a parent or child, it may end up with buckets on its worktop from the other intent.
 
 In a valid transaction:
 
@@ -42,7 +42,7 @@ To be specific, a subintent is "self-contained" if it:
 
 ## Structure
 
-For full details, see the [transaction structure](transaction-structure) article, but to summarize, a subintent contains an intent core, which includes:
+For full details, see the [transaction structure](transaction-structure.md) article, but to summarize, a subintent contains an intent core, which includes:
 
 -   An intent header, capturing its validity constraints (e.g. min/max epoch and optionally a min/max proposer timestamp). The subintent can only be included in a transaction (and so can only be committed) during its validity window.
 -   An optional message
@@ -50,7 +50,7 @@ For full details, see the [transaction structure](transaction-structure) article
 
 ## Construction and Serialization
 
-A subintent can be constructed with a **Partial Transaction Builder**. This can construct a `PartialTransaction` - a sub-tree of the [intent structure](intent-structure), with a subintent at the root. Typically layers are signed before being passed on to other layers, so the partial transaction builder typically outputs a `SignedPartialTransaction`, for use in the `signed_child` step of a parent transaction builder or partial transaction builder.
+A subintent can be constructed with a **Partial Transaction Builder**. This can construct a `PartialTransaction` - a sub-tree of the [intent structure](intent-structure.md), with a subintent at the root. Typically layers are signed before being passed on to other layers, so the partial transaction builder typically outputs a `SignedPartialTransaction`, for use in the `signed_child` step of a parent transaction builder or partial transaction builder.
 
 When passing subintents to an aggregator, they are also typically passed around as a `SignedPartialTransaction`. Or more specifically the canonically encoded raw bytes of a `SignedPartialTransaction`. This is available with `to_raw()` in Rust, or `to_payload_bytes()` in the toolkit.
 

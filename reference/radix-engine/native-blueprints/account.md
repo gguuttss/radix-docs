@@ -24,12 +24,12 @@ The account blueprint has two pre-configured roles by default: `Owner` and `Secu
 
 -   The `Owner` role is given the ability to call all the privileged methods on the account (such as methods that withdraw and deposit resources or lock XRD for fee payment).
     
--   The `Securify` role is the role that can call the appropriate methods that "securifies" the account. This allows to expand the accounts authorization model and enables things like multi-factor control. More information on account securificaton is provided in the [Account Securification](account#account-securification) section.
+-   The `Securify` role is the role that can call the appropriate methods that "securifies" the account. This allows to expand the accounts authorization model and enables things like multi-factor control. More information on account securificaton is provided in the [Account Securification](account.md#account-securification) section.
     
 
 While the `Owner` can expand who is allowed to access their account by re-configuring the roles, by default at instantiation, both roles are associated to the owner.
 
-The diagram below shows a complete list of the account methods and the roles that they map to, in other terms, it shows the roles that are authorized to call these methods. It also shows the mapping of the roles to the access rules. All the methods seen in the diagram below are explained in detail in the [API Reference](account#api-reference) section of the document.
+The diagram below shows a complete list of the account methods and the roles that they map to, in other terms, it shows the roles that are authorized to call these methods. It also shows the mapping of the roles to the access rules. All the methods seen in the diagram below are explained in detail in the [API Reference](account.md#api-reference) section of the document.
 
 ![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/account-tree.png "account-tree.png")
 
@@ -78,9 +78,9 @@ The following is the algorithm used to derive the pre-allocated account address 
 
 There are various standards for Account metadata:
 
--   Accounts can be configured as a [dApp Definition with certain metadata](metadata-for-verification)
+-   Accounts can be configured as a [dApp Definition with certain metadata](../../standards/metadata-standards/metadata-for-verification.md)
     
--   For user accounts, the `owner_keys` property is used for [ROLA](rola-radix-off-ledger-auth) verification
+-   For user accounts, the `owner_keys` property is used for [ROLA](../../../build/build-dapps/dapp-application-stack/rola-radix-off-ledger-auth.md) verification
     
 -   In the future, a new standard metadata property will be published for setting encryption keys for message encryption.
     

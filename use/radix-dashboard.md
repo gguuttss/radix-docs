@@ -9,7 +9,7 @@ After you have linked Radix Wallet and Connector, the easiest place to see how t
 
 For those familiar with the preceding Olympia network, the Radix Dashboard replaces the Radix Explorer at Babylon. Like the Explorer, the Dashboard lets you search for transactions, accounts, and more. It also expands on these capabilities as a real Web3 dApp where you can connect your Radix Wallet directly, to let users perform common network activities such as staking. The Console supplements this by offering utility pages for developer use, including sending raw transaction manifests, and package deployment.
 
-In the upper right corner is the √ **Connect** button. This is a web component that any developer can use and import into their dApp website project that makes it easy to integrate to the Radix Wallet, and gives users an immediate indication that this is a Web3 site where they can use the Radix Wallet. The [Radix dApp Toolkit](dapp-toolkit) provides a seamless way for developers to implement their own √ **Connect** button.
+In the upper right corner is the √ **Connect** button. This is a web component that any developer can use and import into their dApp website project that makes it easy to integrate to the Radix Wallet, and gives users an immediate indication that this is a Web3 site where they can use the Radix Wallet. The [Radix dApp Toolkit](../build/build-dapps/dapp-application-stack/dapp-sdks/dapp-toolkit.md) provides a seamless way for developers to implement their own √ **Connect** button.
 
 Click that button, select “**Connect Now”** and the Connector extension will automatically attempt to find your Radix Wallet.
 

@@ -3,7 +3,7 @@ title: "Transactions for Integrators"
 ---
 # Transactions for Integrators
 
-This article explains how to interact with transactions as integrators. If you're looking for a more complete overview of the structure, design and motivation of the Radix transaction model, see the [transaction overview](transaction-overview).
+This article explains how to interact with transactions as integrators. If you're looking for a more complete overview of the structure, design and motivation of the Radix transaction model, see the [transaction overview](../transactions/transaction-overview.md).
 
 ## Construction process
 

@@ -12,6 +12,6 @@ In this mode, you’ll use our Python CLI too  (`babylonnode`) for a straightf
 > 
 > The CLI does not support Windows at the moment.
 
-Before you begin, please read the [Node Setup Introduction](node-setup), if you haven’t done so yet.
+Before you begin, please read the [Node Setup Introduction](../README.md), if you haven’t done so yet.
 
-**Next:** [**Installing the babylonnode CLI**](node-setup-guided-installing-cli)
+**Next:** [**Installing the babylonnode CLI**](node-setup-guided-installing-cli.md)

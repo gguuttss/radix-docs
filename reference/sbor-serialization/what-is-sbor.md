@@ -17,8 +17,8 @@ The SBOR standard encompasses a powerful **logical model**. The logical model in
 
 The logical model has two main parts:
 
--   A **[Value model](sbor-value-model)**, which defines how data can be represented in SBOR. There are 16 core **value kinds**, covering Strings, Integers, Enums, Arrays, Tuples, Maps. Extensions can define additional custom value kinds, specific to their use case.
--   A **[Type model](sbor-type-model)**, which is used to represent concrete types used by the programmer. Types have a structure which defines how it can be represented in the value model and its relation to other types. Types additionally include names/metadata and validation instructions. The core and each extension define a set of “well-known” types, baked into the standard. User-defined types can be packaged into a schema.
+-   A **[Value model](sbor-value-model.md)**, which defines how data can be represented in SBOR. There are 16 core **value kinds**, covering Strings, Integers, Enums, Arrays, Tuples, Maps. Extensions can define additional custom value kinds, specific to their use case.
+-   A **[Type model](sbor-type-model.md)**, which is used to represent concrete types used by the programmer. Types have a structure which defines how it can be represented in the value model and its relation to other types. Types additionally include names/metadata and validation instructions. The core and each extension define a set of “well-known” types, baked into the standard. User-defined types can be packaged into a schema.
 
 The Radix Engine currently defines three SBOR variants:
 
@@ -33,9 +33,9 @@ The SBOR standard also includes standardized representations of the value model:
 -   Various string representations of the value model, some of which also make use of information in the Schema:
     -   **RustLike** - Takes inspiration from Rust and other programming languages. Uses optional type context for a more compact format.
     -   **NestedString** - Deprecated, intended to be like the manifest format.
-    -   [Manifest Value Syntax](manifest-value-syntax) - Not a standardized representation, but used when creating Manifests.
+    -   [Manifest Value Syntax](manifest-sbor/manifest-value-syntax.md) - Not a standardized representation, but used when creating Manifests.
 -   Various JSON representations, some of which also make use of information in the Schema:
-    -   [Programmatic JSON](sbor-programmatic-json) is stable / standardized.
+    -   [Programmatic JSON](sbor-textual-representations/sbor-programmatic-json.md) is stable / standardized.
     -   **Natural JSON** is intended as a JSON-native format, relying on type context for a more compact / intuitive format - is half-implemented - but in beta, and subject to change.
     -   **Display JSON** is intended for use creating tree-based UIs from SBOR with type context.
     -   **Model JSON** is deprecated, replaced by Programmatic JSON.

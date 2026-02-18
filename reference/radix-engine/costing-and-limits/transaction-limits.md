@@ -5,7 +5,7 @@ title: "Transaction Limits"
 
 ## SBOR Limits
 
-In Radix Engine, almost all payloads are encoded [Scrypto SBOR](scrypto-sbor) or [Manifest SBOR](manifest-sbor), including but not limited to:
+In Radix Engine, almost all payloads are encoded [Scrypto SBOR](../../sbor-serialization/scrypto-sbor/README.md) or [Manifest SBOR](../../sbor-serialization/manifest-sbor/README.md), including but not limited to:
 
 -   Transaction payload
 -   Component state

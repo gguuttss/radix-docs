@@ -9,9 +9,9 @@ An important aspect of Radix metadata standards is the concept of a **dApp Defin
 
 The dApp definition provides information about the dApp, and is a hub to establish trusted two-way links with other entities (resources, components and packages) and websites which form part of the dApp. This allows the Radix wallet to give appropriate guidance to the user, for example by telling the user the dApps they are interacting with during transaction signing.
 
-There is a [tool on the developer console](https://console.radixdlt.com/configure-metadata) to help with setting up and validating the entity metadata. See the [dApp Definition Setup Guide](dapp-definition-setup) for more information.
+There is a [tool on the developer console](https://console.radixdlt.com/configure-metadata) to help with setting up and validating the entity metadata. See the [dApp Definition Setup Guide](../../../build/build-dapps/dapp-application-stack/dapp-definition-setup.md) for more information.
 
-The resolved links are returned by the [/state/entity/details endpoint](https://radix-babylon-gateway-api.redoc.ly/#operation/StateEntityDetails) on the [Gateway API](network-apis).
+The resolved links are returned by the [/state/entity/details endpoint](https://radix-babylon-gateway-api.redoc.ly/#operation/StateEntityDetails) on the [Gateway API](../../../integrate/network-apis/README.md).
 
 ## Overview
 
@@ -25,7 +25,7 @@ The dApp definition account forms the “hub” in a hub-and-spoke model. It act
     
 -   **Partner Links** are links between two different dApp definition accounts, configured at each end with metadata.
     
--   The **Primary Locker** is a link from a dApp definition to a single [account locker](locker), and used by the wallet to auto-discover claims for the user’s accounts for dApps they have previously interacted with.
+-   The **Primary Locker** is a link from a dApp definition to a single [account locker](../../radix-engine/native-blueprints/locker.md), and used by the wallet to auto-discover claims for the user’s accounts for dApps they have previously interacted with.
     
 
 ![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(76).png)
@@ -36,7 +36,7 @@ The following details the various fields of metadata that should be configured o
 
 ### dApp Definition Accounts
 
-To start, the dApp Definition account is configured with information metadata, according to the [Metadata Standards for Wallet Display](metadata-for-wallet-display):
+To start, the dApp Definition account is configured with information metadata, according to the [Metadata Standards for Wallet Display](metadata-for-wallet-display.md):
 
 -   The `name` field should be set to a `String`
     
@@ -67,7 +67,7 @@ The following metadata entries should then be set for verification purposes:
 
 #### Direct Link
 
-A **direct link** can be defined between a dApp definition and a scrypto component or “[native component](native-blueprints)” such as a pool, account, validator or access controller.
+A **direct link** can be defined between a dApp definition and a scrypto component or “[native component](../../radix-engine/native-blueprints/README.md)” such as a pool, account, validator or access controller.
 
 <table width="1312" class="editor360-table" borderstyle="Solid" style="max-width:1312px;width:1312px;"><colgroup><col style="width:194px;"><col style="width:114px;"><col style="width:502px;"><col style="width:502px;"></colgroup><tbody><tr><th colspan="1" rowspan="1" colwidth="194" style="vertical-align:middle;text-align:left;width:194px;"><p>Metadata field</p></th><th colspan="1" rowspan="1" colwidth="114" style="vertical-align:middle;text-align:left;width:114px;"><p>Type</p></th><th colspan="1" rowspan="1" colwidth="502" style="vertical-align:middle;text-align:left;"><p>Contents</p></th><th colspan="1" rowspan="1" colwidth="502" style="vertical-align:middle;text-align:left;"><p>Gateway &amp; Radix Wallet treatment</p></th></tr><tr><td colspan="1" rowspan="1" colwidth="194" style="vertical-align:middle;text-align:left;width:194px;"><p><code>dapp_definition</code></p></td><td colspan="1" rowspan="1" colwidth="114" style="vertical-align:middle;text-align:left;width:114px;"><p><code>Address</code></p></td><td colspan="1" rowspan="1" colwidth="502" style="vertical-align:middle;text-align:left;"><p>The dApp definition account address.</p></td><td colspan="1" rowspan="1" colwidth="502" style="vertical-align:middle;text-align:left;"><p>Defines a direct link to the dApp if the component’s address is also present in the dApp Definition Account’s <code>claimed_entities</code> metadata.</p></td></tr></tbody></table>
 

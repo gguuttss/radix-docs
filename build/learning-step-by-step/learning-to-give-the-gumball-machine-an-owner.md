@@ -7,7 +7,7 @@ Web3 concerns ownership, ownership of digital assets, the distributed ownership 
 
 Having defined owners works as a useful shortcut in our [Authorization Approach](https://docs.radixdlt.com/docs/authorization-approach). We'll expand further on authorization in later Step-by-Step sections, but for now, think of an owner as the admin for that entity. Components and resources have owners. Being able to prove your an owner, with a [**badge**](https://docs.radixdlt.com/v1/docs/user-badge-pattern), can give you access to more of the component. Therefore, declaring who owners are gives you more power to decide who can use a component and how, and the Radix Engin enforces your decisions and guaranties their effects. We can use this to do things like withdraw the collected XRD in our gumball machine without worrying that anyone else can.
 
-We keep track of ownership with [**badges**](learning-to-give-the-gumball-machine-an-owner#badges). Before we dig into what they are and how to use them, let's look at what ownership means for our gumball machine?
+We keep track of ownership with [**badges**](learning-to-give-the-gumball-machine-an-owner.md#badges). Before we dig into what they are and how to use them, let's look at what ownership means for our gumball machine?
 
 ## Ownership and Authorization
 

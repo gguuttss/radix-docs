@@ -5,7 +5,7 @@ title: "Displaying Resource Addresses"
 
 All types of assets issued on the Radix Network take the form of resources. This article covers the recommendations for how fungible and non-fungible resource addresses are displayed to the user, in websites and front-end applications.
 
-You may also wish to read the specific guide on [displaying individual non-fungible global ids](non-fungible-display).
+You may also wish to read the specific guide on [displaying individual non-fungible global ids](../non-fungible-standards/non-fungible-display.md).
 
 ## Shortened display of Resource Addresses
 
@@ -29,4 +29,4 @@ Any resource, fungible or non-fungible, may have metadata set on its resource ma
 
 ## Special Resource Classifications
 
-The Radix Wallet, Dashboard, and dApps may show other kinds of resources, like “badges” or “pool units”. These are just special classifications of fungible or non-fungible resources, and so they aren’t addressed any differently than the above. The wallet or dashboard will be able to identify them with [special metadata](metadata-for-wallet-display), and the Gateway may make it easy to view these special classifications for convenience.
+The Radix Wallet, Dashboard, and dApps may show other kinds of resources, like “badges” or “pool units”. These are just special classifications of fungible or non-fungible resources, and so they aren’t addressed any differently than the above. The wallet or dashboard will be able to identify them with [special metadata](../metadata-standards/metadata-for-wallet-display.md), and the Gateway may make it easy to view these special classifications for convenience.

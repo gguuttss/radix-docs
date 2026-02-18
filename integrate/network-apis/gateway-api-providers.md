@@ -3,7 +3,7 @@ title: "Gateway API Providers"
 ---
 # Gateway API Providers
 
-The following is a list of known [Gateway API](network-apis) providers.
+The following is a list of known [Gateway API](README.md) providers.
 
 This list is not vetted
 

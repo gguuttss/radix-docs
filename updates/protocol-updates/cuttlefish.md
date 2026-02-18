@@ -14,23 +14,23 @@ title: "Cuttlefish (Live)"
 
 ## Main Changes
 
--   A new V2 transaction format supporting an [intent structure](intent-structure) containing [subintents](subintents), and the associated [pre-authorization flows](preauthorizations) to propose them in your dApp and have them reviewed and signed in the wallet.
+-   A new V2 transaction format supporting an [intent structure](../../reference/transactions/intent-structure.md) containing [subintents](../../reference/transactions/subintents.md), and the associated [pre-authorization flows](preauthorizations) to propose them in your dApp and have them reviewed and signed in the wallet.
     -   This is covered in depth in [this twitter space (starts at 4:30)](https://x.com/i/spaces/1vAxROdXqYVKl)
     -   This powers [Anthic Flash Liquidity](https://www.radixdlt.com/blog/technical-deep-dive-how-flash-liquidity-will-work)
--   Getters for balances on the native [Account](account) blueprint.
+-   Getters for balances on the native [Account](../../reference/radix-engine/native-blueprints/account.md) blueprint.
 -   `CryptoUtils` for `blake256` hashing, `Secp256k1` and `Ed25519` validation.
 -   Tweak to the consensus manager min rounds per epoch to make it much harder to miss 5 minute epochs.
 -   Various improvements to the Radix Engine implementation.
 
 ## Release Notes
 
--   [Scrypto v1.3.0](scrypto-v1-3-0)
+-   [Scrypto v1.3.0](../release-notes/scrypto/scrypto-v1-3-0.md)
 
 ## Libraries & SDKS
 
 ### Rust
 
--   [Engine rust crates](rust-libraries-overview) (e.g. `scrypto`, `scrypto-test`, `radix-transactions`) - 1.3.0 ([crates.io](https://crates.io/crates/scrypto))
+-   [Engine rust crates](../../integrate/rust-libraries/rust-libraries-overview.md) (e.g. `scrypto`, `scrypto-test`, `radix-transactions`) - 1.3.0 ([crates.io](https://crates.io/crates/scrypto))
 
 ### Typescript
 
@@ -40,20 +40,20 @@ title: "Cuttlefish (Live)"
 
 ### C#
 
--   Radix Engine Toolkit - v2.2.0 ([install guide](radix-engine-toolkit-installation))
+-   Radix Engine Toolkit - v2.2.0 ([install guide](../../integrate/radix-engine-toolkit/radix-engine-toolkit-installation.md))
 
 ### Kotlin
 
--   Radix Engine Toolkit - v2.2.0 ([install guide](radix-engine-toolkit-installation))
+-   Radix Engine Toolkit - v2.2.0 ([install guide](../../integrate/radix-engine-toolkit/radix-engine-toolkit-installation.md))
 
 ### Swift
 
--   Radix Engine Toolkit - v2.2.0 ([install guide](radix-engine-toolkit-installation))
+-   Radix Engine Toolkit - v2.2.0 ([install guide](../../integrate/radix-engine-toolkit/radix-engine-toolkit-installation.md))
 
 ### Python
 
--   Radix Engine Toolkit - v2.2.0 ([install guide](radix-engine-toolkit-installation))
+-   Radix Engine Toolkit - v2.2.0 ([install guide](../../integrate/radix-engine-toolkit/radix-engine-toolkit-installation.md))
 
 ### Go
 
--   Radix Engine Toolkit - v2.2.0 ([install guide](radix-engine-toolkit-installation))
+-   Radix Engine Toolkit - v2.2.0 ([install guide](../../integrate/radix-engine-toolkit/radix-engine-toolkit-installation.md))

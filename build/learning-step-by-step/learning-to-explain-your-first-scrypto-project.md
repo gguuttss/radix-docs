@@ -29,7 +29,7 @@ One or multiple blueprints grouped together, ready to be instantiated are a **pa
 
 We only have one blueprint in the package called `Hello`, which defines:
 
-1.  The state structure of all `Hello` components; a single [vault](learning-to-explain-your-first-scrypto-project#buckets-vaults). A vault is a container for [resources](learning-to-explain-your-first-scrypto-project#resource-creation);
+1.  The state structure of all `Hello` components; a single [vault](learning-to-explain-your-first-scrypto-project.md#buckets-vaults). A vault is a container for [resources](learning-to-explain-your-first-scrypto-project.md#resource-creation);
 2.  A function `instantiate_hello`, which instantiates a `Hello` component;
 3.  A method `free_token`, which returns a bucket of `HelloToken` (from the  
     component vault) when called.

@@ -110,7 +110,7 @@ Good question: see pattern #3 below.
 
 Important Note
 
-The [Account Locker blueprint](locker) arrived in Jun 2024 with the Bottlenose protocol updated to the Radix Network, but the Radix Wallet functionality described here isn't yet available. In the meantime, dApps will need to propose the transaction for the user to claim from the locker through the dApp's website.
+The [Account Locker blueprint](../../../reference/radix-engine/native-blueprints/locker.md) arrived in Jun 2024 with the Bottlenose protocol updated to the Radix Network, but the Radix Wallet functionality described here isn't yet available. In the meantime, dApps will need to propose the transaction for the user to claim from the locker through the dApp's website.
 
 **This is the pattern to use if you have an absolute need to conduct "no fail" deposits to particular account addresses. Exchanges or bulk airdrops are the classic examples.**
 
@@ -120,7 +120,7 @@ If the tokens are like a physical package, the account locker pattern here is: "
 
 #### How to use the Account Locker pattern
 
-The Radix network includes a native component called an [Account Locker](locker) which is specially designed to enable this pattern.
+The Radix network includes a native component called an [Account Locker](../../../reference/radix-engine/native-blueprints/locker.md) which is specially designed to enable this pattern.
 
 In short, you instantiate a locker for your dApp and can use it to hold deposits for particular account addresses that may be claimed *exclusively by the account owners*. If you wish you can have the locker attempt to directly deposit the assets to the account, and only hold them in the locker if this isn't possible.
 

@@ -65,7 +65,7 @@ The above comparison aside, the following list provides the reader with an idea 
 -   When developing frontend or backend services that need to understand SBOR, decode it, and present it in a human-readable way. One example of this may be an NFT marketplace that wishes to display the SBOR-encoded non-fungible data to users as human-readable data.
 -   When developing applications that need to be able to decompile transactions and show the manifest as well as the header and signature to users. One example of that would be dashboards and explorers which need to decompile transactions and display the manifest to the user.
 
-Other use cases exist as well and they all revolve around the features in the [functionalities](radix-engine-toolkit#functionality) section.
+Other use cases exist as well and they all revolve around the features in the [functionalities](README.md#functionality) section.
 
 * * *
 

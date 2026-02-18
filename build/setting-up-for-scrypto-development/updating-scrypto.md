@@ -9,7 +9,7 @@ When a new version of Scrypto is released, it is recommended to update your tool
 
 1.  Open a terminal, or PowerShell if you are on Window
     
-2.  Install the [required Rust compiler](getting-rust-scrypto) and set it as default  
+2.  Install the [required Rust compiler](getting-rust-scrypto.md) and set it as default  
     
     ```bash
     rustup default <rust-version>

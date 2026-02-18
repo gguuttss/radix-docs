@@ -7,13 +7,13 @@ title: "Building a Frontend dApp"
 
 A Pure Frontend dApp is the simplest kind of dApp. It has no server backend portion at all – it is a website that connects to a user’s Radix Wallet, gets data from the Radix Network, and proposes transactions to the wallet.
 
-For an overview of dApp types on Radix, see [What is a dApp on Radix](dapp-application-stack)?
+For an overview of dApp types on Radix, see [What is a dApp on Radix](README.md)?
 
 It’s useful to start with the big picture of the various tools available to you, and how they connect together. The **green blocks** below are built by you and the **blue blocks** are existing tools for you to make use of.
 
 ![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/pure_frontend_detail_view.png "pure_frontend_detail_view.png")
 
-Your dApp website project will likely include the [Radix dApp Toolkit](dapp-toolkit), which provides a useful combined interface to a √ Connect Button, Wallet SDK, and Gateway SDK. These tools provide a seamless way to facilitate the interaction between the user and your dApp with the Radix Wallet.
+Your dApp website project will likely include the [Radix dApp Toolkit](dapp-sdks/dapp-toolkit.md), which provides a useful combined interface to a √ Connect Button, Wallet SDK, and Gateway SDK. These tools provide a seamless way to facilitate the interaction between the user and your dApp with the Radix Wallet.
 
 Let’s break each specific elements within the Radix dApp Toolkit:
 
@@ -25,7 +25,7 @@ Let’s break each specific elements within the Radix dApp Toolkit:
 
 In addition to this, your frontend dApp may also have an "on-ledger backend" portion on the Radix Network itself. For example, you can build your own powerful automation for assets as a **component**, written in Scrypto. Moreover, you can create assets and tokens of your own as "resources", too. With this set up, third parties may have existing components and resources of their own on the Radix Network that can interact with your frontend as well.
 
-After you’ve built your website, components, and resources that make up your dApp, you will need a way for the Radix wallet to understand the relationship between each piece. To do this, you can [set up a dApp Definition account](dapp-definition-setup). The dApp Definition account provides an on-ledger unique identifier that each parts of your dApp can point to, to establish each other’s relationship. This provides your users a rich experience to interacting with your dApp.
+After you’ve built your website, components, and resources that make up your dApp, you will need a way for the Radix wallet to understand the relationship between each piece. To do this, you can [set up a dApp Definition account](dapp-definition-setup.md). The dApp Definition account provides an on-ledger unique identifier that each parts of your dApp can point to, to establish each other’s relationship. This provides your users a rich experience to interacting with your dApp.
 
 When users interact with your dApp, your dApp interacts with its components (and/or components created by others) by building a [transaction manifest](transaction-manifest). These transaction manifests are composed of the user’s intent which describe how assets move between user accounts and one or more components to perform potentially complex and powerful action. The transaction manifest is then submitted to the Radix Wallet (via Wallet SDK) for the user to review and accept - confirming their intentions.
 

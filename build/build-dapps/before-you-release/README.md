@@ -7,5 +7,5 @@ The goal of this set of articles is to introduce developers to some of the commo
 
 The following are the articles available under this section:
 
--   [Code Hardening](code-hardening)
--   [Productionize Your Code](productionize-your-code)
+-   [Code Hardening](code-hardening.md)
+-   [Productionize Your Code](productionize-your-code.md)

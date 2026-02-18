@@ -5,7 +5,7 @@ title: "Installation and Basic Setup"
 
 ## Introduction
 
-Welcome to the Radix node installation guide! Before we begin, let’s take a look at a high-level overview of the whole process. Please read [Node Introduction](node) first, if you haven’t done so yet.
+Welcome to the Radix node installation guide! Before we begin, let’s take a look at a high-level overview of the whole process. Please read [Node Introduction](../README.md) first, if you haven’t done so yet.
 
 #### Process overview
 
@@ -34,7 +34,7 @@ A complete node setup can be broken down into the following steps:
         
 6.  **(Optional) Registering as a Validator**
     
-    Only for node runners who wish to become validators. Make sure you have a good understanding [of what a validator node is](node) before engaging in this step.
+    Only for node runners who wish to become validators. Make sure you have a good understanding [of what a validator node is](../README.md) before engaging in this step.
     
 
 In the first part of this guide we’ll focus on the top three items from above list as they’re typically done together.
@@ -194,16 +194,16 @@ On the next pages we'll guide you through the process of setting up a Radix node
 In this mode, you’ll use our Python CLI tool (\`babylonnode\`) for a straightforward, guided installation of a Radix node on an Ubuntu host. We recommend this method for most people. This process works best on a fresh, dedicated machine (e.g. cloud instance).  
 `babylonnode` is a versatile tool that can not only assist in setting up a node and related tools, but also helps to manage it afterwards.
 
-[**Proceed to Guided Mode docs**](node-setup-guided)
+[**Proceed to Guided Mode docs**](node-setup-guided/README.md)
 
 #### Manual (Advanced) Setup with Docker
 
 This section will guide you through a manual (i.e. without using the `babylonnode` CLI tool) setup where the node and related tools (e.g. nginx) are running inside Docker containers on a host machine.
 
-[**Proceed to Manual Setup with Docker docs**](node-setup-docker)
+[**Proceed to Manual Setup with Docker docs**](manual-setup-advanced/node-setup-docker.md)
 
 #### Manual (Advanced) Setup with systemd
 
 This section will guide you through a manual (i.e. without using the `babylonnode` CLI tool) setup where the node and related tools (e.g. nginx) are running directly on a host machine. The processes will be managed by systemd. This method is suitable for those who want the most hands-on approach, and may be a useful reference for those figuring out installation on different operating systems.
 
-[**Proceed to Manual Setup with systemd docs**](node-setup-systemd)
+[**Proceed to Manual Setup with systemd docs**](manual-setup-advanced/node-setup-systemd/README.md)

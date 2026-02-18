@@ -23,7 +23,7 @@ Other versions of LLVM and/or Rust may also work, but have not been tested.
 
 ## Install the Scrypto Toolchain
 
-To begin working with Scrypto, you need to first prepare your system for Rust development. Then you can install the Scrypto Libraries, [Radix Engine Simulator](resim-radix-engine-simulator) (`resim`) and command line tools. You can do this by following the manual steps for [Windows](getting-rust-scrypto#manual-windows-install), [macOS](getting-rust-scrypto#manual-macos-install) or [Linux](getting-rust-scrypto#manual-linux-install) systems, or run our scripts for [automated installation](getting-rust-scrypto#automated-installation) at the latests scrypto version.
+To begin working with Scrypto, you need to first prepare your system for Rust development. Then you can install the Scrypto Libraries, [Radix Engine Simulator](../scrypto-1/tools-for-scrypto/resim-radix-engine-simulator.md) (`resim`) and command line tools. You can do this by following the manual steps for [Windows](getting-rust-scrypto.md#manual-windows-install), [macOS](getting-rust-scrypto.md#manual-macos-install) or [Linux](getting-rust-scrypto.md#manual-linux-install) systems, or run our scripts for [automated installation](getting-rust-scrypto.md#automated-installation) at the latests scrypto version.
 
 ### Automated Installation
 
@@ -53,7 +53,7 @@ curl -fsSL https://raw.githubusercontent.com/radixdlt/radixdlt-scrypto/refs/head
 
 After Installation
 
-Look at [After Installing Scrypto](getting-rust-scrypto#after-installing-scrypto) for more helpful tools and suggestions
+Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scrypto) for more helpful tools and suggestions
 
 ### Manual Windows Install
 
@@ -107,7 +107,7 @@ cargo install --force radix-clis@1.3.1
 
 After Installation
 
-Look at [After Installing Scrypto](getting-rust-scrypto#after-installing-scrypto) for more helpful tools and suggestions
+Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scrypto) for more helpful tools and suggestions
 
 ### Manual macOS Install
 
@@ -166,7 +166,7 @@ cargo install --force radix-clis@1.3.1
 
 After Installation
 
-Look at [After Installing Scrypto](getting-rust-scrypto#after-installing-scrypto) for more helpful tools and suggestions
+Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scrypto) for more helpful tools and suggestions
 
 ### Manual Linux Install
 
@@ -208,7 +208,7 @@ cargo install --force radix-clis@1.3.1
 
 After Installation
 
-Look at [After Installing Scrypto](getting-rust-scrypto#after-installing-scrypto) for more helpful tools and suggestions
+Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scrypto) for more helpful tools and suggestions
 
 ## Troubleshooting
 
@@ -366,10 +366,10 @@ You are now ready to start writing your first Scrypto blueprint.
 
 ### What Should You do Next?
 
-If your not sure what to do after installing scrypto have a look at our [Learning Step-by-Step](learning-step-by-step) to learn how to start making Scrypto packages and dapps.
+If your not sure what to do after installing scrypto have a look at our [Learning Step-by-Step](../learning-step-by-step/README.md) to learn how to start making Scrypto packages and dapps.
 
 ## More Information
 
--   [Scrypto CLI](scrypto-cli-tool)
+-   [Scrypto CLI](../scrypto-1/tools-for-scrypto/scrypto-cli-tool.md)
     
 -   [Radix Engine Simulator](radix-engine-simulator-resim)

@@ -5,7 +5,7 @@ title: "Transaction Structure"
 
 This article covers the flattened structure of the transaction model and serialized transactions.
 
-When building or executing a transaction, it is better to think in terms of its tree-based Intent Structure. We advise you to read about the [intent structure](intent-structure) first before reading this article.
+When building or executing a transaction, it is better to think in terms of its tree-based Intent Structure. We advise you to read about the [intent structure](intent-structure.md) first before reading this article.
 
 ## V1 User Transaction Structure
 
@@ -16,7 +16,7 @@ It is much the same as the V2 structure, except has no support for subintents, i
 
 ## V2 User Transaction Structure
 
-In the persisted structure, the subintents are flattened into an array. During validation, they are converted into a tree structure. When building transactions, you will build them up in this tree-based [intent structure](intent-structure).
+In the persisted structure, the subintents are flattened into an array. During validation, they are converted into a tree structure. When building transactions, you will build them up in this tree-based [intent structure](intent-structure.md).
 
 Transaction hashes discussed below are built up in merklized layers, such that a transaction hash can be used to prove details about the content of a transaction without providing the full transaction.
 
@@ -73,15 +73,15 @@ Each intent core contains:
     -   The `min_epoch_inclusive` and `max_epoch_exclusive` in which the intent can be committed
     -   An optional `min_proposer_timestamp_inclusive` and optional `max_proposer_timestamp_exclusive` between which the intent can be committed
     -   An `intent_discriminator`, typically set to a random number - which allows generating a new transaction id for what could otherwise be the same intent.
--   An optional [message](concepts-transactions)
+-   An optional [message](../babylon-technical-concepts/concepts-transactions.md)
 -   The intent's [manifest](transaction-manifest)
     -   One or more blobs (uninterpreted byte payloads which can be passed to smart contracts in the manifest)
     -   An array of the subintent hashes of each child
-    -   A list of [instructions](manifest-instructions), which can be represented in a human readable form
+    -   A list of [instructions](manifest/manifest-instructions.md), which can be represented in a human readable form
 
 ## V2 Partial Transaction Structure
 
-When constructing transactions containing more than one intent, it's typical to build them up in subtrees, according to their [intent structure](intent-structure).
+When constructing transactions containing more than one intent, it's typical to build them up in subtrees, according to their [intent structure](intent-structure.md).
 
 In particular, there are two additional useful models:
 

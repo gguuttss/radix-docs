@@ -5,11 +5,11 @@ title: "Non-Fungible Resource Creation"
 
 It is possible to create non-fungible resources with transactions, but it is quite hard to create them manually - this is because a non-fungible resource includes a [Scrypto SBOR Schema](sbor-schemas) for the non-fungible data.
 
-Instead, it’s better to build the transaction with the [Rust Manifest Builder](rust-manifest-builder), and then submit it using the [developer console](developer-console).
+Instead, it’s better to build the transaction with the [Rust Manifest Builder](../../../../integrate/rust-libraries/rust-manifest-builder.md), and then submit it using the [developer console](developer-console).
 
 ## Building the Transfer Manifest with the Rust Manifest Builder
 
-First, set-up a Rust/Scrypto project as in the [Rust Manifest Builder](rust-manifest-builder) docs.
+First, set-up a Rust/Scrypto project as in the [Rust Manifest Builder](../../../../integrate/rust-libraries/rust-manifest-builder.md) docs.
 
 The below test can be run to output a manifest to `./transaction_manifest/create_non_fungible.rtm` with the `CREATE_NON_FUNGIBLE_RESOURCE_WITH_INITIAL_SUPPLY` command.
 
@@ -74,7 +74,7 @@ fn create_nf_resource() {
 }
 ```
 
-Example manifest output is as follows. Note that because it is automatically generated, it doesn’t use the [manifest type aliases](manifest-instructions) which are typically used for manual creation.
+Example manifest output is as follows. Note that because it is automatically generated, it doesn’t use the [manifest type aliases](../../../../reference/transactions/manifest/manifest-instructions.md) which are typically used for manual creation.
 
 ```bash
 CALL_METHOD

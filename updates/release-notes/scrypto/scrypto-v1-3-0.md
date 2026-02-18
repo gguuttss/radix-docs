@@ -3,7 +3,7 @@ title: "Scrypto v1.3.0"
 ---
 # Scrypto v1.3.0
 
-Scrypto `v1.3.0` adds support for the [cuttlefish](cuttlefish) protocol update.
+Scrypto `v1.3.0` adds support for the [cuttlefish](../../protocol-updates/cuttlefish.md) protocol update.
 
 Use the correct rust version
 
@@ -17,10 +17,10 @@ See [Scrypto v1.3.0 on docs.rs](https://docs.rs/scrypto/1.3.0) for full technica
 
 ### Transaction V2 and Subintents
 
-The headline feature of `cuttlefish` is [subintents](subintents), which function like mini transactions that can be embedded within other transactions. They are complete user intents which are signed separately and can be passed around off-ledger to be assembled with other intents into a complete transaction.
+The headline feature of `cuttlefish` is [subintents](../../../reference/transactions/subintents.md), which function like mini transactions that can be embedded within other transactions. They are complete user intents which are signed separately and can be passed around off-ledger to be assembled with other intents into a complete transaction.
 
--   To understand how subintents work, read about the [intent structure](intent-structure).
--   To use subintents in your dApp, read about the [Pre-authorization Flow](pre-authorizations-and-subintents) which also covers some example use-cases.
+-   To understand how subintents work, read about the [intent structure](../../../reference/transactions/intent-structure.md).
+-   To use subintents in your dApp, read about the [Pre-authorization Flow](../../../build/build-dapps/dapp-transactions/pre-authorizations-and-subintents.md) which also covers some example use-cases.
 
 Further documentation on working with subintents will follow in the next week. But to start you off, here's an example of building a `NotarizedTransactionV2` with a subintent:
 
@@ -117,7 +117,7 @@ These instructions are only available in `V2` manifests, which is supported only
 -   `TransactionManifestV1` stubs for transaction requests  
     Therefore the new instructions *cannot* currently be used when making transaction requests to the wallet.
 
-A brief overview of the new V2 instructions are as follows. Full detail and examples are given in the [manifest instructions article](manifest-instructions). Examples of subintent and transaction manifests can be found [here](https://github.com/radixdlt/radixdlt-scrypto/tree/main/radix-transaction-scenarios/generated-examples/cuttlefish/basic_subintents/manifests).
+A brief overview of the new V2 instructions are as follows. Full detail and examples are given in the [manifest instructions article](../../../reference/transactions/manifest/manifest-instructions.md). Examples of subintent and transaction manifests can be found [here](https://github.com/radixdlt/radixdlt-scrypto/tree/main/radix-transaction-scenarios/generated-examples/cuttlefish/basic_subintents/manifests).
 
 | Instruction | Description |
 | --- | --- |
@@ -146,7 +146,7 @@ CryptoUtils::secp256k1_ecdsa_verify_and_key_recover_uncompressed(&hash, &signatu
 
 ### Getter Methods on Account Blueprint
 
-New getter methods have been added to the [Account](account) blueprint, allowing on-chain account balance lookup.
+New getter methods have been added to the [Account](../../../reference/radix-engine/native-blueprints/account.md) blueprint, allowing on-chain account balance lookup.
 
 The [Account](https://docs.rs/scrypto/1.3.0/scrypto/component/struct.Account.html) stub has been updated with these new methods for easy access:
 
@@ -179,7 +179,7 @@ Notably changes include the following. If you are hitting other compilation erro
 
 We have updated this across the stack, although some APIs (e.g. the Core API and SBOR annotated programmatic JSON) may still refer to the old names in some places due to backwards-compatibility requirements. And the old names are still accepted as Enum descriptors in Manifest Value syntax.
 
-See [advanced access rules](advanced-accessrules) for more information.
+See [advanced access rules](../../../build/scrypto-1/auth/advanced-accessrules.md) for more information.
 
 ### Renames to "virtual" entity types and addresses
 

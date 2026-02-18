@@ -5,7 +5,7 @@ title: "Wrapping Up the Learning Step-by-Step"
 
 We've made it to the end of this step-by-step learning journey. You now know enough to start making your own dapps for the Radix network and help grow our DeFi ecosystem, though there is much more to learn still.
 
-Make sure you have a look at the [Before You Release](before-you-release) docs pages before releasing any of your code into the wild. You find advice for ensuring the [security and intended behaviour](code-hardening) of your dapps there, as well as suggestions for [optimisation and readiness for release checks](productionize-your-code)
+Make sure you have a look at the [Before You Release](../build-dapps/before-you-release/README.md) docs pages before releasing any of your code into the wild. You find advice for ensuring the [security and intended behaviour](../build-dapps/before-you-release/code-hardening.md) of your dapps there, as well as suggestions for [optimisation and readiness for release checks](../build-dapps/before-you-release/productionize-your-code.md)
 
 How did you find the Learning Step-by-Step?
 

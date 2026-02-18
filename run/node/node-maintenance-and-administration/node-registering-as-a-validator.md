@@ -5,7 +5,7 @@ title: "Registering as a Validator"
 
 ## Introduction
 
-Make sure you’ve read the [Node Introduction](node) and have a good understanding of what a validator node is before you decide to register.
+Make sure you’ve read the [Node Introduction](../README.md) and have a good understanding of what a validator node is before you decide to register.
 
 > On Babylon, a "Validator" exists on the ledger independently from its currently configured public key (and associated node). This means that you can change the public key associated with your validator! You will manage your "Validator Component" using an "Owner Badge", which can be stored/protected in an account.
 > 
@@ -27,7 +27,7 @@ In the consensus layer, a node can represent the validator if it is configured w
 
 ## Prerequisites
 
--   You should have completed setting up your node, and have it running. Follow our [Node Setup Guide](node-setup) if you haven’t done so yet.
+-   You should have completed setting up your node, and have it running. Follow our [Node Setup Guide](../node-setup/README.md) if you haven’t done so yet.
     
 -   You should have set up a [Babylon Radix Wallet](https://www.radixdlt.com/wallet).
     
@@ -230,7 +230,7 @@ curl http://localhost:3334/system/identity
 
 Go to “Send Raw Transaction” on the console \[[Stokenet](https://stokenet-console.radixdlt.com/transaction-manifest) | [Mainnet](https://console.radixdlt.com/transaction-manifest)\].
 
-Copy in the following manifest, replacing the `<ACCOUNT_ADDRESS>`, `<BADGE_LOCAL_ID>` and `<VALIDATOR_ADDRESS>` placeholders with their values from the previous steps, and inserting appropriate values for the `<METADATA_*>` values. For more details on the metadata standard, please see the [metadata standard docs](metadata-for-wallet-display).
+Copy in the following manifest, replacing the `<ACCOUNT_ADDRESS>`, `<BADGE_LOCAL_ID>` and `<VALIDATOR_ADDRESS>` placeholders with their values from the previous steps, and inserting appropriate values for the `<METADATA_*>` values. For more details on the metadata standard, please see the [metadata standard docs](../../../reference/standards/metadata-standards/metadata-for-wallet-display.md).
 
 Stokenet (Testnet)
 

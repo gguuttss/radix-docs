@@ -7,7 +7,7 @@ ROLA is method of authenticating something claimed by the user connected to your
 
 ROLA is intended for use in the server backend portion of a Full Stack dApp. It runs "off-ledger" alongside backend business and user management logic, providing reliable authentication of claims of user control using "on-ledger" data from the Radix Network.
 
-Learn more about Pure Frontend dApps and Full Stack dApps at [What is a dApp on Radix?](setting-up-for-dapp-development)
+Learn more about Pure Frontend dApps and Full Stack dApps at [What is a dApp on Radix?](../../setting-up-for-scrypto-development/setting-up-for-dapp-development.md)
 
 ## Uses of ROLA
 
@@ -56,4 +56,4 @@ Please check [ROLA examples](https://github.com/radixdlt/rola) for more document
 
 And please check out the [ROLA npm library](https://www.npmjs.com/package/@radixdlt/rola) for use in building Node.js backends using ROLA.
 
-Finally, some [Community APIs](network-apis) offer delegated ROLA-as-a-service, which could be a good choice assuming you trust the given service with the responsibility to authenticate users on your behalf.
+Finally, some [Community APIs](../../../integrate/network-apis/README.md) offer delegated ROLA-as-a-service, which could be a good choice assuming you trust the given service with the responsibility to authenticate users on your behalf.

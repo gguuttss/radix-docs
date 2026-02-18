@@ -9,7 +9,7 @@ Radix currently offers a couple of few main APIs, targeted to different use case
 
 ### Core API
 
-**Key Links:** [**Full Core API Documentation**](https://radix-babylon-core-api.redoc.ly/) **|** [**Core API Providers**](core-api-providers) **|** [**Typescript Core API SDK**](https://www.npmjs.com/package/@radixdlt/babylon-core-api-sdk)
+**Key Links:** [**Full Core API Documentation**](https://radix-babylon-core-api.redoc.ly/) **|** [**Core API Providers**](core-api-providers.md) **|** [**Typescript Core API SDK**](https://www.npmjs.com/package/@radixdlt/babylon-core-api-sdk)
 
 The Core API provides low-level and high-level abstractions, and includes:
 
@@ -22,11 +22,11 @@ The Core API provides low-level and high-level abstractions, and includes:
 -   A committed transaction stream, at varying abstraction levels
     
 
-The Core API is exposed by [Radix nodes](run-infrastructure). It is predominantly intended as a private API, but there [are some RPC providers offering it](core-api-providers) for public integrations.
+The Core API is exposed by [Radix nodes](run-infrastructure). It is predominantly intended as a private API, but there [are some RPC providers offering it](core-api-providers.md) for public integrations.
 
 ### Gateway API
 
-**Key Links:** [**Full Gateway API Documentation**](https://radix-babylon-gateway-api.redoc.ly/) **|** [**Gateway API Providers**](gateway-api-providers) **|** [**Typescript Gateway API SDK**](https://www.npmjs.com/package/@radixdlt/babylon-gateway-api-sdk)
+**Key Links:** [**Full Gateway API Documentation**](https://radix-babylon-gateway-api.redoc.ly/) **|** [**Gateway API Providers**](gateway-api-providers.md) **|** [**Typescript Gateway API SDK**](https://www.npmjs.com/package/@radixdlt/babylon-gateway-api-sdk)
 
 The Gateway API provides low-level and high-level abstractions, but is primarily intended for use by dApp website frontends and general network clients like dashboards. It can be used for:
 
@@ -39,7 +39,7 @@ The Gateway API provides low-level and high-level abstractions, but is primarily
 -   Queries of historic ledger state
     
 
-The Gateway API is exposed by the [Network Gateway](run-infrastructure), and provided by [Gateway API Providers](gateway-api-providers).
+The Gateway API is exposed by the [Network Gateway](run-infrastructure), and provided by [Gateway API Providers](gateway-api-providers.md).
 
 ### Engine State API
 
@@ -74,7 +74,7 @@ If the Core and Gateway APIs don’t currently meet your needs, members of the c
 
 [RadixAPI](https://radixapi.net/) provides additional [endpoints and functionality](https://docs.radixapi.net/) to the official Gateway API to make it easier to obtain specific data. These include:
 
--   Creating and verifying [ROLA](rola-radix-off-ledger-auth) challenges
+-   Creating and verifying [ROLA](../../build/build-dapps/dapp-application-stack/rola-radix-off-ledger-auth.md) challenges
     
 -   Finding the owners of a fungible or non fungible resource
     

@@ -189,7 +189,7 @@ require_n_of(N, vec![<RESOURCE_ADDRESS or NON_FUNGIBLE 1>, <RESOURCE_ADDRESS or 
 
 ### Resource Address or Non-Fungible
 
-Most basic requirements take a resource address (fungible OR non-fungible) or a specific [non-fungible global id](non-fungible-display#nonfungible-global-id-address-display).
+Most basic requirements take a resource address (fungible OR non-fungible) or a specific [non-fungible global id](../../../reference/standards/non-fungible-standards/non-fungible-display.md#nonfungible-global-id-address-display).
 
 ```rust
 // Requires any non-zero amount of a certain fungible resource:
@@ -240,7 +240,7 @@ But access rules can also include requirements on **implicit proofs** under spec
 
 ### Signature Requirements
 
-For each public key which signed a given notarized transaction, the system creates an implicit non-fungible proof of `NonFungibleLocalId::bytes(LOWER_29_BYTES_OF_BLAKE256B_HASH_OF_PUBLIC_KEY_BYTES)` in the authorization zone of the [transaction processor](transaction-processor) call frame. The non-fungible proof is created under one of the following special reserved non-fungible resource addresses (see [well-known native addresses](well-known-addresses)):
+For each public key which signed a given notarized transaction, the system creates an implicit non-fungible proof of `NonFungibleLocalId::bytes(LOWER_29_BYTES_OF_BLAKE256B_HASH_OF_PUBLIC_KEY_BYTES)` in the authorization zone of the [transaction processor](transaction-processor) call frame. The non-fungible proof is created under one of the following special reserved non-fungible resource addresses (see [well-known native addresses](../../../reference/babylon-technical-concepts/well-known-addresses.md)):
 
 -   Secp256k1 Signature Resource ([stokenet](https://stokenet-dashboard.radixdlt.com/resource/resource_tdx_2_1nfxxxxxxxxxxsecpsgxxxxxxxxx004638826440xxxxxxxxxcdcdpa), [mainnet](https://dashboard.radixdlt.com/resource/resource_rdx1nfxxxxxxxxxxsecpsgxxxxxxxxx004638826440xxxxxxxxxsecpsg))
     
@@ -272,7 +272,7 @@ rule!(require(NonFungibleGlobalId::from_public_key_hash(<PUBLIC_KEY_HASH>)))
 > 
 > As a general rule, explicit requirements are clearer and more flexible - we advise only using caller requirements where they are strictly needed to meet requirements of your application.
 
-The system creates some implicit proofs which can be used to verify the caller of the given method/function. These non-fungible proofs are created with a byte-based local id, containing a hash of a descriptor of the address / global caller descriptor, under the following special reserved resource addresses (see [well-known native addresses](well-known-addresses)):
+The system creates some implicit proofs which can be used to verify the caller of the given method/function. These non-fungible proofs are created with a byte-based local id, containing a hash of a descriptor of the address / global caller descriptor, under the following special reserved resource addresses (see [well-known native addresses](../../../reference/babylon-technical-concepts/well-known-addresses.md)):
 
 -   Package of Direct Caller Resource ([stokenet](https://stokenet-dashboard.radixdlt.com/resource/resource_tdx_2_1nfxxxxxxxxxxpkcllrxxxxxxxxx003652646977xxxxxxxxxfzcnwk), [mainnet](https://dashboard.radixdlt.com/resource/resource_rdx1nfxxxxxxxxxxpkcllrxxxxxxxxx003652646977xxxxxxxxxpkcllr)) - `NonFungibleLocalId::bytes(BLAKE256B_HASH_OF_SCRYPTO_ENCODED_PACKAGE_ADDRESS)`
     

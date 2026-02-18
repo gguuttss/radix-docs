@@ -7,7 +7,7 @@ The following guide will take you through recommendations for how to integrate w
 
 This includes use of simplified tools (Core LTS API and the Toolkit for exchanges) which provide easy interfaces where you only care about fungible transfers, and sending fungible resources between accounts.
 
-We also suggest reading through the [Technical Concepts](babylon-technical-concepts) documentation for information on concepts described in this guide.
+We also suggest reading through the [Technical Concepts](../../../reference/babylon-technical-concepts/README.md) documentation for information on concepts described in this guide.
 
 ## Overview
 

@@ -3,7 +3,7 @@ title: "Metadata"
 ---
 # Metadata
 
-Public networks like Ethereum and Radix offer a public commons where an unlimited variety of digital assets can be owned and transacted. [dApps, which are made of a combination of traditional websites and servers and on-network smart contract logic](setting-up-for-dapp-development), bring these assets to life.
+Public networks like Ethereum and Radix offer a public commons where an unlimited variety of digital assets can be owned and transacted. [dApps, which are made of a combination of traditional websites and servers and on-network smart contract logic](../../../build/setting-up-for-scrypto-development/setting-up-for-dapp-development.md), bring these assets to life.
 
 To make these assets and dApps meaningful and understandable to humans, we need some form of descriptive metadata.
 
@@ -27,6 +27,6 @@ The way the Radix Wallet make use of these standards may serve as a pattern for 
 
 There are two essential kinds of metadata in this standard:
 
--   [Metadata that is set for special display in the wallet](metadata-for-wallet-display)
+-   [Metadata that is set for special display in the wallet](../../standards/metadata-standards/metadata-for-wallet-display.md)
     
--   [Metadata that allows the wallet to associate and verify the various parts of a dApp](metadata-for-verification)
+-   [Metadata that allows the wallet to associate and verify the various parts of a dApp](../../standards/metadata-standards/metadata-for-verification.md)

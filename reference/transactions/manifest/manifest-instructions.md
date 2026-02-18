@@ -16,7 +16,7 @@ Radix transaction manifest adopts a bash-like grammar. Each manifest consists of
 
 -   A command for the type of operation
     
--   Zero or more arguments, in [manifest value syntax](manifest-value-syntax).
+-   Zero or more arguments, in [manifest value syntax](../../sbor-serialization/manifest-sbor/manifest-value-syntax.md).
     
 -   A semicolon
     
@@ -25,7 +25,7 @@ Radix transaction manifest adopts a bash-like grammar. Each manifest consists of
 
 The table below shows all the instructions that all currently supported by Radix Engine.
 
-Many instructions, such as `CALL_METHOD` and `CALL_FUNCTION` take arbitrary values - these values can be expressed in [manifest value syntax](manifest-value-syntax).
+Many instructions, such as `CALL_METHOD` and `CALL_FUNCTION` take arbitrary values - these values can be expressed in [manifest value syntax](../../sbor-serialization/manifest-sbor/manifest-value-syntax.md).
 
 Some instructions are marked as **Added in V2**. These transactions are only available when building manifests for a `TransactionManifestV2` or `SubintentManifestV2`, introduced in Cuttlefish. At Cuttlefish launch, the wallet will only support `TransactionManifestV1`. It will however support `SubintentManifestV2` in pre-authorization requests.
 
@@ -1256,7 +1256,7 @@ CLAIM_PACKAGE_ROYALTIES
 ;
 ```
 
-Learn more about [Royalties](using-royalties).
+Learn more about [Royalties](../../../build/scrypto-1/royalties/using-royalties.md).
 
 `CALL_ROYALTY_METHOD`
 
@@ -1305,7 +1305,7 @@ CLAIM_COMPONENT_ROYALTIES
 ;
 ```
 
-Learn more about [Royalties](using-royalties).
+Learn more about [Royalties](../../../build/scrypto-1/royalties/using-royalties.md).
 
 `LOCK_COMPONENT_ROYALTY` (alias)
 
@@ -1940,14 +1940,14 @@ Sometimes, when constructing a subintent, you only want it to be used by a parti
 
 The `VERIFY_PARENT <access_rule>;` instruction can be used to ensure a subintent can only be used as a direct child of an intent which can meet some authorization criteria.
 
-Specifically, it takes an [access rule](advanced-accessrules) as an argument, and it asserts the access rule against the [auth zone](auth) of the parent intent's processor, which can see:
+Specifically, it takes an [access rule](../../../build/scrypto-1/auth/advanced-accessrules.md) as an argument, and it asserts the access rule against the [auth zone](../../../build/scrypto-1/auth/README.md) of the parent intent's processor, which can see:
 
--   Signatures of the parent intent, via a [signature requirement](advanced-accessrules#signature-requirements)
+-   Signatures of the parent intent, via a [signature requirement](../../../build/scrypto-1/auth/advanced-accessrules.md#signature-requirements)
     
 -   Proofs (e.g. of badges) created during execution which are currently on the parent's auth zone
     
 
-We recommend using the [Rust Manifest Builder](rust-manifest-builder) to create this instruction, as the exact format of an access rule is quite fiddly in the manifest value model.
+We recommend using the [Rust Manifest Builder](../../../integrate/rust-libraries/rust-manifest-builder.md) to create this instruction, as the exact format of an access rule is quite fiddly in the manifest value model.
 
 **Examples**
 
@@ -1973,7 +1973,7 @@ Methods callable on [Native Blueprints](https://docs.radixdlt.com/v1/docs/nativ
 
 ## Arguments
 
-In the Radix transaction manifest, all arguments are strongly typed Manifest SBOR Values in [Manifest Value Syntax](manifest-value-syntax).
+In the Radix transaction manifest, all arguments are strongly typed Manifest SBOR Values in [Manifest Value Syntax](../../sbor-serialization/manifest-sbor/manifest-value-syntax.md).
 
 When making method/function calls, the Manifest SBOR value is converted by the transaction processor into a Scrypto SBOR value, which is then used to make the engine call. As part of this engine call, the resultant Scrypto value is validated by the Radix Engine against the Component’s interface’s schema at runtime.
 

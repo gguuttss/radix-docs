@@ -10,6 +10,6 @@ Assuming that the Core API satisfies your integration requirements, then we’d 
 
 To configure a node for production, you have a few options:
 
--   You can configure an Ubuntu VM to run a node using the NodeCLI - details [found on our documentation site here](node).
+-   You can configure an Ubuntu VM to run a node using the NodeCLI - details [found on our documentation site here](../../../run/node/README.md).
 -   It is also possible to run the docker image in a container orchestrator - by adapting the [docker compose from the testnet-node configuration](https://github.com/radixdlt/babylon-node/blob/main/testnet-node/docker-compose.yml) for your set-up.
--   You can [compile your own node from source](node) and see [these release notes](https://github.com/radixdlt/babylon-node/releases/) explain about some differences / tweaks to get it working for Babylon.
+-   You can [compile your own node from source](../../../run/node/README.md) and see [these release notes](https://github.com/radixdlt/babylon-node/releases/) explain about some differences / tweaks to get it working for Babylon.

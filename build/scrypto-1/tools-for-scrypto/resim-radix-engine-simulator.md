@@ -382,7 +382,7 @@ For example, a `GumballMachine` component may require you to pass a `Bucket` of 
 resim call-method <COMPONENT_ADDRESS> buy_gumball resource_sim1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxakj8n3:1
 ```
 
-> Currently, resource\_sim1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxakj8n3 is the resim known ResourceAddress for XRD. You can refer to [Well-Known Addresses](well-known-addresses) page to keep up to date.
+> Currently, resource\_sim1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxakj8n3 is the resim known ResourceAddress for XRD. You can refer to [Well-Known Addresses](../../../reference/babylon-technical-concepts/well-known-addresses.md) page to keep up to date.
 
 Non-fungible resources follow a similar format as fungible resources, but instead we must also pass its `NonFungibleLocalId`. The format of the string representation of non-fungible `RESOURCE_SPECIFIER` is:
 

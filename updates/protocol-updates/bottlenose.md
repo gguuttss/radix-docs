@@ -14,17 +14,17 @@ title: "Bottlenose"
 
 ## Main Changes
 
--   New [Account Locker native blueprint](locker)
+-   New [Account Locker native blueprint](../../reference/radix-engine/native-blueprints/locker.md)
 -   New API for reading a component's owner role from Scrypto
 -   New substates that expose the current protocol-related parameters
--   Add recovery fee vault to the [Access Controller](access-controller), removing the need for third-party fee locking during the recovery process
--   Various improvements to the [Account](account) and [Transaction Processor](transaction-processor) native blueprints
+-   Add recovery fee vault to the [Access Controller](../../reference/radix-engine/native-blueprints/access-controller.md), removing the need for third-party fee locking during the recovery process
+-   Various improvements to the [Account](../../reference/radix-engine/native-blueprints/account.md) and [Transaction Processor](transaction-processor) native blueprints
 -   Various improvements to the Radix Engine implementation
 
 ## Release Notes
 
--   [Scrypto v1.2.0](scrypto-v1-2-0)
+-   [Scrypto v1.2.0](../release-notes/scrypto/scrypto-v1-2-0.md)
 
 ## Libraries & SDKS
 
-*See later [protocol updates](protocol-updates).*
+*See later [protocol updates](README.md).*

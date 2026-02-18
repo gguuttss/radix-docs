@@ -3,7 +3,7 @@ title: "Core API Providers"
 ---
 # Core API Providers
 
-The following is a list of known [Core API](network-apis) providers.
+The following is a list of known [Core API](README.md) providers.
 
 This list is not vetted
 

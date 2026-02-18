@@ -21,7 +21,7 @@ This information allows us to validate the Intent Hash of each newly-submitted T
 
 Since every Transaction is valid only within its configured Epoch range, and this configuration has a [hard-limited maximum span](https://github.com/radixdlt/radixdlt-scrypto/blob/ff21f24952318387803ae720105eec079afe33f3/radix-engine-common/src/constants/transaction_validation.rs#L19), the Transaction Tracker only needs to keep records for some “recent” subset of the executed Transactions. Specifically: only the transactions with Epoch range *ending after* the current Epoch have any potential of being re-submitted (i.e. all older Transactions would be rejected anyway, due to `TransactionEpochNoLongerValid`).
 
-This allows us to reclaim large volumes of state used by Transaction Tracker, using a Partition-based ring-buffer approach [detailed below](transaction-tracker#transaction-status-ringbuffer).
+This allows us to reclaim large volumes of state used by Transaction Tracker, using a Partition-based ring-buffer approach [detailed below](transaction-tracker.md#transaction-status-ringbuffer).
 
 > Network-wide Singleton
 > 
@@ -31,7 +31,7 @@ This allows us to reclaim large volumes of state used by Transaction Tracker, us
 
 The `TransactionTracker` blueprint defines a single “state” field - a `TransactionTrackerSubstate` structure, which:
 
--   Maintains the metadata needed to interpret the [Transaction Status Ring-buffer](transaction-tracker#transaction-status-ringbuffer) structure:
+-   Maintains the metadata needed to interpret the [Transaction Status Ring-buffer](transaction-tracker.md#transaction-status-ringbuffer) structure:
     
     -   `start_epoch`, indicating the first Epoch covered by the `start_partition`.
         
@@ -58,7 +58,7 @@ Let’s have a look at a specific situation, based on an example `current
 
 ![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(19).png "image(19).png")
 
-Each of these 191 Partitions (within the inclusive range `[65; 255]`) represents a range of `100` future Epochs. The starting Epoch (i.e. `start_epoch` field) [grows in steps](transaction-tracker#buffer-rotation) of `100` (constantly catching up to the current Epoch, when possible) and thus the starting point of the Ring-buffer cycles over the available Partitions (as is usual for all [circular buffers](https://en.wikipedia.org/wiki/Circular_buffer)).
+Each of these 191 Partitions (within the inclusive range `[65; 255]`) represents a range of `100` future Epochs. The starting Epoch (i.e. `start_epoch` field) [grows in steps](transaction-tracker.md#buffer-rotation) of `100` (constantly catching up to the current Epoch, when possible) and thus the starting point of the Ring-buffer cycles over the available Partitions (as is usual for all [circular buffers](https://en.wikipedia.org/wiki/Circular_buffer)).
 
 The exact Epoch range of any Partition, at any moment, can be computed based on the numbers found in the state field.
 

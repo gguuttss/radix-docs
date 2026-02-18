@@ -3,8 +3,8 @@ title: "dApp Transactions"
 ---
 # dApp Transactions
 
-This section focuses on how to think about and construct transactions as a dApp developer. It's best to start with the [Writing Manifests](writing-manifests) article.
+This section focuses on how to think about and construct transactions as a dApp developer. It's best to start with the [Writing Manifests](writing-manifests.md) article.
 
-A complete description of transaction can be found in the [Essentials](essentials) section [Transactions on Radix](transactions-on-radix)
+A complete description of transaction can be found in the [Essentials](../../../essentials/README.md) section [Transactions on Radix](../../../essentials/transactions-on-radix.md)
 
 For more details on the transactions technical model, please see the [Technical Model](technical-model) sections on Transactions.

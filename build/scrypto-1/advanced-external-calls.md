@@ -5,7 +5,7 @@ title: "Advanced External Calls"
 
 From scrypto, you may wish to make calls to a method or blueprint function. This is known as an external, or cross-blueprint call. This allows a developer to create complex systems by composing various blueprints and components together.
 
-An introduction to these ideas can be found in [Use External Blueprints](learning-to-use-external-blueprints) and [Use External Components](learning-to-use-external-components).
+An introduction to these ideas can be found in [Use External Blueprints](../learning-step-by-step/learning-to-use-external-blueprints.md) and [Use External Components](../learning-step-by-step/learning-to-use-external-components.md).
 
 This document covers more combinations of use-cases.
 

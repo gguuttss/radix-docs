@@ -19,7 +19,7 @@ Mainnet's network ID is 1, and addresses on Mainnet have `_rdx` immediately afte
 | Developer Console | [https://console.radixdlt.com/](https://console.radixdlt.com/) |
 | Gateway | [https://mainnet.radixdlt.com/swagger/](https://babylon-stokenet-gateway.radixdlt.com/swagger) |
 | Native addresses | \- XRD: `resource_rdx1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxradxrd`  
-\- More are detailed in [Well-known Addresses](well-known-addresses#mainnet-system-native-addresses). |
+\- More are detailed in [Well-known Addresses](well-known-addresses.md#mainnet-system-native-addresses). |
 
 ## Stokenet (Public Test Network)
 
@@ -42,7 +42,7 @@ Stokenet is our primary public test network, intended for integration and testin
 for Core API development | [https://github.com/radixdlt/babylon-node/tree/main/testnet-node](https://github.com/radixdlt/babylon-node/tree/main/testnet-node) |
 | Native addresses | \- XRD: `resource_tdx_2_1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxtfd2jc`  
 \- Faucet: `component_tdx_2_1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxyulkzl`  
-\- More are detailed in [Well-known Addresses](well-known-addresses#stokenet-system-native-addresses) |
+\- More are detailed in [Well-known Addresses](well-known-addresses.md#stokenet-system-native-addresses) |
 
 ## Local Environment
 
@@ -56,4 +56,4 @@ The simulator's network ID is 242. Addresses on the simulator have `_sim` immedi
 | --- | --- |
 | Native addresses | \- XRD: `resource_sim1tknxxxxxxxxxradxrdxxxxxxxxx009923554798xxxxxxxxxakj8n3`  
 \- Faucet: `component_sim1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxhkrefh`  
-\- More are detailed in [Well-known Addresses](well-known-addresses#resim-system-native-addresses) |
+\- More are detailed in [Well-known Addresses](well-known-addresses.md#resim-system-native-addresses) |

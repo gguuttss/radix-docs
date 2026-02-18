@@ -9,7 +9,7 @@ All packages, components, and resources of an application should have an Owner r
 
 The following are some tips for the owner role:
 
--   If a single badge is used as the owner role then it is important that this badge is accessible and that proofs can be generated from this badge and used in transactions. Thus, this badge should be stored in an [account](account) or an [access controller](access-controller). Storing this badge in a component with no way of creating proofs of the badge makes it essentially unusable for arbitrary transactions.
+-   If a single badge is used as the owner role then it is important that this badge is accessible and that proofs can be generated from this badge and used in transactions. Thus, this badge should be stored in an [account](../../../reference/radix-engine/native-blueprints/account.md) or an [access controller](../../../reference/radix-engine/native-blueprints/access-controller.md). Storing this badge in a component with no way of creating proofs of the badge makes it essentially unusable for arbitrary transactions.
     
 -   Blueprint instantiation functions should take an `OwnerRole` as an argument and apply it recursively to everything that they create. As an example, the owner role passed should be the owner role of all created resources and instantiated components.
     

@@ -3,7 +3,7 @@ title: "dApp Toolkit"
 ---
 # dApp Toolkit
 
-The [Radix dApp Toolkit](https://github.com/radixdlt/radix-dapp-toolkit/tree/main) wraps together the [Wallet SDK](https://github.com/radixdlt/wallet-sdk) and [Gateway SDK](gateway-sdk) along with a framework agnostic √ [Connect Button](https://github.com/radixdlt/connect-button) web component. Together they make it easy for developers to connect users and their Radix Wallet to their dApps.
+The [Radix dApp Toolkit](https://github.com/radixdlt/radix-dapp-toolkit/tree/main) wraps together the [Wallet SDK](https://github.com/radixdlt/wallet-sdk) and [Gateway SDK](gateway-sdk.md) along with a framework agnostic √ [Connect Button](https://github.com/radixdlt/connect-button) web component. Together they make it easy for developers to connect users and their Radix Wallet to their dApps.
 
 ## √ Connect Button
 

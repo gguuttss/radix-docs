@@ -5,7 +5,7 @@ title: "Monitoring"
 
 ## Network Gateway Monitoring
 
-> We recommend [installing a Grafana Dashboard](node-setting-up-grafana) to help monitor your node and gateway.
+> We recommend [installing a Grafana Dashboard](../../node/node-maintenance-and-administration/node-setting-up-grafana.md) to help monitor your node and gateway.
 
 The rest of this article explains more detail about the gateway logging configuration, and the various metrics exposed by the gateway.
 
@@ -42,7 +42,7 @@ This can be integrated with Kubernetes or other health checking systems.
 
 The Data Aggregator has a health check to check for database connectivity, and a custom health check to check for either recent start-up (with 10 seconds) or a ledger extension in the last 20 seconds (this can be configured with the `Monitoring.UnhealthyCommitmentGapSeconds` parameter). The Gateway API has a health check for each of its Database connections.
 
-The health check endpoint will come up after the service loads. For the Data Aggregator, the migrations run before the health check is up, so we recommend the migrations run separately if they are slow-running, see [releasing](releasing) for more information.
+The health check endpoint will come up after the service loads. For the Data Aggregator, the migrations run before the health check is up, so we recommend the migrations run separately if they are slow-running, see [releasing](releasing.md) for more information.
 
 ### Prometheus Metrics
 

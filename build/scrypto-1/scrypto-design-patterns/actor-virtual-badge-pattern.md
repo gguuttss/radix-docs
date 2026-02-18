@@ -3,7 +3,7 @@ title: "Actor Virtual Badge Pattern"
 ---
 # Actor Virtual Badge Pattern
 
-When we’re writing our blueprints we’ll eventually come to a point where we need to think about how a component can be given authority to perform some kind of action. The [user badge pattern](user-badge-pattern) introduces concepts of how to use resources as "badges" to provide authority for certain actions. However, when it comes to enabling components to perform authorized actions, the component itself does not need to have its own badge to provide permission and perform authorized actions. The component itself has the ability to provide the necessary proofs on its behalf to perform a permissioned action. This can be done with the actor virtual badge pattern and it has two common use cases:
+When we’re writing our blueprints we’ll eventually come to a point where we need to think about how a component can be given authority to perform some kind of action. The [user badge pattern](user-badge-pattern.md) introduces concepts of how to use resources as "badges" to provide authority for certain actions. However, when it comes to enabling components to perform authorized actions, the component itself does not need to have its own badge to provide permission and perform authorized actions. The component itself has the ability to provide the necessary proofs on its behalf to perform a permissioned action. This can be done with the actor virtual badge pattern and it has two common use cases:
 
 ## Resource Behavior Permissions
 

@@ -44,7 +44,7 @@ There are three major parts to this type of dApp:
 3.  **The Radix Network** - This is where all accounts and assets live. It is also where transactions can interact with smart contracts, which on Radix are called “components”. You might write your own components in Scrypto to run in that shared trustless network environment – or you might choose to interact with components deployed by others there. Your dApp may also want to access data about the current state of the network - things like how many tokens are in a given account, or what the status of a given component is. dApps can query the network using a Gateway endpoint.
     
 
-If you’re thinking about building a pure frontend dApp, continue to [Building a Pure Frontend dApp section](building-a-frontend-dapp).
+If you’re thinking about building a pure frontend dApp, continue to [Building a Pure Frontend dApp section](building-a-frontend-dapp.md).
 
 ### Full Stack dApps
 
@@ -70,4 +70,4 @@ If you come from the Web2 world, this type of dApp may feel more familiar. It’
 -   Rather than having to store user personal data in your own database (both dangerous and objectionable to users), access personal data directly from the user’s Radix Wallet – with their permission, as needed.
     
 
-If you’re ready to get started creating dApps on Radix, continue on to [Building your first Scrypto Component](installation) and then [Building a Pure Frontend dApp](building-a-frontend-dapp) and [Building a Full System dApp](building-a-full-stack-dapp).
+If you’re ready to get started creating dApps on Radix, continue on to [Building your first Scrypto Component](installation) and then [Building a Pure Frontend dApp](building-a-frontend-dapp.md) and [Building a Full System dApp](building-a-full-stack-dapp.md).

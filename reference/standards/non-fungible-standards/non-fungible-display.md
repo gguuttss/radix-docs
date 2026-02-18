@@ -5,7 +5,7 @@ title: "Displaying Non-fungibles"
 
 This article covers the recommendations for how "non-fungibles" (individual units of non-fungible resources) are displayed to a user, and covers display of their global id and their data.
 
-You may also wish to see the [advice on displaying fungible and non-fungible resource addresses](resource-address-display), for when you wish to display the address of a non-fungible resource without a specific local id.
+You may also wish to see the [advice on displaying fungible and non-fungible resource addresses](../ui-ux-standards/resource-address-display.md), for when you wish to display the address of a non-fungible resource without a specific local id.
 
 ## Non-fungible global id "address" display
 
@@ -48,4 +48,4 @@ The exception to showing local IDs in full is the RUID type of local ID. Since t
 
 ## Non-fungible data display
 
-See [displaying non-fungible data](non-fungible-data-for-wallet-display).
+See [displaying non-fungible data](non-fungible-data-for-wallet-display.md).

@@ -11,4 +11,4 @@ Items within sections are not ordered, and no timeline should be assumed for any
 
   
 
--   Scoping for the "[Dugong](dugong)" coordinated protocol update
+-   Scoping for the "[Dugong](../../protocol-updates/dugong.md)" coordinated protocol update

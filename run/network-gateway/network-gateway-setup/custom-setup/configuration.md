@@ -49,7 +49,7 @@ Default configuration for reference can be seen on github in the various JSON fi
 
 Both the Data Aggregator and Gateway API will need to be configured to read from one or more Core APIs. These can be configured to live in the same private network, or can be configured to communicate over the internet, although we advise that the Core API is not designed to be publicly exposed.
 
-See the [Radix Node Setup](node-setup) guide for further information on running the Radix Nodes.
+See the [Radix Node Setup](../../../node/node-setup/README.md) guide for further information on running the Radix Nodes.
 
 In terms of Network Gateway configuration, the connection details for the Core API/s can be configured in the `CoreApiNodes` array, each element of the array should configure a single Core API full node, and look like:
 

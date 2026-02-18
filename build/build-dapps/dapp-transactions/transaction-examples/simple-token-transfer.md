@@ -9,7 +9,7 @@ It's worth quickly seeing how to build the transaction manually as an example, b
 
 -   Most users will have this kind of transaction built for them by their wallet.
     
--   Most integrators would use a tool like the [Radix Engine Toolkit](radix-engine-toolkit-manifest-builder) to build their transfer transactions.
+-   Most integrators would use a tool like the [Radix Engine Toolkit](../../../../integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/radix-engine-toolkit-manifest-builder.md) to build their transfer transactions.
     
 
 ## Contents of the transaction
@@ -20,11 +20,11 @@ Accounts are components, so even a token transfer happens by calling methods on 
 
 We then need to call `deposit` on the recipient account, but first we need to put the resource we’d like to deposit in a bucket. We can do this by creating a named bucket from the worktop with the `TAKE_FROM_WORKTOP` command, and then using that named bucket in the following `deposit` call.
 
-And conceptually that’s the manifest! But when building the transaction, we also need to consider authorization. To do that, we need to look at who can perform the [account methods](account):
+And conceptually that’s the manifest! But when building the transaction, we also need to consider authorization. To do that, we need to look at who can perform the [account methods](../../../../reference/radix-engine/native-blueprints/account.md):
 
--   Unsurprisingly, only the **owner** of the account can call `lock_fee` and `withdraw`, so we need to ensure we provide proof we are the owner in the [auth zone](transaction-processor). For pre-allocated accounts tied to a key pair, as commonly used by integrators, this will take the form of a “virtual signature proof” and mean we need to sign the transaction with the right key. For securified accounts, we will need to provide an owner proof from another component such as an [access controller](access-controller), which itself will require some combination of signature factors to allow us access.
+-   Unsurprisingly, only the **owner** of the account can call `lock_fee` and `withdraw`, so we need to ensure we provide proof we are the owner in the [auth zone](transaction-processor). For pre-allocated accounts tied to a key pair, as commonly used by integrators, this will take the form of a “virtual signature proof” and mean we need to sign the transaction with the right key. For securified accounts, we will need to provide an owner proof from another component such as an [access controller](../../../../reference/radix-engine/native-blueprints/access-controller.md), which itself will require some combination of signature factors to allow us access.
     
--   Perhaps surprisingly, the **owner** of the account is also required to call `deposit`. This is because `deposit` will always succeed, regardless of the [account’s resource deposit configuration](account), as it requires the owner to sign off on the transaction. The deposit method should be used for dApp interactions where the owner will be present at transaction signing time. If you’re building a transaction to transfer resources without the owner being present, you will instead need to use a method starting `try_deposit_*`, such as `try_deposit_or_abort`. For further information, see the detailed description of the [account methods](account).
+-   Perhaps surprisingly, the **owner** of the account is also required to call `deposit`. This is because `deposit` will always succeed, regardless of the [account’s resource deposit configuration](../../../../reference/radix-engine/native-blueprints/account.md), as it requires the owner to sign off on the transaction. The deposit method should be used for dApp interactions where the owner will be present at transaction signing time. If you’re building a transaction to transfer resources without the owner being present, you will instead need to use a method starting `try_deposit_*`, such as `try_deposit_or_abort`. For further information, see the detailed description of the [account methods](../../../../reference/radix-engine/native-blueprints/account.md).
     
 
 ## Building the Transfer Manifest Manually
