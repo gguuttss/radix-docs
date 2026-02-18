@@ -3,7 +3,11 @@ title: "Milestones"
 ---
 # Milestones
 
-{{snippet.roadmap-milestone-header}}
+{% hint style="info" %}
+Milestones are big ticket items which require significant work and often have complex dependencies and/or impact upon other parts of the stack.
+
+Items on this page are ordered in expected delivery sequence. However, just because a milestone is lower on the list doesn't mean that work isn't progressing on it. Foundational work for future milestones in the form of research, design, prototyping, or dependency implementation proceeds in parallel with progress on the current milestone.
+{% endhint %}
 
 ### Gateway Consolidation
 

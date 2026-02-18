@@ -98,4 +98,10 @@ NAME      TYPE SIZE USED PRIO
 /swapfile file   8G  25M   -2
 ```
 
-{{snippet.More info on babylonnode CLI}}
+## More information on using babylonnode
+
+You can use `babylonnode` to carry out a variety of administrative tasks.
+
+For a full reference on the commands the `babylonnode` CLI offers, please see the [documentation on the CLI GitHub repository](https://github.com/radixdlt/babylon-nodecli/blob/main/docs/command_reference.adoc).
+
+If you have any questions or run into problems, you can get support from the Radix team members and our fantastic community on our Discord server.

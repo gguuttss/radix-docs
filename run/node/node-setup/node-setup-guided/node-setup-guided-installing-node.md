@@ -100,11 +100,15 @@ The config file is created from the input. It will be used during the installati
 
 **Mainnet Seed Nodes**
 
-{{snippet.mainnet-seed-nodes}}
+```plainText
+radix://node_rdx1qf2x63qx4jdaxj83kkw2yytehvvmu6r2xll5gcp6c9rancmrfsgfw0vnc65@babylon-mainnet-eu-west-1-node0.radixdlt.com,radix://node_rdx1qgxn3eeldj33kd98ha6wkjgk4k77z6xm0dv7mwnrkefknjcqsvhuu4gc609@babylon-mainnet-ap-southeast-2-node0.radixdlt.com,radix://node_rdx1qwrrnhzfu99fg3yqgk3ut9vev2pdssv7hxhff80msjmmcj968487uugc0t2@babylon-mainnet-ap-south-1-node0.radixdlt.com,radix://node_rdx1q0gnmwv0fmcp7ecq0znff7yzrt7ggwrp47sa9pssgyvrnl75tvxmvj78u7t@babylon-mainnet-us-east-1-node0.radixdlt.com
+```
 
 **Stokenet Seed Nodes**
 
-{{snippet.stokenet-seed-nodes}}
+```plainText
+radix://node_tdx_2_1qv89yg0la2jt429vqp8sxtpg95hj637gards67gpgqy2vuvwe4s5ss0va2y@babylon-stokenet-ap-south-1-node0.radixdlt.com,radix://node_tdx_2_1qvtd9ffdhxyg7meqggr2ezsdfgjre5aqs6jwk5amdhjg86xhurgn5c79t9t@babylon-stokenet-ap-southeast-2-node0.radixdlt.com,radix://node_tdx_2_1qwfh2nn0zx8cut5fqfz6n7pau2f7vdyl89mypldnn4fwlhaeg2tvunp8s8h@babylon-stokenet-eu-west-1-node0.radixdlt.com,radix://node_tdx_2_1qwz237kqdpct5l3yjhmna66uxja2ymrf3x6hh528ng3gtvnwndtn5rsrad4@babylon-stokenet-us-east-1-node1.radixdlt.com
+```
 
 #### 3.2. Install and setup the node
 
@@ -284,4 +288,10 @@ Refer to the [default.config substition file](https://github.com/radixdlt/babylo
 
 Please note that the file and changes to it will not be added when running `start`, `restart` or `stop` but only when executing the `install` command while the file at `~/babylon-node-config/advanceduserconfig` or the provided custom location is present.
 
-{{snippet.More info on babylonnode CLI}}
+## More information on using babylonnode
+
+You can use `babylonnode` to carry out a variety of administrative tasks.
+
+For a full reference on the commands the `babylonnode` CLI offers, please see the [documentation on the CLI GitHub repository](https://github.com/radixdlt/babylon-nodecli/blob/main/docs/command_reference.adoc).
+
+If you have any questions or run into problems, you can get support from the Radix team members and our fantastic community on our Discord server.

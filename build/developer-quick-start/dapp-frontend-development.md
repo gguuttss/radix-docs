@@ -3,7 +3,11 @@ title: "Frontend dApp (Client and Ledger)"
 ---
 # Frontend dApp (Client and Ledger)
 
-{{snippet.work-in-progress}}
+{% hint style="info" %}
+**This topic is still a work in progress**
+
+This area is either a placeholder for content which is yet to be written, or has sparse/early content which is still being worked on.
+{% endhint %}
 
 ## Frontend quick start guide
 
