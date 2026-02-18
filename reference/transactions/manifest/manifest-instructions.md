@@ -1969,7 +1969,7 @@ VERIFY_PARENT
 
 ## Native Blueprints
 
-Methods callable on [Native Blueprints](https://docs.radixdlt.com/v1/docs/native-blueprints) are listed within their specifications, e.g. [Account](https://docs.radixdlt.com/v1/docs/account#blueprint-api-function-reference)
+Methods callable on [Native Blueprints](../../radix-engine/native-blueprints/README.md) are listed within their specifications, e.g. [Account](../../radix-engine/native-blueprints/account.md#blueprint-api-function-reference)
 
 ## Arguments
 

@@ -11,7 +11,7 @@ This section focuses on getting existing code working on your machine. In the [E
 
 Before we begin
 
-Make sure you have the [Scrypto toolchain installed](https://docs.radixdlt.com/v1/docs/getting-rust-scrypto). If you do, let's get started!
+Make sure you have the [Scrypto toolchain installed](../setting-up-for-scrypto-development/getting-rust-scrypto.md). If you do, let's get started!
 
 ## Developing on Radix
 
@@ -53,7 +53,7 @@ Radix splits the concept of "smart contracts" into two parts:
 Choosing a code editor
 
 VSCode is where we've focused most of our efforts on tooling so far.  
-Find the [instructions on how to setup VSCode here](https://docs.radixdlt.com/v1/docs/choosing-an-ide).
+Find the [instructions on how to setup VSCode here](../setting-up-for-scrypto-development/choosing-an-ide.md).
 
 -   Then open up `src/lib.rs` to see the source that we’re going to compile and deploy to the simulator.
     
