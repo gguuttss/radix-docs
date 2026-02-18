@@ -9,60 +9,11 @@ These system and resiliency requirements are suggestions, for when deploying the
 
 ### Core API
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage (GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage (GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.2xlarge | 8 | 16 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 250 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)You should initially provision 250 GB of SSD space |
 
-c5.2xlarge
-
- | 
-
-8
-
- | 
-
-16
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 250 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
-You should initially provision 250 GB of SSD space
-
- |
 
 ### Data Aggregator
 

@@ -45,204 +45,31 @@ SUBCOMMANDS:
 
 ## `resim` Cheat Sheet
 
-| 
-Command
 
- | 
-
-Action
-
- |
+| Command | Action |
 | --- | --- |
-| 
+| `resim reset` | Resets your local ledger data |
+| `resim new-account` | Creates a new account and sets to default account if one is not already set. ie you just ran `resim reset` so the ledger is empty |
+| `resim show <address>` | To show info about an address |
+| `resim show-ledger` | To list all entities in simulator |
+| `resim set-default-account <account_address> <account_private_key> <owner_badge>` | To change the default account |
+| `resim generate-key-pair` | To get a new key-pair, without creating an account component |
+| `resim new-token-fixed <amount>` | To create a token with fixed supply |
+| `resim new-token-mutable <minter_badge_address>` | To create a token with mutable supply |
+| `resim new-badge-fixed <amount>` | To create a badge with fixed supply |
+| `resim new-badge-mutable <minter_badge_address>` | To create a badge with mutable supply |
+| `resim new-simple-badge` | To create a simple NFT badge |
+| `resim mint <amount> <resource_address> <minter_badge_address>` | To mint resource |
+| `resim transfer <resource_address>:<amount_or_comma_separated_nf_ids> <recipient_address>` | To transfer resource |
+| `resim publish <path_to_package_dir>` | To publish a package |
+| `resim call-function <package_address> <blueprint_name> <function> <args>` | To call a function |
+| `resim call-method <component_address> <method> <args>` | To call a method |
+| `resim export-package-definition [OPTIONS] <PACKAGE_ADDRESS> <OUTPUT>` | Export the definition of a package `<OUTPUT>` the output file |
+| `resim run <path_to_manifest_file>` | To run a transaction manifest file |
+| `resim set-current-epoch` | To set the current epoch |
+| `resim set-current-time` | To set the current time (UTC date time in ISO-8601 format, up to second precision, such as 2011-12-03t10:15:30Z). |
+| `resim publish <path_to_package_dir> --package-address <existing_address>` | To overwrite a deployed package |
 
-`resim reset`
-
- | 
-
-Resets your local ledger data
-
- |
-| 
-
-`resim new-account`
-
- | 
-
-Creates a new account and sets to default account if one is not already set. ie you just ran `resim reset` so the ledger is empty
-
- |
-| 
-
-`resim show <address>`
-
- | 
-
-To show info about an address
-
- |
-| 
-
-`resim show-ledger`
-
- | 
-
-To list all entities in simulator
-
- |
-| 
-
-`resim set-default-account <account_address> <account_private_key> <owner_badge>`
-
- | 
-
-To change the default account
-
- |
-| 
-
-`resim generate-key-pair`
-
- | 
-
-To get a new key-pair, without creating an account component
-
- |
-| 
-
-`resim new-token-fixed <amount>`
-
- | 
-
-To create a token with fixed supply
-
- |
-| 
-
-`resim new-token-mutable <minter_badge_address>`
-
- | 
-
-To create a token with mutable supply
-
- |
-| 
-
-`resim new-badge-fixed <amount>`
-
- | 
-
-To create a badge with fixed supply
-
- |
-| 
-
-`resim new-badge-mutable <minter_badge_address>`
-
- | 
-
-To create a badge with mutable supply
-
- |
-| 
-
-`resim new-simple-badge`
-
- | 
-
-To create a simple NFT badge
-
- |
-| 
-
-`resim mint <amount> <resource_address> <minter_badge_address>`
-
- | 
-
-To mint resource
-
- |
-| 
-
-`resim transfer <resource_address>:<amount_or_comma_separated_nf_ids> <recipient_address>`
-
- | 
-
-To transfer resource
-
- |
-| 
-
-`resim publish <path_to_package_dir>`
-
- | 
-
-To publish a package
-
- |
-| 
-
-`resim call-function <package_address> <blueprint_name> <function> <args>`
-
- | 
-
-To call a function
-
- |
-| 
-
-`resim call-method <component_address> <method> <args>`
-
- | 
-
-To call a method
-
- |
-| 
-
-`resim export-package-definition [OPTIONS] <PACKAGE_ADDRESS> <OUTPUT>`
-
- | 
-
-Export the definition of a package `<OUTPUT>` the output file
-
- |
-| 
-
-`resim run <path_to_manifest_file>`
-
- | 
-
-To run a transaction manifest file
-
- |
-| 
-
-`resim set-current-epoch`
-
- | 
-
-To set the current epoch
-
- |
-| 
-
-`resim set-current-time`
-
- | 
-
-To set the current time (UTC date time in ISO-8601 format, up to second precision, such as 2011-12-03t10:15:30Z).
-
- |
-| 
-
-`resim publish <path_to_package_dir> --package-address <existing_address>`
-
- | 
-
-To overwrite a deployed package
-
- |
 
 ## Using `resim`
 

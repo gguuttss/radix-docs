@@ -68,40 +68,11 @@ There are two public Radix networks available that your node can connect to: the
 
 To run a reliable, performant node, we suggest that the node’s hardware profile should match or exceed the following specification:
 
-| 
-**CPUs**
 
- | 
-
-**Memory**
-
- | 
-
-**Storage**
-
- | 
-
-**Network Bandwidth**
-
- |
+| **CPUs** | **Memory** | **Storage** | **Network Bandwidth** |
 | --- | --- | --- | --- |
-| 
+| 4 | 16 GB | 500 GB of SSD space (initially) | Recommended at least 100 Mbps |
 
-4
-
- | 
-
-16 GB
-
- | 
-
-500 GB of SSD space (initially)
-
- | 
-
-Recommended at least 100 Mbps
-
- |
 
 This is a rough guideline only and each node runner should monitor their node operation to ensure good performance for the intended task.
 
@@ -134,56 +105,11 @@ AWS provisioning is beyond the scope of this doc, but there are plenty of resour
 
 Example instance configuration for AWS
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory
-
- | 
-
-Storage
-
- | 
-
-Operating System
-
- | 
-
-Network Bandwidth
-
- |
+| Model | vCPU | Memory | Storage | Operating System | Network Bandwidth |
 | --- | --- | --- | --- | --- | --- |
-| 
+| m6i-xlarge | 4 | 16 GB | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html). You should initially provision 500 GiB of SSD space. | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/) | Up to 10 Gbps |
 
-m6i-xlarge
-
- | 
-
-4
-
- | 
-
-16 GB
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html). You should initially provision 500 GiB of SSD space.
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
- | 
-
-Up to 10 Gbps
-
- |
 
 ## Choosing the installation mode
 

@@ -105,84 +105,15 @@ Alerting should align with your monitoring requirements. The thresholds below ma
 
 Some suggested alerts are below:
 
-| 
-Importance
 
- | 
-
-Explanation
-
- | 
-
-Possible Alerting Criteria
-
- |
+| Importance | Explanation | Possible Alerting Criteria |
 | --- | --- | --- |
-| 
+| High | MoreThanOnePrimary - More than one primary data aggregator (this can cause high levels of errors with both Data Aggregators trying to do the same thing) | `sum(ng_aggregator_is_primary) != 1` |
+| High | HighTimeSinceLastLedgerCommit - The DB ledger hasn’t been updated in the last minute | `time() - ng_ledger_commit_last_commit_timestamp_seconds{container="data-aggregator"} > 60` |
+| Medium | Resubmission Queue Backlog - This might indicate that resubmissions are delayed | `ng_db_mempool_transactions_needing_resubmission_total{container="data-aggregator"} > 100` |
+| Medium | FailingDataAggregatorHealthChecks | `sum(aspnetcore_healthcheck_status{container="data-aggregator"}) >= 1` |
+| Medium | FailingGatewayAPIHealthChecks | `sum(aspnetcore_healthcheck_status{container="gateway-api"}) >= 1` |
 
-High
-
- | 
-
-MoreThanOnePrimary - More than one primary data aggregator (this can cause high levels of errors with both Data Aggregators trying to do the same thing)
-
- | 
-
-`sum(ng_aggregator_is_primary) != 1`
-
- |
-| 
-
-High
-
- | 
-
-HighTimeSinceLastLedgerCommit - The DB ledger hasn’t been updated in the last minute
-
- | 
-
-`time() - ng_ledger_commit_last_commit_timestamp_seconds{container="data-aggregator"} > 60`
-
- |
-| 
-
-Medium
-
- | 
-
-Resubmission Queue Backlog - This might indicate that resubmissions are delayed
-
- | 
-
-`ng_db_mempool_transactions_needing_resubmission_total{container="data-aggregator"} > 100`
-
- |
-| 
-
-Medium
-
- | 
-
-FailingDataAggregatorHealthChecks
-
- | 
-
-`sum(aspnetcore_healthcheck_status{container="data-aggregator"}) >= 1`
-
- |
-| 
-
-Medium
-
- | 
-
-FailingGatewayAPIHealthChecks
-
- | 
-
-`sum(aspnetcore_healthcheck_status{container="gateway-api"}) >= 1`
-
- |
 
 Depending on your use cases, you may also wish to configure alerting on transaction submission or resubmission errors, possibly making use of some of the following metrics:
 

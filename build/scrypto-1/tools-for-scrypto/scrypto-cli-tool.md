@@ -28,48 +28,10 @@ SUBCOMMANDS:
 
 ## Cheat Sheet
 
-| 
-Command
 
- | 
-
-Action
-
- |
+| Command | Action |
 | --- | --- |
-| 
-
-`scrypto new-package <package_name>`
-
- | 
-
-To create a new package
-
- |
-| 
-
-`scrypto build`
-
- | 
-
-To build a package
-
- |
-| 
-
-`scrypto test`
-
- | 
-
-To test a package
-
- |
-| 
-
-`scrypto test - <test_name> -- --nocapture`
-
- | 
-
-To run a test with standard output
-
- |
+| `scrypto new-package <package_name>` | To create a new package |
+| `scrypto build` | To build a package |
+| `scrypto test` | To test a package |
+| `scrypto test - <test_name> -- --nocapture` | To run a test with standard output |

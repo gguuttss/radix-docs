@@ -3,7 +3,7 @@ title: "Application Stack"
 ---
 # Application Stack
 
-<source src="https://www.youtube.com/embed/\_RaFcIuz1h8?feature=shared" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="" width="759" height="503" dataalign="left" mediatype="iframe">
+{% embed url="https://www.youtube.com/embed/_RaFcIuz1h8?feature=shared" %}
 
 ## Introduction
 

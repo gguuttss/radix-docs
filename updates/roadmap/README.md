@@ -22,4 +22,4 @@ If you don't see a particular product feature appearing in any of its sub-pages,
 
 This video explains the rationale behind the roadmap, and answers some common questions:
 
-<source src="https://www.youtube.com/embed/NcXHEbPaYXA?si=RVF\_mleFuGsjp0gd" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="" width="560" height="315" dataalign="left" mediatype="iframe">
+{% embed url="https://www.youtube.com/embed/NcXHEbPaYXA?si=RVF_mleFuGsjp0gd" %}

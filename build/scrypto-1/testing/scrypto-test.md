@@ -92,69 +92,16 @@ The modular design of the Radix Engine kernel proves to be useful when writing t
 
 The following table describes the state of each of the system modules when the [TestEnvironment](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html) is first instantiated.
 
-| 
-System module
 
- | 
-
-Initial State
-
- |
+| System module | Initial State |
 | --- | --- |
-| 
+| Auth Module | Enabled |
+| Limits Module | Enabled |
+| Transaction Runtime Module | Enabled |
+| Costing Module | Disabled |
+| Kernel Trace Module | Disabled |
+| Execution Trace Module | Disabled |
 
-Auth Module
-
- | 
-
-Enabled
-
- |
-| 
-
-Limits Module
-
- | 
-
-Enabled
-
- |
-| 
-
-Transaction Runtime Module
-
- | 
-
-Enabled
-
- |
-| 
-
-Costing Module
-
- | 
-
-Disabled
-
- |
-| 
-
-Kernel Trace Module
-
- | 
-
-Disabled
-
- |
-| 
-
-Execution Trace Module
-
- | 
-
-Disabled
-
- |
 
 Each of the system modules have four methods on the [TestEnvironment](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html) struct:
 
@@ -171,7 +118,33 @@ For the block scoped methods, they cache the state of the system modules, enable
 
 The following is a complete list of the methods used to manipulate the system modules.
 
-<table width="100%" class="editor360-table" borderstyle="Solid"><tbody><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Auth Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_auth_module" target="_blank">TestEnvironment::enable_auth_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_auth_module" target="_blank">TestEnvironment::disable_auth_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_auth_module_enabled" target="_blank">TestEnvironment::with_auth_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_auth_module_disabled" target="_blank">TestEnvironment::with_auth_module_disabled</a></p></td></tr><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Limits Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_limits_module" target="_blank">TestEnvironment::enable_limits_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_limits_module" target="_blank">TestEnvironment::disable_limits_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_limits_module_enabled" target="_blank">TestEnvironment::with_limits_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_limits_module_disabled" target="_blank">TestEnvironment::with_limits_module_disabled</a></p></td></tr><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Transaction Runtime Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_transaction_runtime_module" target="_blank">TestEnvironment::enable_transaction_runtime_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_transaction_runtime_module" target="_blank">TestEnvironment::disable_transaction_runtime_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_transaction_runtime_module_enabled" target="_blank">TestEnvironment::with_transaction_runtime_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_transaction_runtime_module_disabled" target="_self">TestEnvironment::with_transaction_runtime_module_disabled</a></p></td></tr><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Costing Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_costing_module" target="_blank">TestEnvironment::enable_costing_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_costing_module" target="_blank">TestEnvironment::disable_costing_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_costing_module_enabled" target="_blank">TestEnvironment::with_costing_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_costing_module_disabled" target="_blank">TestEnvironment::with_costing_module_disabled</a></p></td></tr><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Kernel Trace Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_kernel_trace_module" target="_blank">TestEnvironment::enable_kernel_trace_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_kernel_trace_module" target="_blank">TestEnvironment::disable_kernel_trace_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_kernel_trace_module_enabled" target="_blank">TestEnvironment::with_kernel_trace_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_kernel_trace_module_disabled" target="_blank">TestEnvironment::with_kernel_trace_module_disabled</a></p></td></tr><tr><td colspan="1" rowspan="4" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><strong>Execution Trace Module</strong></p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Enable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_execution_trace_module" target="_self">TestEnvironment::enable_execution_trace_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Disable</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_execution_trace_module" target="_blank">TestEnvironment::disable_execution_trace_module</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Enabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_execution_trace_module_enabled" target="_blank">TestEnvironment::with_execution_trace_module_enabled</a></p></td></tr><tr><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p>Block-scope Disabled</p></td><td colspan="1" rowspan="1" data-vertical-align="middle" data-horizontal-align="left" style="vertical-align:middle;text-align:left;"><p><a href="https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_execution_trace_module_disabled" target="_blank">TestEnvironment::with_execution_trace_module_disabled</a></p></td></tr></tbody></table>
+
+| **Auth Module** | Enable | [TestEnvironment::enable_auth_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_auth_module) |
+| --- | --- | --- |
+| Disable | [TestEnvironment::disable_auth_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_auth_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_auth_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_auth_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_auth_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_auth_module_disabled) |  |
+| **Limits Module** | Enable | [TestEnvironment::enable_limits_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_limits_module) |
+| Disable | [TestEnvironment::disable_limits_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_limits_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_limits_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_limits_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_limits_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_limits_module_disabled) |  |
+| **Transaction Runtime Module** | Enable | [TestEnvironment::enable_transaction_runtime_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_transaction_runtime_module) |
+| Disable | [TestEnvironment::disable_transaction_runtime_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_transaction_runtime_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_transaction_runtime_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_transaction_runtime_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_transaction_runtime_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_transaction_runtime_module_disabled) |  |
+| **Costing Module** | Enable | [TestEnvironment::enable_costing_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_costing_module) |
+| Disable | [TestEnvironment::disable_costing_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_costing_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_costing_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_costing_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_costing_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_costing_module_disabled) |  |
+| **Kernel Trace Module** | Enable | [TestEnvironment::enable_kernel_trace_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_kernel_trace_module) |
+| Disable | [TestEnvironment::disable_kernel_trace_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_kernel_trace_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_kernel_trace_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_kernel_trace_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_kernel_trace_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_kernel_trace_module_disabled) |  |
+| **Execution Trace Module** | Enable | [TestEnvironment::enable_execution_trace_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.enable_execution_trace_module) |
+| Disable | [TestEnvironment::disable_execution_trace_module](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.disable_execution_trace_module) |  |
+| Block-scope Enabled | [TestEnvironment::with_execution_trace_module_enabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_execution_trace_module_enabled) |  |
+| Block-scope Disabled | [TestEnvironment::with_execution_trace_module_disabled](https://docs.rs/scrypto-test/latest/scrypto_test/environment/env/struct.TestEnvironment.html#method.with_execution_trace_module_disabled) |  |
+
 
 ### Creation of Buckets and Proofs
 

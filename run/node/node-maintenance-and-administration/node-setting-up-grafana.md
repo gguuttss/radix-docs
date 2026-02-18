@@ -23,58 +23,11 @@ Before you start, you must have the [babylonnode CLI](../node-setup/node-setup-g
 
 If running monitoring on a separate host, we’d recommend the following (or equivalent) specs:
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory
-
- | 
-
-Storage
-
- | 
-
-Network Bandwidth
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory | Storage | Network Bandwidth | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| t3.medium | 2 | 4 GB | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 60 GB of SSD space | At least 100 Mbps | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/) |
 
-t3.medium
-
- | 
-
-2
-
- | 
-
-4 GB
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 60 GB of SSD space
-
- | 
-
-At least 100 Mbps
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
- |
 
 ### 1\. Set up the Nginx Metrics password
 

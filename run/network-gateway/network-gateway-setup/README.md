@@ -7,7 +7,7 @@ title: "Setup"
 
 ### Architecture Overview
 
-![Architecture Overview](../../../.gitbook/assets/image-10.png)
+![Architecture Overview](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(10).png "image(10).png")
 
 A Network Gateway deployment consists of the following services:
 
@@ -81,117 +81,21 @@ Whatever your setup, we’d also recommend [deploying the Grafana / Monitoring s
 > -   For optimal performance, we’d recommend running PostgreSQL using systemd or using a separate database on a dedicated host. If run in a docker image, PostgreSQL has a tendency to consume all available resources, and may make the docker daemon sluggish or unresponsive. This is particularly bad whilst syncing.
 >     
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage(GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage(GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.4xlarge | 16 | 32 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 500 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/) |
 
-c5.4xlarge
-
- | 
-
-16
-
- | 
-
-32
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 500 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
- |
 
 **Single Host with separate DB**
 
 **CORE and GATEWAY:**
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage(GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage(GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.2xlarge | 8 | 16 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 250 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)You should initially provision 250 GB of SSD space |
 
-c5.2xlarge
-
- | 
-
-8
-
- | 
-
-16
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 250 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
-You should initially provision 250 GB of SSD space
-
- |
 
 GATEWAY DB:
 
@@ -203,174 +107,29 @@ See the dedicated [Network Gateway service requirements](custom-setup/requiremen
 
 **CORE:**
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage(GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage(GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.2xlarge | 8 | 16 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 250 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)You should initially provision 250 GB of SSD space |
 
-c5.2xlarge
-
- | 
-
-8
-
- | 
-
-16
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 250 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
-You should initially provision 250 GB of SSD space
-
- |
 
 **GATEWAY:**
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage(GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage(GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.4xlarge | 16 | 32 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 600 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/) |
 
-c5.4xlarge
-
- | 
-
-16
-
- | 
-
-32
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 600 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
- |
 
 **Dual Host with separate DB**
 
 **CORE:**
 
-| 
-Model
 
- | 
-
-vCPU
-
- | 
-
-Memory (GB)
-
- | 
-
-Storage(GB)
-
- | 
-
-Network Bandwidth (Gbps)
-
- | 
-
-Operating System
-
- |
+| Model | vCPU | Memory (GB) | Storage(GB) | Network Bandwidth (Gbps) | Operating System |
 | --- | --- | --- | --- | --- | --- |
-| 
+| c5.2xlarge | 8 | 16 | [Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).You should initially provision 250 GB of SSD space | Up to 10 | [Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)You should initially provision 250 GB of SSD space |
 
-c5.2xlarge
-
- | 
-
-8
-
- | 
-
-16
-
- | 
-
-[Provision a gp2 storage volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
-
-You should initially provision 250 GB of SSD space
-
- | 
-
-Up to 10
-
- | 
-
-[Ubuntu 22.04.2.0 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/)
-
-You should initially provision 250 GB of SSD space
-
- |
 
 **GATEWAY:**
 

@@ -113,273 +113,52 @@ Scrypto also introduces a few domain-specific types to enable asset-oriented pro
 
 #### Types related to blueprints and components
 
-| 
-Type
 
- | 
-
-Description
-
- |
+| Type | Description |
 | --- | --- |
-| 
+| `PackageAddress` | Represents the system-wide address of a Package. |
+| `ComponentAddress` | Represents the system-wide address of a Component. |
+| `Global<T>` | Represents a reference to a global object (e.g `Global<MyComponent>`). |
+| `Globalizing<T>` | Represents a local component to be globalized. |
+| `Attached<T>` | Represents an attached module to a global object (e.g `Attached<Metadata>`). |
+| `Owned<T>` | Represents an owned local component. |
+| `KeyValueStore` | Represents a lookup table and the data it contains. It uses key-value pairs to store and retrieve data. |
 
-`PackageAddress`
-
- | 
-
-Represents the system-wide address of a Package.
-
- |
-| 
-
-`ComponentAddress`
-
- | 
-
-Represents the system-wide address of a Component.
-
- |
-| 
-
-`Global<T>`
-
- | 
-
-Represents a reference to a global object (e.g `Global<MyComponent>`).
-
- |
-| 
-
-`Globalizing<T>`
-
- | 
-
-Represents a local component to be globalized.
-
- |
-| 
-
-`Attached<T>`
-
- | 
-
-Represents an attached module to a global object (e.g `Attached<Metadata>`).
-
- |
-| 
-
-`Owned<T>`
-
- | 
-
-Represents an owned local component.
-
- |
-| 
-
-`KeyValueStore`
-
- | 
-
-Represents a lookup table and the data it contains. It uses key-value pairs to store and retrieve data.
-
- |
 
 #### Types related to cryptograpy
 
-| 
-Type
 
- | 
-
-Description
-
- |
+| Type | Description |
 | --- | --- |
-| 
+| `Hash` | Represents a 32-byte hash digest. Currently, the only supported hash algorithm is `SHA256`. |
+| `Secp256k1PublicKey` | Represents an ECDSA public key. Currently, the only supported curve is `secp256k1`. |
+| `Secp256k1PrivateKey` | Represents an ECDSA signature. Currently, the only supported curve is `secp256k1`. |
 
-`Hash`
-
- | 
-
-Represents a 32-byte hash digest. Currently, the only supported hash algorithm is `SHA256`.
-
- |
-| 
-
-`Secp256k1PublicKey`
-
- | 
-
-Represents an ECDSA public key. Currently, the only supported curve is `secp256k1`.
-
- |
-| 
-
-`Secp256k1PrivateKey`
-
- | 
-
-Represents an ECDSA signature. Currently, the only supported curve is `secp256k1`.
-
- |
 
 #### Types related to Math
 
-| 
-Type
 
- | 
-
-Description
-
- |
+| Type | Description |
 | --- | --- |
-| 
+| `Decimal` | `Decimal` type represents a 192 bit fixed-scale decimal number that can have up to **18 decimal places**. |
+| `PreciseDecimal` | If you need even more precision, we provide the 256 bit `PreciseDecimal` type which allows up to **36 decimal places** |
 
-`Decimal`
-
- | 
-
-`Decimal` type represents a 192 bit fixed-scale decimal number that can have up to **18 decimal places**.
-
- |
-| 
-
-`PreciseDecimal`
-
- | 
-
-If you need even more precision, we provide the 256 bit `PreciseDecimal` type which allows up to **36 decimal places**
-
- |
 
 #### Types related to Resources
 
-| 
-Type
 
- | 
-
-Description
-
- |
+| Type | Description |
 | --- | --- |
-| 
-
-`Bucket`
-
- | 
-
-Represents a bucket of resources. Can be of fungible or non-fungible type. Resources in Scrypto can only be moved using Buckets.
-
- |
-| 
-
-`FungibleBucket`
-
- | 
-
-Represents a bucket of fungible resource. This bucket can only contain fungible resource.
-
- |
-| 
-
-`NonFungibleBucket`
-
- | 
-
-Represents a bucket of non-fungible resource. This bucket can only contain non-fungible resource.
-
- |
-| 
-
-`Proof`
-
- | 
-
-Represents a proof of ownership of a resource. Can be a proof of a fungible resource or non-fungible resource.
-
- |
-| 
-
-`FungibleProof`
-
- | 
-
-Represents a proof of a fungible resource. Can only be of a fungible resource.
-
- |
-| 
-
-`NonFungibleProof`
-
- | 
-
-Represents a proof of a non-fungible resource. Can only be of a non-fungible resource.
-
- |
-| 
-
-`CheckedProof`
-
- | 
-
-Represents a proof that has been validated to be legitimate at the application layer.
-
- |
-| 
-
-`Vault`
-
- | 
-
-Represents a vault of resources. Resources in Scrypto can only be stored using Vaults.
-
- |
-| 
-
-`FungibleVault`
-
- | 
-
-Represents a vault which contains a fungible resource. Can only contain fungible resource.
-
- |
-| 
-
-`NonFungibleVault`
-
- | 
-
-Represents a vault which contains a non-fungible resource. Can only contain non-fungible resource.
-
- |
-| 
-
-`NonFungibleGlobalId`
-
- | 
-
-Represents a system-wide address of a Non-Fungible Resource.
-
- |
-| 
-
-`NonFungibleLocalId`
-
- | 
-
-Represents an Id of an Non-Fungible Resource.
-
- |
-| 
-
-`ResourceAddress`
-
- | 
-
-Represents a system-wide address of a Resource.
-
- |
+| `Bucket` | Represents a bucket of resources. Can be of fungible or non-fungible type. Resources in Scrypto can only be moved using Buckets. |
+| `FungibleBucket` | Represents a bucket of fungible resource. This bucket can only contain fungible resource. |
+| `NonFungibleBucket` | Represents a bucket of non-fungible resource. This bucket can only contain non-fungible resource. |
+| `Proof` | Represents a proof of ownership of a resource. Can be a proof of a fungible resource or non-fungible resource. |
+| `FungibleProof` | Represents a proof of a fungible resource. Can only be of a fungible resource. |
+| `NonFungibleProof` | Represents a proof of a non-fungible resource. Can only be of a non-fungible resource. |
+| `CheckedProof` | Represents a proof that has been validated to be legitimate at the application layer. |
+| `Vault` | Represents a vault of resources. Resources in Scrypto can only be stored using Vaults. |
+| `FungibleVault` | Represents a vault which contains a fungible resource. Can only contain fungible resource. |
+| `NonFungibleVault` | Represents a vault which contains a non-fungible resource. Can only contain non-fungible resource. |
+| `NonFungibleGlobalId` | Represents a system-wide address of a Non-Fungible Resource. |
+| `NonFungibleLocalId` | Represents an Id of an Non-Fungible Resource. |
+| `ResourceAddress` | Represents a system-wide address of a Resource. |

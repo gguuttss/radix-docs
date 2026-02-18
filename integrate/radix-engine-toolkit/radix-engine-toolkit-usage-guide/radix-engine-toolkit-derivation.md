@@ -13,51 +13,14 @@ An account can be virtual or physical (see the "[Account Virtualization](../../.
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.VirtualAccountAddressFromPublicKey` |
+| Kotlin | `Address.VirtualAccountAddressFromPublicKey` |
+| Python | `Address.virtual_account_address_from_public_key` |
+| Swift | `Address.VirtualAccountAddressFromPublicKey` |
 
-C#
-
- | 
-
-`Address.VirtualAccountAddressFromPublicKey`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.VirtualAccountAddressFromPublicKey`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.virtual_account_address_from_public_key`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.VirtualAccountAddressFromPublicKey`
-
- |
 
 ### Arguments
 
@@ -163,51 +126,14 @@ Deterministically maps a public key to its associated virtual identity component
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.VirtualIdentityAddressFromPublicKey` |
+| Kotlin | `Address.VirtualIdentityAddressFromPublicKey` |
+| Python | `Address.virtual_identity_address_from_public_key` |
+| Swift | `Address.VirtualIdentityAddressFromPublicKey` |
 
-C#
-
- | 
-
-`Address.VirtualIdentityAddressFromPublicKey`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.VirtualIdentityAddressFromPublicKey`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.virtual_identity_address_from_public_key`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.VirtualIdentityAddressFromPublicKey`
-
- |
 
 ### Arguments
 
@@ -313,51 +239,14 @@ Deterministically maps an Olympia account address to a Babylon virtual account c
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.VirtualAccountAddressFromOlympiaAddress` |
+| Kotlin | `Address.VirtualAccountAddressFromOlympiaAddress` |
+| Python | `Address.virtual_account_address_from_olympia_address` |
+| Swift | `Address.VirtualAccountAddressFromOlympiaAddress` |
 
-C#
-
- | 
-
-`Address.VirtualAccountAddressFromOlympiaAddress`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.VirtualAccountAddressFromOlympiaAddress`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.virtual_account_address_from_olympia_address`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.VirtualAccountAddressFromOlympiaAddress`
-
- |
 
 ### Arguments
 
@@ -453,51 +342,14 @@ Deterministically maps an Olympia resource address to a Babylon resource address
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.ResourceAddressFromOlympiaResourceAddress` |
+| Kotlin | `Address.ResourceAddressFromOlympiaResourceAddress` |
+| Python | `Address.resource_address_from_olympia_resource_address` |
+| Swift | `Address.ResourceAddressFromOlympiaResourceAddress` |
 
-C#
-
- | 
-
-`Address.ResourceAddressFromOlympiaResourceAddress`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.ResourceAddressFromOlympiaResourceAddress`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.resource_address_from_olympia_resource_address`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.ResourceAddressFromOlympiaResourceAddress`
-
- |
 
 ### Arguments
 
@@ -591,51 +443,14 @@ Derives the public key associated with an Olympia account address.
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.DerivePublicKeyFromOlympiaAccountAddress` |
+| Kotlin | `Address.DerivePublicKeyFromOlympiaAccountAddress` |
+| Python | `Address.derive_public_key_from_olympia_account_address` |
+| Swift | `Address.DerivePublicKeyFromOlympiaAccountAddress` |
 
-C#
-
- | 
-
-`Address.DerivePublicKeyFromOlympiaAccountAddress`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.DerivePublicKeyFromOlympiaAccountAddress`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.derive_public_key_from_olympia_account_address`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.DerivePublicKeyFromOlympiaAccountAddress`
-
- |
 
 ### Arguments
 
@@ -714,51 +529,14 @@ Derives an Olympia account address from a Secp256k1 public key.
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.DeriveOlympiaAccountAddressFromPublicKey` |
+| Kotlin | `Address.DeriveOlympiaAccountAddressFromPublicKey` |
+| Python | `Address.derive_olympia_account_address_from_public_key` |
+| Swift | `Address.DeriveOlympiaAccountAddressFromPublicKey` |
 
-C#
-
- | 
-
-`Address.DeriveOlympiaAccountAddressFromPublicKey`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.DeriveOlympiaAccountAddressFromPublicKey`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.derive_olympia_account_address_from_public_key`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.DeriveOlympiaAccountAddressFromPublicKey`
-
- |
 
 ### Arguments
 
@@ -855,51 +633,14 @@ Derives the non-fungible global ID of the virtual signature badge associated wit
 
 ### Function Name
 
-| 
-Language
 
- | 
-
-Function Name
-
- |
+| Language | Function Name |
 | --- | --- |
-| 
+| C# | `Address.VirtualSignatureBadge` |
+| Kotlin | `Address.VirtualSignatureBadge` |
+| Python | `Address.virtual_signature_badge` |
+| Swift | `Address.VirtualSignatureBadge` |
 
-C#
-
- | 
-
-`Address.VirtualSignatureBadge`
-
- |
-| 
-
-Kotlin
-
- | 
-
-`Address.VirtualSignatureBadge`
-
- |
-| 
-
-Python
-
- | 
-
-`Address.virtual_signature_badge`
-
- |
-| 
-
-Swift
-
- | 
-
-`Address.VirtualSignatureBadge`
-
- |
 
 ### Arguments
 

@@ -9,71 +9,14 @@ Once your node is running and connected to the network, you can optimise it for 
 
 We’re going to change the system resource allocations by changing the parameters in the `ulimit` configuration, but before we get going, let’s take a look at the configuration settings we’re interested in:
 
-| 
-Parameter
 
- | 
-
-Description
-
- | 
-
-Setting
-
- |
+| Parameter | Description | Setting |
 | --- | --- | --- |
-| 
+| `nofile` | The number of files the host OS can keep open at once. | 65536 |
+| `nproc` | The number of processes the OS can run simultaneously. | 65536 |
+| `memlock (soft)` | The maximum locked-in address space a particular user can allocate. Once allocated, the pages stay in physical memory, which speeds up operations on the ledger database. The `soft` limit applies to the owner of the process, which will be `radixdlt` in our case. | unlimited |
+| `memlock (hard)` | The maximum locked-in address space that can allocated on the OS as a whole. This value can only be set by the `root` user. Any `soft` memlock cannot exceed the value of the `hard` memlock. | unlimited |
 
-`nofile`
-
- | 
-
-The number of files the host OS can keep open at once.
-
- | 
-
-65536
-
- |
-| 
-
-`nproc`
-
- | 
-
-The number of processes the OS can run simultaneously.
-
- | 
-
-65536
-
- |
-| 
-
-`memlock (soft)`
-
- | 
-
-The maximum locked-in address space a particular user can allocate. Once allocated, the pages stay in physical memory, which speeds up operations on the ledger database. The `soft` limit applies to the owner of the process, which will be `radixdlt` in our case.
-
- | 
-
-unlimited
-
- |
-| 
-
-`memlock (hard)`
-
- | 
-
-The maximum locked-in address space that can allocated on the OS as a whole. This value can only be set by the `root` user. Any `soft` memlock cannot exceed the value of the `hard` memlock.
-
- | 
-
-unlimited
-
- |
 
 > If you’re running other applications on the same server as your node (which is highly inadvisable) then setting `memlock (soft)` to `unlimited` will severely impact the performance of the other applications.
 
