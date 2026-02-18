@@ -1,0 +1,28 @@
+---
+title: "Anemone"
+---
+# Anemone
+
+## Details
+
+-   **Display Name:** Anemone
+-   **Logical Name:** `anemone`
+-   **Mainnet Enactment:**
+    -   **Status:** Enacted
+    -   **Epoch:** `70575`
+    -   **Timestamp:** `2024-02-07T16:20:57.229Z`
+
+## Main Changes
+
+-   Correct the creation cost for validators to 100 USD
+-   Bring basic BLS support to Scrypto
+-   Allow requesting `TimePrecision::Second` when requesting the current time in Scrypto
+-   Tweak the pool blueprints to improve precision, and improve behaviour with non-18 divisibility resources.
+
+## Release Notes
+
+-   [Scrypto v1.1.0](scrypto-v1-1-0)
+
+## Libraries & SDKS
+
+*See later [protocol updates](protocol-updates).*

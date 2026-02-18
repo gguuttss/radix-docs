@@ -1,0 +1,1038 @@
+[
+  {
+    "oldUrl": "/docs/welcome",
+    "newPath": "/welcome"
+  },
+  {
+    "oldUrl": "/docs/essentials",
+    "newPath": "/essentials/README"
+  },
+  {
+    "oldUrl": "/docs/asset-oriented",
+    "newPath": "/essentials/asset-oriented"
+  },
+  {
+    "oldUrl": "/docs/reusable-code",
+    "newPath": "/essentials/reusable-code"
+  },
+  {
+    "oldUrl": "/docs/transactions-on-radix",
+    "newPath": "/essentials/transactions-on-radix"
+  },
+  {
+    "oldUrl": "/docs/authorization-approach",
+    "newPath": "/essentials/authorization-approach"
+  },
+  {
+    "oldUrl": "/docs/getting-help",
+    "newPath": "/essentials/getting-help"
+  },
+  {
+    "oldUrl": "/docs/use",
+    "newPath": "/use/README"
+  },
+  {
+    "oldUrl": "/docs/radix-dashboard",
+    "newPath": "/use/radix-dashboard"
+  },
+  {
+    "oldUrl": "/docs/radix-wallet-overview",
+    "newPath": "/use/radix-wallet-overview"
+  },
+  {
+    "oldUrl": "/docs/ecosystem-tools-and-libraries",
+    "newPath": "/use/ecosystem-tools-and-libraries"
+  },
+  {
+    "oldUrl": "/docs/integrate",
+    "newPath": "/integrate/README"
+  },
+  {
+    "oldUrl": "/docs/integrate-with-radix",
+    "newPath": "/integrate/integrate-with-radix/README"
+  },
+  {
+    "oldUrl": "/docs/introduction-to-radix-at-babylon",
+    "newPath": "/integrate/integrate-with-radix/introduction-to-radix-at-babylon"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-guide",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/README"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-infrastructure-set-up",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-infrastructure-set-up"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-development-set-up-for-developing-an-integration",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-development-set-up-for-developing-an-integration"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-lts-core-api",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-lts-core-api"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-lts-toolkit",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-lts-toolkit"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-detecting-deposits-from-different-users",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-detecting-deposits-from-different-users"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-worked-example-1-transfer-transaction-submission-flow",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-worked-example-1-transfer-transaction-submission-flow"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-worked-example-2-tracking-deposits-to-any-account",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-worked-example-2-tracking-deposits-to-any-account"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-worked-example-3-tracking-deposits-to-specific-account",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-worked-example-3-tracking-deposits-to-specific-account"
+  },
+  {
+    "oldUrl": "/docs/exchange-integration-worked-example-4-node-status-and-monitoring",
+    "newPath": "/integrate/integrate-with-radix/exchange-integration-guide/exchange-integration-worked-example-4-node-status-and-monitoring"
+  },
+  {
+    "oldUrl": "/docs/updating-from-olympia",
+    "newPath": "/integrate/integrate-with-radix/updating-from-olympia/README"
+  },
+  {
+    "oldUrl": "/docs/changes-in-babylon-from-olympia",
+    "newPath": "/integrate/integrate-with-radix/updating-from-olympia/changes-in-babylon-from-olympia"
+  },
+  {
+    "oldUrl": "/docs/sourcing-data-from-olympia",
+    "newPath": "/integrate/integrate-with-radix/updating-from-olympia/sourcing-data-from-olympia"
+  },
+  {
+    "oldUrl": "/docs/olympia-to-babylon-migration-address-mapping-and-reconciliation",
+    "newPath": "/integrate/integrate-with-radix/updating-from-olympia/olympia-to-babylon-migration-address-mapping-and-reconciliation"
+  },
+  {
+    "oldUrl": "/docs/integrate-with-radix-faqs",
+    "newPath": "/integrate/integrate-with-radix/integrate-with-radix-faqs"
+  },
+  {
+    "oldUrl": "/docs/network-apis",
+    "newPath": "/integrate/network-apis/README"
+  },
+  {
+    "oldUrl": "/docs/core-api-providers",
+    "newPath": "/integrate/network-apis/core-api-providers"
+  },
+  {
+    "oldUrl": "/docs/gateway-api-providers",
+    "newPath": "/integrate/network-apis/gateway-api-providers"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit",
+    "newPath": "/integrate/radix-engine-toolkit/README"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-architecture",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-architecture"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-installation",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-installation"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-usage-guide",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/README"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-derivation",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/radix-engine-toolkit-derivation"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-manifest-builder",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-usage-guide/radix-engine-toolkit-manifest-builder"
+  },
+  {
+    "oldUrl": "/docs/radix-engine-toolkit-examples",
+    "newPath": "/integrate/radix-engine-toolkit/radix-engine-toolkit-examples"
+  },
+  {
+    "oldUrl": "/docs/rust-libraries-overview",
+    "newPath": "/integrate/rust-libraries/rust-libraries-overview"
+  },
+  {
+    "oldUrl": "/docs/rust-manifest-builder",
+    "newPath": "/integrate/rust-libraries/rust-manifest-builder"
+  },
+  {
+    "oldUrl": "/docs/rust-transaction-building",
+    "newPath": "/integrate/rust-libraries/rust-transaction-building"
+  },
+  {
+    "oldUrl": "/docs/build",
+    "newPath": "/build/README"
+  },
+  {
+    "oldUrl": "/docs/developer-quick-start",
+    "newPath": "/build/developer-quick-start/README"
+  },
+  {
+    "oldUrl": "/docs/dapp-frontend-development",
+    "newPath": "/build/developer-quick-start/dapp-frontend-development"
+  },
+  {
+    "oldUrl": "/docs/fullstack-dapp-development",
+    "newPath": "/build/developer-quick-start/fullstack-dapp-development"
+  },
+  {
+    "oldUrl": "/docs/scrypto-ledger",
+    "newPath": "/build/developer-quick-start/scrypto-ledger"
+  },
+  {
+    "oldUrl": "/docs/setting-up-for-scrypto-development",
+    "newPath": "/build/setting-up-for-scrypto-development/README"
+  },
+  {
+    "oldUrl": "/docs/setting-up-for-dapp-development",
+    "newPath": "/build/setting-up-for-scrypto-development/setting-up-for-dapp-development"
+  },
+  {
+    "oldUrl": "/docs/getting-rust-scrypto",
+    "newPath": "/build/setting-up-for-scrypto-development/getting-rust-scrypto"
+  },
+  {
+    "oldUrl": "/docs/updating-scrypto",
+    "newPath": "/build/setting-up-for-scrypto-development/updating-scrypto"
+  },
+  {
+    "oldUrl": "/docs/choosing-an-ide",
+    "newPath": "/build/setting-up-for-scrypto-development/choosing-an-ide"
+  },
+  {
+    "oldUrl": "/docs/learning-step-by-step",
+    "newPath": "/build/learning-step-by-step/README"
+  },
+  {
+    "oldUrl": "/docs/learning-to-run-your-first-scrypto-project",
+    "newPath": "/build/learning-step-by-step/learning-to-run-your-first-scrypto-project"
+  },
+  {
+    "oldUrl": "/docs/learning-to-explain-your-first-scrypto-project",
+    "newPath": "/build/learning-step-by-step/learning-to-explain-your-first-scrypto-project"
+  },
+  {
+    "oldUrl": "/docs/learning-to-create-your-first-custom-resource",
+    "newPath": "/build/learning-step-by-step/learning-to-create-your-first-custom-resource"
+  },
+  {
+    "oldUrl": "/docs/learning-to-build-a-gumball-machine",
+    "newPath": "/build/learning-step-by-step/learning-to-build-a-gumball-machine"
+  },
+  {
+    "oldUrl": "/docs/learning-to-give-the-gumball-machine-an-owner",
+    "newPath": "/build/learning-step-by-step/learning-to-give-the-gumball-machine-an-owner"
+  },
+  {
+    "oldUrl": "/docs/learning-to-make-your-gumball-machine-refillable",
+    "newPath": "/build/learning-step-by-step/learning-to-make-your-gumball-machine-refillable"
+  },
+  {
+    "oldUrl": "/docs/learning-to-create-and-use-transaction-manifests",
+    "newPath": "/build/learning-step-by-step/learning-to-create-and-use-transaction-manifests"
+  },
+  {
+    "oldUrl": "/docs/learning-to-use-the-gumball-machine-on-stokenet",
+    "newPath": "/build/learning-step-by-step/learning-to-use-the-gumball-machine-on-stokenet"
+  },
+  {
+    "oldUrl": "/docs/learning-to-run-your-first-front-end-dapp",
+    "newPath": "/build/learning-step-by-step/learning-to-run-your-first-front-end-dapp"
+  },
+  {
+    "oldUrl": "/docs/learning-to-run-the-gumball-machine-front-end-dapp",
+    "newPath": "/build/learning-step-by-step/learning-to-run-the-gumball-machine-front-end-dapp"
+  },
+  {
+    "oldUrl": "/docs/learning-to-set-verification-metadata",
+    "newPath": "/build/learning-step-by-step/learning-to-set-verification-metadata"
+  },
+  {
+    "oldUrl": "/docs/learning-to-create-your-first-non-fungible",
+    "newPath": "/build/learning-step-by-step/learning-to-create-your-first-non-fungible"
+  },
+  {
+    "oldUrl": "/docs/learning-to-build-a-candy-store",
+    "newPath": "/build/learning-step-by-step/learning-to-build-a-candy-store"
+  },
+  {
+    "oldUrl": "/docs/learning-to-make-recallable-badges",
+    "newPath": "/build/learning-step-by-step/learning-to-make-recallable-badges"
+  },
+  {
+    "oldUrl": "/docs/learning-to-build-a-multi-blueprint-package",
+    "newPath": "/build/learning-step-by-step/learning-to-build-a-multi-blueprint-package"
+  },
+  {
+    "oldUrl": "/docs/learning-to-create-owned-components",
+    "newPath": "/build/learning-step-by-step/learning-to-create-owned-components"
+  },
+  {
+    "oldUrl": "/docs/learning-to-use-external-blueprints",
+    "newPath": "/build/learning-step-by-step/learning-to-use-external-blueprints"
+  },
+  {
+    "oldUrl": "/docs/learning-to-use-external-components",
+    "newPath": "/build/learning-step-by-step/learning-to-use-external-components"
+  },
+  {
+    "oldUrl": "/docs/learning-to-explain-your-first-test",
+    "newPath": "/build/learning-step-by-step/learning-to-explain-your-first-test"
+  },
+  {
+    "oldUrl": "/docs/learning-to-test-a-multi-blueprint-package",
+    "newPath": "/build/learning-step-by-step/learning-to-test-a-multi-blueprint-package"
+  },
+  {
+    "oldUrl": "/docs/run-the-radiswap-dapp",
+    "newPath": "/build/learning-step-by-step/run-the-radiswap-dapp"
+  },
+  {
+    "oldUrl": "/docs/wrapping-up-the-learning-step-by-step",
+    "newPath": "/build/learning-step-by-step/wrapping-up-the-learning-step-by-step"
+  },
+  {
+    "oldUrl": "/docs/build-dapps",
+    "newPath": "/build/build-dapps/README"
+  },
+  {
+    "oldUrl": "/docs/dapp-application-stack",
+    "newPath": "/build/build-dapps/dapp-application-stack/README"
+  },
+  {
+    "oldUrl": "/docs/building-a-frontend-dapp",
+    "newPath": "/build/build-dapps/dapp-application-stack/building-a-frontend-dapp"
+  },
+  {
+    "oldUrl": "/docs/building-a-full-stack-dapp",
+    "newPath": "/build/build-dapps/dapp-application-stack/building-a-full-stack-dapp"
+  },
+  {
+    "oldUrl": "/docs/dapp-toolkit",
+    "newPath": "/build/build-dapps/dapp-application-stack/dapp-sdks/dapp-toolkit"
+  },
+  {
+    "oldUrl": "/docs/gateway-sdk",
+    "newPath": "/build/build-dapps/dapp-application-stack/dapp-sdks/gateway-sdk"
+  },
+  {
+    "oldUrl": "/docs/rola-radix-off-ledger-auth",
+    "newPath": "/build/build-dapps/dapp-application-stack/rola-radix-off-ledger-auth"
+  },
+  {
+    "oldUrl": "/docs/dapp-definition-setup",
+    "newPath": "/build/build-dapps/dapp-application-stack/dapp-definition-setup"
+  },
+  {
+    "oldUrl": "/docs/dapp-transactions",
+    "newPath": "/build/build-dapps/dapp-transactions/README"
+  },
+  {
+    "oldUrl": "/docs/writing-manifests",
+    "newPath": "/build/build-dapps/dapp-transactions/writing-manifests"
+  },
+  {
+    "oldUrl": "/docs/pre-authorizations-and-subintents",
+    "newPath": "/build/build-dapps/dapp-transactions/pre-authorizations-and-subintents"
+  },
+  {
+    "oldUrl": "/docs/transaction-examples",
+    "newPath": "/build/build-dapps/dapp-transactions/transaction-examples/README"
+  },
+  {
+    "oldUrl": "/docs/simple-token-transfer",
+    "newPath": "/build/build-dapps/dapp-transactions/transaction-examples/simple-token-transfer"
+  },
+  {
+    "oldUrl": "/docs/transaction-non-fungible-resource-creation",
+    "newPath": "/build/build-dapps/dapp-transactions/transaction-examples/transaction-non-fungible-resource-creation"
+  },
+  {
+    "oldUrl": "/docs/before-you-release",
+    "newPath": "/build/build-dapps/before-you-release/README"
+  },
+  {
+    "oldUrl": "/docs/code-hardening",
+    "newPath": "/build/build-dapps/before-you-release/code-hardening"
+  },
+  {
+    "oldUrl": "/docs/productionize-your-code",
+    "newPath": "/build/build-dapps/before-you-release/productionize-your-code"
+  },
+  {
+    "oldUrl": "/docs/useful-links",
+    "newPath": "/build/build-dapps/useful-links"
+  },
+  {
+    "oldUrl": "/docs/scrypto-1",
+    "newPath": "/build/scrypto-1/README"
+  },
+  {
+    "oldUrl": "/docs/tools-for-scrypto",
+    "newPath": "/build/scrypto-1/tools-for-scrypto/README"
+  },
+  {
+    "oldUrl": "/docs/scrypto-cli-tool",
+    "newPath": "/build/scrypto-1/tools-for-scrypto/scrypto-cli-tool"
+  },
+  {
+    "oldUrl": "/docs/scrypto-builder",
+    "newPath": "/build/scrypto-1/tools-for-scrypto/scrypto-builder"
+  },
+  {
+    "oldUrl": "/docs/resim-radix-engine-simulator",
+    "newPath": "/build/scrypto-1/tools-for-scrypto/resim-radix-engine-simulator"
+  },
+  {
+    "oldUrl": "/docs/blueprints-and-components",
+    "newPath": "/build/scrypto-1/blueprints-and-components"
+  },
+  {
+    "oldUrl": "/docs/resources",
+    "newPath": "/build/scrypto-1/resources/README"
+  },
+  {
+    "oldUrl": "/docs/resource-creation-in-detail",
+    "newPath": "/build/scrypto-1/resources/resource-creation-in-detail"
+  },
+  {
+    "oldUrl": "/docs/resource-behaviors",
+    "newPath": "/build/scrypto-1/resources/resource-behaviors"
+  },
+  {
+    "oldUrl": "/docs/buckets-and-vaults",
+    "newPath": "/build/scrypto-1/resources/buckets-and-vaults"
+  },
+  {
+    "oldUrl": "/docs/non-fungible-data",
+    "newPath": "/build/scrypto-1/resources/non-fungible-data"
+  },
+  {
+    "oldUrl": "/docs/recalling-resources",
+    "newPath": "/build/scrypto-1/resources/recalling-resources"
+  },
+  {
+    "oldUrl": "/docs/freezing-vaults",
+    "newPath": "/build/scrypto-1/resources/freezing-vaults"
+  },
+  {
+    "oldUrl": "/docs/auth",
+    "newPath": "/build/scrypto-1/auth/README"
+  },
+  {
+    "oldUrl": "/docs/call-a-protected-method-function",
+    "newPath": "/build/scrypto-1/auth/call-a-protected-method-function"
+  },
+  {
+    "oldUrl": "/docs/using-proofs",
+    "newPath": "/build/scrypto-1/auth/using-proofs"
+  },
+  {
+    "oldUrl": "/docs/assign-function-accessrules",
+    "newPath": "/build/scrypto-1/auth/assign-function-accessrules"
+  },
+  {
+    "oldUrl": "/docs/structure-roles-and-methods",
+    "newPath": "/build/scrypto-1/auth/structure-roles-and-methods"
+  },
+  {
+    "oldUrl": "/docs/assign-component-roles",
+    "newPath": "/build/scrypto-1/auth/assign-component-roles"
+  },
+  {
+    "oldUrl": "/docs/assign-roles-to-resources",
+    "newPath": "/build/scrypto-1/auth/assign-roles-to-resources"
+  },
+  {
+    "oldUrl": "/docs/assign-metadata-roles",
+    "newPath": "/build/scrypto-1/auth/assign-metadata-roles"
+  },
+  {
+    "oldUrl": "/docs/assign-component-royalty-roles",
+    "newPath": "/build/scrypto-1/auth/assign-component-royalty-roles"
+  },
+  {
+    "oldUrl": "/docs/advanced-accessrules",
+    "newPath": "/build/scrypto-1/auth/advanced-accessrules"
+  },
+  {
+    "oldUrl": "/docs/data-types",
+    "newPath": "/build/scrypto-1/data-types"
+  },
+  {
+    "oldUrl": "/docs/functions-and-methods",
+    "newPath": "/build/scrypto-1/functions-and-methods"
+  },
+  {
+    "oldUrl": "/docs/logging",
+    "newPath": "/build/scrypto-1/logging"
+  },
+  {
+    "oldUrl": "/docs/component-ownership",
+    "newPath": "/build/scrypto-1/component-ownership"
+  },
+  {
+    "oldUrl": "/docs/advanced-external-calls",
+    "newPath": "/build/scrypto-1/advanced-external-calls"
+  },
+  {
+    "oldUrl": "/docs/runtime",
+    "newPath": "/build/scrypto-1/runtime"
+  },
+  {
+    "oldUrl": "/docs/bech32-address-types-conversion",
+    "newPath": "/build/scrypto-1/bech32-address-types-conversion"
+  },
+  {
+    "oldUrl": "/docs/scrypto-events",
+    "newPath": "/build/scrypto-1/scrypto-events"
+  },
+  {
+    "oldUrl": "/docs/coverage-tool",
+    "newPath": "/build/scrypto-1/coverage-tool"
+  },
+  {
+    "oldUrl": "/docs/scrypto-entity-metadata",
+    "newPath": "/build/scrypto-1/scrypto-entity-metadata"
+  },
+  {
+    "oldUrl": "/docs/royalties",
+    "newPath": "/build/scrypto-1/royalties/README"
+  },
+  {
+    "oldUrl": "/docs/using-royalties",
+    "newPath": "/build/scrypto-1/royalties/using-royalties"
+  },
+  {
+    "oldUrl": "/docs/cryptography",
+    "newPath": "/build/scrypto-1/cryptography/README"
+  },
+  {
+    "oldUrl": "/docs/keccak256",
+    "newPath": "/build/scrypto-1/cryptography/keccak256"
+  },
+  {
+    "oldUrl": "/docs/bls12-381",
+    "newPath": "/build/scrypto-1/cryptography/bls12-381"
+  },
+  {
+    "oldUrl": "/docs/testing",
+    "newPath": "/build/scrypto-1/testing/README"
+  },
+  {
+    "oldUrl": "/docs/scrypto-test",
+    "newPath": "/build/scrypto-1/testing/scrypto-test"
+  },
+  {
+    "oldUrl": "/docs/scrypto-design-patterns",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/README"
+  },
+  {
+    "oldUrl": "/docs/user-badge-pattern",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/user-badge-pattern"
+  },
+  {
+    "oldUrl": "/docs/actor-virtual-badge-pattern",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/actor-virtual-badge-pattern"
+  },
+  {
+    "oldUrl": "/docs/the-withdraw-pattern",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/the-withdraw-pattern"
+  },
+  {
+    "oldUrl": "/docs/transient-badge-pattern",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/transient-badge-pattern"
+  },
+  {
+    "oldUrl": "/docs/reusable-blueprints-pattern",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/reusable-blueprints-pattern"
+  },
+  {
+    "oldUrl": "/docs/account-deposit-patterns",
+    "newPath": "/build/scrypto-1/scrypto-design-patterns/account-deposit-patterns"
+  },
+  {
+    "oldUrl": "/docs/run",
+    "newPath": "/run/README"
+  },
+  {
+    "oldUrl": "/docs/running-infrastructure",
+    "newPath": "/run/running-infrastructure"
+  },
+  {
+    "oldUrl": "/docs/node",
+    "newPath": "/run/node/README"
+  },
+  {
+    "oldUrl": "/docs/node-setup",
+    "newPath": "/run/node/node-setup/README"
+  },
+  {
+    "oldUrl": "/docs/node-setup-guided",
+    "newPath": "/run/node/node-setup/node-setup-guided/README"
+  },
+  {
+    "oldUrl": "/docs/node-setup-guided-installing-cli",
+    "newPath": "/run/node/node-setup/node-setup-guided/node-setup-guided-installing-cli"
+  },
+  {
+    "oldUrl": "/docs/node-setup-guided-installing-node",
+    "newPath": "/run/node/node-setup/node-setup-guided/node-setup-guided-installing-node"
+  },
+  {
+    "oldUrl": "/docs/node-setup-guided-updating-node",
+    "newPath": "/run/node/node-setup/node-setup-guided/node-setup-guided-updating-node"
+  },
+  {
+    "oldUrl": "/docs/node-setup-docker",
+    "newPath": "/run/node/node-setup/manual-setup-advanced/node-setup-docker"
+  },
+  {
+    "oldUrl": "/docs/node-setup-systemd",
+    "newPath": "/run/node/node-setup/manual-setup-advanced/node-setup-systemd/README"
+  },
+  {
+    "oldUrl": "/docs/node-setup-systemd-update",
+    "newPath": "/run/node/node-setup/manual-setup-advanced/node-setup-systemd/node-setup-systemd-update"
+  },
+  {
+    "oldUrl": "/docs/node-maintenance-and-administration",
+    "newPath": "/run/node/node-maintenance-and-administration/README"
+  },
+  {
+    "oldUrl": "/docs/node-monitoring-health",
+    "newPath": "/run/node/node-maintenance-and-administration/node-monitoring-health"
+  },
+  {
+    "oldUrl": "/docs/node-protocol-updates",
+    "newPath": "/run/node/node-maintenance-and-administration/node-protocol-updates"
+  },
+  {
+    "oldUrl": "/docs/node-registering-as-a-validator",
+    "newPath": "/run/node/node-maintenance-and-administration/node-registering-as-a-validator"
+  },
+  {
+    "oldUrl": "/docs/node-optimizing-performance",
+    "newPath": "/run/node/node-maintenance-and-administration/node-optimizing-performance"
+  },
+  {
+    "oldUrl": "/docs/node-setting-up-grafana",
+    "newPath": "/run/node/node-maintenance-and-administration/node-setting-up-grafana"
+  },
+  {
+    "oldUrl": "/docs/docker-register-as-a-validator",
+    "newPath": "/run/node/workbench/trash-to-remove/docker-register-as-a-validator"
+  },
+  {
+    "oldUrl": "/docs/network-gateway",
+    "newPath": "/run/network-gateway/README"
+  },
+  {
+    "oldUrl": "/docs/network-gateway-setup",
+    "newPath": "/run/network-gateway/network-gateway-setup/README"
+  },
+  {
+    "oldUrl": "/docs/setup-with-cli",
+    "newPath": "/run/network-gateway/network-gateway-setup/setup-with-cli"
+  },
+  {
+    "oldUrl": "/docs/custom-setup",
+    "newPath": "/run/network-gateway/network-gateway-setup/custom-setup/README"
+  },
+  {
+    "oldUrl": "/docs/requirements",
+    "newPath": "/run/network-gateway/network-gateway-setup/custom-setup/requirements"
+  },
+  {
+    "oldUrl": "/docs/configuration",
+    "newPath": "/run/network-gateway/network-gateway-setup/custom-setup/configuration"
+  },
+  {
+    "oldUrl": "/docs/maintenance-1",
+    "newPath": "/run/network-gateway/maintenance-1/README"
+  },
+  {
+    "oldUrl": "/docs/monitoring",
+    "newPath": "/run/network-gateway/maintenance-1/monitoring"
+  },
+  {
+    "oldUrl": "/docs/releasing",
+    "newPath": "/run/network-gateway/maintenance-1/releasing"
+  },
+  {
+    "oldUrl": "/docs/reference",
+    "newPath": "/reference/README"
+  },
+  {
+    "oldUrl": "/docs/environments",
+    "newPath": "/reference/environments"
+  },
+  {
+    "oldUrl": "/docs/address-description",
+    "newPath": "/reference/address-description"
+  },
+  {
+    "oldUrl": "/docs/well-known-addresses-1",
+    "newPath": "/reference/well-known-addresses-1"
+  },
+  {
+    "oldUrl": "/docs/standards",
+    "newPath": "/reference/standards/README"
+  },
+  {
+    "oldUrl": "/docs/metadata-standards",
+    "newPath": "/reference/standards/metadata-standards/README"
+  },
+  {
+    "oldUrl": "/docs/metadata-for-wallet-display",
+    "newPath": "/reference/standards/metadata-standards/metadata-for-wallet-display"
+  },
+  {
+    "oldUrl": "/docs/metadata-for-verification",
+    "newPath": "/reference/standards/metadata-standards/metadata-for-verification"
+  },
+  {
+    "oldUrl": "/docs/non-fungible-display",
+    "newPath": "/reference/standards/non-fungible-standards/non-fungible-display"
+  },
+  {
+    "oldUrl": "/docs/non-fungible-data-for-wallet-display",
+    "newPath": "/reference/standards/non-fungible-standards/non-fungible-data-for-wallet-display"
+  },
+  {
+    "oldUrl": "/docs/resource-address-display",
+    "newPath": "/reference/standards/ui-ux-standards/resource-address-display"
+  },
+  {
+    "oldUrl": "/docs/babylon-technical-concepts",
+    "newPath": "/reference/babylon-technical-concepts/README"
+  },
+  {
+    "oldUrl": "/docs/concepts-addresses",
+    "newPath": "/reference/babylon-technical-concepts/concepts-addresses"
+  },
+  {
+    "oldUrl": "/docs/concepts-environments",
+    "newPath": "/reference/babylon-technical-concepts/concepts-environments"
+  },
+  {
+    "oldUrl": "/docs/well-known-addresses",
+    "newPath": "/reference/babylon-technical-concepts/well-known-addresses"
+  },
+  {
+    "oldUrl": "/docs/concepts-infrastructure-and-apis",
+    "newPath": "/reference/babylon-technical-concepts/concepts-infrastructure-and-apis"
+  },
+  {
+    "oldUrl": "/docs/concepts-consensus-ledger-forks-blocks-and-trust-chains",
+    "newPath": "/reference/babylon-technical-concepts/concepts-consensus-ledger-forks-blocks-and-trust-chains"
+  },
+  {
+    "oldUrl": "/docs/concepts-curves-keys-signatures-and-hashing",
+    "newPath": "/reference/babylon-technical-concepts/concepts-curves-keys-signatures-and-hashing"
+  },
+  {
+    "oldUrl": "/docs/concepts-state-model-introduction",
+    "newPath": "/reference/babylon-technical-concepts/concepts-state-model-introduction"
+  },
+  {
+    "oldUrl": "/docs/concepts-state-model-advanced",
+    "newPath": "/reference/babylon-technical-concepts/concepts-state-model-advanced"
+  },
+  {
+    "oldUrl": "/docs/concepts-native-token-xrd",
+    "newPath": "/reference/babylon-technical-concepts/concepts-native-token-xrd"
+  },
+  {
+    "oldUrl": "/docs/concepts-transactions",
+    "newPath": "/reference/babylon-technical-concepts/concepts-transactions"
+  },
+  {
+    "oldUrl": "/docs/concepts-getting-test-xrd-and-paying-fees-from-the-faucet",
+    "newPath": "/reference/babylon-technical-concepts/concepts-getting-test-xrd-and-paying-fees-from-the-faucet"
+  },
+  {
+    "oldUrl": "/docs/concepts-key-developer-links-and-version",
+    "newPath": "/reference/babylon-technical-concepts/concepts-key-developer-links-and-version"
+  },
+  {
+    "oldUrl": "/docs/concepts-network-upgrades-once-live",
+    "newPath": "/reference/babylon-technical-concepts/concepts-network-upgrades-once-live"
+  },
+  {
+    "oldUrl": "/docs/concepts-dapps-dashboards-and-wallets",
+    "newPath": "/reference/babylon-technical-concepts/concepts-dapps-dashboards-and-wallets"
+  },
+  {
+    "oldUrl": "/docs/engine-tech-docs",
+    "newPath": "/reference/radix-engine/engine-tech-docs"
+  },
+  {
+    "oldUrl": "/docs/authorization-model",
+    "newPath": "/reference/radix-engine/authorization-model"
+  },
+  {
+    "oldUrl": "/docs/native-blueprints",
+    "newPath": "/reference/radix-engine/native-blueprints/README"
+  },
+  {
+    "oldUrl": "/docs/fungible-resource-manager",
+    "newPath": "/reference/radix-engine/native-blueprints/fungible-resource-manager"
+  },
+  {
+    "oldUrl": "/docs/account",
+    "newPath": "/reference/radix-engine/native-blueprints/account"
+  },
+  {
+    "oldUrl": "/docs/access-controller",
+    "newPath": "/reference/radix-engine/native-blueprints/access-controller"
+  },
+  {
+    "oldUrl": "/docs/pool",
+    "newPath": "/reference/radix-engine/native-blueprints/pool"
+  },
+  {
+    "oldUrl": "/docs/validator",
+    "newPath": "/reference/radix-engine/native-blueprints/validator"
+  },
+  {
+    "oldUrl": "/docs/intent-processor",
+    "newPath": "/reference/radix-engine/native-blueprints/intent-processor"
+  },
+  {
+    "oldUrl": "/docs/consensus-manager",
+    "newPath": "/reference/radix-engine/native-blueprints/consensus-manager"
+  },
+  {
+    "oldUrl": "/docs/identity",
+    "newPath": "/reference/radix-engine/native-blueprints/identity"
+  },
+  {
+    "oldUrl": "/docs/transaction-tracker",
+    "newPath": "/reference/radix-engine/native-blueprints/transaction-tracker"
+  },
+  {
+    "oldUrl": "/docs/locker",
+    "newPath": "/reference/radix-engine/native-blueprints/locker"
+  },
+  {
+    "oldUrl": "/docs/costing-and-limits",
+    "newPath": "/reference/radix-engine/costing-and-limits/README"
+  },
+  {
+    "oldUrl": "/docs/transaction-costing",
+    "newPath": "/reference/radix-engine/costing-and-limits/transaction-costing"
+  },
+  {
+    "oldUrl": "/docs/transaction-limits",
+    "newPath": "/reference/radix-engine/costing-and-limits/transaction-limits"
+  },
+  {
+    "oldUrl": "/docs/metadata",
+    "newPath": "/reference/radix-engine/metadata/README"
+  },
+  {
+    "oldUrl": "/docs/entity-metadata",
+    "newPath": "/reference/radix-engine/metadata/entity-metadata"
+  },
+  {
+    "oldUrl": "/docs/transaction-overview",
+    "newPath": "/reference/transactions/transaction-overview"
+  },
+  {
+    "oldUrl": "/docs/manifest",
+    "newPath": "/reference/transactions/manifest/README"
+  },
+  {
+    "oldUrl": "/docs/manifest-instructions",
+    "newPath": "/reference/transactions/manifest/manifest-instructions"
+  },
+  {
+    "oldUrl": "/docs/conforming-manifest-types",
+    "newPath": "/reference/transactions/manifest/conforming-manifest-types"
+  },
+  {
+    "oldUrl": "/docs/intent-structure",
+    "newPath": "/reference/transactions/intent-structure"
+  },
+  {
+    "oldUrl": "/docs/transaction-structure",
+    "newPath": "/reference/transactions/transaction-structure"
+  },
+  {
+    "oldUrl": "/docs/transaction-intents",
+    "newPath": "/reference/transactions/transaction-intents"
+  },
+  {
+    "oldUrl": "/docs/transaction-notary",
+    "newPath": "/reference/transactions/transaction-notary"
+  },
+  {
+    "oldUrl": "/docs/subintents",
+    "newPath": "/reference/transactions/subintents"
+  },
+  {
+    "oldUrl": "/docs/what-is-sbor",
+    "newPath": "/reference/sbor-serialization/what-is-sbor"
+  },
+  {
+    "oldUrl": "/docs/sbor-value-model",
+    "newPath": "/reference/sbor-serialization/sbor-value-model"
+  },
+  {
+    "oldUrl": "/docs/sbor-type-model",
+    "newPath": "/reference/sbor-serialization/sbor-type-model"
+  },
+  {
+    "oldUrl": "/docs/sbor-textual-representations",
+    "newPath": "/reference/sbor-serialization/sbor-textual-representations/README"
+  },
+  {
+    "oldUrl": "/docs/sbor-programmatic-json",
+    "newPath": "/reference/sbor-serialization/sbor-textual-representations/sbor-programmatic-json"
+  },
+  {
+    "oldUrl": "/docs/manifest-sbor",
+    "newPath": "/reference/sbor-serialization/manifest-sbor/README"
+  },
+  {
+    "oldUrl": "/docs/manifest-sbor-specs",
+    "newPath": "/reference/sbor-serialization/manifest-sbor/manifest-sbor-specs"
+  },
+  {
+    "oldUrl": "/docs/manifest-value-syntax",
+    "newPath": "/reference/sbor-serialization/manifest-sbor/manifest-value-syntax"
+  },
+  {
+    "oldUrl": "/docs/scrypto-sbor",
+    "newPath": "/reference/sbor-serialization/scrypto-sbor/README"
+  },
+  {
+    "oldUrl": "/docs/scrypto-sbor-specs",
+    "newPath": "/reference/sbor-serialization/scrypto-sbor/scrypto-sbor-specs"
+  },
+  {
+    "oldUrl": "/docs/protocol-updates",
+    "newPath": "/updates/protocol-updates/README"
+  },
+  {
+    "oldUrl": "/docs/babylon-genesis",
+    "newPath": "/updates/protocol-updates/babylon-genesis"
+  },
+  {
+    "oldUrl": "/docs/anemone",
+    "newPath": "/updates/protocol-updates/anemone"
+  },
+  {
+    "oldUrl": "/docs/bottlenose",
+    "newPath": "/updates/protocol-updates/bottlenose"
+  },
+  {
+    "oldUrl": "/docs/cuttlefish",
+    "newPath": "/updates/protocol-updates/cuttlefish"
+  },
+  {
+    "oldUrl": "/docs/dugong",
+    "newPath": "/updates/protocol-updates/dugong"
+  },
+  {
+    "oldUrl": "/docs/roadmap",
+    "newPath": "/updates/roadmap/README"
+  },
+  {
+    "oldUrl": "/docs/wallets-milestones",
+    "newPath": "/updates/roadmap/wallets/wallets-milestones"
+  },
+  {
+    "oldUrl": "/docs/wallets-underway",
+    "newPath": "/updates/roadmap/wallets/wallets-underway"
+  },
+  {
+    "oldUrl": "/docs/wallets-backlog",
+    "newPath": "/updates/roadmap/wallets/wallets-backlog"
+  },
+  {
+    "oldUrl": "/docs/complete",
+    "newPath": "/updates/roadmap/wallets/complete"
+  },
+  {
+    "oldUrl": "/docs/scrypto-milestones",
+    "newPath": "/updates/roadmap/scrypto/scrypto-milestones"
+  },
+  {
+    "oldUrl": "/docs/scrypto-underway",
+    "newPath": "/updates/roadmap/scrypto/scrypto-underway"
+  },
+  {
+    "oldUrl": "/docs/scrypto-backlog",
+    "newPath": "/updates/roadmap/scrypto/scrypto-backlog"
+  },
+  {
+    "oldUrl": "/docs/node-engine-milestones",
+    "newPath": "/updates/roadmap/node-engine/node-engine-milestones"
+  },
+  {
+    "oldUrl": "/docs/node-engine-underway",
+    "newPath": "/updates/roadmap/node-engine/node-engine-underway"
+  },
+  {
+    "oldUrl": "/docs/node-engine-backlog",
+    "newPath": "/updates/roadmap/node-engine/node-engine-backlog"
+  },
+  {
+    "oldUrl": "/docs/node-engine-complete",
+    "newPath": "/updates/roadmap/node-engine/node-engine-complete"
+  },
+  {
+    "oldUrl": "/docs/gateway-milestones",
+    "newPath": "/updates/roadmap/gateway/gateway-milestones"
+  },
+  {
+    "oldUrl": "/docs/gateway-underway",
+    "newPath": "/updates/roadmap/gateway/gateway-underway"
+  },
+  {
+    "oldUrl": "/docs/gateway-backlog",
+    "newPath": "/updates/roadmap/gateway/gateway-backlog"
+  },
+  {
+    "oldUrl": "/docs/gateway-complete",
+    "newPath": "/updates/roadmap/gateway/gateway-complete"
+  },
+  {
+    "oldUrl": "/docs/developer-tools-underway",
+    "newPath": "/updates/roadmap/developer-tools/developer-tools-underway"
+  },
+  {
+    "oldUrl": "/docs/developer-tools-backlog",
+    "newPath": "/updates/roadmap/developer-tools/developer-tools-backlog"
+  },
+  {
+    "oldUrl": "/docs/release-notes",
+    "newPath": "/updates/release-notes/README"
+  },
+  {
+    "oldUrl": "/docs/scrypto-v1-3-1",
+    "newPath": "/updates/release-notes/scrypto/scrypto-v1-3-1"
+  },
+  {
+    "oldUrl": "/docs/scrypto-v1-3-0",
+    "newPath": "/updates/release-notes/scrypto/scrypto-v1-3-0"
+  },
+  {
+    "oldUrl": "/docs/scrypto-v1-2-0",
+    "newPath": "/updates/release-notes/scrypto/scrypto-v1-2-0"
+  },
+  {
+    "oldUrl": "/docs/scrypto-v1-1-0",
+    "newPath": "/updates/release-notes/scrypto/scrypto-v1-1-0"
+  }
+]
