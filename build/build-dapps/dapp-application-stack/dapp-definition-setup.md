@@ -30,9 +30,9 @@ Ideally, a dApp Definition account should be created after you have built your d
     
 7.  You will see initial form with one “account\_type” field and “Badges” section. Change value of “account\_type” field to “dapp definition”.
     
-8.  Fill in the name, description, tags and icon\_url. These fields are [standard display metadata](https://docs.radixdlt.com/docs/metadata-for-wallet-display) entries for account entity. Values of these fields will be displayed when your dApp sends requests to wallet
+8.  Fill in the name, description, tags and icon\_url. These fields are [standard display metadata](../../../reference/standards/metadata-standards/metadata-for-wallet-display.md) entries for account entity. Values of these fields will be displayed when your dApp sends requests to wallet
     
-9.  In order to set [metadata for verification](https://docs.radixdlt.com/docs/metadata-for-verification), you need to fill claimed\_websites and claimed\_entities fields.
+9.  In order to set [metadata for verification](../../../reference/standards/metadata-standards/metadata-for-verification.md), you need to fill claimed\_websites and claimed\_entities fields.
     
     1.  **claimed\_websites** - Here, you can claim ownership of your dApps website(s) for authenticity. This is confirmed by looking up an expected `.well-known/radix.json` file at the claimed website origin. **This will be required for your dApp to successfully send requests to the Radix Wallet at Mainnet.**
         

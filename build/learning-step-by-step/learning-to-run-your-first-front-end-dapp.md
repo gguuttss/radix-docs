@@ -9,7 +9,7 @@ create-radix-app
 
 If your in a hurry to get a working front end dapp up and running, use [create-radix-app](https://github.com/radixdlt/create-radix-app#readme). It will give you some great templates to build more from. To understand how to turn a template into a dapp of your own, learn how Radix dapps work across this and the next few lessons.
 
-This section shows you how to make a very simple dapp with a front end. We deployed a package to the network and started interacting with it on ledger in the last section. Before we turn that Gumball Machine into a fully fledged dapp, we need to learn how to connect a front end to the Radix network and wallet. This section shows you how using the Hello package from the first and [second sections](https://docs.radixdlt.com/docs/learning-to-explain-your-first-scrypto-project), adding a front end that sends a connected user a free Hello Token.
+This section shows you how to make a very simple dapp with a front end. We deployed a package to the network and started interacting with it on ledger in the last section. Before we turn that Gumball Machine into a fully fledged dapp, we need to learn how to connect a front end to the Radix network and wallet. This section shows you how using the Hello package from the first and [second sections](learning-to-explain-your-first-scrypto-project.md), adding a front end that sends a connected user a free Hello Token.
 
 We assume you have some familiarity with JavaScript and front end web development for this section, but it's kept as simple as possible.
 

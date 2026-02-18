@@ -73,7 +73,7 @@ Next we deploy the package in the Radix Engine Simulator.
 
 ## Deploying the package locally via Radix Engine Simulator `resim`
 
-On distributed ledgers like Radix, each action on the network incurs transaction fees. [Transaction fees](https://docs.radixdlt.com/docs/en/transaction-costing) reflect the load each transaction puts on the network and are used to compensate the [network validators](https://docs.radixdlt.com/docs/validator).
+On distributed ledgers like Radix, each action on the network incurs transaction fees. [Transaction fees](../../reference/radix-engine/costing-and-limits/transaction-costing.md) reflect the load each transaction puts on the network and are used to compensate the [network validators](../../reference/radix-engine/native-blueprints/validator.md).
 
 To deploy our package, we will therefore need an account with enough XRD to cover the transaction fees. We can create both in `resim`.
 
@@ -236,7 +236,7 @@ This reads as:
 | Caption | Description |
 | --- | --- |
 | Transaction Status | Transaction was successful. |
-| Transaction Cost | This sections describes the fees you had to pay to execute this transaction. Read [more about fees here](https://docs.radixdlt.com/docs/costing-and-limits). |
+| Transaction Cost | This sections describes the fees you had to pay to execute this transaction. Read [more about fees here](../../reference/radix-engine/costing-and-limits/README.md). |
 | Logs | There were no logs. |
 | Events | The transaction first executed a call to lock the fees. Then it executed one `CallFunction` instruction, that called the `instantiate_hello` function which in turn issued a `CallMethod` instruction. The events emitted show us what happened as a result of the manifest instructions. |
 | Outputs and Balance Changes | The new instantiated `ComponentAddress` and information about resource movement is displayed here |
@@ -342,7 +342,7 @@ This reads as:
 | Caption | Description |
 | --- | --- |
 | Transaction status | Transaction was successful. |
-| Transaction Fee and Cost Units | This sections describes the fees you had to pay to execute this transaction. Read [more about fees here](https://docs.radixdlt.com/docs/costing-and-limits). |
+| Transaction Fee and Cost Units | This sections describes the fees you had to pay to execute this transaction. Read [more about fees here](../../reference/radix-engine/costing-and-limits/README.md). |
 | Logs | There was one log message. The message was: "\[INFO \] My balance is: 1000 HelloToken. Now giving away a token!" |
 | Events | The transaction first locked the fees. Then it executed one `CallMethod` instruction, that called the `free_token` method which in turn issued another `CallMethod` instruction to withdraw and store the `HelloToken` in your account. |
 | Outputs and Balance Changes | Information about resource movement is displayed here |

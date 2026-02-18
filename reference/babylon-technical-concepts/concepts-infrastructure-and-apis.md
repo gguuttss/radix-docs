@@ -27,7 +27,7 @@ For most exchanges, the [LTS sub-section **Core API** of a node](https://radix-b
 -   Streaming of committed transaction outcomes, filtered to an individual account
 -   Reading of current account balance for 1 or all resources.
 
-Exchanges will need to run their own Babylon full node/s. Documentation on [running a Babylon node may be found here](https://docs.radixdlt.com/docs/running-infrastructure).
+Exchanges will need to run their own Babylon full node/s. Documentation on [running a Babylon node may be found here](../../run/running-infrastructure.md).
 
 ## Network Gateway
 

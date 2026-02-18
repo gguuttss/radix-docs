@@ -213,7 +213,7 @@ fn get_non_fungible_data(
 
 This also gives us access to our non-fungible's local ID as it was passed in as a method argument.
 
-This pattern can also be used to validate the calling component [using the global\_caller implicit requirement](https://docs.radixdlt.com/docs/advanced-accessrules#caller-requirements).
+This pattern can also be used to validate the calling component [using the global\_caller implicit requirement](advanced-accessrules.md#caller-requirements).
 
 Methods Protected with `assert_access_rule`
 

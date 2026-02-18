@@ -15,13 +15,13 @@ Two way linking involves linking a dapp definition to a component, resources and
 
 ## Metadata for Verification
 
-[The system of dapp, component and resource verification](https://docs.radixdlt.com/docs/metadata-for-verification) involves a dapp definition and a collection of metadata fields for linking entities together.
+[The system of dapp, component and resource verification](../../reference/standards/metadata-standards/metadata-for-verification.md) involves a dapp definition and a collection of metadata fields for linking entities together.
 
 Each component can have a `dapp_definition` stored in metadata and each resource can be linked to multiple `dapp_definitions`. The dapp definition account will need to have all of these components and resources stored in `claimed_entities` metadata to complete the links. The dapp definition can also link to other `dapp_definitions` and `claimed_websites`. In the last case, the website will need to have a `.well-known/radix.json` file with the dapp definition address in it to complete the link.
 
-The full list, with data types for each, can be found in the [Metadata for verification](https://docs.radixdlt.com/docs/metadata-for-verification#metadata-standards-for-verification-of-onledger-entities) section of the documentation.
+The full list, with data types for each, can be found in the [Metadata for verification](../../reference/standards/metadata-standards/metadata-for-verification.md#metadata-standards-for-verification-of-onledger-entities) section of the documentation.
 
-Often, when components and resources are created, we won't have a dapp definition yet. Fortunately [metadata can be updated by a component or resource owner by default](https://docs.radixdlt.com/docs/entity-metadata#updating-and-locking-metadata), so all we need to do is give them an owner, then update the metadata when we have a dapp definition. Ownership is again a shortcut to the most used parts of the authorization system.
+Often, when components and resources are created, we won't have a dapp definition yet. Fortunately [metadata can be updated by a component or resource owner by default](../../reference/radix-engine/metadata/entity-metadata.md#updating-and-locking-metadata), so all we need to do is give them an owner, then update the metadata when we have a dapp definition. Ownership is again a shortcut to the most used parts of the authorization system.
 
 You can see this change when creating the Gumball resource for this section.
 

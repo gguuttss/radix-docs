@@ -25,7 +25,7 @@ This allows us to reclaim large volumes of state used by Transaction Tracker, us
 
 > Network-wide Singleton
 > 
-> The singleton Transaction Tracker’s instance is created and started by the system during Genesis (i.e. it is not supposed to be instantiated by users). You can find its well-known address for each Network [here](https://docs.radixdlt.com/docs/well-known-addresses).
+> The singleton Transaction Tracker’s instance is created and started by the system during Genesis (i.e. it is not supposed to be instantiated by users). You can find its well-known address for each Network [here](../../babylon-technical-concepts/well-known-addresses.md).
 
 ## On-ledger State
 

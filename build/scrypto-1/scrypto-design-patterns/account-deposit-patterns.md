@@ -93,7 +93,7 @@ Instead it is recommended that your application use this process:
 3.  In your frontend, let the user "claim" the tokens at their own convenience. Your frontend builds a transaction in which a proof of their user badge is produced and passed to your component – or the badge itself is "turned in", in the case of a single-use claim ticket. Your component can examine that proof/badge to identify the user and return the correct tokens.
 4.  The claim transaction can then deposit to any of the user's accounts, as in the "online" pattern above, since the user themself signs and submits the transaction.
 
-([More about this pattern can be found here](https://docs.radixdlt.com/docs/user-badge-pattern "https://docs.radixdlt.com/docs/user-badge-pattern").)
+([More about this pattern can be found here](user-badge-pattern.md).)
 
 However, you might be thinking *"if I use a non-transferable user badge, how do I send that badge to the user and ensure it reaches the right person?"*
 
@@ -131,7 +131,7 @@ If you link your locker to your dApp Definition, and the user's wallet already t
 Use the following process:
 
 1.  Instantiate a single locker component for use by your dApp. You never need more than one.
-2.  *(Recommended)* Configure the [verification metadata](https://docs.radixdlt.com/docs/metadata-for-verification "https://docs.radixdlt.com/docs/metadata-for-verification") on the locker to include a `dapp_definition`set to your dApp Definition address. In that dApp Definition, add the locker address to the `claimed_entities` list. This provides a verified link between the locker and your dApp for use by the Radix Wallet. Also add the locker address to an `account_locker` field on the dApp Definition to let the Radix Wallet know that it might check this address for available claims.
+2.  *(Recommended)* Configure the [verification metadata](../../../reference/standards/metadata-standards/metadata-for-verification.md) on the locker to include a `dapp_definition`set to your dApp Definition address. In that dApp Definition, add the locker address to the `claimed_entities` list. This provides a verified link between the locker and your dApp for use by the Radix Wallet. Also add the locker address to an `account_locker` field on the dApp Definition to let the Radix Wallet know that it might check this address for available claims.
 3.  When you wish to do a send of tokens to addresses, use the locker's `send` method. This will take an account address, resources to be sent, and a flag that control whether the method should first attempt to deposit the resources into the account or not.
     1.  If the method is invoked with the `try_direct_send` flag set to `true` the locker will attempt to immediately deposit the resources in that account, but if that is not possible (due to account deposit settings) it will store those resources for later claim by that account's owner.
     2.  If the method is invoked with the `try_direct_send` flag set to `false` the locker immediately keeps the resources for claim by the account owner without attempting to directly deposit. This may be used as a fallback if your own system wishes to attempt the direct deposit itself, or if you prefer to have all users receive their resources by claiming them
@@ -160,9 +160,9 @@ The "physical package" pattern here is: "*Give us a permission to make a special
 
 #### How to use the Authorized Depositor pattern
 
-All Radix accounts give the owner the ability to configure their own preferences for what tokens (resources) may be deposited to that account by an unknown third party. ([See documentation on the account component](https://docs.radixdlt.com/docs/account "https://docs.radixdlt.com/docs/account"))
+All Radix accounts give the owner the ability to configure their own preferences for what tokens (resources) may be deposited to that account by an unknown third party. ([See documentation on the account component](../../../reference/radix-engine/native-blueprints/account.md))
 
-If you wish to make a direct deposit of a non-transferable token to an account, your system can first ask [a Radix Gateway or Node, via API](https://docs.radixdlt.com/docs/network-apis "https://docs.radixdlt.com/docs/network-apis"), if deposit of the token will be allowed by its settings. This will include checking if either the default account deposit mode or the resource preference map would block the deposit. If the answer is that the deposit is okay, go ahead and make the deposit using one of the `try_deposit` methods and you're done!
+If you wish to make a direct deposit of a non-transferable token to an account, your system can first ask [a Radix Gateway or Node, via API](../../../integrate/network-apis/README.md), if deposit of the token will be allowed by its settings. This will include checking if either the default account deposit mode or the resource preference map would block the deposit. If the answer is that the deposit is okay, go ahead and make the deposit using one of the `try_deposit` methods and you're done!
 
 If however the account will *not* allow the direct deposit, you can ask the user to allow your particular application to be able to deposit to that account by adding you as an "authorized depositor". Use the following process:
 

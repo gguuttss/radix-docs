@@ -26,7 +26,7 @@ In Radix, the Consensus Manager native component is responsible for bridging the
 
 > Network-wide Singleton
 > 
-> The singleton Consensus Manager’s instance is created and started by the system during Genesis (i.e. it is not supposed to be instantiated by users). You can find its well-known address for each Network [here](https://docs.radixdlt.com/docs/well-known-addresses).
+> The singleton Consensus Manager’s instance is created and started by the system during Genesis (i.e. it is not supposed to be instantiated by users). You can find its well-known address for each Network [here](../../babylon-technical-concepts/well-known-addresses.md).
 
 The Consensus Manager’s [internal responsibilities](consensus-manager.md#internal-responsibilities) (i.e. related to Consensus progress) are performed at the beginning of each Consensus Round, when a special system transaction calls the protected `ConsensusManager::next_round()` method.
 

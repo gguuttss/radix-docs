@@ -9,9 +9,9 @@ The scrypto package referenced in this section can be found in our [official exa
 
 ## External Blueprints
 
-As the Radix ecosystem continues to mature there will be more and more blueprints available to use. These blueprints are created by many different teams and individuals and some are intended for external use, with the possibility of [royalties](https://docs.radixdlt.com/docs/using-royalties) given to the blueprint owner. You may work on some of these yourself.
+As the Radix ecosystem continues to mature there will be more and more blueprints available to use. These blueprints are created by many different teams and individuals and some are intended for external use, with the possibility of [royalties](../scrypto-1/royalties/using-royalties.md) given to the blueprint owner. You may work on some of these yourself.
 
-[Using external blueprints](https://docs.radixdlt.com/docs/cross-blueprint-calls#calling-a-specific-blueprint-or-global-component-of-your-package) is a little different to using your own. We need to import the blueprint into our own using the `extern_blueprint!` macro. This macro describes the external blueprint with its address, name, function and method signatures.
+[Using external blueprints](../scrypto-1/advanced-external-calls.md#calling-a-specific-blueprint-or-global-component-of-your-package) is a little different to using your own. We need to import the blueprint into our own using the `extern_blueprint!` macro. This macro describes the external blueprint with its address, name, function and method signatures.
 
 ```
 mod candy_store {
@@ -84,7 +84,7 @@ This is a good demonstration of component instantiation producing owned componen
 
 We use it here, so the same version of the blueprint can also be used in this and the next section.
 
-Having multiple instantiation functions can serve several other purposes as well. Allowing for a standard default component to be created, while also allowing for a more complex or customized component versions, potentially using input arguments to decide on metadata or [more complex access rules](https://docs.radixdlt.com/docs/en/reusable-blueprints-pattern#multiple-instantiation-functions).
+Having multiple instantiation functions can serve several other purposes as well. Allowing for a standard default component to be created, while also allowing for a more complex or customized component versions, potentially using input arguments to decide on metadata or [more complex access rules](../scrypto-1/scrypto-design-patterns/reusable-blueprints-pattern.md#multiple-instantiation-functions).
 
 ## Using the Candy Store with an External Gumball Machine
 

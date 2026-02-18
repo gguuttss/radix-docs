@@ -11,7 +11,7 @@ The scrypto package referenced in this section can be found in our [official exa
 
 ### Two Resource Pools
 
-The Radiswap package is a customised wrapper around the standard TwoResourcePool native blueprint with the addition of a swap function. There are a range of [native pool blueprints](https://docs.radixdlt.com/docs/pool-component) available in the Radix Engine, and the TwoResourcePool is one of the most commonly used. It does what you would expect and holds two resources allowing users to deposit and withdraw from the pool in exchange for Pool Unit resources (often called LP tokens). This is a useful part of the functionality of many dApps and these functions are accessed with the `add_liquidity` and `remove_liquidity` methods. In our case the Radiswap blueprint extends the pool blueprint's methods by also allowing users to swap between the two resources in the pool.
+The Radiswap package is a customised wrapper around the standard TwoResourcePool native blueprint with the addition of a swap function. There are a range of [native pool blueprints](../../reference/radix-engine/native-blueprints/pool.md) available in the Radix Engine, and the TwoResourcePool is one of the most commonly used. It does what you would expect and holds two resources allowing users to deposit and withdraw from the pool in exchange for Pool Unit resources (often called LP tokens). This is a useful part of the functionality of many dApps and these functions are accessed with the `add_liquidity` and `remove_liquidity` methods. In our case the Radiswap blueprint extends the pool blueprint's methods by also allowing users to swap between the two resources in the pool.
 
 ### The Swap Method
 
@@ -28,7 +28,7 @@ output_amount = input_amount * (output_reserves / (input_reserves + input_amount
 ```
 
 The  
-[checked math](https://docs.radixdlt.com/docs/code-hardening#pay-special-attention-to-decimal-operations)  
+[checked math](../build-dapps/before-you-release/code-hardening.md#pay-special-attention-to-decimal-operations)  
 version of this becomes:
 
 ```
@@ -62,7 +62,7 @@ OwnerRole::Fixed(rule!(require(
             )))
 ```
 
-Now that we've made it an argument we'll need to provide the full role in a transaction manifest when we instantiate the component. To do that we'll use some new [Manifest Value Syntax](https://docs.radixdlt.com/docs/manifest-value-syntax), instead of the `rule!` shorthand, that works for Scrypto but doesn't in manifests. This will give us a function call that looks something like this:
+Now that we've made it an argument we'll need to provide the full role in a transaction manifest when we instantiate the component. To do that we'll use some new [Manifest Value Syntax](../../reference/sbor-serialization/manifest-sbor/manifest-value-syntax.md), instead of the `rule!` shorthand, that works for Scrypto but doesn't in manifests. This will give us a function call that looks something like this:
 
 ```
 CALL_FUNCTION
@@ -102,7 +102,7 @@ Enum<OwnerRole::None>()
 #### Adding a Dapp Definition Account Address in a Transaction Manifest #
 
 The second new instantiation argument is the dapp definition account address. Adding a this address as an argument allows us to add it as metadata for the component now, rather than in the Developer Console later. In  
-[Set Verification Metadata](https://docs.radixdlt.com/docs/learning-to-set-verification-metadata) we customised our metadata in the [Developer Console](https://stokenet-console.radixdlt.com/configure-metadata), but if we already know what we want it to be, we can add it at instantiation,  
+[Set Verification Metadata](learning-to-set-verification-metadata.md) we customised our metadata in the [Developer Console](https://stokenet-console.radixdlt.com/configure-metadata), but if we already know what we want it to be, we can add it at instantiation,  
 e.g.
 
 ```
@@ -141,14 +141,14 @@ CALL_FUNCTION
 
 Updating Metadata
 
-You can find more information about setting and updating metadata in the [Entity Metadata](https://docs.radixdlt.com/docs/entity-metadata#configuring-metadata-roles) section of the documentation.
+You can find more information about setting and updating metadata in the [Entity Metadata](../../reference/radix-engine/metadata/entity-metadata.md#configuring-metadata-roles) section of the documentation.
 
 This changes the steps to instantiate the package component on Stokenet. You can find those updated steps in the  
 [Using the Radiswap Front End on Stokenet](run-the-radiswap-dapp.md#using-the-radiswap-front-end-on-stokenet) Setup section below.
 
 ### Event Emission
 
-[Events in Scrypto](https://docs.radixdlt.com/docs/scrypto-events) are a way to communicate to off chain clients. They are emitted by the component and can be listened for to begin secondary actions with the [Gateway](https://docs.radixdlt.com/docs/network-apis#gateway-api) or [Core](https://docs.radixdlt.com/docs/network-apis#core-api) APIs. There are many events that already exist in the core components. You may have noticed these in transaction receipts on resim. In the Radiswap component we also emit *custom* events when different methods are called. For example a `SwapEvent`, which contains the amount of each resource swapped:
+[Events in Scrypto](../scrypto-1/scrypto-events.md) are a way to communicate to off chain clients. They are emitted by the component and can be listened for to begin secondary actions with the [Gateway](../../integrate/network-apis/README.md#gateway-api) or [Core](../../integrate/network-apis/README.md#core-api) APIs. There are many events that already exist in the core components. You may have noticed these in transaction receipts on resim. In the Radiswap component we also emit *custom* events when different methods are called. For example a `SwapEvent`, which contains the amount of each resource swapped:
 
 ```
 #[derive(ScryptoSbor, ScryptoEvent)]
@@ -183,7 +183,7 @@ As no part of a transaction will succeed if any of it fails, events will not be 
 
 The Radiswap front end is a single web page that allows anyone with a Radix Wallet to interact with Radiswap component on ledger. Its HTML defines several buttons and text inputs and runs the `client/main.js` script, where interactions with the Radix network and wallet take place.
 
-These types of front end interactions were previously described in more detail in both the [Run Your First Front End Dapp](https://docs.radixdlt.com/docs/learning-to-run-your-first-front-end-dapp) and [Run the Gumball Machine Front End dApp](https://docs.radixdlt.com/docs/learning-to-run-the-gumball-machine-front-end-dapp) sections of the documentation. They are summarised again here.
+These types of front end interactions were previously described in more detail in both the [Run Your First Front End Dapp](learning-to-run-your-first-front-end-dapp.md) and [Run the Gumball Machine Front End dApp](learning-to-run-the-gumball-machine-front-end-dapp.md) sections of the documentation. They are summarised again here.
 
 In `client/main.js` we use the [radix-dapp-toolkit](../build-dapps/dapp-application-stack/dapp-sdks/dapp-toolkit.md) and [gateway-api-sdk](../build-dapps/dapp-application-stack/dapp-sdks/gateway-sdk.md) to interact with the Radix network.
 

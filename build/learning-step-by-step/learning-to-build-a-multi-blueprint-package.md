@@ -11,7 +11,7 @@ The scrypto package referenced in this section can be found in our [official exa
 
 ## Modular Packages
 
-Using [several blueprints in one package](https://docs.radixdlt.com/docs/en/reusable-blueprints-pattern#small-modular-reusable-blueprints) is a common pattern with advantages of making it;
+Using [several blueprints in one package](../scrypto-1/scrypto-design-patterns/reusable-blueprints-pattern.md#small-modular-reusable-blueprints) is a common pattern with advantages of making it;
 
 -   easier to manage and upgrade parts of your application,
 -   more secure, by limiting the scope of each component,

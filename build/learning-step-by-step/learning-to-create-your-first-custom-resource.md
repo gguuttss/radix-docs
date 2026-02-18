@@ -5,19 +5,19 @@ title: "Create Your First Custom Resource"
 
 Using Scrypto you can create a wide range of resources, whether fungible, non-fungible, simple tokens or more complex authorization badges. Being able to modify their properties allows you to accurately represent your chosen entity/idea for each.
 
-In [Run Your First Project](https://docs.radixdlt.com/docs/run-your-first-project) you've created your first resource. Before we start modifying resources let's understand what they are a little more.
+In [Run Your First Project](learning-to-run-your-first-scrypto-project.md) you've created your first resource. Before we start modifying resources let's understand what they are a little more.
 
-As an [Asset-Oriented](https://docs.radixdlt.com/docs/asset-oriented) language resources/assets are not implemented on top of Scrypto, but are native to it. Many other platforms do not have resources at the core of their engines. Asset's and their behaviours must be implemented through additional code that requires checking and tracking that transactions have happened as expected.
+As an [Asset-Oriented](../../essentials/asset-oriented.md) language resources/assets are not implemented on top of Scrypto, but are native to it. Many other platforms do not have resources at the core of their engines. Asset's and their behaviours must be implemented through additional code that requires checking and tracking that transactions have happened as expected.
 
 With Scrypto the behaviours are guaranteed. To make resources behave intuitively and safely, we've also made the language and Radix Engine treat them like real world objects, making things like double spending (where a resource is counted twice but has only been transferred once) impossible, and ensuring no resources can be lost in a transaction. In other words, every transaction concludes with all resources securely transferred from and to an account or other component. The engine itself does the work of tracking and checking the deeper level of the transaction, so your code can focus on utility and application.
 
 Resources on Radix can have many different roles, so we have given them many different properties and behaviours that can be customized. Although much of the depth of these features lies in [resource behaviors](../scrypto-1/resources/resource-behaviors.md), resource [metadata](../../reference/radix-engine/metadata/README.md) is where a tokens name and its symbol are stored.
 
-For a deeper dive into resources, explore the the [Resources](https://docs.radixdlt.com/docs/resources) section of these docs, but for now let's move our focus to how we can create and customise our own.
+For a deeper dive into resources, explore the the [Resources](../scrypto-1/resources/README.md) section of these docs, but for now let's move our focus to how we can create and customise our own.
 
 ## Creating a Resource
 
-If you've been following the [Learning Step-By-Step](https://docs.radixdlt.com/docs/learning-step-by-step), you've already created your first resource, the Hello token. With a few adjustments to the blueprint code we can customize that token and make it more like the resources you will soon use in your own projects. In fact, you can create multiple resource types from the same updated code.
+If you've been following the [Learning Step-By-Step](README.md), you've already created your first resource, the Hello token. With a few adjustments to the blueprint code we can customize that token and make it more like the resources you will soon use in your own projects. In fact, you can create multiple resource types from the same updated code.
 
 Let's first take a look at how the Hello token is given its name and symbol.
 
@@ -25,7 +25,7 @@ To create your own Hello blueprint run the command `scrypto new-package hello`�
 
 ## Metadata
 
-In many cases the resources you make will need to have information on them that makes them human understandable. Things like the name and description of a resource will need to be somehow associated with it. That information is held in [metadata](https://docs.radixdlt.com/docs/metadata). There are a variety of [standard fields](https://docs.radixdlt.com/docs/metadata-for-wallet-display) that we can add (or any custom fields we need). A resource's `name` and `symbol` are amongst the fields used by wallets and dApps to display the resource to users, so are the first metadata fields we'll set.
+In many cases the resources you make will need to have information on them that makes them human understandable. Things like the name and description of a resource will need to be somehow associated with it. That information is held in [metadata](../../reference/radix-engine/metadata/README.md). There are a variety of [standard fields](../../reference/standards/metadata-standards/metadata-for-wallet-display.md) that we can add (or any custom fields we need). A resource's `name` and `symbol` are amongst the fields used by wallets and dApps to display the resource to users, so are the first metadata fields we'll set.
 
 You can see them being set in the Hello blueprint in the in the `instantiate_hello` function here:
 
@@ -77,11 +77,11 @@ To give it a go follow the instructions in [the official-examples repo here](ht
 
 ## One Blueprint, Multiple Resources
 
-A fundamental part of how we made the Radix Engine work is to [reuse code](https://docs.radixdlt.com/docs/reusable-code). This means components are instantiated from the blueprints you write, and these components are the live objects that can be interacted with on the network, similar to smart contracts on other platforms. From a blueprint you construct a component (or more than one component). This [blueprints and components](../scrypto-1/blueprints-and-components.md) relationship gives us a few useful things we can do.
+A fundamental part of how we made the Radix Engine work is to [reuse code](../../essentials/reusable-code.md). This means components are instantiated from the blueprints you write, and these components are the live objects that can be interacted with on the network, similar to smart contracts on other platforms. From a blueprint you construct a component (or more than one component). This [blueprints and components](../scrypto-1/blueprints-and-components.md) relationship gives us a few useful things we can do.
 
 -   You can create multiple components from the same blueprint
 -   You can use existing blueprints made by others to create your own components
--   You can [make your own blueprints with the intention of sharing them with the community](https://docs.radixdlt.com/docs/reusable-blueprints-pattern)
+-   You can [make your own blueprints with the intention of sharing them with the community](../scrypto-1/scrypto-design-patterns/reusable-blueprints-pattern.md)
 
 With the updated Hello blueprint we can explore the first of these and create multiple components that each supply a different token when we call the `free token` method.
 

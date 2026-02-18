@@ -15,7 +15,7 @@ The below test can be run to output a manifest to `./transaction_manifest/create
 
 You can tweak lots of the parameters, including renaming/restructuring `MyNonFungibleDataType`.
 
-This code uses `.lock_fee_from_faucet()` to lock the standard test fee from the system faucet in Stokenet. [Learn more about Lock Fees here](https://docs.radixdlt.com/docs/en/rust-manifest-builder#:~:text=Lock%20Fee,-lock_fee).
+This code uses `.lock_fee_from_faucet()` to lock the standard test fee from the system faucet in Stokenet. [Learn more about Lock Fees here](../../../../integrate/rust-libraries/rust-manifest-builder.md#:~:text=Lock%20Fee,-lock_fee).
 
 ```rust
 use scrypto::prelude::*;

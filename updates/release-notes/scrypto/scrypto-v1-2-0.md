@@ -11,7 +11,7 @@ Starting from this version, Scrypto and Radix Engine crates are published to [cr
 
 `Bottlenose` protocol update introduces two new features that can be used by Scrypto blueprints.
 
-There is a new native blueprint `AccountLocker`, which makes sending resource to accounts easier. See [this doc](https://docs.radixdlt.com/docs/locker) for more details. A corresponding stub is added to Scrypto library.
+There is a new native blueprint `AccountLocker`, which makes sending resource to accounts easier. See [this doc](../../../reference/radix-engine/native-blueprints/locker.md) for more details. A corresponding stub is added to Scrypto library.
 
 A new method `get_owner_role` is added to every global component. Here is an example of how to get the owner role of a component:
 

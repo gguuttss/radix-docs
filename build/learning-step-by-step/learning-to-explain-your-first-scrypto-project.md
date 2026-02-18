@@ -151,7 +151,7 @@ Self {
     .globalize()
 ```
 
-(The `OwnerRole` is explained in [Give the Gumball Machine an Owner](https://docs.radixdlt.com/docs/learning-to-give-the-gumball-machine-an-owner))
+(The `OwnerRole` is explained in [Give the Gumball Machine an Owner](learning-to-give-the-gumball-machine-an-owner.md))
 
 This completes the `instantiate_hello` function which creates a new `HelloToken` definition with an initial supply of 1000, stores the 1000 tokens inside a state struct and instantiates a new component from that state.
 
@@ -166,7 +166,7 @@ This completes the `instantiate_hello` function which creates a new `HelloToken`
 Methods can only be called on instantiated components, not blueprints. Our `Hello` component has one method,  
 `free_token`, which first logs the component's token balance then returns a `HelloToken`.
 
-Logs are explained more in the [Logging section of these docs](https://docs.radixdlt.com/docs/logging). `free_token` uses the `info!` macro for logging:
+Logs are explained more in the [Logging section of these docs](../scrypto-1/logging.md). `free_token` uses the `info!` macro for logging:
 
 ```
     info!(
@@ -186,6 +186,6 @@ The lack of `;` at the end of the line means that the result of the last express
 
 ## Wrapping Up
 
-That's it! You now know how the `Hello` package works. The information here is the foundation for the rest of this [learning journey](https://docs.radixdlt.com/docs/learning-step-by-step). The next step is to [Create Your First Custom Resource](/learning-to-create-your-first-custom-resource). Where we look in more detail at metadata, why to change it and how.
+That's it! You now know how the `Hello` package works. The information here is the foundation for the rest of this [learning journey](README.md). The next step is to [Create Your First Custom Resource](/learning-to-create-your-first-custom-resource). Where we look in more detail at metadata, why to change it and how.
 
 Let us know if you find any section helpful or not by clicking one of the buttons below ⬇. You can also let us know about a typo or outdated information using the same buttons.

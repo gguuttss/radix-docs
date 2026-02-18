@@ -111,7 +111,7 @@ Here we;
 
 Bucket Factories
 
-[`BucketFactory`](https://docs.radixdlt.com/docs/scrypto-test#creation-of-buckets-and-proofs) is a part of the `scrypto-test` framework, used to create buckets for testing.
+[`BucketFactory`](../scrypto-1/testing/scrypto-test.md#creation-of-buckets-and-proofs) is a part of the `scrypto-test` framework, used to create buckets for testing.
 
 ### Integration Testing the Candy Store Module
 
@@ -181,7 +181,7 @@ Any test we write will need to emulate the way we interact with the Candy Store 
     receipt.expect_commit_success();
 ```
 
-The [LedgerSimulator](https://docs.rs/scrypto-test/latest/scrypto_test/ledger_simulator/struct.LedgerSimulator.html) has various methods to arrange and execute in the simulated ledger, like `new_allocated_account()` and `execute_manifest` while the [ManifestBuilder](https://docs.radixdlt.com/docs/rust-manifest-builder) is used to create transaction manifests inside a rust file. These allow us to test a variety of interactions with the Candy Store and be sure that none will fail. Have a closer look at the file to see more of how this works.
+The [LedgerSimulator](https://docs.rs/scrypto-test/latest/scrypto_test/ledger_simulator/struct.LedgerSimulator.html) has various methods to arrange and execute in the simulated ledger, like `new_allocated_account()` and `execute_manifest` while the [ManifestBuilder](../../integrate/rust-libraries/rust-manifest-builder.md) is used to create transaction manifests inside a rust file. These allow us to test a variety of interactions with the Candy Store and be sure that none will fail. Have a closer look at the file to see more of how this works.
 
 ## Using Candy Store Tests
 
@@ -189,4 +189,4 @@ Running tests on this package is simple just follow the instructions here in our
 
 ## Closing thoughts
 
-This section shows how to test a Scrypto package with both unit and integration tests, but there's room for more thorough testing even here. We could add more tests to cover more edge cases and check for where we should see more failed transactions rather than just successful ones. There is also a lot of repeated code in these tests, which is useful to see how they work but could be reduced with helper functions. `scrypto-unit` and `scrypto-test` are powerful tools for testing Scrypto packages, and it's worth exploring the [documentation](https://docs.radixdlt.com/docs/scrypto-test) more to see what else it can do.
+This section shows how to test a Scrypto package with both unit and integration tests, but there's room for more thorough testing even here. We could add more tests to cover more edge cases and check for where we should see more failed transactions rather than just successful ones. There is also a lot of repeated code in these tests, which is useful to see how they work but could be reduced with helper functions. `scrypto-unit` and `scrypto-test` are powerful tools for testing Scrypto packages, and it's worth exploring the [documentation](../scrypto-1/testing/scrypto-test.md) more to see what else it can do.

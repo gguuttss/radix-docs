@@ -7,7 +7,7 @@ title: "Account Locker"
 
 The locker package, and the account locker blueprint in particular, offer a new pattern for applications to handle account deposits in a way that doesn't fail due to account deposit settings, does not require authorized depositor or user badges, and allows applications to not keep track of claims or resources that they owe to users. This comes from the fact that accounts on the network can potentially reject deposits that do not align with their account deposit rules.
 
-One solution to enable direct account deposits is the [authorized depositor badge concept](https://docs.radixdlt.com/docs/account#authorized-depositors). However, authorized depositor badges are not ideal for all use cases, as they require prior coordination between the recipient and the application wishing to send tokens to them.
+One solution to enable direct account deposits is the [authorized depositor badge concept](account.md#authorized-depositors). However, authorized depositor badges are not ideal for all use cases, as they require prior coordination between the recipient and the application wishing to send tokens to them.
 
 Asset bridges are a good example of a case where it's important that the depositor has a guaranteed way of being able to make sure that the intended recipient can get their tokens, regardless of whether they've pre-authorized the bridge. Refunds on cross-network bridging are not always possible, and most bridges are built around the notion of a "fire-and-forget" pattern where the asset is sent on the receiving network and there is no follow-up to handle failure cases. However, it's equally important that Radix users who have configured their accounts to restrict depositing to not be bothered by unexpected tokens showing up.
 
@@ -152,7 +152,7 @@ Clients interested in reconciling the state of an account locker through events 
 
 ## Metadata
 
-When a locker component is instantiated it comes with no metadata whatsoever. It’s the job of the owner role to add metadata to it as it sees fit. Standards-wise, a locker component would just need to have the typical `dapp_definition` metadata field that components have as described by the ["Metadata for Wallet Verification"](https://docs.radixdlt.com/docs/metadata-for-verification) document.
+When a locker component is instantiated it comes with no metadata whatsoever. It’s the job of the owner role to add metadata to it as it sees fit. Standards-wise, a locker component would just need to have the typical `dapp_definition` metadata field that components have as described by the ["Metadata for Wallet Verification"](../../standards/metadata-standards/metadata-for-verification.md) document.
 
 The metadata standard of dApp definitions would change very slightly to accommodate for locker components:
 

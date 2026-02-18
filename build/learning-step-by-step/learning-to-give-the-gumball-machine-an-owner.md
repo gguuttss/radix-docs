@@ -3,9 +3,9 @@ title: "Give the Gumball Machine an Owner"
 ---
 # Give the Gumball Machine an Owner
 
-Web3 concerns ownership, ownership of digital assets, the distributed ownership of decentralized systems, and more. On Radix, with our [asset oriented](https://docs.radixdlt.com/docs/asset-oriented) stack, we implicitly have an easy way to track asset ownership by possession. e.g. an asset is owned by a vault it sits in; a vault is owned by a component it's a internal to. But a component and it's blueprint don't need to sit within another entity, so for these we declare an owner explicitly. We can then give the owner access to specific privileges and/or they can receive [royalties](https://docs.radixdlt.com/docs/using-royalties) when their component or blueprint is used.
+Web3 concerns ownership, ownership of digital assets, the distributed ownership of decentralized systems, and more. On Radix, with our [asset oriented](../../essentials/asset-oriented.md) stack, we implicitly have an easy way to track asset ownership by possession. e.g. an asset is owned by a vault it sits in; a vault is owned by a component it's a internal to. But a component and it's blueprint don't need to sit within another entity, so for these we declare an owner explicitly. We can then give the owner access to specific privileges and/or they can receive [royalties](../scrypto-1/royalties/using-royalties.md) when their component or blueprint is used.
 
-Having defined owners works as a useful shortcut in our [Authorization Approach](https://docs.radixdlt.com/docs/authorization-approach). We'll expand further on authorization in later Step-by-Step sections, but for now, think of an owner as the admin for that entity. Components and resources have owners. Being able to prove your an owner, with a [**badge**](https://docs.radixdlt.com/v1/docs/user-badge-pattern), can give you access to more of the component. Therefore, declaring who owners are gives you more power to decide who can use a component and how, and the Radix Engin enforces your decisions and guaranties their effects. We can use this to do things like withdraw the collected XRD in our gumball machine without worrying that anyone else can.
+Having defined owners works as a useful shortcut in our [Authorization Approach](../../essentials/authorization-approach.md). We'll expand further on authorization in later Step-by-Step sections, but for now, think of an owner as the admin for that entity. Components and resources have owners. Being able to prove your an owner, with a [**badge**](https://docs.radixdlt.com/v1/docs/user-badge-pattern), can give you access to more of the component. Therefore, declaring who owners are gives you more power to decide who can use a component and how, and the Radix Engin enforces your decisions and guaranties their effects. We can use this to do things like withdraw the collected XRD in our gumball machine without worrying that anyone else can.
 
 We keep track of ownership with [**badges**](learning-to-give-the-gumball-machine-an-owner.md#badges). Before we dig into what they are and how to use them, let's look at what ownership means for our gumball machine?
 
@@ -37,7 +37,7 @@ Using a badge's to prove ownership also makes it possible to transfer ownership 
 
 Proofs
 
-[Proofs](https://docs.radixdlt.com/docs/call-a-protected-method-function#proofs) are used to prove that a caller has a required badge. Proofs are a special type of resource that only exist for the length of the transaction. They allow a caller to prove that they have a resource without having to risk transferring a badge away and hoping that it is transferred back. A proof of resource is created from a vault (or bucket) and automatically added to the [Authorization Zone](https://docs.radixdlt.com/docs/call-a-protected-method-function#the-authorization-zone) where methods will automatically check for any required proofs.
+[Proofs](../scrypto-1/auth/call-a-protected-method-function.md#proofs) are used to prove that a caller has a required badge. Proofs are a special type of resource that only exist for the length of the transaction. They allow a caller to prove that they have a resource without having to risk transferring a badge away and hoping that it is transferred back. A proof of resource is created from a vault (or bucket) and automatically added to the [Authorization Zone](../scrypto-1/auth/call-a-protected-method-function.md#the-authorization-zone) where methods will automatically check for any required proofs.
 
 We use a fungible resource for our owner badge:
 
@@ -77,7 +77,7 @@ proof of the `owner_badge` or the transaction will fail.
 
 ### Restricted Methods
 
-Now we can restrict methods to just the owner of the gumball machine, we've updated the blueprint from the [Build a Gumball Machine](https://docs.radixdlt.com/docs/learning-to-build-a-gumball-machine) version. The two new methods are:
+Now we can restrict methods to just the owner of the gumball machine, we've updated the blueprint from the [Build a Gumball Machine](learning-to-build-a-gumball-machine.md) version. The two new methods are:
 
 -   `set_price` - Allows the owner to set the price of the gumballs.
     
@@ -103,8 +103,8 @@ To try out our new gumball machine and it's owner badge, have a go by following 
 
 ## Closing Thoughts
 
-Hopefully you now have a grasp of how the Owner role works as a shortcut for a usage pattern where you have a single admin, as well as the basics of the authorization system in Scrypto. The tools and system shown here form the foundation of [method access limitation](https://docs.radixdlt.com/docs/structure-roles-and-methods), allowing us to decide exactly who can do what with any component generated from our blueprints.
+Hopefully you now have a grasp of how the Owner role works as a shortcut for a usage pattern where you have a single admin, as well as the basics of the authorization system in Scrypto. The tools and system shown here form the foundation of [method access limitation](../scrypto-1/auth/structure-roles-and-methods.md), allowing us to decide exactly who can do what with any component generated from our blueprints.
 
-There's still much more to the Scrypto authorisation system, some of which we'll cover in the next part of the Learning Step-by-Step, [Make Your Gumball Machine Refillable](https://docs.radixdlt.com/docs/learning-to-make-your-gumball-machine-refillable). If you're keen to learn even more now though, you can go to the [Authorization](https://docs.radixdlt.com/docs/auth) section of these docs.
+There's still much more to the Scrypto authorisation system, some of which we'll cover in the next part of the Learning Step-by-Step, [Make Your Gumball Machine Refillable](learning-to-make-your-gumball-machine-refillable.md). If you're keen to learn even more now though, you can go to the [Authorization](../scrypto-1/auth/README.md) section of these docs.
 
 Let us know if you find any section helpful or not by clicking one of the buttons below ⬇

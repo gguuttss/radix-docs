@@ -71,7 +71,7 @@ We then need the package available in the environment:
 
 Once we have the package we can test the instantiate function. This is done by:
 
-1.  Building a manifest with the the [ManifestBuilder](https://docs.radixdlt.com/docs/rust-manifest-builder):
+1.  Building a manifest with the the [ManifestBuilder](../../integrate/rust-libraries/rust-manifest-builder.md):
     
     ```
         let manifest = ManifestBuilder::new()

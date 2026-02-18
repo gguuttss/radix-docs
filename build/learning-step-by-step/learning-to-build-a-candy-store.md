@@ -139,7 +139,7 @@ The `buy_candy` method uses checked mathematical operations to prevent overflow 
        .unwrap();
 ```
 
-See the [Decimal Overflows](https://docs.radixdlt.com/docs/code-hardening#pay-special-attention-to-decimal-operations) section of the docs for more information.
+See the [Decimal Overflows](../build-dapps/before-you-release/code-hardening.md#pay-special-attention-to-decimal-operations) section of the docs for more information.
 
 There are also two methods to set the price of the candy and chocolate eggs. These are restricted to the manager and owner roles.
 

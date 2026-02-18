@@ -9,7 +9,7 @@ The scrypto package referenced in this section can be found in our [official exa
 
 ## External Components
 
-There are [many methods to use external components in Scrypto](https://docs.radixdlt.com/docs/cross-blueprint-calls#calling-a-specific-blueprint-or-global-component-of-your-package). Here we show you one of the simpler of these ways. There are two main steps:
+There are [many methods to use external components in Scrypto](../scrypto-1/advanced-external-calls.md#calling-a-specific-blueprint-or-global-component-of-your-package). Here we show you one of the simpler of these ways. There are two main steps:
 
 First, we use the `extern_blueprint!` macro to import the external blueprint into our own. This process is the same as in the previous section, but this time we won't instantiate the external component in our package.
 
@@ -65,7 +65,7 @@ pub fn set_gumball_price(&mut self, new_price: Decimal) {
 }
 ```
 
-The proof is created so the badge doesn't need to be removed from its vault and passed around. It can be placed wherever we need to prove ownership of the badge and only exists for the duration of the transaction. More about proofs and the Authorization Zone can be found in the [Call a Protected Method/Function documentation section](https://docs.radixdlt.com/docs/call-a-protected-method-function).
+The proof is created so the badge doesn't need to be removed from its vault and passed around. It can be placed wherever we need to prove ownership of the badge and only exists for the duration of the transaction. More about proofs and the Authorization Zone can be found in the [Call a Protected Method/Function documentation section](../scrypto-1/auth/call-a-protected-method-function.md).
 
 ## Using the Candy Store and External Gumball Machine
 

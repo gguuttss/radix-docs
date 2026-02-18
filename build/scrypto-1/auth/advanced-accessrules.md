@@ -234,7 +234,7 @@ Notes:
 
 ## Implicit Requirements
 
-Access rules can be used to require a proof of an explicit resource or non-fungible is present on the authorization zone. This is sufficient for implementing many custom authorization schemes, where a dApp developer first defines a specialized “badge” resource, and then references it in access rules (see e.g. the `admin_badge` resource within our [User Badge Pattern](https://docs.radixdlt.com/docs/user-badge-pattern) example).
+Access rules can be used to require a proof of an explicit resource or non-fungible is present on the authorization zone. This is sufficient for implementing many custom authorization schemes, where a dApp developer first defines a specialized “badge” resource, and then references it in access rules (see e.g. the `admin_badge` resource within our [User Badge Pattern](../scrypto-design-patterns/user-badge-pattern.md) example).
 
 But access rules can also include requirements on **implicit proofs** under special system-reserved resource addresses, which have special meanings to the Radix Engine and aren’t part of the standard authorization zone.
 

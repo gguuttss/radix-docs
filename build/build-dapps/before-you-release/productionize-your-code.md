@@ -86,11 +86,11 @@ The Radix wallet and dashboard show various information to the user based on the
 
 The primary standards and guides to follow are:
 
--   [Metadata for Wallet Display](https://docs.radixdlt.com/docs/metadata-for-wallet-display)
+-   [Metadata for Wallet Display](../../../reference/standards/metadata-standards/metadata-for-wallet-display.md)
     
--   [Metadata for Verification](https://docs.radixdlt.com/docs/metadata-for-verification)
+-   [Metadata for Verification](../../../reference/standards/metadata-standards/metadata-for-verification.md)
     
--   [dApp Definition Setup](https://docs.radixdlt.com/docs/dapp-definition-setup)
+-   [dApp Definition Setup](../dapp-application-stack/dapp-definition-setup.md)
     
 
 ### Updatable Metadata
@@ -113,7 +113,7 @@ The metadata standard used by the wallet will continue to change and evolve as t
 
 ### Do The Manifests Look Correct In The Wallet?
 
--   Does the wallet show the application manifests as being conforming or non-conforming? Conforming manifests are shown in the user-friendly user interface that shows the assets withdrawal and deposits, presented badges, as well as related dApps whereas non-conforming manifests are displayed as raw manifest strings. If the manifests are shown as non-conforming then they should adhere to the rules defined in the [Conforming Transaction Manifest Types](https://docs.radixdlt.com/docs/conforming-transaction-manifest-types) document. Not all of the transaction types in that document are currently supported, a small number are. However, it serves as guidance for developers on how to write manifests that are recognized by the current and future versions of the wallet. The rules surrounding manifest types will continue to improve and the detection will get better. Eventually, transaction type detection will be in a place where users would very seldom encounter non-conforming manifests and most would refuse to sign non-conforming manifests. Thus, application developers should aim to make their manifests conform to the wallet rules to be displayed well to the users.
+-   Does the wallet show the application manifests as being conforming or non-conforming? Conforming manifests are shown in the user-friendly user interface that shows the assets withdrawal and deposits, presented badges, as well as related dApps whereas non-conforming manifests are displayed as raw manifest strings. If the manifests are shown as non-conforming then they should adhere to the rules defined in the [Conforming Transaction Manifest Types](../../../reference/transactions/manifest/conforming-manifest-types.md) document. Not all of the transaction types in that document are currently supported, a small number are. However, it serves as guidance for developers on how to write manifests that are recognized by the current and future versions of the wallet. The rules surrounding manifest types will continue to improve and the detection will get better. Eventually, transaction type detection will be in a place where users would very seldom encounter non-conforming manifests and most would refuse to sign non-conforming manifests. Thus, application developers should aim to make their manifests conform to the wallet rules to be displayed well to the users.
     
 -   Does the dApp information show up in the “using dApps” section of the transaction preview screen? If it does not then this could be because of a misconfigured dApp definition. Application developers should aim to have their dApps displayed correctly in the “using dApps” of the transaction preview screen as future versions of the wallet will warn the users when a new dApp is encountered there and when a dApp seems to be impersonating the name.
     

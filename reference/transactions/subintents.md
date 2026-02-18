@@ -56,8 +56,8 @@ When passing subintents to an aggregator, they are also typically passed around 
 
 A partial transaction builder is provided:
 
--   In the [radix-transactions](https://docs.radixdlt.com/docs/rust-libraries-overview) crate, if building in Rust.
--   In the [radix-engine-toolkit](https://docs.radixdlt.com/docs/radix-engine-toolkit), if building in other UniFFI-based stacks. As of December 2024, it isn't possible exposed in the Typescript Builder.
+-   In the [radix-transactions](../../integrate/rust-libraries/rust-libraries-overview.md) crate, if building in Rust.
+-   In the [radix-engine-toolkit](../../integrate/radix-engine-toolkit/README.md), if building in other UniFFI-based stacks. As of December 2024, it isn't possible exposed in the Typescript Builder.
 
 ## Behaviour
 
