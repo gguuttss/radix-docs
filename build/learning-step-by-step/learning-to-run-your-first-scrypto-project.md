@@ -36,7 +36,7 @@ Development starts by creating a package. We'll use the `scrypto` command line t
     
 ```bash
     scrypto new-package tutorial
-    ```
+```
     
 
 This scaffolds a simple package containing a `Hello` blueprint.
@@ -59,7 +59,7 @@ Find the [instructions on how to setup VSCode here](../setting-up-for-scrypto-de
     
 ```bash
     code tutorial/src/lib.rs
-    ```
+```
     
 
 The `Hello` blueprint has one function which creates a new component with a supply of tokens (`instantiate_hello`), and one method to get one of those tokens from the component (`free_token`). A detailed explanation of this blueprint is in the [next learning journey section](learning-to-explain-your-first-scrypto-project.md).
@@ -85,7 +85,7 @@ To deploy our package, we will therefore need an account with enough XRD to cove
     
 ```bash
     resim new-account
-    ```
+```
     
 
 You should get a success message. At the bottom of the output you should see the created account component address, public/private key, and the `NonFungibleGlobalId` of your owner badge. e.g.:
@@ -107,7 +107,7 @@ Do not attempt to use this private key on the main network! It is seeded from a 
     
 ```bash
     resim set-default-account <ACCOUNT_ADDRESS> <PRIVATE_KEY> <OWNER_BADGE>
-    ```
+```
     
 
 ### Displaying the Account
@@ -116,7 +116,7 @@ Do not attempt to use this private key on the main network! It is seeded from a 
     
 ```bash
     resim show <ACCOUNT_ADDRESS>
-    ```
+```
     
 
 `resim show`
@@ -144,13 +144,13 @@ Note the `Owned Fungible Resources:` section, which indicates that the account a
     
 ```bash
     cd tutorial
-    ```
+```
     
 -   Then we use the radix engine simulator to publish/deploy our package locally
     
 ```bash
     resim publish .
-    ```
+```
     
 
 Once this finishes you should see the published package’s address at the end of the output. e.g.
@@ -167,7 +167,7 @@ Success! New Package: package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp
     
 ```bash
     resim call-function <PACKAGE_ADDRESS> Hello instantiate_hello
-    ```
+```
     
 
 **You can find an example and explanation of the function call output by clicking here**
@@ -264,7 +264,7 @@ Now that we have our component in our local environment, we can interact with th
     
 ```bash
     resim call-method <COMPONENT_ADDRESS> free_token
-    ```
+```
     
 
 This uses `resim call-method` rather than the just used `resim call-function` since we are now calling a **method** on an instantiated component instead of a **function** on a blueprint.
@@ -355,11 +355,11 @@ You'll now have a shiny new `HelloToken` in your account, and your `Hello` compo
     
 ```bash
     resim show <ACCOUNT_ADDRESS>
-    ```
+```
     
 ```bash
     resim show <COMPONENT_ADDRESS>
-    ```
+```
     
 
 ## Final Notes
@@ -368,13 +368,13 @@ You'll now have a shiny new `HelloToken` in your account, and your `Hello` compo
     
 ```bash
     resim publish . --package-address <PACKAGE_ADDRESS>
-    ```
+```
     
 -   At any point you can instantly get a clean slate in the simulator by running:
     
 ```bash
     resim reset
-    ```
+```
     
     You almost certainly need to do this if you switch to working on a different project.
     

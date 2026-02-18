@@ -96,7 +96,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
     const transactionStatus = await gatewayApi.transaction.getStatus(
       result.value.transactionIntentHash
     );
-    ```
+```
     
 -   Finding the addresses of the new component and resources after instantiation (as component instantiation is a part of the front end this time):
     
@@ -112,7 +112,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
     ownerBadgeAddress = committedDetails.transaction.affected_global_entities[3];
     gumballResourceAddress =
       committedDetails.transaction.affected_global_entities[4];
-    ```
+```
     
 -   Querying the ledger state of our Gumball Machine component to track price, number of gumballs and earnings:
     
@@ -136,7 +136,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
         const earnings = componentDetails.fungible_resources.items.find(
           (item) => item.resource_address === xrdAddress
         )?.vaults.items[0].amount;
-    ```
+```
     
     We then use these values to update the page:
     
@@ -147,7 +147,7 @@ The Gateway API is used by the Radix Wallet and both the Console and Dashboard t
         document.getElementById("earnings").innerText = earnings + " XRD";
       }
     }
-    ```
+```
     
 
 ## Running the Gumball Machine dApp

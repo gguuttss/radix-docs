@@ -62,7 +62,7 @@ We've added just one new method to the gumball machine this time:
           self.gumballs
               .put(self.gum_resource_manager.mint(gumball_amount));
       }
-    ```
+```
     
 
 ## Using the Refillable Gumball Machine

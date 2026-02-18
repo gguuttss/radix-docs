@@ -65,7 +65,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
         
 ```plainText
         git config --system core.longpaths true
-        ```
+```
         
 -   Visit the [Visual Studio Downloads page](https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022):
     
@@ -84,7 +84,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 ```bash
     rustup default 1.92.0
-    ```
+```
     
 
 #### 2\. Enable cargo in the current shell
@@ -117,7 +117,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 ```bash
     xcode-select --install
-    ```
+```
     
 -   Install `cmake` and `LLVM`
     
@@ -127,21 +127,21 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 ```bash
     brew install cmake llvm
-    ```
+```
     
 -   Add `LLVM` to the system path by updating `~/.zshrc` and `~/.profile`:
     
 ```bash
     path_update='export PATH="$(brew --prefix llvm)/bin:$PATH"' 
     echo $path_update >> ~/.zshrc && echo $path_update >> ~/.profile
-    ```
+```
     
 -   Install Rust compiler
     
 ```bash
     # Replace 1.92.0 with the required version
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.92.0 
-    ```
+```
     
 
 #### 2\. Enable cargo in the current shell
@@ -176,14 +176,14 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 ```bash
     sudo apt install clang build-essential llvm
-    ```
+```
     
 -   Install Rust compiler
     
 ```bash
     # Replace 1.92.0 with the required version
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.92.0
-    ```
+```
     
 
 #### 2\. Enable cargo in the current shell
@@ -218,7 +218,7 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
     
 ```bash
     clang --version
-    ```
+```
     
 2.  Check your **LLVM/Clang** version is compatible with your **Rust** and **Resim** versions by looking at the [Compatibility Table](docs/getting-rust-scrypto#compatibility)
     
@@ -229,20 +229,20 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 ```bash
     # Replace 1.92.0 with the required version
     rustup default 1.92.0
-    ```
+```
     
 5.  Add WebAssembly target
     
 ```bash
     rustup target add wasm32-unknown-unknown
-    ```
+```
     
 6.  Install Radix Engine Simulator and command-line tools
     
 ```bash
     # Replace 1.3.1 with the required version
     cargo install --force radix-clis@1.3.1
-    ```
+```
     
 
 ### macOS
@@ -254,21 +254,21 @@ Try the following steps:
 ```bash
     # Replace 1.92.0 with the required version
     rustup default 1.92.0
-    ```
+```
     
 2.  Install LLVM 21 using brew:
     
 ```bash
     # Replace 21 with the required version
     brew install llvm@21
-    ```
+```
     
 3.  Confirm the Installation Path:
     
 ```bash
     # Replace 21 with the required version
     brew --prefix llvm@21
-    ```
+```
     
     **Output:** `/usr/local/opt/llvm@21`
     
@@ -278,7 +278,7 @@ Try the following steps:
     # Replace @21 with the required version
     path_update='export PATH="$(brew --prefix llvm@21)/bin:$PATH"' 
     echo $path_update >> ~/.zshrc && echo $path_update >> ~/.profile
-    ```
+```
     
 5.  Open a new terminal window to reload the environment
     
@@ -286,7 +286,7 @@ Try the following steps:
     
 ```bash
     clang --version
-    ```
+```
     
 7.  Install XCode from the App Store
     
@@ -294,19 +294,19 @@ Try the following steps:
     
 ```bash
     xcodebuild -runFirstLaunch
-    ```
+```
     
 9.  Add WebAssembly target
     
 ```bash
     rustup target add wasm32-unknown-unknown
-    ```
+```
     
 10.  Install Radix Engine Simulator and command-line tools
      
 ```bash
      cargo install --force radix-clis@1.3.1
-     ```
+```
      
 
 ### macOS Command line tools
@@ -315,13 +315,13 @@ Try the following steps:
     
 ```bash
     sudo rm -rf /Library/Developer/CommandLineTools
-    ```
+```
     
 2.  Reinstall command line tools
     
 ```bash
     xcode-select install
-    ```
+```
     
 
 ## After Installing Scrypto

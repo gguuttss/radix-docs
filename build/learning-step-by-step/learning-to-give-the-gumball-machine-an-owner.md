@@ -85,7 +85,7 @@ Now we can restrict methods to just the owner of the gumball machine, we've upda
       pub fn set_price(&mut self, price: Decimal) {
           self.price = price
       }
-    ```
+```
     
 -   `withdraw_earnings` - Lets the owner withdraw any  
     XRD collected in the gumball machine, from bought gumballs.
@@ -94,7 +94,7 @@ Now we can restrict methods to just the owner of the gumball machine, we've upda
       pub fn withdraw_earnings(&mut self) -> Bucket {
           self.collected_xrd.take_all()
       }
-    ```
+```
     
 
 These additions are simple, but they start to show how we can use badges to control access to our components.

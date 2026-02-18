@@ -64,7 +64,7 @@ The global `GumballMachine` remains the same as in previous sections.
             refill_gumball_machine => restrict_to: [OWNER];
         }
         }
-    ```
+```
     
 -   The component's address is reserved for token access rules.
     
@@ -76,13 +76,13 @@ The global `GumballMachine` remains the same as in previous sections.
                 Runtime::allocate_component_address(
                     GumballMachine::blueprint_id()
                 );
-    ```
+```
     
 -   An owner badge is created. This will later be stored in the `CandyStore`, so it can call restricted methods on the `GumballMachine`.
     
 ```rust
     let owner_badge = ...
-    ```
+```
     
 -   Mint roles are set using the components reserved address ensuring that only the `GumballMachine` can mint new tokens.
     
@@ -93,7 +93,7 @@ The global `GumballMachine` remains the same as in previous sections.
             ));
             minter_updater => rule!(deny_all);
         })
-    ```
+```
     
 -   Proof of the owner badge is made the required authorization for ownership and the address reservation is applied to the new component.
     
@@ -104,7 +104,7 @@ The global `GumballMachine` remains the same as in previous sections.
         ))))
         .with_address(address_reservation)
         .globalize();
-    ```
+```
     
 
 ### The `CandyStore` blueprint
@@ -118,7 +118,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
         gumball_machine: Global<GumballMachine>,
         gumball_machine_owner_badges: Vault,
     }
-    ```
+```
     
 -   The gumball machine is instantiated as a part of the candy store's own instantiate function.
     
@@ -127,7 +127,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
         GumballMachine::instantiate_gumball_machine(
             gumball_price
         );
-    ```
+```
     
 -   To call the `GumballMachine`'s public methods we can simply call them on the `CandyStore`'s internal `gumball_machine`.
     
@@ -135,7 +135,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
       pub fn buy_gumball(&mut self, mut payment: Bucket) -> (Bucket, Bucket) {
         self.gumball_machine.buy_gumball(payment)
       }
-    ```
+```
     
 -   To call a restricted method on the `GumballMachine` we need to pass a proof that we have it's owner badge by calling `authorize_with_amount` on the vault containing it.
     
@@ -148,7 +148,7 @@ Our `CandyStore` has been simplified in comparison to the last section, by remov
                 || self.gumball_machine.set_price(new_price)
             );
     }
-    ```
+```
     
 
 Authorize with Amount

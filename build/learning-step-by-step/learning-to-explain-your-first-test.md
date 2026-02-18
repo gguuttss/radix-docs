@@ -83,7 +83,7 @@ Once we have the package we can test the instantiate function. This is done by:
                 manifest_args!(),
             )
             .build();
-    ```
+```
     
 2.  Submitting the manifest to the ledger:
     
@@ -92,13 +92,13 @@ Once we have the package we can test the instantiate function. This is done by:
             manifest,
             vec![NonFungibleGlobalId::from_public_key(&public_key)],
         );
-    ```
+```
     
 3.  Checking the manifest receipt to see if it successfully instantiated a new component, then storing the component address for later use if it did:
     
 ```rust
         let component = receipt.expect_commit(true).new_component_addresses()[0];
-    ```
+```
     
 
 With the component in our test environment and its address, we can now test the `free_token` method. A similar 3 steps are followed, but with a different manifest:
@@ -115,7 +115,7 @@ With the component in our test environment and its address, we can now test the 
              manifest_args!(ManifestExpression::EntireWorktop),
          )
          .build();
-    ```
+```
     
 2.  Submit the manifest to the ledger:
     
@@ -124,13 +124,13 @@ With the component in our test environment and its address, we can now test the 
          manifest,
          vec![NonFungibleGlobalId::from_public_key(&public_key)],
      );
-    ```
+```
     
 3.  Check the manifest receipt to see if it was successful:
     
 ```rust
      receipt.expect_commit_success();
-    ```
+```
     
 
 We do not need to check the return value of the `free_token` method as we are testing the ledger interaction, not the logic of the method. If the method returns an error, the test will fail. Testing the logic of the method is more easily done with `TestEnvironment`.
