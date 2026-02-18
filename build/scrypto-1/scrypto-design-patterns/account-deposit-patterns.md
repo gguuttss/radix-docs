@@ -44,7 +44,7 @@ This "physical package" metaphor is one we'll use in the patterns below to help 
 
 The various deposit patterns in this document are useful in different situations and for different application needs. The flow chart below summarizes when the various deposit patterns are used. Each of these deposit patterns has a section in this document that dives deeper into them, their properties, how they're used, and their advantages.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/account-deposit-flow-chart%281%29.png)
+![](../../../.gitbook/assets/account-deposit-flow-chart(1).png)
 
 ## The "Online" User-signed Deposit Pattern
 

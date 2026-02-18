@@ -43,7 +43,7 @@ The important part here is the address is stored as the component's type, `Globa
 
 This combination of importing the external blueprint and storing the component address in our component's state allows us to call an external component's methods from within our component.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2816%29.png)
+![image.png](../../.gitbook/assets/image(16).png)
 
 ## Authorizing Calls Between Components
 

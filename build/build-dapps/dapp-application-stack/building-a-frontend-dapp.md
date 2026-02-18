@@ -11,7 +11,7 @@ For an overview of dApp types on Radix, see [What is a dApp on Radix](README.md)
 
 It’s useful to start with the big picture of the various tools available to you, and how they connect together. The **green blocks** below are built by you and the **blue blocks** are existing tools for you to make use of.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/pure_frontend_detail_view.png "pure_frontend_detail_view.png")
+![](../../../.gitbook/assets/pure_frontend_detail_view.png)
 
 Your dApp website project will likely include the [Radix dApp Toolkit](dapp-sdks/dapp-toolkit.md), which provides a useful combined interface to a √ Connect Button, Wallet SDK, and Gateway SDK. These tools provide a seamless way to facilitate the interaction between the user and your dApp with the Radix Wallet.
 

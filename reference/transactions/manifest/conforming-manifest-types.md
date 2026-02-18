@@ -91,7 +91,7 @@ The general transaction is intended to match just about any sort of typical arbi
 
 If the transaction is made of these elements, it can be succinctly and consistently summarized in a view like this:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/general-transaction.png "general-transaction.png")
+![](../../../.gitbook/assets/general-transaction.png)
 
 Such a view encapsulates everything that matters to the user in such a transaction: They know what they lose, what they gain, what they’re interacting with, and what proofs of their own assets were required to accomplish it. Deposits that are of undefined quantity can be estimated (via transaction preview) and assert statements added to guardrail them.
 
@@ -191,7 +191,7 @@ Bear in mind that:
 
 If you’re not careful, users may see warnings like this, because they have approved a possible deposit of unspecified resources.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot 2025-01-08 at 17.05.03.png)
+![](../../../.gitbook/assets/screenshot-2025-01-08-at-17.05.03.png)
 
 There are a lots of patterns that can be used to constrain the [account](../../radix-engine/native-blueprints/account.md) deposits. The following are some examples of possible structures for this:
 
@@ -229,7 +229,7 @@ That is all - meaning, among other things, that no non-account component calls a
 
 With this type, the wallet is able to show a summary in an understandable style in terms of a “sender” and the assets to be received by one or more recipients, like this:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/transfer2.png "transfer2.png")
+![](../../../.gitbook/assets/transfer2.png)
 
 ### 1a) Simple Transfer
 
@@ -326,7 +326,7 @@ This type is when a user is updating the configuration settings of one or more o
 
 With this type, the wallet is able to show a description of settings to be changed, on a per-account basis. For example…
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/account-deposit-settings.png "account-deposit-settings.png")
+![](../../../.gitbook/assets/account-deposit-settings.png)
 
 ## Possible future conforming types
 

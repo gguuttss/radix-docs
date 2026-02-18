@@ -494,7 +494,7 @@ It is important for any non-trivial application to have an answer to the above q
 
 There are many different architectures and ways of implementing application-level upgradeability. What makes sense for one application might not make sense for another. An architecture that might make sense for many applications is shown in the diagram below and discussed afterward:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/app-level-upgrade.png)
+![](../../../.gitbook/assets/app-level-upgrade.png)
 
 This architecture separates component state completely from component logic. The entirety of the state and vaults is stored in one component while another logic component operates over the state. Only one logic component can read or write state at any point in time which is established by requiring a badge for each state read or write. This is the mechanism by which old versions of the code are deprecated and decommissioned; they lose access to the badge and thus lose access to their ability to read and write state and service method calls. Similarly, new versions of the logic are given authority to read and write state by having the badge.
 

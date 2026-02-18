@@ -345,21 +345,21 @@ To set up Visual Studio Code:
     -   Click on the extension icon on the left panel
         
     
-    ![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2826%29.png)
+    ![image.png](../../.gitbook/assets/image(26).png)
     
     -   Search for "**rust-analyzer**"
         
     -   Click on install
         
     
-    ![Screenshot 2024-11-05 at 11.37.37.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot%202024-11-05%20at%2011.37.37.png)
+    ![Screenshot 2024-11-05 at 11.37.37.png](../../.gitbook/assets/Screenshot-2024-11-05-at-11.37.37.png)
     
     -   Search for "**Radix Developer Tools**"
         
     -   Click on install
         
     
-    ![Screenshot 2024-11-05 at 11.41.49.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot%202024-11-05%20at%2011.41.49.png)
+    ![Screenshot 2024-11-05 at 11.41.49.png](../../.gitbook/assets/Screenshot-2024-11-05-at-11.41.49.png)
     
 
 You are now ready to start writing your first Scrypto blueprint.

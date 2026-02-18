@@ -124,7 +124,7 @@ mod basic_flash_loan {
 
 This pattern is very powerful and allows for a large degree of control over the transaction by the blueprint creator. The general rule of this pattern is: you can use this pattern when you wish for two or more methods to be called in a specific order—​defined by you, the blueprint developer—​in the same transaction.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/transient-badges.png "transient-badges.png")
+![](../../../.gitbook/assets/transient-badges.png)
 
 The above diagram showcases how this pattern can be used to ensure that n methods will be called in the same transaction and how the different transient badges involved will be handled. Each method takes in the transient badge produced by the method before it, burns it, and creates a new transient badge which may only be burned by the method that follows it. If the transaction does not get to the last method, it fails due to the characteristics of transient resources. If the transaction gets to the last method, then the last transient badge is burned, and the caller is allowed to proceed freely.
 

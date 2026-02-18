@@ -12,7 +12,7 @@ The Radix Engine Toolkit is written in Rust and is split between three main crat
 
 The following diagram visualizes the different layers that exist in the Radix Engine toolkit stack:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/RET.drawio%20(3).png)
+![](../../.gitbook/assets/RET-drawio-3.png)
 
 The Swift, Kotlin, C#, and Python implementations of the Radix Engine Toolkit are referred to as ***toolkit wrappers***, as they wrap a Radix Engine Toolkit dynamic library, make calls to it, and return results back to the caller. From this point onward, Radix Engine Toolkit implementation in non-Rust languages will be referred to as ***toolkit wrappers*** or ***Radix Engine Toolkit wrappers*** from this point onward.
 

@@ -7,7 +7,7 @@ title: "Addresses"
 
 Radix Engine addresses are [Bech32m](https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki) encoded, where they are made up of a Human Readable Part (HRP), separator, and a base32m encoded data part which includes a 6 character checksum of the HRP and data.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2823%29.png)
+![image.png](../../.gitbook/assets/image(23).png)
 
 The human readable part is made up of two specifiers that are separated by an underscore ("\_"). These are:
 
@@ -28,7 +28,7 @@ The data encoded in the Bech32m address is the byte representation of the addres
 1.  Entity Byte: This is the first byte in the address and it defines the type of entity being addressed.
 2.  Address Bytes: These are the remaining 29 bytes in the array and they are the address of the entity.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2824%29.png)
+![image.png](../../.gitbook/assets/image(24).png)
 
 The supported entity types and their entity byte representation are given in [entity\_type.rs](https://github.com/radixdlt/radixdlt-scrypto/blob/main/radix-common/src/types/entity_type.rs).
 

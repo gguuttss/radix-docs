@@ -18,7 +18,7 @@ The basic pattern for calling a protected method or function consists of 3 steps
 
 Here is an example flow of how this process may look:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/auth-flow.drawio (1).png "auth-flow.drawio (1).png")
+![](../../.gitbook/assets/auth-flow-drawio-1.png)
 
 In this example, the **Badge Holding Component** holds a resource used for auth (called a “badge”) and produces proofs of the held resource. The caller calls a method on this component to retrieve a proof of this resource. They can then push it onto their AuthZone, after which they may call a protected method.
 

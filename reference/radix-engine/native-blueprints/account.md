@@ -31,7 +31,7 @@ While the `Owner` can expand who is allowed to access their account by re-config
 
 The diagram below shows a complete list of the account methods and the roles that they map to, in other terms, it shows the roles that are authorized to call these methods. It also shows the mapping of the roles to the access rules. All the methods seen in the diagram below are explained in detail in the [API Reference](account.md#api-reference) section of the document.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/account-tree.png "account-tree.png")
+![](../../../.gitbook/assets/account-tree.png)
 
 ## How the Account Component Works
 
@@ -157,7 +157,7 @@ For example, if the authorized depositor deposits a resource that have been spec
 
 The following is a complete flow chart showing the logic to determine if a deposit is allowed or not.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/account-deposit-flow-chart.png "account-deposit-flow-chart.png")
+![](../../../.gitbook/assets/account-deposit-flow-chart.png)
 
 ## Account Securification
 

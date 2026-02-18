@@ -7,7 +7,7 @@ title: "Setup"
 
 ### Architecture Overview
 
-![Architecture Overview](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(10).png "image(10).png")
+![Architecture Overview](../../../.gitbook/assets/image-10.png)
 
 A Network Gateway deployment consists of the following services:
 

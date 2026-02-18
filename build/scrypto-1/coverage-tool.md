@@ -26,7 +26,7 @@ It will compile the package, run tests, and generate a HTML report in `coverage/
 
 ## Example report
 
-![Example code coverage report](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot%202024-05-17%20at%2000.20.47.png)
+![Example code coverage report](../../.gitbook/assets/Screenshot-2024-05-17-at-00.20.47.png)
 
 Additionally, source of all analyzed files can be viewed. All lines which were not visited during tests execution are marked. More information about interpreting report data can be found [here](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#interpreting-reports).
 

@@ -115,7 +115,7 @@ Once the target Epoch is reached, the Unstake NFT can be exchanged for actual XR
 
 The following is a sequence diagram describing this process:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(5).png)
+![](../../../.gitbook/assets/image-5.png)
 
 Staking, Unstaking and Claiming
 
@@ -156,7 +156,7 @@ The Stake Units locked in the Owner Stake Vault are a bit trickier to unlock: th
 
 The following is a sequence diagram describing the entire process:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(7).png)
+![](../../../.gitbook/assets/image-7.png)
 
 Locking and Unlocking Owner Stake Units
 

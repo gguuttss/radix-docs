@@ -7,13 +7,13 @@ Resources (sometimes referred to as tokens or assets) are special and are a cruc
 
 Resources must *always* be stored in *resource containers* – either a `Vault` or a `Bucket` – and Radix Engine enforces that no resource can ever be lost. In short, Radix Engine ensures that resources behave like "physical things" which is why they are used on Radix for all types of assets. Even the utility token of the Radix network, XRD, is a resource.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Screenshot 2023-11-30 at 15.19.12(1).png "Screenshot 2023-11-30 at 15.19.12(1).png")
+![](../../.gitbook/assets/screenshot-2023-11-30-at-15.19.12-1.png)
 
 ## Types of Resources
 
 Scrypto offers two types of resources that developers can easily build: Fungible and NonFungible resources.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/types-of-resources.png "types-of-resources.png")
+![](../../../.gitbook/assets/types-of-resources.png)
 
 ### Fungible Resources
 

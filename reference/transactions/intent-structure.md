@@ -13,7 +13,7 @@ Together, these are called the intents of a transaction. In a valid transaction,
 
 Each intent has zero or more child subintents, and each subintent has a single unique parent.
 
-![Intent Tree Diagram](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2838%29.png)
+![Intent Tree Diagram](../../.gitbook/assets/image(38).png)
 
 ## Interaction between intents
 

@@ -28,7 +28,7 @@ The dApp definition account forms the “hub” in a hub-and-spoke model. It act
 -   The **Primary Locker** is a link from a dApp definition to a single [account locker](../../radix-engine/native-blueprints/locker.md), and used by the wallet to auto-discover claims for the user’s accounts for dApps they have previously interacted with.
     
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image(76).png)
+![](../../../.gitbook/assets/image-76.png)
 
 ## Metadata Standards for Verification
 

@@ -31,7 +31,7 @@ Because decentralized ledger networks like Ethereum and Radix can store and run 
 
 On Radix, this type of dApp is structured like so:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/pure_frontend_dapp.png "pure_frontend_dapp.png")
+![](../../../.gitbook/assets/pure_frontend_dapp.png)
 
 **The portions in blue are existing things from Radix that you can make use of. The portions in green are your responsibility as a dApp developer.**
 
@@ -52,7 +52,7 @@ This type of dApp keeps everything we had in the pure frontend dApp, but introdu
 
 This type of dApp on Radix is structured like so:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/full_stack_dapp.png "full_stack_dapp.png")
+![](../../../.gitbook/assets/full_stack_dapp.png)
 
 The new **dApp backend** part of the system has two new functions that interact with the Radix Network:
 

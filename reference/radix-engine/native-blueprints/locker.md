@@ -38,7 +38,7 @@ The features of the `AccountLocker` blueprint are as follows:
 
 The functionality provided by the account locker blueprint is perhaps better explained by the state machine seen below:
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/state-machine.png)
+![](../../../.gitbook/assets/state-machine.png)
 
 This state machine represents the movement of resources between an account, the worktop, and an account locker component. The resources start in an account and could be withdrawn to the worktop.
 

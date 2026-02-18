@@ -42,9 +42,9 @@ Package with Owned GumballMachine
 
 Package with Global GumballMachine
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2813%29.png)
+![image.png](../../.gitbook/assets/image(13).png)
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2814%29.png)
+![image.png](../../.gitbook/assets/image(14).png)
 
 ### Owned vs Global `GumballMachine`
 

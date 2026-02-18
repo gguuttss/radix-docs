@@ -11,7 +11,7 @@ Ensuring that your blueprints are general and reusable is not something that is 
 
 A common approach which is typically seen in many blueprints is this concept of an instantiation function which creates an admin badge and assumes this as the admin. Then, when a caller presents this badge, they are authorized to call administrative methods on the component. While this works well when the administrator is a single person or entity, this does not lend itself very well when the instantiator of your blueprint is a complex organization which requires the ability to set components up which have complex access rules.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/complex-authorization.png "complex-authorization.png")
+![](../../../.gitbook/assets/complex-authorization.png)
 
 Consider an organization with the above structure which wishes to utilize your blueprint to instantiate a new component. While the single admin badge worked well under the assumption of a single admin, it does not lend itself well at all to such a complex organization structure. Very quickly, many questions begin popping up: who should be given the admin badge? should the admin badge be mintable to allow for the additional people to be included? How to handle the complex auth required here with the "and" and "or" logical operations?
 
@@ -33,7 +33,7 @@ Therefore, it is recommended that blueprints implement two (or more) instantiati
 
 This best practice is not unique to Scrypto, it is a universal best practice which you will encounter in almost all programming languages in all fields. When working on a Scrypto package, its important to notice repeating patterns which could be refactored into their own blueprint, or even better, notice which pieces of your logic can be replaced by components of a blueprint already available in the blueprint catalog.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/large-blueprints.png "large-blueprints.png")
+![](../../../.gitbook/assets/large-blueprints.png)
 
 When developing a system, it might be tempting to put everything into a single blueprint which would manage the system and would essentially be the system. This is approach is typically faster when you are first developing a system prototype, however, in no time, bugs will find their way into such a system and the process of maintaining it would be very difficult as it would very quickly become harder to reason about and harder to debug due to the sheer amount of moving pieces.
 

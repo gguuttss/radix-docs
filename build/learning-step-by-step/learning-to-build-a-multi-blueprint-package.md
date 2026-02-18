@@ -46,7 +46,7 @@ There are then two ways to for us to prepare our components to work together. We
 
 Our package has two blueprints, `CandyStore` and `GumballMachine`.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2812%29.png)
+![image.png](../../.gitbook/assets/image(12).png)
 
 ### The `GumBallMachine` blueprint
 

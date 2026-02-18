@@ -18,7 +18,7 @@ The instructions interpreter (the transaction processor) only understands a smal
 
 The following diagram shows how all of the various builders and compilers eventually create instructions from the base instruction set that’s understood by the instructions interpreter.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/instruction2.png "instruction2.png")
+![](../../../.gitbook/assets/instruction2.png)
 
 The Radix Engine Toolkit manifest builder supports the following instructions:
 

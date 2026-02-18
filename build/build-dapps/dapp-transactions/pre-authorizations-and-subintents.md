@@ -15,7 +15,7 @@ This video introduces the pre-authorization / preauthorization / preauth concept
 
 The following diagram compares the standard transaction request flow with the pre-authorization request flow covered in this article. In the dApp toolkit these are initiated with [sendTransaction](https://github.com/radixdlt/radix-dapp-toolkit/blob/main/packages/dapp-toolkit/README.md#sendtransaction) and [sendPreAuthorizationRequest](https://github.com/radixdlt/radix-dapp-toolkit/blob/develop/packages/dapp-toolkit/README.md#preauthorization-requests) respectively.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2860%29.png)
+![image.png](../../../.gitbook/assets/image(60).png)
 
 The pre-authorization flow happens in four parts:
 
@@ -54,7 +54,7 @@ The dApp acts as the subintent aggregator, in order to pay fees for a user's sub
     -   Sign/notarize with keys for the dApp account
     -   Submit the transaction to the network
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2861%29.png)
+![image.png](../../../.gitbook/assets/image(61).png)
 
 ### User Badge Deposit
 
@@ -69,7 +69,7 @@ In this case, the dApp acts as the subintent aggregator and:
     -   YIELDs back to parent to finish. Optionally it can also withdraw and a small bucket of XRD back to the dApp in the YIELD, to cover fee costs.
 2.  The dApp front-end then passes the signed partial transaction to their backend, for checking, wrapping, signing and submitting, as per the delegated fee payment use case.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2862%29.png)
+![image.png](../../../.gitbook/assets/image(62).png)
 
 ### Intent-based partial trades
 
@@ -93,7 +93,7 @@ To take [Anthic](https://www.anthic.io/) ([primer blog](https://www.radixdlt.com
 3.  The dApp then submits the signed partial transaction from the user with some metadata to the Anthic Trade API.
 4.  Anthic attempts to find a matching trade with market makers, gets a signed partial transaction from them. It combines these into a complete transaction and submits it to the network.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2863%29.png)
+![image.png](../../../.gitbook/assets/image(63).png)
 
 ### Co-ordinated ticket purchase
 
@@ -105,4 +105,4 @@ In this case, the dApp acts as the subintent aggregator and:
 2.  Combines the resulting signed partial transactions into a single transaction, which must commit atomically.
 3.  Passes the transaction to its backend for checking, wrapping, signing and submitting as per the delegated fee payment use case.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2865%29.png)
+![image.png](../../../.gitbook/assets/image(65).png)

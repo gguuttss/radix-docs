@@ -38,7 +38,7 @@ You should now be able to use Rust versions **above 1.81.0**, including the **Ru
 
 To understand the need for this we need to take a deep dive into how the data flows throughout the Radix Engine. The following is a *rough* state machine of the various states that the data can exist in and how various data transformations are performed.
 
-![original.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/original(1).png)
+![original.png](../../../.gitbook/assets/original-1.png)
 
 Let’s now say that you have the following argument in a manifest, which is equivalent to a `rule!(require(named_address))` which is a an access rule that requires a named address:
 
@@ -56,7 +56,7 @@ Enum<2u8>(
 
 When this data is flowing through the Radix Engine it takes the following path through the above state machine:
 
-![happy-path.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/happy-path(1).png)
+![happy-path.png](../../../.gitbook/assets/happy-path-1.png)
 
 The data starts out in the textual transaction manifest representation. The manifest compiler then compiles it into a `ManifestValue` and eventually that makes its way to the transaction processor. Not all value types in the Manifest SBOR codec are compatible with the Scrypto SBOR codec. For example, Scrypto SBOR doesn’t have a concept of a `NamedAddress`, only static addresses, but the Manifest SBOR codec does. This means that translating a `ManifestValue` into a `ScryptoValue` can’t be done without the use of some context. A `NamedAddress` requires the context of the transaction to understand which address reservation it’s linked to and what static address was allocated as a result of the allocation instruction. The transaction processor tracks the transaction’s context and is therefore capable of taking a named address (or other types that require conversion) and converting it into the appropriate `ScryptoValue`. Once the `ManifestValue` has been converted into a `ScryptoValue` by the transaction processor it can then be SBOR decoded into its appropriate Rust type, which is an `AccessRule` in this case.
 
@@ -64,7 +64,7 @@ This is the **core reason** as to why an `AccessRule` that contains a `NamedAddr
 
 However, there are certain cases where the data that we have might not take the same flow as described above. Let’s use the manifest’s static analyzer as an example which decodes all of the native blueprint invocations found in the manifest to analyze the manifest and determine its static validity. For the same example textual manifest input provided above, the state machine diagram for it would look like the following:
 
-![bad-path.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/bad-path(1).png)
+![bad-path.png](../../../.gitbook/assets/bad-path-1.png)
 
 The data would start out in its textual manifest representation and will then be compiled by the manifest compiler into a `ManifestValue` which is fed into the static analyzer. The static analyzer would then attempt to decode this `ManifestValue` into its appropriate Rust type, which is an `AccessRule` in this case, but fail since the `AccessRule` model doesn’t support `NamedAddress`es. The static analyzer would then, ***incorrectly***, flag this manifest as being statically invalid despite the fact that if it were submitted to the ledger it would execute successfully.
 

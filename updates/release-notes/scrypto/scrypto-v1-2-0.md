@@ -38,7 +38,7 @@ cargo install --force radix-clis@1.2.0
 
 Radix CLI `rtmc` now prints pretty error message and highlights the problematic parts.
 
-![image.png](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2822%29.png)
+![image.png](../../../.gitbook/assets/image(22).png)
 
 ### New Scrypto Compiler Library
 

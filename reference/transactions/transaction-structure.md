@@ -20,7 +20,7 @@ In the persisted structure, the subintents are flattened into an array. During v
 
 Transaction hashes discussed below are built up in merklized layers, such that a transaction hash can be used to prove details about the content of a transaction without providing the full transaction.
 
-![Tranasction Structure Diagram](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/image%2839%29.png)
+![Tranasction Structure Diagram](../../.gitbook/assets/image(39).png)
 
 ### Notarized Transaction
 

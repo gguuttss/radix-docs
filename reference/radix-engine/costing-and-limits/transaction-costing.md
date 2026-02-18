@@ -34,7 +34,7 @@ This is designed to help prioritise transaction when there is a traffic jam. |
 
 ## How does costing work?
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/Untitled.drawio.png)Transaction costing is done through the costing module within the System.
+![](../../../.gitbook/assets/Untitled.drawio.png)Transaction costing is done through the costing module within the System.
 
 This module is responsible for tracking the fee balance, counting execution and finalisation cost units and applying the costs listed above, with the help of a [fee reserve](https://github.com/radixdlt/radixdlt-scrypto/blob/6d35fe85de69d82b85700aaa9a68310a6163b72e/radix-engine/src/system/system_modules/costing/fee_reserve.rs#L98-L143).
 

@@ -7,7 +7,7 @@ title: "Setting up a Grafana dashboard"
 
 Radix uses [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) to provide nodes and gateways with a real-time monitoring and alert system. Prometheus reads from metrics API endpoints of the node and gateway, and stores it as time series data. Grafana reads this time series data and uses it to build monitoring dashboards for displaying node information and alerts in real-time.
 
-![](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/radix-grafana.svg "radix-grafana.svg")
+![](../../../.gitbook/assets/radix-grafana.svg)
 
 The Prometheus/Grafana installation has been packaged as part of the `babylonnode` script. This will allow node runners to get a monitoring dashboard up and running by simply running the script and answering a few questions.
 
@@ -240,31 +240,31 @@ The `monitoring-host-ip` is the external IP address of your host where monitorin
 
 Grafana will display a page asking for your username and password.
 
-![null](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/log-into-grafana.png)
+![null](../../../.gitbook/assets/log-into-grafana.png)
 
 *the Grafana welcome screen*
 
 Since this is the first time you’ve run the monitor, enter `admin` for the username and `admin` again for the password. Grafana will now display another dialog asking you to change the password for the `admin` user.
 
-![null](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/grafana-change-password.png)
+![null](../../../.gitbook/assets/grafana-change-password.png)
 
 *pick a new password*
 
 You will now see a blank page with a somewhat discouraging `Not Found` message at the top. Click the Search icon (the magnifying glass).
 
-![null](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/opening-grafana-screen.png)
+![null](../../../.gitbook/assets/opening-grafana-screen.png)
 
 *opening window*
 
 Navigate to Dashboards > Radix Node Dashboard:
 
-![null](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/select-dashboard.png)
+![null](../../../.gitbook/assets/select-dashboard.png)
 
 *selecting the dashboard*
 
 Grafana will now the example dashboard:
 
-![null](https://cdn.document360.io/50e78792-5410-4ac9-aa43-4612b4d33953/Images/Documentation/radix-node-validator-dashboard.png)
+![null](../../../.gitbook/assets/radix-node-validator-dashboard.png)
 
 *The Grafana Dashboard*
 
