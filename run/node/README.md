@@ -42,14 +42,10 @@ In order to become an Active Validator one must first [Register as a Validator](
 
 A Validator that reaches the top 100 (by the amount of delegated stake) is included in the Validator Set for the given epoch and becomes an Active Validator. Their associated node is called Active Validator Node**.** All other Validators that have been Registered but didn’t make it to the top 100 are called Inactive Validators and their nodes Inactive Validator Nodes.
 
-![](../../.gitbook/assets/validator_registration_flow.png)
-
-The lifecycle of a *Validator*
+<figure><img src="../../.gitbook/assets/validator_registration_flow.png" alt="The lifecycle of a Validator"><figcaption><p>The lifecycle of a Validator</p></figcaption></figure>
 
 A complete overview of the network including different kinds of nodes has been presented on the diagram below:
 
-![](../../.gitbook/assets/network_diagram.png)
-
-Radix Network overview
+<figure><img src="../../.gitbook/assets/network_diagram.png" alt="Radix Network overview"><figcaption><p>Radix Network overview</p></figcaption></figure>
 
 ### Next: [Node Installation and Basic Setup](node-setup/README.md)

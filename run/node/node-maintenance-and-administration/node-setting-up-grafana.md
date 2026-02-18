@@ -193,34 +193,19 @@ The `monitoring-host-ip` is the external IP address of your host where monitorin
 
 Grafana will display a page asking for your username and password.
 
-![null](../../../.gitbook/assets/log-into-grafana.png)
-
-*the Grafana welcome screen*
-
+<figure><img src="../../../.gitbook/assets/log-into-grafana.png" alt="the Grafana welcome screen"><figcaption><p>the Grafana welcome screen</p></figcaption></figure>
 Since this is the first time you’ve run the monitor, enter `admin` for the username and `admin` again for the password. Grafana will now display another dialog asking you to change the password for the `admin` user.
 
-![null](../../../.gitbook/assets/grafana-change-password.png)
-
-*pick a new password*
-
+<figure><img src="../../../.gitbook/assets/grafana-change-password.png" alt="pick a new password"><figcaption><p>pick a new password</p></figcaption></figure>
 You will now see a blank page with a somewhat discouraging `Not Found` message at the top. Click the Search icon (the magnifying glass).
 
-![null](../../../.gitbook/assets/opening-grafana-screen.png)
-
-*opening window*
-
+<figure><img src="../../../.gitbook/assets/opening-grafana-screen.png" alt="opening window"><figcaption><p>opening window</p></figcaption></figure>
 Navigate to Dashboards > Radix Node Dashboard:
 
-![null](../../../.gitbook/assets/select-dashboard.png)
-
-*selecting the dashboard*
-
+<figure><img src="../../../.gitbook/assets/select-dashboard.png" alt="selecting the dashboard"><figcaption><p>selecting the dashboard</p></figcaption></figure>
 Grafana will now the example dashboard:
 
-![null](../../../.gitbook/assets/radix-node-validator-dashboard.png)
-
-*The Grafana Dashboard*
-
+<figure><img src="../../../.gitbook/assets/radix-node-validator-dashboard.png" alt="The Grafana Dashboard"><figcaption><p>The Grafana Dashboard</p></figcaption></figure>
 ### 4\. Accessing the metrics endpoint
 
 Now that the dashboard is up and running, you may want to add new elements yourself, or use the data from the node to build other applications for monitoring and gathering information.
