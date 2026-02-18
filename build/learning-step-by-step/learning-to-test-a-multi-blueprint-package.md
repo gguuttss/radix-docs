@@ -20,7 +20,7 @@ We can have multiple test files for a Scrypto package by placing them in the `te
 
 To import the modules into their test files we need to add the `pub` keyword to module exports in `/src/lib.rs`. This makes them accessible for testing:
 
-```
+```rust
 pub mod candy_store;
 pub mod gumball_machine;
 ```
@@ -33,7 +33,7 @@ Most of the logic of our package is in the `gumball_machine` module. To test it 
 
 First we add the `scrypto-test`, `radix-engine-interface` crates to the `Cargo.toml` file `dev-dependencies`, as well as `candy-store` itself with the `test` feature:
 
-```
+```toml
 [dev-dependencies]
 # --snip--
 scrypto-test = { git = "https://github.com/radixdlt/radixdlt-scrypto", tag = "v1.1.1" }
@@ -43,7 +43,7 @@ candy-store = { path = ".", features = ["test"] }
 
 Then we add the required imports to `tests/gumball_machine.rs`:
 
-```
+```rust
 use radix_engine_interface::prelude::*;
 use scrypto::this_package;
 use scrypto_test::prelude::*;
@@ -53,7 +53,7 @@ use candy_store::gumball_machine::test_bindings::*;
 
 We can now write tests for the `gumball_machine` module. We'll start with a helper function to arrange the test environment:
 
-```
+```rust
 fn arrange_test_environment(
     price: Decimal,
 ) -> Result<(TestEnvironment, GumballMachine), RuntimeError> {
@@ -71,7 +71,7 @@ This function creates a new `TestEnvironment`, compiles and publishes the packag
 
 The first test checks that the `GumballMachine` can be instantiated, by just running our helper function. If it doesn't panic, the test passes.
 
-```
+```rust
 #[test]
 fn can_instantiate_gumball_machine() -> Result<(), RuntimeError> {
     let (_env, _gumball_machine) = arrange_test_environment(dec!(1))?;
@@ -81,7 +81,7 @@ fn can_instantiate_gumball_machine() -> Result<(), RuntimeError> {
 
 After this, the rest of our unit tests follow a similar pattern. With clear arrange, act, and assert sections. For example, we can test that the `GumballMachine` can be refilled:
 
-```
+```rust
 #[test]
 fn can_refill_gumball_machine() -> Result<(), RuntimeError> {
     // Arrange
@@ -119,7 +119,7 @@ As the `candy_store` module is the globalised part of the package, any transacti
 
 The Scrypto Test Runner works by generating and running transaction manifests, so it too is ideal for integration testing. To use it in the `tests/candy_store.rs` file we first need to add the `scrypto-unit` and `radix-engine-interface` crates to the `Cargo.toml` file `dev-dependencies`:
 
-```
+```toml
 [dev-dependencies]
 # --snip---
 scrypto-unit = { git = "https://github.com/radixdlt/radixdlt-scrypto", tag = "v1.1.1" }
@@ -129,7 +129,7 @@ radix-engine-interface = { git = "https://github.com/radixdlt/radixdlt-scrypto",
 
 Then we add the required imports to `tests/candy_store.rs`:
 
-```
+```rust
 use radix_engine_interface::prelude::*;
 use scrypto::this_package;
 use scrypto_test::prelude::*;
@@ -138,13 +138,13 @@ use scrypto_unit::*;
 
 We can then start to write our test with a `LedgerSimulator` (simulated ledger for testing) created with `LedgerSimulatorBuilder`:
 
-```
+```rust
     let mut ledger = LedgerSimulatorBuilder::new().build();
 ```
 
 Any test we write will need to emulate the way we interact with the Candy Store on the Radix network, publishing the package, using it to instantiate a `CandyStore` and then calling methods on them with transaction manifests. you can see some of this demonstrated at the start of the test:
 
-```
+```rust
 // Create a new account with associated public and private keys.
     let (public_key, _private_key, account_address) = ledger.new_allocated_account();
 

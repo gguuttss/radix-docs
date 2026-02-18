@@ -15,7 +15,7 @@ There is a new native blueprint `AccountLocker`, which makes sending resource to
 
 A new method `get_owner_role` is added to every global component. Here is an example of how to get the owner role of a component:
 
-```
+```rust
 let owner_role = global_component.get_owner_role();
 ```
 
@@ -30,7 +30,7 @@ The `simulator` is rebranded to `radix-clis`, featuring the following tools:
 
 Here is the **new** way of installing Radix CLIs:
 
-```
+```bash
 cargo install --force radix-clis@1.2.0
 ```
 

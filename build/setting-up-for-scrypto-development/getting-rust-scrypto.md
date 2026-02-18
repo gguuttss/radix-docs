@@ -37,14 +37,14 @@ Invoke-RestMethod 'https://raw.githubusercontent.com/radixdlt/radixdlt-scrypto/r
 
 #### macOS
 
-```
+```bash
 curl -fsSL https://raw.githubusercontent.com/radixdlt/radixdlt-scrypto/refs/heads/main/scrypto-install-scripts/install-scrypto-macos.sh | zsh
 
 ```
 
 #### Linux (Debian based distributions)
 
-```
+```bash
 curl -fsSL https://raw.githubusercontent.com/radixdlt/radixdlt-scrypto/refs/heads/main/scrypto-install-scripts/install-scrypto-debian.sh | bash
 
 ```
@@ -93,13 +93,13 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 #### 3\. Add WebAssembly target
 
-```
+```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
 #### 4\. Install Radix Engine Simulator and command-line tools
 
-```
+```bash
 cargo install --force radix-clis@1.3.1
 ```
 
@@ -146,19 +146,19 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 #### 2\. Enable cargo in the current shell
 
-```
+```bash
 source $HOME/.cargo/env
 ```
 
 #### 3\. Add WebAssembly target
 
-```
+```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
 #### 4\. Install Radix Engine Simulator and command-line tools
 
-```
+```bash
 cargo install --force radix-clis@1.3.1
 ```
 
@@ -188,19 +188,19 @@ Look at [After Installing Scrypto](getting-rust-scrypto.md#after-installing-scry
 
 #### 2\. Enable cargo in the current shell
 
-```
+```bash
 source $HOME/.cargo/env
 ```
 
 #### 3\. Add WebAssembly target
 
-```
+```plainText
 rustup target add wasm32-unknown-unknown
 ```
 
 #### 4\. Install Radix Engine Simulator and command-line tools
 
-```
+```bash
 cargo install --force radix-clis@1.3.1
 ```
 

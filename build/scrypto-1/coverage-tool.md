@@ -38,19 +38,19 @@ You can follow the following steps to run coverage on example blueprint:
 
 1.  Install Radix CLI tools:
 
-```
+```bash
 cargo install --force radix-clis@1.2.0
 ```
 
 2.  Create a test package
 
-```
+```bash
 scrypto new-package hello
 ```
 
 3.  Run coverage tool:
 
-```
+```bash
 cd hello
 RUSTUP_TOOLCHAIN=nightly-2024-07-18 scrypto coverage
 ```
@@ -63,21 +63,21 @@ Following instruction will prepare clean OS using Docker image (alternatively lo
 
 1.  Pull new image and get its ID:
 
-```
+```bash
 docker pull ubuntu:mantic
 docker images
 ```
 
 2.  Start a container (replace `<IMAGE ID>` tag with value obtained from step 1) and get its ID:
 
-```
+```bash
 docker run -t -d <IMAGE ID>
 docker ps -a
 ```
 
 3.  Login into the container (replace `<CONTAINER ID>` tag with value obtained from step 2):
 
-```
+```bash
 docker exec -i -t <CONTAINER ID> /bin/bash
 ```
 
@@ -85,14 +85,14 @@ docker exec -i -t <CONTAINER ID> /bin/bash
 
 1.  Install required packages
 
-```
+```plainText
 apt-get update
 apt install build-essential llvm cmake clang  wget curl git
 ```
 
 2.  Install Rust compiler
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup target add wasm32-unknown-unknown
@@ -100,14 +100,14 @@ rustup target add wasm32-unknown-unknown
 
 3.  Install supported Rust toolchain (Rust `1.81.0-nightly`)
 
-```
+```plainText
 rustup install nightly-2024-07-18
 rustup target add wasm32-unknown-unknown --toolchain nightly-2024-07-18
 ```
 
 4.  Install supported `llvm` version, for Rust `1.81.0-nightly` it is version 18:
 
-```
+```bash
 apt install lsb-release wget software-properties-common gnupg
 bash -c "$(wget -O - https://apt.llvm.org/llvm.sh 18)"
 apt install llvm-18

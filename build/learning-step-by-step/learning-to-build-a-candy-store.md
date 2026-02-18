@@ -44,7 +44,7 @@ The component methods can then be restricted to one or more roles:
 
 Along with the Owner badge we now need a Manger badge and a Staff badges. The Manger badge is just like the Owner badge, but with `name` and `symbol` metadata of `Manger Badge` and `MNG` respectively.
 
-```
+```rust
 let manager_badge: Bucket = ResourceBuilder::new_fungible(OwnerRole::None)
     .metadata(metadata!(
         init {
@@ -68,7 +68,7 @@ let (address_reservation, component_address) =
 
 The `component_address` can then be used in the `minter` rule.
 
-```
+```rust
 let staff_badge: Bucket = ResourceBuilder::new_fungible(OwnerRole::None)
     .metadata(metadata!(
         init {
@@ -96,7 +96,7 @@ The same minting rule is applied to our candy and chocolate egg tokens. This Scr
 
 Now we have these new roles and rules, we need to instantiate the component with rules stating which proofs are required to fulfil which roles. We also need to give the new component it's address reserved at the beginning of the instantiation function.
 
-```
+```rust
 let component = Self {
                 // --snip--
     }
@@ -116,13 +116,13 @@ let component = Self {
 
 Buying a chocolate egg works the same as buying a gumball in previouse sections. You provide a payment and if it is more than the cost of an egg, you get one chocolate egg and change.
 
-```
+```rust
 pub fn buy_chocolate_egg(&mut self, mut payment: Bucket) -> (Bucket, Bucket) {
 ```
 
 Buying candy is a little different. You can buy as much candy as is currently in stock at once, if you have the tokens to pay for it. The payment is divided by the candy price and you receive that many candy tokens, plus any change. You get as much candy as you can afford for your XRD. Any change is returned with the candy
 
-```
+```rust
 pub fn buy_candy(&mut self, mut payment: Bucket) -> (Bucket, Bucket) {
 ```
 
@@ -130,7 +130,7 @@ Checked Math
 
 The `buy_candy` method uses checked mathematical operations to prevent overflow which might lock a component. It is **highly recommended** that you do the same in any Decimal calculations.
 
-```
+```rust
    let candy_amount = payment
        .amount()
        .checked_div(self.candy_price)
@@ -143,23 +143,23 @@ See the [Decimal Overflows](../build-dapps/before-you-release/code-hardening.md#
 
 There are also two methods to set the price of the candy and chocolate eggs. These are restricted to the manager and owner roles.
 
-```
+```rust
 pub fn set_candy_price(&mut self, new_price: Decimal) {
 ```
 
-```
+```rust
 pub fn set_chocolate_egg_price(&mut self, new_price: Decimal) {
 ```
 
 Minting staff badges is also restricted to the manager and owner roles. The method returns the minted badge rather than storing it in the component.
 
-```
+```rust
 pub fn mint_staff_badge(&mut self) -> Bucket {
 ```
 
 The `restock_store` method can be called by staff, manager or owner role holders. It now adds resources to two vaults, adding one of each type of egg and refilling the candy vault to 100.
 
-```
+```rust
     pub fn restock_store(&mut self) {
         let candy_amount = 100 - self.candy.amount();
         self.candy

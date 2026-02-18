@@ -13,7 +13,7 @@ As the Radix ecosystem continues to mature there will be more and more blueprint
 
 [Using external blueprints](../scrypto-1/advanced-external-calls.md#calling-a-specific-blueprint-or-global-component-of-your-package) is a little different to using your own. We need to import the blueprint into our own using the `extern_blueprint!` macro. This macro describes the external blueprint with its address, name, function and method signatures.
 
-```
+```rust
 mod candy_store {
     extern_blueprint! {
         // import the GumballMachine package from the ledger using its package address
@@ -37,7 +37,7 @@ When publishing the package, the package address is checked for an existing blue
 
 The description in the macro gives us access to the external blueprint's functions in ours. In our Candy Store blueprint we use this to instantiate a component from a separately and previously published Gumball Machine package.
 
-```
+```rust
     let gumball_machine =
         Blueprint::<GumballMachine>::instantiate_owned(gumball_price, component_address);
 ```
@@ -52,7 +52,7 @@ The new Gumball Machine component is now owned by our Candy Store giving it acce
 
 So as to allow for both an owned and global gumball machine, we have two instantiation functions. `instantiate_owned`:
 
-```
+```rust
     pub fn instantiate_owned(
         price: Decimal,
         component_address: ComponentAddress,
@@ -64,7 +64,7 @@ So as to allow for both an owned and global gumball machine, we have two instant
 
 And `instantiate_global`:
 
-```
+```rust
     pub fn instantiate_global(price: Decimal) -> (Global<GumballMachine>, Bucket) {
     // --snip--
     let gumball_machine = Self::instantiate_owned(price, component_address)

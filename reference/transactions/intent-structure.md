@@ -19,7 +19,7 @@ Each intent has zero or more child subintents, and each subintent has a single u
 
 Each intent declares its children as pseudo-instructions as the start of its manifest:
 
-```
+```rust
 USE_CHILD
     NamedIntent("my_child")
     Intent("subtxid_sim1lh5la66jj3dwl69z2cjjf0hphaj90yl5l5xnd7s8mxx273tkhw2qer299e")

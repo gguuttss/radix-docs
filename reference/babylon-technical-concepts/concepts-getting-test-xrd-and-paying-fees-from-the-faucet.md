@@ -9,7 +9,7 @@ The faucet is available on test networks to get XRD. There are a number of ways 
 -   The LTS Toolkit has a function for building a transaction to deposit XRD from a faucet into an account.
 -   In a transaction manifest, you can use the following to lock fee or withdraw money from the faucet - the faucet address can be found in the **Test Networks** section:
 
-```
+```rust
 # Pay fees from the faucet:
 CALL_METHOD Address("<FAUCET_ADDRESS>") "lock_fee" Decimal("10");
 

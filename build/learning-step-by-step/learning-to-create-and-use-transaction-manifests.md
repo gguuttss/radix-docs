@@ -13,7 +13,7 @@ Every transaction in the Radix Engine and Radix Engine Simulator (resim) has a m
 
 Here is an example of simple transaction manifest to transfer 10 XRD from one account to another:
 
-```
+```rust
 CALL_METHOD
     Address("account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma")
     "lock_fee"
@@ -49,7 +49,7 @@ Although you can write manifests by hand, it easier to use `resim` to generate t
 
 resim generates transaction manifests for us for each transaction, so we don't have to create and apply them ourselves. Normally we don't have access to them, but we can use the `--manifest <FILE_NAME>` flag to produce the manifest for a given transaction instead of run it. e.g.
 
-```
+```typescript
 resim call-function package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp2krkpr92 GumballMachine instantiate_gumball_machine 5 --manifest instantiate_gumball_machine.rtm
 ```
 
@@ -59,7 +59,7 @@ This will print the manifest to the file `instantiate_gumball_machine.rtm`, wher
 
 Transactions in the Radix Engine require a small fee to pay for the resources used to run the transaction. The simulator has these too and you'll see an amount reserved for the fee at the start of each transaction manifest. That looks something like this:
 
-```
+```rust
 CALL_METHOD
     Address("component_sim1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxhkrefh")
     "lock_fee"
@@ -73,7 +73,7 @@ This locks a fee for the transaction from the faucet, a component that will prod
 
 To run a transaction manifest in `resim` we can use the `run` command, e.g.
 
-```
+```bash
 resim run instantiate_gumball_machine.rtm
 ```
 

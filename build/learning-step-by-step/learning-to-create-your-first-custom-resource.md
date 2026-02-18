@@ -50,7 +50,7 @@ Metadata fields that have url values must be of type `Url` and not `String`, as 
 
 We can update the Hello blueprint to create resources with any name and symbol metadata that we parse in. We start by adding input arguments for the two fields to the `instantiate_hello` function.
 
-```
+```rust
     pub fn instantiate_hello(name: String, symbol: String) -> Global<Hello> {
         // --snip--
     }
@@ -58,7 +58,7 @@ We can update the Hello blueprint to create resources with any name and symbol m
 
 Then adjust the resource builder to use the new arguments.
 
-```
+```rust
 let my_bucket: Bucket = ResourceBuilder::new_fungible(OwnerRole::None)
              .divisibility(DIVISIBILITY_MAXIMUM)
              .metadata(metadata! {

@@ -27,7 +27,7 @@ To make the Hello example non-fungible, we need to make a few small changes to t
 
 Firstly, we need to add our `NonFungibleData` structure in the form of the `Greeting` struct.
 
-```
+```rust
 #[derive(ScryptoSbor, NonFungibleData)]
 pub struct Greeting {
     text: String,
@@ -36,7 +36,7 @@ pub struct Greeting {
 
 Then we need to change our `HelloToken` resource to be non-fungible by changing the `ResourceBuilder` method used from `new_fungible` to `new_ruid_non_fungible`.
 
-```
+```rust
   let my_bucket: Bucket = ResourceBuilder::new_ruid_non_fungible(OwnerRole::None)
 ```
 
@@ -73,13 +73,13 @@ Non-RUID Non-Fungible Local IDs
 
 A `NonFungibleLocalID` must be specified for a **non-RUID** non-fungible (integer, string or bytes) when minting. To do this state the local ID before the `NonFungibleData` in a tuple. e.g. if we create our non-fungibles with integer local IDs like so:
 
-```
+```rust
 let my_bucket: Bucket = ResourceBuilder::new_integer_non_fungible(OwnerRole::None)
 ```
 
 Then we would mint like this:
 
-```
+```rust
   .mint_initial_supply([
     (
       // NonFungibleLocalID

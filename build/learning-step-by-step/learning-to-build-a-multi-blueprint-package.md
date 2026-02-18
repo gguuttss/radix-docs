@@ -20,7 +20,7 @@ Using [several blueprints in one package](../scrypto-1/scrypto-design-patterns/r
 
 For these reasons it's normally a good idea to split your application into several blueprints each in their own file, though it's not always necessary. This is done by placing each blueprint in it's own file in the `src/` directory, alongside the `lib.rs` file. For example:
 
-```
+```plainText
 src/
 ├── candy_store.rs
 ├── gumball_machine.rs
@@ -29,14 +29,14 @@ src/
 
 `lib.rs` is the starting point of a scrypto package. Any blueprints modules in the package not in `lib.rs` it's self must be added using the `mod` keyword, like so:
 
-```
+```rust
 mod candy_store;
 mod gumball_machine;
 ```
 
 For a blueprint that directly uses another, we also need to import it into the blueprint's file. For example, the `CandyStore` blueprint uses the `GumballMachine`, so we import it at the top of `candy_store.rs`, with the `use` keyword:
 
-```
+```rust
 use crate::gumball_machine::gumball_machine::*;
 ```
 

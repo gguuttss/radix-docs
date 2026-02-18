@@ -90,7 +90,7 @@ To deploy our package, we will therefore need an account with enough XRD to cove
 
 You should get a success message. At the bottom of the output you should see the created account component address, public/private key, and the `NonFungibleGlobalId` of your owner badge. e.g.:
 
-```
+```plainText
 A new account has been created!
 Account component address: account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma
 Public key: 03b9813c2244f864d3f886a8d8716aff5d234fab83a1c6f39d60999ddb01a15f98
@@ -155,7 +155,7 @@ Note the `Owned Fungible Resources:` section, which indicates that the account a
 
 Once this finishes you should see the published package’s address at the end of the output. e.g.
 
-```
+```plainText
 Success! New Package: package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp2krkpr92
 ```
 
@@ -174,7 +174,7 @@ Success! New Package: package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp
 
 The `instantiate_hello` output should look something like this:
 
-```
+```rust
 Transaction Status: COMMITTED SUCCESS
 Transaction Cost: 0.65177966419 XRD
 ├─ Network execution: 0.30327475 XRD, 6065495 execution cost units
@@ -273,7 +273,7 @@ This uses `resim call-method` rather than the just used `resim call-function` si
 
 The `free_token` output should look something like this:
 
-```
+```rust
 Transaction Status: COMMITTED SUCCESS
 Transaction Cost: 0.43160387771 XRD
 ├─ Network execution: 0.30021485 XRD, 6004297 execution cost units

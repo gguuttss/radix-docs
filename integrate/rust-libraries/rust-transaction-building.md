@@ -37,7 +37,7 @@ You will likely want to read the documentation on [intent structure](../../refer
 
 ### Configuration
 
-```
+```rust
 // The notary can be an ephemeral key (in which case, set notary_is_signatory as false)
 // or a main signer key (in which case, set notary_is_signatory as true)
 let notary = ...;
@@ -56,7 +56,7 @@ let end_epoch_exclusive = Epoch::of(current_epoch + 2);
 
 ### Using subintents
 
-```
+```rust
 /* Use an existing signed partial transaction, from e.g. the pre-authorization flow */
 let signed_partial_transaction = SignedPartialTransactionV2::from_raw(RawSignedPartialTransaction::from_hex(hex));
 let subintent_hash =  signed_partial_transaction
@@ -87,7 +87,7 @@ let subintent_hash = signed_partial_transaction.subintent_hash;
 
 ### Building a transaction
 
-```
+```rust
 let DetailedNotarizedTransactionV2 {
    transaction,
    raw,
@@ -131,7 +131,7 @@ let transaction_id = transaction_intent_hash.to_string(&network);
 
 To build just a `TransactionManifestV2`, you can use the `new_v2()` method on `ManifestBuilder`, or to build a `SubintentManifestV2`, you can use the `new_subintent_v2()` method. Note that `yield_to_parent(..)` and `verify_parent(..)` are only available on subintent manifests:
 
-```
+```rust
 let transaction_manifest = ManifestBuilder::new_v2()
     .use_child("child", subintent_hash)
     .lock_standard_test_fee(account)
@@ -151,7 +151,7 @@ You will need to integrate with the [Gateway API](gateway-api) or [Core API](cor
 
 Support for external signers (e.g. HSMs) is available via implementing the (blocking/non-async) `Signer` trait. Note the [Curves, Keys, Signatures and Hashing](../../reference/babylon-technical-concepts/concepts-curves-keys-signatures-and-hashing.md) guide for the canonical serialization to use for keys and signatures.
 
-```
+```rust
 // The notary can be an ephemeral key (in which case, set notary_is_signatory as false)
 // or a main signer key (in which case, set notary_is_signatory as true)
 let notary = ...;

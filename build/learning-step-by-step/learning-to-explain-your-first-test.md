@@ -17,7 +17,7 @@ The [Ledger Simulator](../scrypto-1/testing/scrypto-test.md) is an in-memory led
 
 To test in Scrypto, we import `scrypto_test::prelude::*` and the test version of our blueprint. In our case that's the `hello` blueprint imported with `use hello_test::hello_test`, `hello_test` is the package name followed by the blueprint name, appended with `_test` for the test version of said blueprint. These are imported at the top of our test file:
 
-```
+```rust
 use scrypto_test::prelude::*;
 
 use hello_test::hello_test::*;
@@ -27,20 +27,20 @@ Test Module names
 
 For testing you need to import the test version of packages, appended with `_test`. e.g. to test `example_blueprint` in the `example_package` package you would import it with:
 
-```
+```rust
 use example_package::example_blueprint_test::*
 ```
 
 To make this import work, we need to add `scrypto_test` to the `Cargo.toml` file:
 
-```
+```toml
 [dev-dependencies]
 scrypto-test = { version = "1.2.0" }
 ```
 
 Where we also need to make sure the `test` feature is enabled:
 
-```
+```toml
 [features]
 default = []
 test = []
@@ -48,7 +48,7 @@ test = []
 
 Then we can create our simulated ledger. In our case that's back in the `test/lib.rs` file inside the `test_hello` function:
 
-```
+```rust
 #[test]
 fn test_hello() {
     // Setup the ledger
@@ -64,7 +64,7 @@ In that environment, we create an account:
 
 We then need the package available in the environment:
 
-```
+```rust
     // Publish package
     let package_address = ledger.compile_and_publish(this_package!());
 ```
@@ -141,7 +141,7 @@ The [Test Environment](https://docs.rs/scrypto-test/latest/scrypto-test/) framew
 
 Testing our Hello blueprint with `TestEnvironment` is done with the same test import modules:
 
-```
+```rust
 use scrypto_test::prelude::*;
 
 use hello_test::hello_test::*;
@@ -149,7 +149,7 @@ use hello_test::hello_test::*;
 
 Meaning `scrypto-test` is still needed in our `Cargo.toml` file's dev-dependencies, with the `test` feature enabled:
 
-```
+```toml
 [dev-dependencies]
 scrypto-test = { version = "1.2.0" }
 
@@ -164,7 +164,7 @@ We'll use `TestEnvironment` to test the `free_token` method output with a AAA te
 
 In our `test/lib.rs` file, with the modules imported we create a new environment and arrange the conditions for our test by publishing our package and instantiating a new Hello component from it - no manifest required:
 
-```
+```rust
 // Arrange
     let mut env = TestEnvironment::new();
     let package_address = PackageFactory::compile_and_publish(this_package!(), &mut env)?;
@@ -174,14 +174,14 @@ In our `test/lib.rs` file, with the modules imported we create a new environment
 
 This allows us to then perform the action we want to test by calling the method:
 
-```
+```rust
     // Act
     let bucket = hello.free_token(&mut env)?;
 ```
 
 The method returns whatever it would on ledger; in this case a bucket. We can now check the amount of tokens in the bucket is what we expect with an assertion:
 
-```
+```rust
     // Assert
     let amount = bucket.amount(&mut env)?;
     assert_eq!(amount, dec!("1"));
@@ -189,7 +189,7 @@ The method returns whatever it would on ledger; in this case a bucket. We can no
 
 If the assertion is incorrect the test will panic and the test will fail. If the assertion is correct we can return an `Ok` (containing an empty value):
 
-```
+```rust
     Ok(())
 ```
 

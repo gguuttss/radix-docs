@@ -28,7 +28,7 @@ For now our minter rule allows anyone to mint new gumballs. We'll look at restri
 
 Now our gumball resource is mintable, we need to have access to its resource manager to mint it. We can do this by adding a `ResourceManager` to our component's state.
 
-```
+```rust
 struct GumballMachine {
     gum_resource_manager: ResourceManager,
     gumballs: Vault,
@@ -39,7 +39,7 @@ struct GumballMachine {
 
 That also means we need to add the resource manager to the component at instantiation. We can do this with the `resource_manager` method on the bucket.
 
-```
+```rust
 let component = Self {
     gum_resource_manager: bucket_of_gumballs.resource_manager(),
     gumballs: Vault::with_bucket(bucket_of_gumballs),

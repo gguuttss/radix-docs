@@ -5,7 +5,7 @@ title: "Scrypto Events"
 
 Events in Scrypto are a way to communicate to off chain clients. They are emitted by the component and can be listened for to begin secondary actions with the Gateway or Core APIs. There are many events that already exist in the native blueprints, e.g. the `WithdrawEvent` on accounts:
 
-```
+```rust
 #[derive(ScryptoSbor, ScryptoEvent, Debug, PartialEq, Eq)]
 pub enum WithdrawEvent {
     Fungible(ResourceAddress, Decimal),
@@ -27,7 +27,7 @@ Events can be observed in the transaction stream. To receive events in this stre
 
 Events can also be observed in the `events` section of transaction receipts e.g:
 
-```
+```rust
 {
   "status": "CommittedSuccess",
   // --snip--
@@ -88,7 +88,7 @@ These are available with a [Gateway API Committed Transaction Details endpoint](
 
 To create your own events you can register and emit them directly from Scrypto.
 
-```
+```rust
 use scrypto::prelude::*;
 
 #[derive(ScryptoSbor, ScryptoEvent)]
@@ -111,7 +111,7 @@ mod example_event {
 
 The Blueprint macro expects an optional `#[events(…​)]` attribute for the event registration. Multiple attributes could be provided to add more events, i.e:
 
-```
+```rust
 #[blueprint]
 #[event(NewUserEvent, UserIsNoMoreEvent, UserIsUserEvent)]
 mod blueprint {

@@ -13,7 +13,7 @@ A full reference implementation for educational purposes is available here: [htt
 
 If you’re currently using Radix Olympia Javascript libraries for your HD derivation such as [@radixdlt/account](https://www.npmjs.com/package/@radixdlt/account), you can convert the in-memory private keys generated this way using the following:
 
-```
+```typescript
 // Assuming you have these in scope:
 const hdMasterSeed = //...
 const derivationPath = //...

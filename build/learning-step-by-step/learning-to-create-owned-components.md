@@ -16,7 +16,7 @@ The scrypto package referenced in this section can be found in our [official exa
 
 All components are initially local. In this state they are not addressable by or accessible to others. To change this we globalize them. This is done after instantiation by first calling `prepare_to_globalize` (setting the component access rules and reserving an address) on the new component, then calling the `globalize` method like so:
 
-```
+```rust
     .instantiate()
     .prepare_to_globalize(OwnerRole::None)
     .globalize();
@@ -24,7 +24,7 @@ All components are initially local. In this state they are not addressable by or
 
 Without these steps, to use a component it must be internal to another. This is done by adding the component in a parent component's struct, with the wrapping `Owned` type, e.g.
 
-```
+```rust
     struct CandyStore {
         gumball_machine: Owned<GumballMachine>,
     }
@@ -32,7 +32,7 @@ Without these steps, to use a component it must be internal to another. This is 
 
 The owned component's methods, can then be called by it's parent, but no other components. e.g.
 
-```
+```rust
     self.gumball_machine.buy_gumball(payment);
 ```
 
@@ -78,7 +78,7 @@ Global
 -   The parent component address is passed in.
 -   Only the new component is returned as there's no owner badge.
 
-```
+```rust
 pub fn instantiate_gumball_machine(
    price: Decimal,
    parent_component_address:
@@ -89,7 +89,7 @@ pub fn instantiate_gumball_machine(
 -   A component address reserved.
 -   Both the component and owner badge are returned.
 
-```
+```rust
 pub fn instantiate_gumball_machine(
   price: Decimal
 ) ->
@@ -112,7 +112,7 @@ Global
 
 -   No owner badge. The parent component is the owner.
 
-```
+```rust
 let owner_badge = ...
 ```
 
@@ -173,13 +173,13 @@ Owner (owned GumballMachine)
 
 Non-owner (global GumballMachine)
 
-```
+```rust
 struct CandyStore {
     gumball_machine: Owned<GumballMachine>,
 }
 ```
 
-```
+```rust
 struct CandyStore {
     gumball_machine: Global<GumballMachine>,
     gumball_machine_owner_badges: Vault,
@@ -208,7 +208,7 @@ Owner (owned GumballMachine)
 
 Non-owner (global GumballMachine)
 
-```
+```rust
 let gumball_machine =
     GumballMachine::instantiate_gumball_machine(
         gumball_price,
@@ -257,7 +257,7 @@ Owner (owned GumballMachine)
 
 Non-owner (global GumballMachine)
 
-```
+```rust
 pub fn set_gumball_price(
   &mut self, new_price: Decimal
 ) {
@@ -269,7 +269,7 @@ pub fn set_gumball_price(
 
 -   To call a method on the GumballMachine we need to pass a proof that we have it's owner badge.
 
-```
+```rust
 pub fn set_gumball_price(
       &mut self, new_price: Decimal
 ) {

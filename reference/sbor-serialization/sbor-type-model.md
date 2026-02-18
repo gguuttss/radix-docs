@@ -44,7 +44,7 @@ For each type, the information splits into three categories:
 
 Consider the following example in Rust.
 
-```
+```rust
 #[derive(Sbor)] // Shorthand for Categorize, Encode, Decode and Describe 
 struct Tree {
     root: TreeNode,
@@ -64,7 +64,7 @@ struct TreeLength(usize); // A new-type for semantic purposes
 
 I could take a particular `Tree` and encode it into an SBOR value. In textual manifest value syntax, this might look like:
 
-```
+```rust
 Tuple(                        # Tree { .. }
     Tuple(                    # > root: TreeNode { .. }
         Enum<1u8>(            # >> left: Some(..)

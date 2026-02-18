@@ -34,7 +34,7 @@ We only have one blueprint in the package called `Hello`, which defines:
 3.  A method `free_token`, which returns a bucket of `HelloToken` (from the  
     component vault) when called.
 
-```
+```rust
 use scrypto::prelude::*;
 
 #[blueprint]
@@ -60,7 +60,7 @@ mod hello {
 
 ### 1\. Defining Component Structure
 
-```
+```rust
     struct Hello {
         // A vault to store resources
         sample_vault: Vault,
@@ -71,7 +71,7 @@ Every blueprint must start with a `struct` defining what is stored where in the 
 
 ### 2\. Instantiating a Component from a Package
 
-```
+```rust
     pub fn instantiate_hello() -> Global<Hello> {
         // --snip--
     }
@@ -95,7 +95,7 @@ To create a new resource, we:
 4.  Specifying the initial supply of the resource.
 5.  Convert the bucket type returned from minting initial supply (here: `FungibleBucket`) to a more general `Bucket`.
 
-```
+```rust
 // 1. Define a new fungible resource with ResourceBuilder
 let my_bucket: Bucket = ResourceBuilder::new_fungible(OwnerRole::None)
     // 2. Set the max number of decimal places to 18
@@ -140,7 +140,7 @@ Finally, we can instantiate a `Hello` component by:
 6.  Calling `instantiate`
 7.  Making the component available in the network by calling `globalize`
 
-```
+```rust
 Self {
         sample_vault: Vault::with_bucket(my_bucket),
     }
@@ -157,7 +157,7 @@ This completes the `instantiate_hello` function which creates a new `HelloToken`
 
 ### 3\. Component Methods
 
-```
+```rust
     pub fn free_token(&mut self) -> Bucket {
             // --snip--
     }
@@ -168,7 +168,7 @@ Methods can only be called on instantiated components, not blueprints. Our `Hell
 
 Logs are explained more in the [Logging section of these docs](../scrypto-1/logging.md). `free_token` uses the `info!` macro for logging:
 
-```
+```rust
     info!(
         "My balance is: {} HelloToken. Now giving away a token!",
         self.sample_vault.amount()
@@ -177,7 +177,7 @@ Logs are explained more in the [Logging section of these docs](../scrypto-1/logg
 
 The method then returns a bucket of one token, ready to transfer to another component or account:
 
-```
+```rust
     // Return 1 HelloToken, taken from the vault
     self.sample_vault.take(1)
 ```

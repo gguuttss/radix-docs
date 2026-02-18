@@ -17,7 +17,7 @@ The Radiswap package is a customised wrapper around the standard TwoResourcePool
 
 The `swap` method accepts an input amount of one resource and returns an output amount of the other resource.
 
-```
+```rust
 pub fn swap(&mut self, input_bucket: Bucket) -> Bucket {
 ```
 
@@ -31,7 +31,7 @@ The
 [checked math](../build-dapps/before-you-release/code-hardening.md#pay-special-attention-to-decimal-operations)  
 version of this becomes:
 
-```
+```rust
 let output_amount = input_amount
                 .checked_mul(output_reserves)
                 .unwrap()
@@ -64,7 +64,7 @@ OwnerRole::Fixed(rule!(require(
 
 Now that we've made it an argument we'll need to provide the full role in a transaction manifest when we instantiate the component. To do that we'll use some new [Manifest Value Syntax](../../reference/sbor-serialization/manifest-sbor/manifest-value-syntax.md), instead of the `rule!` shorthand, that works for Scrypto but doesn't in manifests. This will give us a function call that looks something like this:
 
-```
+```rust
 CALL_FUNCTION
     Address("<PACKAGE_ADDRESS>")
     "Radiswap"
@@ -88,7 +88,7 @@ CALL_FUNCTION
 
 Though for the rare case of no owner we could just put:
 
-```
+```rust
 CALL_FUNCTION
     Address("<PACKAGE_ADDRESS>")
     "Radiswap"
@@ -105,7 +105,7 @@ The second new instantiation argument is the dapp definition account address. Ad
 [Set Verification Metadata](learning-to-set-verification-metadata.md) we customised our metadata in the [Developer Console](https://stokenet-console.radixdlt.com/configure-metadata), but if we already know what we want it to be, we can add it at instantiation,  
 e.g.
 
-```
+```rust
 pub fn new(
       owner_role: OwnerRole,
       resource_address1: ResourceAddress,
@@ -129,7 +129,7 @@ pub fn new(
 
 Adding the dapp definition account address as metadata in the instantiation manifest will look like this:
 
-```
+```rust
 CALL_FUNCTION
     Address("<PACKAGE_ADDRESS>")
     "Radiswap"
@@ -150,7 +150,7 @@ This changes the steps to instantiate the package component on Stokenet. You can
 
 [Events in Scrypto](../scrypto-1/scrypto-events.md) are a way to communicate to off chain clients. They are emitted by the component and can be listened for to begin secondary actions with the [Gateway](../../integrate/network-apis/README.md#gateway-api) or [Core](../../integrate/network-apis/README.md#core-api) APIs. There are many events that already exist in the core components. You may have noticed these in transaction receipts on resim. In the Radiswap component we also emit *custom* events when different methods are called. For example a `SwapEvent`, which contains the amount of each resource swapped:
 
-```
+```rust
 #[derive(ScryptoSbor, ScryptoEvent)]
 pub struct SwapEvent {
     pub input: (ResourceAddress, Decimal),
@@ -160,7 +160,7 @@ pub struct SwapEvent {
 
 Is emitted whenever the `swap` method is called:
 
-```
+```rust
 pub fn swap(&mut self, input_bucket: Bucket) -> Bucket {
   // --snip--
   Runtime::emit_event(SwapEvent {
@@ -171,7 +171,7 @@ pub fn swap(&mut self, input_bucket: Bucket) -> Bucket {
 
 For these events to be emitted successfully, they all need to be declared in a `#[events(...)]` attribute at the start of the blueprint:
 
-```
+```rust
 #[blueprint]
 #[events(InstantiationEvent, AddLiquidityEvent, RemoveLiquidityEvent, SwapEvent)]
 mod radiswap {
@@ -187,7 +187,7 @@ These types of front end interactions were previously described in more detail i
 
 In `client/main.js` we use the [radix-dapp-toolkit](../build-dapps/dapp-application-stack/dapp-sdks/dapp-toolkit.md) and [gateway-api-sdk](../build-dapps/dapp-application-stack/dapp-sdks/gateway-sdk.md) to interact with the Radix network.
 
-```
+```typescript
 import {
   RadixDappToolkit,
   // --snip--
@@ -198,7 +198,7 @@ import { GatewayApiClient } from "@radixdlt/babylon-gateway-api-sdk";
 A connection to the Radix Wallet and Network is established using the Radix dApp Toolkit, Gatway API and a  
 [Dapp Definition](../build-dapps/dapp-application-stack/dapp-definition-setup.md):
 
-```
+```typescript
 const dAppDefinitionAddress = "_YOUR_DAPP_DEFINITION_ACCOUNT_ADDRESS_";
 // --snip--
 
@@ -217,7 +217,7 @@ const gatewayApi = GatewayApiClient.initialize(dappConfig);
 
 With this and the Radiswap component address, the front end can then get information about the components state via the gateway API, e.g.
 
-```
+```typescript
 const componentDetails =
   await gatewayApi.state.getEntityDetailsVaultAggregated(componentAddress);
 ```
@@ -230,7 +230,7 @@ rdt.walletApi.setRequestData(DataRequestBuilder.accounts().exactly(1));
 
 With a connection to the wallet established, the dapp can then use the transition manifests generation functions in the `client/manifests` directory to interact with the Radiswap component. For example, to swap resources in the pool:
 
-```
+```typescript
 import {
   // --snip--
   getSwapManifest,

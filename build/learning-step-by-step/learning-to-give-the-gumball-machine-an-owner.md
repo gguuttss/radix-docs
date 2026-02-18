@@ -41,7 +41,7 @@ Proofs
 
 We use a fungible resource for our owner badge:
 
-```
+```rust
 let owner_badge: Bucket = ResourceBuilder::new_fungible(OwnerRole::None)
               .metadata(metadata!(init{
                   "name" => "Gumball Machine Owner Badge", locked;

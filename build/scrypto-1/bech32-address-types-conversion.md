@@ -7,7 +7,7 @@ title: "Bech32 Address Types Conversion"
 
 To convert a Bech32 address to an Address type in Scrypto (e.g., `ComponentAddress`), you can use the following example for a `ComponentAddress` on mainnet:
 
-```
+```rust
 let my_bech32_address = "component_tdx_2_1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxyulkzl";
 let my_component_address = ComponentAddress::try_from_bech32(
     &AddressBech32Decoder::new(&NetworkDefinition::stokenet()), 
@@ -23,7 +23,7 @@ If you are working in a different environment, replace `::stokenet()` with the a
 
 To convert an Address type (e.g., ResourceAddress) to a Bech32 encoded address, you can use the following method:
 
-```
+```rust
 let my_resource_address = resource_manager.address();
 let my_bech32_address = Runtime::bech32_encode_address(my_resource_address);
 ```

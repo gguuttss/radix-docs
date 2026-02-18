@@ -45,7 +45,7 @@ Resources are locked in their Vault or Bucket while a Proof of them exists to gu
 
 You can create Proofs from Vaults or Buckets with several different Scrypto methods.
 
-```
+```rust
 // Make an IndexSet of one NonFungibleLocalId for our NonFungibleProofs
 let non_fungible_local_ids =
     indexset![NonFungibleLocalId::string("example_id").unwrap()];
@@ -67,7 +67,7 @@ let proof_5: NonFungibleProof =
 
 You can also make Proofs from Proofs:
 
-```
+```rust
 let proof_2 = proof_1.clone();
 ```
 
@@ -82,7 +82,7 @@ There are two main Account methods for this, depending on the resource type:
 
 These can be used as follows:
 
-```
+```rust
 CALL_METHOD
   Address("${ACCOUNT_ADDRESS}")
   "create_proof_of_amount"
@@ -90,7 +90,7 @@ CALL_METHOD
   Decimal("1");
 ```
 
-```
+```rust
 CALL_METHOD
   Address("${ACCOUNT_ADDRESS}")
   "create_proof_of_non_fungibles"
@@ -108,7 +108,7 @@ There are also lots of manifest instructions for creating, moving and dropping P
 
 Tangible Proofs can be put on and popped off the AuthZone:
 
-```
+```rust
     LocalAuthZone::push(proof);
     let proof = LocalAuthZone::pop().unwrap();
 ```
@@ -190,7 +190,7 @@ If your badge resource is non-fungible you can authorize the method and retrieve
 2.  Check a Proof with that ID and resource address is on the Auth Zone with `assert_access_rule`
 3.  Use the ID to get the non-fungible data.
 
-```
+```rust
 fn get_non_fungible_data(
     &self,
     badge_local_id: NonFungibleLocalId,
@@ -229,7 +229,7 @@ Typically, this will be done in three steps:
 
 If Proofs aren't placed on the Auth Zone you will need to check that they are a from the correct resource before you do anything else with them.
 
-```
+```rust
 fn check_admin_proof(&self, admin_proof: Proof) -> CheckedProof {
     admin_proof.check(self.admin_badge_address)
 }
@@ -243,7 +243,7 @@ With our Proof checked we can retrieve any non-fungible data from it.
 
 e.g. If we've derived the following `AdminBadgeData` for our badge and added it to our Scrypto package, outside the blueprint, with code like this.
 
-```
+```rust
 #[derive(ScryptoSbor, NonFungibleData)]
 struct AdminBadgeData {
     admin_id: String,
@@ -252,7 +252,7 @@ struct AdminBadgeData {
 
 We could then retrieve the `admin_id` data field like so.
 
-```
+```rust
 fn get_admin_id(&self, admin_proof: NonFungibleProof) -> String {
     // check the proof and retrieve the non-fungible data
     let non_fungible_data = admin_proof
@@ -271,7 +271,7 @@ fn get_admin_id(&self, admin_proof: NonFungibleProof) -> String {
 
 Sometimes we might need to retrieve the a non-fungible ID from a Proof. In this example we've stored our admin IDs as the non-fungible local IDs of our badges instead of in a data field. We can retrieve it like so.
 
-```
+```rust
 fn get_admin_id(&self, admin_proof: NonFungibleProof) -> NonFungibleLocalId {
     // check the proof then retrieve and return the non-fungible local ID
     let non_fungible_id = admin_proof
@@ -287,7 +287,7 @@ fn get_admin_id(&self, admin_proof: NonFungibleProof) -> NonFungibleLocalId {
 
 Or if we need to unwrap the type to something other than a `NonFungibleLocalId` we can use some more advanced Rust pattern matching.
 
-```
+```rust
 fn get_admin_id(&self, admin_proof: NonFungibleProof) -> String {
     // check the proof and retrieve the non-fungible local ID
     let non_fungible_id_string = match admin_proof
@@ -320,7 +320,7 @@ When calling a protected method, you will need to prepare your proofs:
 
 To call an AuthZone protected method, you will need to put the required proofs on your AuthZone. You can do that as follows:
 
-```
+```rust
 pub fn withdraw_earnings(&mut self, owner_badge: Proof) -> FungibleBucket {
     // place the proof on the local auth zone authorizing methods called within
     // this one
@@ -345,7 +345,7 @@ pub fn withdraw_earnings(&mut self, owner_badge: Proof) -> FungibleBucket {
 
 Alternatively, there is an abbreviated form that automates adding and removing the Proof to the AuthZone:
 
-```
+```rust
 pub fn withdraw_earnings(&mut self, owner_badge: Proof) -> FungibleBucket {
     // place the proof on the local auth zone authorizing methods called within  
     // its closure method, then remove it
@@ -366,7 +366,7 @@ In Scrypto, you can just pass a non-restricted tangible Proof in the arguments o
 
 In transaction manifests, to provide Proofs as method arguments, you will usually just pop the latest added Proof from the AuthZone and then call your method, as follows:
 
-```
+```rust
 POP_FROM_AUTH_ZONE
     Proof("badge_proof");
 CALL_METHOD
@@ -379,7 +379,7 @@ For some dApps, you will also need to keep a copy of the Proof on your AuthZone 
 
 The easiest is to simply use `CREATE_PROOF_FROM_AUTH_ZONE_OF_ALL` to create a separate tangible Proof for passing into the method, which will be backed by the same resources as the Proof/s on the AuthZone:
 
-```
+```rust
 CREATE_PROOF_FROM_AUTH_ZONE_OF_ALL
     Address("${BADGE_RESOURCE_ADDRESS}")
     Proof("badge_proof");
@@ -391,7 +391,7 @@ CALL_METHOD
 
 Or if you don't know the resource address, you can pop it from the AuthZone, explicitly clone the Proof and return it to the AuthZone:
 
-```
+```rust
 POP_FROM_AUTH_ZONE
     Proof("badge_proof_1");
 CLONE_PROOF

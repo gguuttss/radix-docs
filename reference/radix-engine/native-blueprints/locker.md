@@ -108,7 +108,7 @@ This section has an API reference for the methods that are publicly callable on 
 
 The structure of the events that can be emitted by the account locker blueprint is as follows:
 
-```
+```rust
 #[derive(ScryptoSbor, ScryptoEvent, Debug, Clone, PartialEq, Eq)]
 pub struct StoreEvent {
     pub claimant: Global<Account>,
@@ -171,7 +171,7 @@ Doing an airdrop using the account locker blueprint is simple and involves two m
 
 To create a new account locker we will use the `instantiate_simple` method which will create a new admin badge and set it as the owner, storer, and potentially the recoverer of the account locker. This method takes a single argument which is `allow_recover` that is a boolean that controls whether the admin can recover resources that have not been claimed. Since some people might not claim their airdrops in time we will set the `allow_recover` flag to true in this example.
 
-```
+```rust
 CALL_METHOD
     Address("component_sim1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxhkrefh")
     "lock_fee"
@@ -209,7 +209,7 @@ When the above manifest is executed we get an account locker and account locker 
 
 We will airdrop some XRD from the faucet to users. To perform the airdrop we will first need to create a proof of the account locker admin badge to allow us to call the `airdrop` method. Then, we can take the resources from the worktop and pass them to the `airdrop` method alongside a map that describes the amount that should go to each user. We will be setting the `try_direct_send` flag to `true` so that the locker first attempts to deposit the resources into the user accounts and then stores them in the locker if the deposit fails. The following is the manifest we're using to airdrop resources in this example:
 
-```
+```rust
 CALL_METHOD
     Address("component_sim1cptxxxxxxxxxfaucetxxxxxxxxx000527798379xxxxxxxxxhkrefh")
     "lock_fee"
@@ -278,7 +278,7 @@ CALL_METHOD
 
 This is another example that uses the account locker blueprint to build a gumball machine that, instead of returning the gumball token back, attempts to deliver it directly and falls back to storing it in an account locker that it controls, for the user to claim later.
 
-```
+```rust
 use scrypto::prelude::*;
 
 #[blueprint]

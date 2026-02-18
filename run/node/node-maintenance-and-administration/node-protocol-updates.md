@@ -93,7 +93,7 @@ If you are using a validator badge owner by an account under a Radix wallet, you
 
 Submit the following manifest, replacing the four placeholders with their appropriate values:
 
-```
+```rust
 CALL_METHOD
     Address("<ACCOUNT ADDRESS WITH VALIDATOR BADGE>")
     "create_proof_of_non_fungibles"

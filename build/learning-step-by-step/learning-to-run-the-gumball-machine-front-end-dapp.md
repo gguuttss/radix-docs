@@ -15,7 +15,7 @@ The code for the dapp referenced in this section can be found in our [official e
 
 Our file structure will be similar to the last section, with the addition of a `manifests` directory to hold our transaction manifests, now converted into javascript functions so they can be called by `main.js`.
 
-```
+```plainText
 /
 ├── client/
 │  ├── index.html
@@ -34,7 +34,7 @@ The transactions sent by the front end cover the `instantiate_gumball_machine` f
 
 Each transaction manifest is generated from one of the manifest functions in `client/manifests/`. These functions take the same arguments as the corresponding blueprint method plus necessary addresses. For example, the `refill_gumball_machine` manifest function:
 
-```
+```rust
 export const refillManifest = (
   accountAddress,
   componentAddress,
@@ -61,7 +61,7 @@ CALL_METHOD
 
 The transactions are then sent to the wallet for signing and submission to the network:
 
-```
+```typescript
 // Send manifest to wallet for signing
 const result = await rdt.walletApi.sendTransaction({
   transactionManifest: manifest,
@@ -77,13 +77,13 @@ We saw how the Radix Developer Toolkit (RDT) can be used to interact with the ne
 
 The Gateway API is set up in a similar way to RDT. It's imported into `client/main.js`:
 
-```
+```typescript
 import { GatewayApiClient } from "@radixdlt/babylon-gateway-api-sdk";
 ```
 
 Then we generate an instance so we can use it's various methods:
 
-```
+```typescript
 const gatewayApi = GatewayApiClient.initialize(dappConfig);
 ```
 

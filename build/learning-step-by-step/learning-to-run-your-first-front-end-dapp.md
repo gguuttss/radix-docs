@@ -19,7 +19,7 @@ The code for the dapp referenced in this section can be found in our [official e
 
 Now that we have more than just the scrypto package, we need to reorganize our project a little. We'll put the scrypto package in a `scrypto-package` directory and add a front end `client` directory. In the `client` directory we have an `index.html` file, a `main.js` file and a `package.json` file. The `index.html` file is the main page of our dapp. The `main.js` file is the javascript that runs on the page. The `package.json` file is be used to install the Radix Dapp Toolkit and has scripts to start and build the front end. There's also a small amount of styling added with the `style.css` file.
 
-```
+```plainText
 /
 ├── client/
 │  ├── index.html
@@ -43,13 +43,13 @@ There are a collection of utilities that are needed to build a dapp on Radix. Th
 
 First it's used in the `client/index.html` file to connect the wallet:
 
-```
+```plainText
 <radix-connect-button />
 ```
 
 Second it's used in `client/main.js` to interact with the network and wallet. To do this we first need to import the toolkit:
 
-```
+```typescript
 import {
   DataRequestBuilder,
   RadixDappToolkit,
@@ -59,7 +59,7 @@ import {
 
 Then we generate an instance of the toolkit so we can use it's various methods:
 
-```
+```typescript
 // Create a dapp configuration object for the Radix Dapp Toolkit
 const dappConfig = {
   networkId: RadixNetwork.Stokenet,
@@ -79,13 +79,13 @@ rdt.walletApi.setRequestData(DataRequestBuilder.accounts().exactly(1));
 
 Next, to send a transaction we first need to get the user's account address:
 
-```
+```typescript
 const accountAddress = rdt.walletApi.getWalletData().accounts[0].address;
 ```
 
 Which we use in a transaction manifest that we send back to the wallet:
 
-```
+```typescript
 const result = await rdt.walletApi.sendTransaction({
   transactionManifest: manifest,
   version: 1,

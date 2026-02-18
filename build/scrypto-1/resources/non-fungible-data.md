@@ -15,7 +15,7 @@ Non-fungible data structures are defined when creating a non-fungible resource c
 
 To add non-fungible data to resource we first define the data structure.
 
-```
+```rust
 // A top-level struct must derive NonFungibleData.
 // All types referenced directly/indirectly also need to derive ScryptoSbor.
 #[derive(ScryptoSbor, NonFungibleData)]
@@ -32,7 +32,7 @@ struct MyData {
 
 With a defined non-fungible data struct we can create the resource. Note where `::<MyData>` is below.
 
-```
+```rust
 #[blueprint]
 mod example {
     struct Example {
@@ -50,7 +50,7 @@ When minting new non-fungibles we decide the vales for any data they will hold. 
 
 ### RUID Type Non-fungibles
 
-```
+```rust
         pub fn mint_non_fungible(
             &mut self,
             name: String,
@@ -70,7 +70,7 @@ When minting new non-fungibles we decide the vales for any data they will hold. 
 
 ### Integer Type Non-fungibles
 
-```
+```rust
         pub fn mint_non_fungible(
             &mut self,
             id: u64,
@@ -92,7 +92,7 @@ When minting new non-fungibles we decide the vales for any data they will hold. 
 
 ### String Type Non-fungibles
 
-```
+```rust
         pub fn mint_non_fungible(
             &mut self,
             id: String,
@@ -114,7 +114,7 @@ When minting new non-fungibles we decide the vales for any data they will hold. 
 
 ### Byte Type Non-fungibles
 
-```
+```rust
         pub fn mint_non_fungible(
             &mut self,
             id: [u8; 32],
@@ -140,7 +140,7 @@ When minting new non-fungibles we decide the vales for any data they will hold. 
 
 With the resource address and a local ID we can retrieve non-fungible data. The `collection_manger` holds the resource address in the example below.
 
-```
+```rust
         pub fn get_non_fungible_data_by_id(&self, id: NonFungibleLocalId) -> MyData {
             self.collection_manager.get_non_fungible_data::<MyData>(&id)
         }
@@ -150,7 +150,7 @@ With the resource address and a local ID we can retrieve non-fungible data. The 
 
 For a bucket containing a single non-fungible
 
-```
+```rust
         pub fn get_non_fungible_id_and_data_from_bucket(
             &self,
             bucket: NonFungibleBucket,
@@ -164,7 +164,7 @@ For a bucket containing a single non-fungible
 
 For a bucket containing a multiple non-fungibles
 
-```
+```rust
         pub fn get_multiple_non_fungible_ids_and_data_from_bucket(
             &self,
             bucket: NonFungibleBucket,
@@ -191,7 +191,7 @@ There are different ways to retrieve non-fungible data from Proofs depending on 
 
 There is no way to read a single specified non-fungible data field by name yet. However if you know its position in the data struct you can use the following method.
 
-```
+```rust
         pub fn get_non_fungible_data_field(
             &self,
             field_index: usize,
@@ -217,7 +217,7 @@ You could use a [Gateway API call](https://radix-babylon-gateway-api.redoc.ly/#o
 
 For a non-fungible data field to be mutable we have to mark it as such in it's struct.
 
-```
+```rust
 // All types referenced directly/indirectly also need to derive ScryptoSbor.
 #[derive(ScryptoSbor, NonFungibleData)]
 pub struct MyData {
@@ -236,7 +236,7 @@ In most circumstances, to update a non-fungible data field in Scrypto you will n
 
 The authorized closure ( method in `authorize_with_amount()`) can then use the resource address in the form of the `collection_manger` and the `id` of our chosen non-fungible to identify and update the `mutable_field` value.
 
-```
+```rust
         pub fn update_non_fungible_data(
             &mut self,
             id: NonFungibleLocalId,
@@ -256,7 +256,7 @@ The authorized closure ( method in `authorize_with_amount()`) can then use the r
 
 We can change updatable non-fungible data fields using Radix transaction maniefsts. In the example below we first authorize the change by adding an `owner_badge` Proof to the authzone, then we call `update_non_fungible_data` on the resource manager.
 
-```
+```rust
 CALL_METHOD
   Address("${account_address}")
   "lock_fee"

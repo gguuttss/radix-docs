@@ -25,7 +25,7 @@ extern_blueprint! {
 
 Second, we store the external component's address (and owner badge for non public method calls) in our in our new component's state.
 
-```
+```rust
 struct CandyStore {
         gumball_machine_owner_badge: Vault,
         gumball_machine_address: Global<GumballMachine>,
@@ -34,7 +34,7 @@ struct CandyStore {
 
 The important part here is the address is stored as the component's type, `Global<GumballMachine>`. Component types are all addresses in the Radix Engine. By applying the type, we can now call the methods on the external component described in our `extern_blueprint!` macro, e.g.
 
-```
+```rust
     pub fn buy_gumball(&mut self, payment: Bucket) -> (Bucket, Bucket) {
         // buy a gumball
         self.gumball_machine_address.buy_gumball(payment)
@@ -51,7 +51,7 @@ In previous sections, this logic is abstracted away in the `authorize_with_amoun
 
 When we call restricted methods in one component from another, we need to prove we have authorization for the inner component. Proving ownership of badges only works per component or resource. This is to avoid the possibility of accidentally escalating permissions by providing unintended authorization. This means that when one method calls another method requiring authorization on a separate component, a proof needs to be placed on a local authorization zone for the second component. e.g.
 
-```
+```rust
 pub fn set_gumball_price(&mut self, new_price: Decimal) {
     // create a proof of the gumball machine owner badge
     let gumball_machine_owner_badge_proof = self

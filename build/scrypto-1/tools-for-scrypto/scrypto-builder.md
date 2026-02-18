@@ -9,7 +9,7 @@ title: "Scrypto Builder"
 
 1.  Pull the `scrypto-builder` Docker image
 
-```
+```bash
 # You can find all releases on https://github.com/radixdlt/radixdlt-scrypto/releases
 
 DOCKER_DEFAULT_PLATFORM=linux/amd64 docker pull radixdlt/scrypto-builder:v1.2.0

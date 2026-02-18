@@ -11,7 +11,7 @@ The scrypto package referenced in this section can be found in our [official exa
 
 By default tokens can neither be recalled nor are they burnable. Turning these behaviours on will allow us to both bring a token to us from another vault and burn/destroy it. If we want to add these behaviors we do it the same way the mintable behaviour (or any others) would be added, by including roles for each.
 
-```
+```rust
     let staff_badges_manager =
             // --snip--
             .recall_roles(recall_roles! {
@@ -44,7 +44,7 @@ RECALL_NON_FUNGIBLES_FROM_VAULT
 
 And here:
 
-```
+```rust
 BURN_RESOURCE
     Bucket("staff_badge_bucket")
 ;
@@ -59,7 +59,7 @@ We've also made the Candy Store staff badges non-fungible. This change from the 
 
 To make this change we added a struct for the staff badge non-fungible data:
 
-```
+```rust
 #[derive(NonFungibleData, ScryptoSbor, Clone)]
 struct StaffBadge {
     employee_number: u64,
@@ -69,7 +69,7 @@ struct StaffBadge {
 
 Then we changed the staff badge to create a non-fungible resource using the new struct and the `new_integer_non_fungible` method:
 
-```
+```rust
     let staff_badges_manager =
         ResourceBuilder::new_integer_non_fungible::<StaffBadge>(OwnerRole::None)
             // --snip--
@@ -80,7 +80,7 @@ Changing the staff badge creation to `create_with_no_initial_supply()` also mean
 
 More significantly, the change to non-fungible staff badges means we need to change the minting method. It now takes 2 arguments, the name and number of the employee, which become the stored non-fungible data. The number is also used as the local ID for the non-fungible, so must be unique. The function is now:
 
-```
+```rust
     pub fn mint_staff_badge(&mut self, name: String, number: u64) -> Bucket {
         let staff_badge_bucket: Bucket = self.staff_badge_resource_manager.mint_non_fungible(
             &NonFungibleLocalId::integer(number),

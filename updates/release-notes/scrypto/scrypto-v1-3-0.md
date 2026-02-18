@@ -24,7 +24,7 @@ The headline feature of `cuttlefish` is [subintents](../../../reference/transact
 
 Further documentation on working with subintents will follow in the next week. But to start you off, here's an example of building a `NotarizedTransactionV2` with a subintent:
 
-```
+```rust
 let subintent = TransactionBuilder::new_partial_v2()
     .intent_header(IntentHeaderV2 {
         network_id,
@@ -77,7 +77,7 @@ let DetailedNotarizedTransactionV2 {
 
 To build just a `TransactionManifestV2`, you can use the `new_v2()` method on `ManifestBuilder`, or to build a `SubintentManifestV2`, you can use the `new_subintent_v2()` method:
 
-```
+```rust
 let transaction_manifest = ManifestBuilder::new_v2()
     .use_child("child", subintent_hash)
     .lock_standard_test_fee(account)
@@ -150,7 +150,7 @@ New getter methods have been added to the [Account](../../../reference/radix-eng
 
 The [Account](https://docs.rs/scrypto/1.3.0/scrypto/component/struct.Account.html) stub has been updated with these new methods for easy access:
 
-```
+```rust
 fn balance(&self, resource_address: ResourceAddress) -> Decimal;
 
 fn non_fungible_local_ids(

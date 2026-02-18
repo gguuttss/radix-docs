@@ -25,7 +25,7 @@ Often, when components and resources are created, we won't have a dapp definitio
 
 You can see this change when creating the Gumball resource for this section.
 
-```
+```rust
   let bucket_of_gumballs: Bucket = ResourceBuilder::new_fungible(
     OwnerRole::Fixed(rule!(require(
       owner_badge.resource_address()
